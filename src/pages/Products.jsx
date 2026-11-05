@@ -402,12 +402,14 @@ export default function Products() {
               <p className="text-xs text-slate-600 leading-relaxed">
                 Download the official high-resolution Bounten brochure with complete specifications.
               </p>
-              <button
-                onClick={() => handleDownload(COMPANY_CONFIG.brochureUrl, 'Bounten-Broucher.pdf')}
+              <a
+                href={COMPANY_CONFIG.brochureUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white py-2 px-3 rounded-xl text-xs font-bold transition-colors shadow-xs"
               >
                 <span>Download PDF</span>
-              </button>
+              </a>
             </div>
 
           </aside>

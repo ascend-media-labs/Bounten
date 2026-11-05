@@ -226,13 +226,15 @@ export default function ProductDetails() {
 
             {/* Download Brochure Link */}
             <div className="pt-3">
-              <button
-                onClick={() => handleDownload(COMPANY_CONFIG.brochureUrl, 'Bounten-Broucher.pdf')}
+              <a
+                href={COMPANY_CONFIG.brochureUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-bold text-sky-600 hover:text-sky-800"
               >
                 <FileDown className="w-4 h-4" />
                 <span>Download full technical brochure PDF</span>
-              </button>
+              </a>
             </div>
           </div>
 

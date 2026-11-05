@@ -47,13 +47,15 @@ export default function Footer() {
                 <WhatsAppIcon className="w-5 h-5 fill-white" />
                 <span>Chat on WhatsApp</span>
               </button>
-              <button
-                onClick={() => handleDownload(COMPANY_CONFIG.brochureUrl, 'Bounten-Broucher.pdf')}
+              <a
+                href={COMPANY_CONFIG.brochureUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-sky-400 hover:text-white border border-slate-700 px-5 py-3 rounded-xl font-bold text-sm transition-all"
               >
                 <FileDown className="w-4 h-4" />
                 <span>Download Brochure</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -301,13 +303,15 @@ export default function Footer() {
                   <FileDown className="w-3.5 h-3.5 text-sky-400" />
                   <span>Download Product Brochure</span>
                 </button>
-                <button
-                  onClick={() => handleDownload(COMPANY_CONFIG.flyerUrl, 'bounten-flyer.pdf')}
+                <a
+                  href={COMPANY_CONFIG.flyerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-slate-300 hover:text-white"
                 >
                   <FileDown className="w-3.5 h-3.5 text-sky-400" />
                   <span>Download Sales Flyer</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>

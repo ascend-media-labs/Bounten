@@ -13,9 +13,9 @@ export const NAV_LINKS = [
   },
   { 
     name: "Download Flyer", 
-    path: "/bounten-flyer.pdf",
+    path: "/Bounten-Flyer.pdf",
     isDownload: true,
-    fileName: "bounten-flyer.pdf"
+    fileName: "Bounten-Flyer.pdf"
   }
 ];
 
