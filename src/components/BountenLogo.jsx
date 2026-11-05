@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import bountenLogoImg from '../assets/logo/logo.png';
 
-export default function BountenLogo({ className = "h-10 sm:h-12 w-auto", link = true }) {
+export default function BountenLogo({ className = "h-8 sm:h-10 md:h-11 w-auto", link = true }) {
   const content = (
-    <div className={`flex items-center gap-3 select-none ${className}`}>
-      {/* Exact BOUNTEN Transparent Logo image with responsive sizing */}
+    <div className="flex items-center select-none">
+      {/* Exact original BOUNTEN logo image with preserved aspect ratio */}
       <img
-        src="/logo.png"
+        src={bountenLogoImg}
         alt="BOUNTEN - Advanced Water Softener & Water Treatment"
-        className="h-full w-auto object-contain max-h-14 transition-transform duration-200 hover:scale-[1.02]"
-        onError={(e) => {
-          // Fallback to vector SVG if PNG fails
-          e.target.src = "/logo.svg";
-        }}
+        className={`${className} object-contain max-w-full transition-transform duration-200 hover:scale-[1.02]`}
+        style={{ aspectRatio: "492 / 103" }}
       />
     </div>
   );

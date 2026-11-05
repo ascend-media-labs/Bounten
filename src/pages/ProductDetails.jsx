@@ -72,7 +72,7 @@ export default function ProductDetails() {
   return (
     <div className="bg-slate-50/50 min-h-screen py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        
+
         {/* Breadcrumb Navigation */}
         <nav className="flex items-center space-x-2 text-xs sm:text-sm text-slate-500">
           <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
@@ -93,7 +93,7 @@ export default function ProductDetails() {
 
         {/* Main Product Section: Two Columns (Image Left, Details Right) */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
+
           {/* Left: Large Product Image (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="relative aspect-square rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100 border border-slate-100 p-8 flex items-center justify-center overflow-hidden">
@@ -203,7 +203,7 @@ export default function ProductDetails() {
 
         {/* Specifications & Features Tabs/Sections */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Specifications Table (Left 7 cols) */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
             <h2 className="text-lg sm:text-xl font-bold text-[#081C3B] border-l-4 border-sky-600 pl-3">
@@ -215,9 +215,8 @@ export default function ProductDetails() {
                 {product.specifications.map((spec, idx) => (
                   <div
                     key={spec.label}
-                    className={`grid grid-cols-1 sm:grid-cols-12 p-3.5 text-xs sm:text-sm ${
-                      idx % 2 === 0 ? 'bg-slate-50/60' : 'bg-white'
-                    }`}
+                    className={`grid grid-cols-1 sm:grid-cols-12 p-3.5 text-xs sm:text-sm ${idx % 2 === 0 ? 'bg-slate-50/60' : 'bg-white'
+                      }`}
                   >
                     <span className="sm:col-span-5 font-semibold text-slate-600">
                       {spec.label}
