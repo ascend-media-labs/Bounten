@@ -611,14 +611,14 @@ export default function Products() {
           
           {/* Section Header with Fade Up */}
           <AnimatedSection animation="fade-up" duration={700}>
-            <div className="text-center max-w-3xl mx-auto space-y-2">
-              <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600 bg-sky-50 px-3.5 py-1 rounded-full border border-sky-100">
+            <div className="space-y-1">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
                 Applications & Uses
               </span>
               <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                 {PRODUCT_HIGHLIGHTS.applications.title}
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base font-normal">
+              <p className="text-slate-600 text-sm mt-0.5">
                 {PRODUCT_HIGHLIGHTS.applications.subtitle}
               </p>
             </div>

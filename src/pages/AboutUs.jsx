@@ -139,8 +139,8 @@ export default function AboutUs() {
       {/* 4. Technology Pillars */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-sky-600">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
               Why We Are Different
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">

@@ -223,14 +223,14 @@ export default function Home() {
         
         {/* Categories Header */}
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="text-center max-w-4xl mx-auto space-y-1.5">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
               Product Series
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
               Two Distinct Series. Tailored to Your Water Setup.
             </h2>
-            <p className="text-slate-600 text-sm lg:whitespace-nowrap">
+            <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
               Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
             </p>
           </div>
@@ -441,14 +441,14 @@ export default function Home() {
       {/* 4. WATER SOFTENER - APPLICATIONS & USES - id="solutions" */}
       <section id="solutions" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="text-center max-w-4xl mx-auto space-y-1.5">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
               Applications & Uses
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
               {PRODUCT_HIGHLIGHTS.applications.title}
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base font-normal lg:whitespace-nowrap">
+            <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
               {PRODUCT_HIGHLIGHTS.applications.subtitle}
             </p>
           </div>
