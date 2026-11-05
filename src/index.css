@@ -4,8 +4,17 @@
   :root {
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
   }
   
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
     font-family: var(--font-sans);
     color: #1e293b;
@@ -15,42 +24,231 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 }
 
-/* Custom scrollbar */
+/* Custom smooth scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 4px;
+  border-radius: 9999px;
+  border: 2px solid #f8fafc;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
 
-/* Subtle animation helpers */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+/* ============================================================ */
+/* KEYFRAME ANIMATIONS FOR LUXURY & WATER-THEMED MOTION          */
+/* ============================================================ */
+
+/* 1. Float Slow (Subtle floating for hero products and badges) */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.5deg);
+  }
 }
 
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.05); }
+/* 2. Soft Ambient Water Glow */
+@keyframes ambientGlow {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+    filter: blur(40px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.12);
+    filter: blur(55px);
+  }
 }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+/* 3. Water Pulse Rings (for Hero & WhatsApp) */
+@keyframes waterPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
-.animate-glow {
-  animation: pulseGlow 3s ease-in-out infinite;
+/* 4. Luxury Shine Shimmer across cards */
+@keyframes luxuryShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
+/* 5. Fade In & Slide Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 6. Fade In & Slide Down */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 7. Zoom In Scale */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 8. Subtle Border Glow Cycle */
+@keyframes borderGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(2, 132, 199, 0.15);
+    border-color: rgba(56, 189, 248, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(2, 132, 199, 0.35);
+    border-color: rgba(2, 132, 199, 0.7);
+  }
+}
+
+/* 9. Page Fade Transition */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================ */
+/* REUSABLE ANIMATION & INTERACTION CLASSES                      */
+/* ============================================================ */
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-ambient-glow {
+  animation: ambientGlow 6s ease-in-out infinite;
+}
+
+.animate-water-pulse {
+  animation: waterPulse 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-border-glow {
+  animation: borderGlowPulse 4s ease-in-out infinite;
+}
+
+.page-transition {
+  animation: pageEnter 0.4s var(--ease-out-expo) forwards;
+}
+
+/* Card 3D Lift on Hover */
+.hover-lift {
+  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), border-color 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(8, 28, 59, 0.12), 0 12px 20px -8px rgba(8, 28, 59, 0.08);
+}
+
+/* Luxury Diagonal Light Shine Sweep across elements */
+.shine-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-sweep::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  width: 45%;
+  height: 220%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.shine-sweep:hover::after {
+  left: 140%;
+}
+
+/* Interactive Tactile Button Press */
+.btn-press {
+  transition: transform 0.2s var(--ease-out-expo), box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-press:hover {
+  transform: translateY(-2px);
+}
+
+.btn-press:active {
+  transform: scale(0.97) translateY(0);
+}
+
+/* Fluid Animated Gradient Text */
+.gradient-text-animated {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 40%, #081C3B 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: luxuryShimmer 8s linear infinite;
+}
+
+/* Glassmorphism card */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}

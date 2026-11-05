@@ -30,16 +30,18 @@ function ScrollToTop() {
   return null;
 }
 
-export default function App() {
-  return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-white text-slate-800 font-sans">
-        {/* Navigation Bar */}
-        <Navbar />
+// Inner Content Component to access useLocation for silky page transitions
+function AppContent() {
+  const location = useLocation();
 
-        {/* Main Content Area */}
-        <main className="flex-grow">
+  return (
+    <div className="flex flex-col min-h-screen bg-white text-slate-800 font-sans selection:bg-sky-500 selection:text-white">
+      {/* Navigation Bar */}
+      <Navbar />
+
+      {/* Main Content Area with Route Animation */}
+      <main className="flex-grow">
+        <div key={location.pathname} className="page-transition">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
@@ -55,15 +57,23 @@ export default function App() {
             {/* Catch-all redirect to Home */}
             <Route path="*" element={<Home />} />
           </Routes>
-        </main>
+        </div>
+      </main>
 
-        {/* Global Footer */}
-        <Footer />
+      {/* Global Footer */}
+      <Footer />
 
-        {/* Global Floating WhatsApp Enquiry Button */}
-        <WhatsAppButton />
-      </div>
-    </Router>
+      {/* Global Floating WhatsApp Enquiry Button */}
+      <WhatsAppButton />
+    </div>
   );
 }
 
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <AppContent />
+    </Router>
+  );
+}
