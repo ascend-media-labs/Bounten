@@ -55,7 +55,7 @@ export default function Footer() {
                 <span>Chat on WhatsApp</span>
               </button>
               <button
-                onClick={() => handleDownload(COMPANY_CONFIG.brochureUrl, 'bounten-brochure.pdf')}
+                onClick={() => handleDownload(COMPANY_CONFIG.brochureUrl, 'Bounten-Broucher.pdf')}
                 className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-sky-400 hover:text-white border border-slate-700 px-5 py-3 rounded-xl font-bold text-sm transition-all"
               >
                 <FileDown className="w-4 h-4" />
@@ -302,7 +302,7 @@ export default function Footer() {
               </span>
               <div className="space-y-2 text-xs">
                 <button
-                  onClick={() => handleDownload(COMPANY_CONFIG.brochureUrl, 'bounten-brochure.pdf')}
+                  onClick={() => handleDownload(COMPANY_CONFIG.brochureUrl, 'Bounten-Broucher.pdf')}
                   className="flex items-center gap-1.5 text-slate-300 hover:text-white"
                 >
                   <FileDown className="w-3.5 h-3.5 text-sky-400" />

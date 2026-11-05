@@ -95,3 +95,4 @@ page1 = create_brochure_page_1()
 page1.save('public/bounten-brochure.pdf', 'PDF', resolution=150.0)
 page1.save('public/bounten-flyer.pdf', 'PDF', resolution=150.0)
 print('PDF files updated with exact logo!')
+

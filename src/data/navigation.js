@@ -7,9 +7,9 @@ export const NAV_LINKS = [
   { name: "Gallery", path: "/gallery" },
   { 
     name: "Download Brochure", 
-    path: "/bounten-brochure.pdf",
+    path: "/Bounten-Broucher.pdf",
     isDownload: true,
-    fileName: "bounten-brochure.pdf"
+    fileName: "Bounten-Broucher.pdf"
   },
   { 
     name: "Download Flyer", 
