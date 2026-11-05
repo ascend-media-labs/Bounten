@@ -66,23 +66,23 @@ export default function Home() {
   };
 
   return (
-    <div className="space-y-14 sm:space-y-20 pb-8 sm:pb-10 overflow-hidden">
+    <div className="space-y-8 sm:space-y-12 pb-6 sm:pb-8 overflow-hidden">
       
       {/* 1. HERO SECTION WITH AMBIENT WATER GLOW - id="home" */}
-      <section id="home" className="scroll-mt-28 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/50 pt-8 sm:pt-16 pb-12 sm:pb-24 border-b border-slate-100">
+      <section id="home" className="scroll-mt-24 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/50 pt-6 sm:pt-10 pb-8 sm:pb-12 border-b border-slate-100">
         {/* Soft Ambient Floating Water Glow Rings */}
         <div className="absolute top-0 right-0 -mr-28 -mt-28 w-[450px] h-[450px] rounded-full bg-sky-200/40 blur-3xl pointer-events-none animate-ambient-glow" />
         <div className="absolute bottom-0 left-0 -ml-28 -mb-28 w-[400px] h-[400px] rounded-full bg-blue-100/50 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '2.5s' }} />
         <div className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full bg-cyan-100/30 blur-2xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '4s' }} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
             
             {/* Left Content (7 cols) - Slide in from Right */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left">
               <AnimatedSection animation="fade-right" duration={700}>
                 {/* Trust Tag with animated pulse */}
-                <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md border border-sky-200 text-[#081C3B] font-bold text-xs uppercase tracking-wider py-1.5 px-3.5 rounded-full shadow-xs hover:border-sky-400 transition-colors">
+                <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md border border-sky-200 text-[#081C3B] font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full shadow-xs hover:border-sky-400 transition-colors">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                   <span>Resin-Free | Salt-Free | Chemical-Free</span>
                 </div>
@@ -95,7 +95,7 @@ export default function Home() {
                   <span className="bg-gradient-to-r from-sky-600 via-sky-700 to-sky-900 bg-clip-text text-transparent">
                     Multiple Applications.
                   </span>
-                  <span className="block text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-700 mt-2">
+                  <span className="block text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-700 mt-1.5">
                     Better Water for Everyday Living.
                   </span>
                 </h1>
@@ -110,10 +110,10 @@ export default function Home() {
 
               {/* Two CTA Buttons */}
               <AnimatedSection animation="fade-right" delay={300} duration={800}>
-                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <div className="pt-1 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
                   <a
                     href="#products"
-                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-7 py-3.5 rounded-xl font-bold text-base shadow-md hover:shadow-xl transition-all"
+                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-6 py-3 rounded-xl font-bold text-base shadow-md hover:shadow-xl transition-all"
                   >
                     <span>Explore Products</span>
                     <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
@@ -121,7 +121,7 @@ export default function Home() {
 
                   <button
                     onClick={openGeneralEnquiry}
-                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-7 py-3.5 rounded-xl font-bold text-base shadow-md hover:shadow-xl transition-all"
+                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-xl font-bold text-base shadow-md hover:shadow-xl transition-all"
                   >
                     <WhatsAppIcon className="w-5 h-5 fill-white" />
                     <span>Contact on WhatsApp</span>
@@ -131,7 +131,7 @@ export default function Home() {
 
               {/* Key Trust Specifications */}
               <AnimatedSection animation="fade-up" delay={400} duration={800}>
-                <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-200/80 max-w-2xl mx-auto lg:mx-0 text-left">
+                <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 border-t border-slate-200/80 max-w-2xl mx-auto lg:mx-0 text-left">
                   <div className="bg-white/60 backdrop-blur-xs p-3 rounded-xl border border-slate-100 hover:border-sky-200 transition-colors">
                     <div className="text-xl font-black text-[#081C3B]">≤ 1,999 ppm</div>
                     <div className="text-xs text-slate-500 font-medium">TDS Compatibility</div>
@@ -214,12 +214,12 @@ export default function Home() {
       </section>
 
       {/* 2. TWO CATEGORIES SHOWCASE & FEATURED PRODUCTS - id="products" */}
-      <section id="products" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section id="products" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         
         {/* Categories Header */}
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3.5 py-1 rounded-full border border-sky-100">
+          <div className="text-center max-w-2xl mx-auto space-y-1.5">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
               Product Series
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
@@ -232,12 +232,12 @@ export default function Home() {
         </AnimatedSection>
 
         {/* Categories Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           
           {/* Category 1 Card: Zoftner Pro */}
           <AnimatedSection animation="fade-right" delay={100} duration={800}>
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-sky-200/80 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-6 h-full">
-              <div className="space-y-4">
+            <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-sky-200/80 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
+              <div className="space-y-3.5">
                 <div className="flex items-center justify-between">
                   <span className="bg-emerald-600 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-xs">
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
@@ -279,7 +279,7 @@ export default function Home() {
 
               <Link
                 to="/products?cat=Zoftner+Pro"
-                className="btn-press w-full inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white py-3.5 px-4 rounded-xl font-bold text-xs transition-colors shadow-sm"
+                className="btn-press w-full inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white py-3 px-4 rounded-xl font-bold text-xs transition-colors shadow-sm"
               >
                 <span>Explore Zoftner Pro Models</span>
                 <ArrowRight className="w-4 h-4" />
@@ -289,8 +289,8 @@ export default function Home() {
 
           {/* Category 2 Card: Zoftner Quick Fix */}
           <AnimatedSection animation="fade-left" delay={200} duration={800}>
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-slate-200 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-6 h-full">
-              <div className="space-y-4">
+            <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-slate-200 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
+              <div className="space-y-3.5">
                 <div className="flex items-center justify-between">
                   <span className="bg-slate-800 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
                     Without Bag Filter
@@ -331,7 +331,7 @@ export default function Home() {
 
               <Link
                 to="/products?cat=Zoftner+Quick+Fix"
-                className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white py-3.5 px-4 rounded-xl font-bold text-xs transition-colors shadow-sm"
+                className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white py-3 px-4 rounded-xl font-bold text-xs transition-colors shadow-sm"
               >
                 <span>Explore Zoftner Quick Fix Models</span>
                 <ArrowRight className="w-4 h-4" />
@@ -342,8 +342,8 @@ export default function Home() {
         </div>
 
         {/* Featured Models Grid */}
-        <div className="space-y-8 pt-4">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div className="space-y-4 pt-1">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
               <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
                 Top Picks
@@ -351,7 +351,7 @@ export default function Home() {
               <h3 className="text-2xl font-extrabold text-[#081C3B]">
                 Featured Water Softening Systems
               </h3>
-              <p className="text-slate-600 text-sm mt-1 max-w-xl">
+              <p className="text-slate-600 text-sm mt-0.5 max-w-xl">
                 Direct WhatsApp enquiry with pre-filled model specifications and immediate assistance.
               </p>
             </div>
@@ -365,7 +365,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {featuredProducts.map((product, idx) => (
               <AnimatedSection key={product.id} animation="fade-up" delay={idx * 100} duration={600}>
                 <ProductCard product={product} />
@@ -377,9 +377,9 @@ export default function Home() {
       </section>
 
       {/* 3. SERVICES OVERVIEW - id="services" */}
-      <section id="services" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="services" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
               <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
                 Reliable Technical Support
@@ -387,7 +387,7 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
                 Comprehensive Services & AMC
               </h2>
-              <p className="text-slate-600 text-sm mt-1 max-w-xl">
+              <p className="text-slate-600 text-sm mt-0.5 max-w-xl">
                 From site feasibility inspections to professional installation, electronics synchronization, and Annual Maintenance Contracts.
               </p>
             </div>
@@ -402,13 +402,13 @@ export default function Home() {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {SERVICES_DATA.map((service, idx) => (
             <AnimatedSection key={service.id} animation="fade-up" delay={idx * 100} duration={600}>
-              <div className="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 flex flex-col justify-between space-y-4 h-full">
-                <div className="space-y-3">
-                  <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center transform group-hover:scale-110 transition-transform">
-                    <Wrench className="w-6 h-6" />
+              <div className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 flex flex-col justify-between space-y-3.5 h-full">
+                <div className="space-y-2.5">
+                  <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                    <Wrench className="w-5 h-5" />
                   </div>
                   <h3 className="font-bold text-base text-[#081C3B]">
                     {service.title}
@@ -434,10 +434,10 @@ export default function Home() {
       </section>
 
       {/* 4. WATER SOFTENER - APPLICATIONS & USES - id="solutions" */}
-      <section id="solutions" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section id="solutions" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3.5 py-1 rounded-full border border-sky-100">
+          <div className="text-center max-w-3xl mx-auto space-y-1.5">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
               Applications & Uses
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#081C3B]">
@@ -450,21 +450,21 @@ export default function Home() {
         </AnimatedSection>
 
         {/* 3 Columns: Residential, Commercial, Everyday */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
           
           {/* Residential */}
           <AnimatedSection animation="fade-up" delay={100} duration={700}>
-            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-4 h-full flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-12 h-12 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md">
-                  <HomeIcon className="w-6 h-6" />
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
+              <div className="space-y-2.5">
+                <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md">
+                  <HomeIcon className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-[#081C3B]">
                   {PRODUCT_HIGHLIGHTS.applications.residential.title}
                 </h3>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                   {PRODUCT_HIGHLIGHTS.applications.residential.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5">
+                    <li key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -476,17 +476,17 @@ export default function Home() {
 
           {/* Commercial */}
           <AnimatedSection animation="fade-up" delay={200} duration={700}>
-            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-4 h-full flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
-                  <Building2 className="w-6 h-6" />
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
+              <div className="space-y-2.5">
+                <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                  <Building2 className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-[#081C3B]">
                   {PRODUCT_HIGHLIGHTS.applications.commercial.title}
                 </h3>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                   {PRODUCT_HIGHLIGHTS.applications.commercial.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5">
+                    <li key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -498,15 +498,15 @@ export default function Home() {
 
           {/* Everyday Applications */}
           <AnimatedSection animation="fade-up" delay={300} duration={700}>
-            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-4 h-full flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md">
-                  <Droplets className="w-6 h-6" />
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
+              <div className="space-y-2.5">
+                <div className="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md">
+                  <Droplets className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-[#081C3B]">
                   {PRODUCT_HIGHLIGHTS.applications.everyday.title}
                 </h3>
-                <div className="space-y-2 text-xs sm:text-sm text-slate-700">
+                <div className="space-y-1.5 text-xs sm:text-sm text-slate-700">
                   {PRODUCT_HIGHLIGHTS.applications.everyday.items.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
@@ -525,23 +525,23 @@ export default function Home() {
 
         {/* 4. KEY BENEFITS ROW */}
         <AnimatedSection animation="fade-up" delay={150} duration={800}>
-          <div className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
               <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
                 {PRODUCT_HIGHLIGHTS.applications.keyBenefits.title}
               </h3>
-              <span className="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-1 rounded-full w-fit">
+              <span className="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-0.5 rounded-full w-fit">
                 Resin-Free | Salt-Free | Chemical-Free
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-0.5">
               {PRODUCT_HIGHLIGHTS.applications.keyBenefits.items.map((benefit, idx) => (
                 <div
                   key={idx}
-                  className="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800 hover:border-emerald-300 transition-colors"
+                  className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-xs flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800 hover:border-emerald-300 transition-colors"
                 >
-                  <div className="w-6 h-6 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 font-bold text-xs">
+                  <div className="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 font-bold text-xs">
                     ✓
                   </div>
                   <span>{benefit}</span>
@@ -553,8 +553,8 @@ export default function Home() {
 
         {/* WARRANTY & TDS BAR */}
         <AnimatedSection animation="zoom" delay={200} duration={800}>
-          <div className="bg-gradient-to-r from-[#081C3B] via-slate-900 to-[#081C3B] text-white p-6 sm:p-8 rounded-2xl shadow-xl grid grid-cols-1 md:grid-cols-3 gap-6 items-center border border-slate-800">
-            <div className="space-y-1">
+          <div className="bg-gradient-to-r from-[#081C3B] via-slate-900 to-[#081C3B] text-white p-5 sm:p-6 rounded-2xl shadow-xl grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-center border border-slate-800">
+            <div className="space-y-0.5">
               <span className="text-emerald-400 font-bold text-xs uppercase tracking-wider block">
                 Warranty Assurance
               </span>
@@ -565,7 +565,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-y-1">
+            <div className="space-y-0.5">
               <span className="text-sky-400 font-bold text-xs uppercase tracking-wider block">
                 Water Quality Compatibility
               </span>
@@ -575,7 +575,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-y-1">
+            <div className="space-y-0.5">
               <span className="text-amber-400 font-bold text-xs uppercase tracking-wider block">
                 Standards & Materials
               </span>
@@ -589,12 +589,12 @@ export default function Home() {
       </section>
 
       {/* 4. ABOUT BOUNTEN SUMMARY SECTION - id="about" */}
-      <section id="about" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="about" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200/80 hover-lift transition-all">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/80 hover-lift transition-all">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               
-              <div className="lg:col-span-8 space-y-4">
+              <div className="lg:col-span-8 space-y-3.5">
                 <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600">
                   About Bounten Global
                 </span>
@@ -605,7 +605,7 @@ export default function Home() {
                   Headquartered in Banjara Hills, Hyderabad, <strong>BOUNTEN</strong> (KCS Pride Products LLP) was founded to end the cycle of salt dependency and groundwater pollution caused by outdated water softeners. Our advanced Zoftner systems treat hard water at a molecular level, preventing limescale encrustation while preserving vital healthy minerals like calcium and magnesium.
                 </p>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-slate-700 font-semibold">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-slate-700 font-semibold">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                     <span>Food-Grade SS 304 Reactor Materials</span>
@@ -624,7 +624,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="pt-2">
+                <div className="pt-1">
                   <Link
                     to="/about"
                     className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 group"
@@ -635,18 +635,18 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="lg:col-span-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 space-y-4 text-center">
-                <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mx-auto">
-                  <ShieldCheck className="w-7 h-7" />
+              <div className="lg:col-span-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 space-y-3 text-center">
+                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mx-auto">
+                  <ShieldCheck className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-[#081C3B]">Our Quality Commitment</h3>
+                <h3 className="text-base font-bold text-[#081C3B]">Our Quality Commitment</h3>
                 <p className="text-xs text-slate-500 leading-relaxed font-normal">
                   Every Bounten unit undergoes strict 10-bar hydraulic pressure validation, electrode calibration, and electrical safety testing before dispatch.
                 </p>
-                <div className="pt-2">
+                <div className="pt-1">
                   <button
                     onClick={openGeneralEnquiry}
-                    className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 px-4 rounded-xl text-xs font-bold transition-all shadow-xs"
+                    className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2 px-3.5 rounded-xl text-xs font-bold transition-all shadow-xs"
                   >
                     <WhatsAppIcon className="w-4 h-4 fill-white" />
                     <span>Consult an Expert</span>
@@ -660,9 +660,9 @@ export default function Home() {
       </section>
 
       {/* 6. GALLERY PREVIEW - id="gallery" */}
-      <section id="gallery" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="gallery" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
               <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
                 Field Installations
@@ -670,7 +670,7 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
                 Real Installations Across India
               </h2>
-              <p className="text-slate-600 text-sm mt-1 max-w-xl">
+              <p className="text-slate-600 text-sm mt-0.5 max-w-xl">
                 Take a look at Bounten water softeners installed in residential apartments, luxury villas, gated communities, and commercial spaces.
               </p>
             </div>
@@ -685,7 +685,7 @@ export default function Home() {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {galleryPreview.map((item, idx) => (
             <AnimatedSection key={item.id} animation="zoom" delay={idx * 80} duration={600}>
               <div className="group relative aspect-square rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xs hover:shadow-lg hover-lift transition-all duration-400">

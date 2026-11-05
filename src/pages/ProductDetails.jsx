@@ -65,8 +65,8 @@ export default function ProductDetails() {
   const formattedOriginalPrice = product.originalPrice ? formatINR(product.originalPrice) : null;
 
   return (
-    <div className="bg-slate-50/50 min-h-screen py-8 sm:py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div className="bg-slate-50/50 min-h-screen py-6 sm:py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
 
         {/* Breadcrumb Navigation */}
         <nav className="flex items-center space-x-2 text-xs sm:text-sm text-slate-500 flex-wrap">

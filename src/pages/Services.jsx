@@ -19,7 +19,7 @@ import { COMPANY_CONFIG } from '../data/config';
 
 export default function Services() {
   return (
-    <div className="bg-slate-50/50 min-h-screen py-8 sm:py-16 space-y-16">
+    <div className="bg-slate-50/50 min-h-screen py-6 sm:py-10 space-y-8 sm:space-y-10">
       
       {/* 1. Header Hero */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

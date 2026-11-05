@@ -141,8 +141,8 @@ export default function Products() {
   }, [totalPages, currentPage]);
 
   return (
-    <div className="bg-slate-50/50 min-h-screen py-8 sm:py-12 space-y-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div className="bg-slate-50/50 min-h-screen py-5 sm:py-8 space-y-6 sm:space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         
         {/* HERO BANNER: Suggested Catalogue Headline & Trust Badges */}
         <AnimatedSection animation="fade-down" duration={700}>
