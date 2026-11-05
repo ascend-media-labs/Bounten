@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="100%" height="100%" fill="none">
+  <!-- Symbol: Interlocking / Overlapping Ovals -->
+  <g transform="translate(10, 5)">
+    <!-- Blue Oval (Tilted Left) -->
+    <ellipse cx="28" cy="30" rx="22" ry="12" transform="rotate(-32 28 30)" stroke="#0080D8" stroke-width="4.5" fill="none" opacity="0.95" />
+    
+    <!-- Orange / Red Oval (Tilted Right) -->
+    <ellipse cx="36" cy="30" rx="22" ry="12" transform="rotate(32 36 30)" stroke="#FF5722" stroke-width="4.5" fill="none" opacity="0.95" />
+    
+    <!-- Overlap Accent / Water Sparkle Glow -->
+    <circle cx="32" cy="30" r="3.2" fill="#0080D8" opacity="0.8" />
+  </g>
+
+  <!-- Typography: BOUNTEN in Dark Navy Blue -->
+  <g transform="translate(78, 48)">
+    <text font-family="'Plus Jakarta Sans', 'Outfit', 'Montserrat', Arial, sans-serif" font-size="34" font-weight="900" fill="#081C3B" letter-spacing="0.08em">
+      BOUNTEN
+    </text>
+  </g>
+</svg>
