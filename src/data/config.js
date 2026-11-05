@@ -61,8 +61,8 @@ export const COMPANY_CONFIG = {
   },
 
   // Downloads
-  brochureUrl: "/Bounten-Broucher.pdf",
-  flyerUrl: "/Bounten-Flyer.pdf",
+  brochureUrl: "/bounten-brochure.pdf",
+  flyerUrl: "/bounten-flyer.pdf",
 
   // Key stats
   stats: [
