@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Zap, Check, CheckCircle2 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import { formatINR, openProductEnquiry } from '../utils/whatsapp';
 
@@ -9,22 +9,29 @@ export default function ProductCard({ product }) {
   const formattedOriginalPrice = product.originalPrice ? formatINR(product.originalPrice) : null;
 
   return (
-    <div className="group bg-white rounded-2xl border border-slate-200/90 hover:border-sky-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+    <div className="group bg-white rounded-2xl border border-slate-200/90 hover:border-sky-300 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
       {/* Product Image Section */}
       <div className="relative aspect-[4/3] bg-gradient-to-b from-slate-50 to-slate-100 overflow-hidden flex items-center justify-center p-4">
         {/* Category Pill */}
         <div className="absolute top-3 left-3 z-10">
-          <span className="inline-flex items-center gap-1 bg-white/95 backdrop-blur-md text-[#081C3B] font-bold text-xs px-2.5 py-1 rounded-md shadow-xs border border-slate-200/60">
-            <Zap className="w-3 h-3 text-sky-500 fill-sky-500" />
+          <span className="inline-flex items-center gap-1 bg-[#081C3B]/90 backdrop-blur-md text-white font-bold text-xs px-2.5 py-1 rounded-md shadow-xs">
+            <Zap className="w-3 h-3 text-sky-400 fill-sky-400" />
             {product.category}
           </span>
         </div>
 
-        {/* Salt-free badge */}
+        {/* Bag Filter Status Badge */}
         <div className="absolute top-3 right-3 z-10">
-          <span className="bg-emerald-600 text-white font-bold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs">
-            Salt-Free
-          </span>
+          {product.hasBagFilter ? (
+            <span className="bg-emerald-600 text-white font-bold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs flex items-center gap-1">
+              <Check className="w-3 h-3 stroke-[3]" />
+              <span>With Bag Filter</span>
+            </span>
+          ) : (
+            <span className="bg-slate-700/90 text-slate-100 font-bold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs">
+              Without Bag Filter
+            </span>
+          )}
         </div>
 
         <Link to={`/products/${product.id}`} className="w-full h-full flex items-center justify-center">
@@ -39,7 +46,7 @@ export default function ProductCard({ product }) {
 
       {/* Card Content Section */}
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           {/* Product Name */}
           <Link to={`/products/${product.id}`}>
             <h3 className="text-lg font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors line-clamp-1">
@@ -57,6 +64,19 @@ export default function ProductCard({ product }) {
                 {formattedOriginalPrice}
               </span>
             )}
+          </div>
+
+          {/* Key Product Highlights Badge Row */}
+          <div className="flex flex-wrap gap-1.5 pt-0.5">
+            <span className="inline-block bg-sky-50 text-sky-700 text-[10px] font-bold px-2 py-0.5 rounded-md border border-sky-100">
+              Resin-Free | Salt-Free
+            </span>
+            <span className="inline-block bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-md border border-emerald-100">
+              5-Yr Electrode
+            </span>
+            <span className="inline-block bg-amber-50 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-md border border-amber-100">
+              TDS ≤ 1,999 ppm
+            </span>
           </div>
 
           {/* Short Description */}
@@ -82,7 +102,7 @@ export default function ProductCard({ product }) {
             to={`/products/${product.id}`}
             className="w-full flex items-center justify-center gap-1.5 bg-slate-100 hover:bg-slate-200/80 text-slate-700 py-2 px-3 rounded-xl font-semibold text-xs transition-colors"
           >
-            <span>View Details</span>
+            <span>View Details & Specs</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -90,4 +110,3 @@ export default function ProductCard({ product }) {
     </div>
   );
 }
-
