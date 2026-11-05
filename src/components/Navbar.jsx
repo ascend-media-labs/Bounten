@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, FileDown, PhoneCall } from 'lucide-react';
 import BountenLogo from './BountenLogo';
 import WhatsAppIcon from './WhatsAppIcon';
@@ -10,7 +10,11 @@ import { COMPANY_CONFIG } from '../data/config';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const isHomePage = location.pathname === '/';
 
   // Sticky navbar shadow on scroll
   useEffect(() => {
@@ -20,6 +24,80 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Track active section on scroll when on home page
+  useEffect(() => {
+    if (!isHomePage) {
+      // If on another page, set active section based on current path
+      const currentNav = NAV_LINKS.find(
+        (link) => !link.isDownload && link.path === location.pathname
+      );
+      if (currentNav && currentNav.sectionId) {
+        setActiveSection(currentNav.sectionId);
+      }
+      return;
+    }
+
+    const sections = ['home', 'products', 'services', 'solutions', 'about', 'gallery'];
+
+    const handleScrollSpy = () => {
+      // Top of page
+      if (window.scrollY < 100) {
+        setActiveSection('home');
+        return;
+      }
+
+      // Bottom of page
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60) {
+        setActiveSection(sections[sections.length - 1]);
+        return;
+      }
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const secId = sections[i];
+        const el = document.getElementById(secId);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 200) {
+            setActiveSection(secId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScrollSpy, { passive: true });
+    handleScrollSpy(); // initialize on load
+    return () => window.removeEventListener('scroll', handleScrollSpy);
+  }, [isHomePage, location.pathname]);
+
+  // Handle clicking on nav items (smooth scroll on home, navigate otherwise)
+  const handleNavClick = (e, link) => {
+    if (link.isDownload) return; // native download
+
+    if (isHomePage) {
+      e.preventDefault();
+      const secId = link.sectionId || 'home';
+      const el = document.getElementById(secId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        setActiveSection(secId);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setActiveSection('home');
+      }
+    } else {
+      // If on another page and clicking Home or section anchor
+      if (link.sectionId) {
+        e.preventDefault();
+        navigate(`/#${link.sectionId}`);
+      } else {
+        // regular navigation
+        navigate(link.path);
+      }
+    }
+    setIsOpen(false);
+  };
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -41,20 +119,20 @@ export default function Navbar() {
       <div className="bg-[#081C3B] text-slate-300 text-xs py-2 px-4 border-b border-slate-800 transition-colors">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
-            <span className="flex items-center gap-1.5 text-sky-400 font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+            <span className="flex items-center gap-1.5 text-sky-400 font-medium whitespace-nowrap">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse flex-shrink-0"></span>
               India's Leading Salt-Free Water Softeners
             </span>
             <span className="hidden md:inline text-slate-500">|</span>
-            <span className="hidden md:inline">Call / WhatsApp: <strong className="text-white">{COMPANY_CONFIG.displayWhatsApp}</strong></span>
+            <span className="hidden md:inline whitespace-nowrap">Call / WhatsApp: <strong className="text-white">{COMPANY_CONFIG.displayWhatsApp}</strong></span>
           </div>
 
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex items-center gap-4 text-xs whitespace-nowrap">
             <button
               onClick={openGeneralEnquiry}
               className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium transition-colors btn-press"
             >
-              <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
+              <WhatsAppIcon className="w-3.5 h-3.5 fill-current flex-shrink-0" />
               <span>WhatsApp: {COMPANY_CONFIG.displayWhatsApp}</span>
             </button>
             <span className="hidden sm:inline text-slate-600">|</span>
@@ -65,21 +143,34 @@ export default function Navbar() {
 
       {/* Main Sticky Navbar */}
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-400 ${
+        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled 
             ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200/80 py-2.5' 
-            : 'bg-white/90 backdrop-blur-sm border-b border-slate-100 py-3.5'
+            : 'bg-white/95 backdrop-blur-sm border-b border-slate-100 py-3'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            {/* Logo on Left with smooth hover scale */}
-            <div className="flex-shrink-0 flex items-center transform hover:scale-105 transition-transform duration-300">
-              <BountenLogo className="h-10 sm:h-12 w-auto" />
+          <div className="flex items-center justify-between gap-2 lg:gap-4">
+            
+            {/* Logo on Left - strictly flex-shrink-0 */}
+            <div className="flex-shrink-0 flex items-center mr-1 sm:mr-3">
+              <Link
+                to="/"
+                onClick={(e) => {
+                  if (isHomePage) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    setActiveSection('home');
+                  }
+                }}
+                className="transform hover:scale-105 transition-transform duration-300 inline-block"
+              >
+                <BountenLogo className="h-8 sm:h-9 xl:h-10 w-auto flex-shrink-0" />
+              </Link>
             </div>
 
-            {/* Desktop Navigation Links on Right */}
-            <nav className="hidden xl:flex items-center space-x-1 lg:space-x-1.5">
+            {/* Desktop Navigation Links - STRICTLY SINGLE LINE WITH whitespace-nowrap */}
+            <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5 2xl:space-x-2 flex-nowrap whitespace-nowrap flex-shrink-0">
               {NAV_LINKS.map((link) => {
                 if (link.isDownload) {
                   return (
@@ -88,55 +179,55 @@ export default function Navbar() {
                       href={link.path}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-xl hover:bg-sky-50 transition-all duration-300 relative overflow-hidden"
+                      className="whitespace-nowrap flex-shrink-0 group inline-flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-xl hover:bg-sky-50 transition-all duration-300 relative"
                       title={`Open official ${link.name}`}
                     >
-                      <FileDown className="w-4 h-4 text-sky-500 transform group-hover:translate-y-0.5 transition-transform duration-200" />
-                      <span>{link.name}</span>
+                      <FileDown className="w-4 h-4 text-sky-500 flex-shrink-0 transform group-hover:translate-y-0.5 transition-transform duration-200" />
+                      <span className="whitespace-nowrap">{link.name}</span>
                     </a>
                   );
                 }
 
+                // Check active state: either based on scrollspy (on home) or pathname (on subpage)
+                const isActive = isHomePage
+                  ? activeSection === link.sectionId
+                  : location.pathname === link.path;
+
                 return (
-                  <NavLink
+                  <a
                     key={link.name}
-                    to={link.path}
-                    className={({ isActive }) =>
-                      `relative px-3.5 py-2 text-sm font-semibold rounded-xl transition-all duration-300 group ${
-                        isActive
-                          ? 'text-sky-600 bg-sky-50/80 font-bold shadow-xs'
-                          : 'text-slate-700 hover:text-sky-600 hover:bg-slate-50'
-                      }`
-                    }
+                    href={isHomePage ? `#${link.sectionId}` : link.path}
+                    onClick={(e) => handleNavClick(e, link)}
+                    className={`whitespace-nowrap flex-shrink-0 relative px-2.5 xl:px-3 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl transition-all duration-300 cursor-pointer group ${
+                      isActive
+                        ? 'text-sky-600 bg-sky-50/90 font-bold shadow-xs'
+                        : 'text-slate-700 hover:text-sky-600 hover:bg-slate-50'
+                    }`}
                   >
-                    {({ isActive }) => (
-                      <>
-                        <span className="relative z-10">{link.name}</span>
-                        {/* Animated expanding bottom underline on active/hover */}
-                        <span
-                          className={`absolute bottom-0 left-3 right-3 h-0.5 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full transition-transform duration-300 ${
-                            isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                          }`}
-                        />
-                      </>
-                    )}
-                  </NavLink>
+                    <span className="relative z-10 whitespace-nowrap">{link.name}</span>
+                    {/* Animated expanding indicator line */}
+                    <span
+                      className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-sky-600 rounded-full transition-transform duration-300 ${
+                        isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                      }`}
+                    />
+                  </a>
                 );
               })}
 
-              {/* WhatsApp Quick Icon Button with fluid bounce */}
+              {/* WhatsApp Quick Icon Button - strictly single line */}
               <button
                 onClick={openGeneralEnquiry}
-                className="btn-press ml-3 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-300"
+                className="btn-press ml-1.5 xl:ml-3 inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white px-3 xl:px-4 py-1.5 xl:py-2 rounded-xl text-xs xl:text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-300 whitespace-nowrap flex-shrink-0"
                 title="Enquire on WhatsApp"
               >
-                <WhatsAppIcon className="w-4 h-4 fill-white" />
-                <span>Enquire</span>
+                <WhatsAppIcon className="w-4 h-4 fill-white flex-shrink-0" />
+                <span className="whitespace-nowrap">Enquire</span>
               </button>
             </nav>
 
-            {/* Tablet & Compact Menu Actions (< 1280px) */}
-            <div className="flex items-center xl:hidden space-x-2">
+            {/* Tablet & Compact Menu Actions (< 1024px) */}
+            <div className="flex items-center lg:hidden space-x-2 flex-shrink-0">
               {/* Mobile WhatsApp Button */}
               <button
                 onClick={openGeneralEnquiry}
@@ -157,12 +248,13 @@ export default function Navbar() {
                 {isOpen ? <X className="w-6 h-6 text-sky-600" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
+
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer with Smooth Slide & Spring Feel */}
+        {/* Mobile Navigation Drawer with Smooth Slide & Single Line Items */}
         {isOpen && (
-          <div className="fixed inset-0 top-[108px] z-50 xl:hidden">
+          <div className="fixed inset-0 top-[108px] z-50 lg:hidden">
             {/* Backdrop Fade */}
             <div
               className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300"
@@ -181,32 +273,34 @@ export default function Navbar() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setIsOpen(false)}
-                        className="flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold text-sky-700 bg-sky-50/70 hover:bg-sky-100 border border-sky-100 transition-colors my-1"
+                        className="flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold text-sky-700 bg-sky-50/70 hover:bg-sky-100 border border-sky-100 transition-colors my-1 whitespace-nowrap"
                       >
-                        <span className="flex items-center gap-2">
-                          <FileDown className="w-4 h-4 text-sky-600" />
-                          <span>{link.name}</span>
+                        <span className="flex items-center gap-2 whitespace-nowrap">
+                          <FileDown className="w-4 h-4 text-sky-600 flex-shrink-0" />
+                          <span className="whitespace-nowrap">{link.name}</span>
                         </span>
                         <span className="text-xs bg-white text-sky-800 px-2 py-0.5 rounded-full font-bold">PDF</span>
                       </a>
                     );
                   }
 
+                  const isActive = isHomePage
+                    ? activeSection === link.sectionId
+                    : location.pathname === link.path;
+
                   return (
-                    <NavLink
+                    <a
                       key={link.name}
-                      to={link.path}
-                      onClick={() => setIsOpen(false)}
-                      className={({ isActive }) =>
-                        `flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-                          isActive
-                            ? 'text-sky-600 bg-sky-50 font-bold border-l-4 border-sky-600'
-                            : 'text-slate-700 hover:bg-slate-50 hover:text-sky-600'
-                        }`
-                      }
+                      href={isHomePage ? `#${link.sectionId}` : link.path}
+                      onClick={(e) => handleNavClick(e, link)}
+                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${
+                        isActive
+                          ? 'text-sky-600 bg-sky-50 font-bold border-l-4 border-sky-600'
+                          : 'text-slate-700 hover:bg-slate-50 hover:text-sky-600'
+                      }`}
                     >
-                      <span>{link.name}</span>
-                    </NavLink>
+                      <span className="whitespace-nowrap">{link.name}</span>
+                    </a>
                   );
                 })}
               </nav>
@@ -218,9 +312,9 @@ export default function Navbar() {
                     openGeneralEnquiry();
                     setIsOpen(false);
                   }}
-                  className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md transition-all"
+                  className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap"
                 >
-                  <WhatsAppIcon className="w-5 h-5 fill-white" />
+                  <WhatsAppIcon className="w-5 h-5 fill-white flex-shrink-0" />
                   <span>Enquire on WhatsApp</span>
                 </button>
               </div>

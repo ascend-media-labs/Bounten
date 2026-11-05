@@ -1,10 +1,10 @@
 export const NAV_LINKS = [
-  { name: "Home", path: "/" },
-  { name: "Products", path: "/products" },
-  { name: "Services", path: "/services" },
-  { name: "Solutions", path: "/solutions" },
-  { name: "About Us", path: "/about" },
-  { name: "Gallery", path: "/gallery" },
+  { name: "Home", path: "/", sectionId: "home" },
+  { name: "Products", path: "/products", sectionId: "products" },
+  { name: "Services", path: "/services", sectionId: "services" },
+  { name: "Solutions", path: "/solutions", sectionId: "solutions" },
+  { name: "About Us", path: "/about", sectionId: "about" },
+  { name: "Gallery", path: "/gallery", sectionId: "gallery" },
   { 
     name: "Download Brochure", 
     path: "/bounten-brochure.pdf",
@@ -43,4 +43,3 @@ export const FOOTER_LINKS = {
     { name: "Hospitality Solutions", path: "/solutions#hospitality" }
   ]
 };
-

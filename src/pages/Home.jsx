@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import {
   ShieldCheck,
   Zap,
@@ -25,6 +25,7 @@ import { PRODUCTS_DATA, PRODUCT_HIGHLIGHTS } from '../data/products';
 import { SOLUTIONS_DATA } from '../data/solutions';
 import { SERVICES_DATA } from '../data/services';
 import { GALLERY_ITEMS } from '../data/gallery';
+import { ABOUT_DATA } from '../data/about';
 import { COMPANY_CONFIG } from '../data/config';
 import ProductCard from '../components/ProductCard';
 import AnimatedSection from '../components/AnimatedSection';
@@ -32,6 +33,21 @@ import WhatsAppIcon from '../components/WhatsAppIcon';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 
 export default function Home() {
+  const location = useLocation();
+
+  // Scroll to anchor on load or hash change
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      }
+    }
+  }, [location.hash]);
+
   // Top featured products (show 2 from Zoftner Pro, 2 from Zoftner Quick Fix)
   const proFeatured = PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Pro').slice(0, 2);
   const quickFixFeatured = PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Quick Fix').slice(0, 2);
@@ -52,8 +68,8 @@ export default function Home() {
   return (
     <div className="space-y-16 sm:space-y-24 pb-16 overflow-hidden">
       
-      {/* 1. HERO SECTION WITH AMBIENT WATER GLOW */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/50 pt-8 sm:pt-16 pb-12 sm:pb-24 border-b border-slate-100">
+      {/* 1. HERO SECTION WITH AMBIENT WATER GLOW - id="home" */}
+      <section id="home" className="scroll-mt-28 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/50 pt-8 sm:pt-16 pb-12 sm:pb-24 border-b border-slate-100">
         {/* Soft Ambient Floating Water Glow Rings */}
         <div className="absolute top-0 right-0 -mr-28 -mt-28 w-[450px] h-[450px] rounded-full bg-sky-200/40 blur-3xl pointer-events-none animate-ambient-glow" />
         <div className="absolute bottom-0 left-0 -ml-28 -mb-28 w-[400px] h-[400px] rounded-full bg-blue-100/50 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '2.5s' }} />
@@ -95,13 +111,13 @@ export default function Home() {
               {/* Two CTA Buttons */}
               <AnimatedSection animation="fade-right" delay={300} duration={800}>
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                  <Link
-                    to="/products"
+                  <a
+                    href="#products"
                     className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-7 py-3.5 rounded-xl font-bold text-base shadow-md hover:shadow-xl transition-all"
                   >
                     <span>Explore Products</span>
                     <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  </a>
 
                   <button
                     onClick={openGeneralEnquiry}
@@ -181,13 +197,13 @@ export default function Home() {
                   </div>
 
                   <div className="pt-1">
-                    <Link
-                      to="/products"
+                    <a
+                      href="#products"
                       className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white py-3 rounded-xl font-bold text-xs transition-colors shadow-sm"
                     >
                       <span>Explore All Models ({PRODUCTS_DATA.length})</span>
                       <ChevronRight className="w-4 h-4" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </AnimatedSection>
@@ -197,12 +213,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. TWO CATEGORIES SHOWCASE SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      {/* 2. TWO CATEGORIES SHOWCASE & FEATURED PRODUCTS - id="products" */}
+      <section id="products" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        {/* Categories Header */}
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3.5 py-1 rounded-full border border-sky-100">
-              Product Categories
+              Product Series
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
               Two Distinct Series. Tailored to Your Water Setup.
@@ -213,6 +231,7 @@ export default function Home() {
           </div>
         </AnimatedSection>
 
+        {/* Categories Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Category 1 Card: Zoftner Pro */}
@@ -321,21 +340,19 @@ export default function Home() {
           </AnimatedSection>
 
         </div>
-      </section>
 
-      {/* 3. FEATURED PRODUCTS (4 CARDS) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <AnimatedSection animation="fade-up" duration={700}>
+        {/* Featured Models Grid */}
+        <div className="space-y-8 pt-4">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-                Our Products
+                Top Picks
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
+              <h3 className="text-2xl font-extrabold text-[#081C3B]">
                 Featured Water Softening Systems
-              </h2>
+              </h3>
               <p className="text-slate-600 text-sm mt-1 max-w-xl">
-                Engineered for residential apartments, villas, and commercial properties. Direct WhatsApp enquiry without checkout friction.
+                Direct WhatsApp enquiry with pre-filled model specifications and immediate assistance.
               </p>
             </div>
 
@@ -343,28 +360,85 @@ export default function Home() {
               to="/products"
               className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group"
             >
-              <span>View All Products ({PRODUCTS_DATA.length})</span>
+              <span>View Full Catalogue ({PRODUCTS_DATA.length})</span>
+              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredProducts.map((product, idx) => (
+              <AnimatedSection key={product.id} animation="fade-up" delay={idx * 100} duration={600}>
+                <ProductCard product={product} />
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+
+      </section>
+
+      {/* 3. SERVICES OVERVIEW - id="services" */}
+      <section id="services" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <AnimatedSection animation="fade-up" duration={700}>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+                Reliable Technical Support
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
+                Comprehensive Services & AMC
+              </h2>
+              <p className="text-slate-600 text-sm mt-1 max-w-xl">
+                From site feasibility inspections to professional installation, electronics synchronization, and Annual Maintenance Contracts.
+              </p>
+            </div>
+
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group"
+            >
+              <span>View All Services</span>
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </AnimatedSection>
 
-        {/* 4 Cards Grid Staggered */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredProducts.map((product, idx) => (
-            <AnimatedSection key={product.id} animation="fade-up" delay={idx * 100} duration={600}>
-              <ProductCard product={product} />
+          {SERVICES_DATA.map((service, idx) => (
+            <AnimatedSection key={service.id} animation="fade-up" delay={idx * 100} duration={600}>
+              <div className="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 flex flex-col justify-between space-y-4 h-full">
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                    <Wrench className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-bold text-base text-[#081C3B]">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                    {service.shortDescription}
+                  </p>
+                </div>
+
+                <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                  <span className="text-xs font-semibold text-emerald-600">Available PAN India</span>
+                  <Link
+                    to={`/services#${service.id}`}
+                    className="text-xs font-bold text-sky-600 hover:text-sky-800"
+                  >
+                    Details →
+                  </Link>
+                </div>
+              </div>
             </AnimatedSection>
           ))}
         </div>
       </section>
 
-      {/* 4. WATER SOFTENER - APPLICATIONS & USES (USER REQUESTED SECTION) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      {/* 4. WATER SOFTENER - APPLICATIONS & USES - id="solutions" */}
+      <section id="solutions" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3.5 py-1 rounded-full border border-sky-100">
-              Water Softener
+              Applications & Uses
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#081C3B]">
               {PRODUCT_HIGHLIGHTS.applications.title}
@@ -375,7 +449,7 @@ export default function Home() {
           </div>
         </AnimatedSection>
 
-        {/* 3 Columns: Residential, Commercial, Everyday with Staggered Fade Up */}
+        {/* 3 Columns: Residential, Commercial, Everyday */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           {/* Residential */}
@@ -514,135 +588,79 @@ export default function Home() {
         </AnimatedSection>
       </section>
 
-      {/* 5. SOLUTIONS OVERVIEW (SECTOR CARDS) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      {/* 4. ABOUT BOUNTEN SUMMARY SECTION - id="about" */}
+      <section id="about" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-              Tailored Applications
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
-              Water Solutions for Every Sector
-            </h2>
-            <p className="text-slate-600 text-sm">
-              Whether for your home overhead tank, commercial cooling loops, agricultural drip lines, or hotel facilities, Bounten delivers customized flow capacities.
-            </p>
-          </div>
-        </AnimatedSection>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SOLUTIONS_DATA.map((solution, idx) => {
-            const Icon = solutionIcons[solution.id] || Droplets;
-            return (
-              <AnimatedSection key={solution.id} animation="fade-up" delay={idx * 100} duration={600}>
-                <div className="group bg-white rounded-2xl border border-slate-200/90 hover:border-sky-300 shadow-sm hover:shadow-2xl hover-lift transition-all duration-400 flex flex-col overflow-hidden h-full">
-                  {/* Solution Image with Zoom */}
-                  <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
-                    <img
-                      src={solution.image}
-                      alt={solution.title}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent" />
-                    
-                    <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
-                      <span className="w-8 h-8 rounded-lg bg-sky-500/90 backdrop-blur-md flex items-center justify-center text-white shadow-xs">
-                        <Icon className="w-4 h-4" />
-                      </span>
-                      <h3 className="font-bold text-base text-white">
-                        {solution.title}
-                      </h3>
-                    </div>
+          <div className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200/80 hover-lift transition-all">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div className="lg:col-span-8 space-y-4">
+                <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600">
+                  About Bounten Global
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
+                  Pioneering Non-Chemical Hard Water Treatment in India
+                </h2>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                  Headquartered in Banjara Hills, Hyderabad, <strong>BOUNTEN</strong> (KCS Pride Products LLP) was founded to end the cycle of salt dependency and groundwater pollution caused by outdated water softeners. Our advanced Zoftner systems treat hard water at a molecular level, preventing limescale encrustation while preserving vital healthy minerals like calcium and magnesium.
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-slate-700 font-semibold">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>Food-Grade SS 304 Reactor Materials</span>
                   </div>
-
-                  {/* Content */}
-                  <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                    <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                      {solution.description}
-                    </p>
-
-                    <div className="space-y-3 pt-2">
-                      <div className="text-xs text-slate-500">
-                        <span className="font-semibold text-slate-700">Suitable For: </span>
-                        {solution.applications.slice(0, 2).join(", ")}
-                      </div>
-
-                      <Link
-                        to={`/solutions#${solution.id}`}
-                        className="btn-press w-full inline-flex items-center justify-center gap-1.5 bg-sky-50 hover:bg-sky-100 text-sky-700 py-2.5 px-3 rounded-xl font-bold text-xs transition-colors"
-                      >
-                        <span>Explore More</span>
-                        <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>0.06-Micron Iridium Mesh Technology</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>100% Retained Healthy Minerals</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>Certified PAN India Technical Network</span>
                   </div>
                 </div>
-              </AnimatedSection>
-            );
-          })}
-        </div>
-      </section>
 
-      {/* 6. SERVICES OVERVIEW */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
-              <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-                Reliable Technical Support
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
-                Comprehensive Services & AMC
-              </h2>
-              <p className="text-slate-600 text-sm mt-1 max-w-xl">
-                From site feasibility inspections to professional installation, electronics synchronization, and Annual Maintenance Contracts.
-              </p>
-            </div>
-
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group"
-            >
-              <span>View All Services</span>
-              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </AnimatedSection>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SERVICES_DATA.map((service, idx) => (
-            <AnimatedSection key={service.id} animation="fade-up" delay={idx * 100} duration={600}>
-              <div className="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 flex flex-col justify-between space-y-4 h-full">
-                <div className="space-y-3">
-                  <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center transform group-hover:scale-110 transition-transform">
-                    <Wrench className="w-6 h-6" />
-                  </div>
-                  <h3 className="font-bold text-base text-[#081C3B]">
-                    {service.title}
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                    {service.shortDescription}
-                  </p>
-                </div>
-
-                <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-xs font-semibold text-emerald-600">Available PAN India</span>
+                <div className="pt-2">
                   <Link
-                    to={`/services#${service.id}`}
-                    className="text-xs font-bold text-sky-600 hover:text-sky-800"
+                    to="/about"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 group"
                   >
-                    Details →
+                    <span>Learn more about our company & technology</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
-            </AnimatedSection>
-          ))}
-        </div>
+
+              <div className="lg:col-span-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 space-y-4 text-center">
+                <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mx-auto">
+                  <ShieldCheck className="w-7 h-7" />
+                </div>
+                <h3 className="text-lg font-bold text-[#081C3B]">Our Quality Commitment</h3>
+                <p className="text-xs text-slate-500 leading-relaxed font-normal">
+                  Every Bounten unit undergoes strict 10-bar hydraulic pressure validation, electrode calibration, and electrical safety testing before dispatch.
+                </p>
+                <div className="pt-2">
+                  <button
+                    onClick={openGeneralEnquiry}
+                    className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 px-4 rounded-xl text-xs font-bold transition-all shadow-xs"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 fill-white" />
+                    <span>Consult an Expert</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </AnimatedSection>
       </section>
 
-      {/* 7. GALLERY PREVIEW */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      {/* 6. GALLERY PREVIEW - id="gallery" */}
+      <section id="gallery" className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
