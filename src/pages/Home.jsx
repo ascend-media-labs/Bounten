@@ -218,14 +218,14 @@ export default function Home() {
         
         {/* Categories Header */}
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="text-center max-w-2xl mx-auto space-y-1.5">
+          <div className="text-center max-w-4xl mx-auto space-y-1.5">
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
               Product Series
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
               Two Distinct Series. Tailored to Your Water Setup.
             </h2>
-            <p className="text-slate-600 text-sm">
+            <p className="text-slate-600 text-sm lg:whitespace-nowrap">
               Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
             </p>
           </div>
@@ -351,14 +351,14 @@ export default function Home() {
               <h3 className="text-2xl font-extrabold text-[#081C3B]">
                 Featured Water Softening Systems
               </h3>
-              <p className="text-slate-600 text-sm mt-0.5 max-w-xl">
+              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
                 Direct WhatsApp enquiry with pre-filled model specifications and immediate assistance.
               </p>
             </div>
 
             <Link
               to="/products"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group flex-shrink-0"
             >
               <span>View Full Catalogue ({PRODUCTS_DATA.length})</span>
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
@@ -387,14 +387,14 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
                 Comprehensive Services & AMC
               </h2>
-              <p className="text-slate-600 text-sm mt-0.5 max-w-xl">
+              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
                 From site feasibility inspections to professional installation, electronics synchronization, and Annual Maintenance Contracts.
               </p>
             </div>
 
             <Link
               to="/services"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group flex-shrink-0"
             >
               <span>View All Services</span>
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
@@ -436,14 +436,14 @@ export default function Home() {
       {/* 4. WATER SOFTENER - APPLICATIONS & USES - id="solutions" */}
       <section id="solutions" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="text-center max-w-3xl mx-auto space-y-1.5">
+          <div className="text-center max-w-4xl mx-auto space-y-1.5">
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
               Applications & Uses
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#081C3B]">
               {PRODUCT_HIGHLIGHTS.applications.title}
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base font-normal">
+            <p className="text-slate-600 text-sm sm:text-base font-normal lg:whitespace-nowrap">
               {PRODUCT_HIGHLIGHTS.applications.subtitle}
             </p>
           </div>
@@ -670,14 +670,14 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
                 Real Installations Across India
               </h2>
-              <p className="text-slate-600 text-sm mt-0.5 max-w-xl">
+              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
                 Take a look at Bounten water softeners installed in residential apartments, luxury villas, gated communities, and commercial spaces.
               </p>
             </div>
 
             <Link
               to="/gallery"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group flex-shrink-0"
             >
               <span>View Full Gallery</span>
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />

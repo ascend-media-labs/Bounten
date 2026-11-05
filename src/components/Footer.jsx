@@ -34,7 +34,7 @@ export default function Footer() {
               <h3 className="text-base sm:text-lg font-bold text-white">
                 Ready to protect your home and appliances from limescale?
               </h3>
-              <p className="text-xs text-slate-300 mt-0.5">
+              <p className="text-xs text-slate-300 mt-0.5 md:whitespace-nowrap">
                 Speak directly with a Bounten water treatment specialist for a free water TDS consultation.
               </p>
             </div>
