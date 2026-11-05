@@ -26,6 +26,21 @@
     font-family: var(--font-heading);
     letter-spacing: -0.025em;
   }
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+  }
+}
+
+/* Universal Text Justification for Website Content */
+p, 
+.text-justify,
+.prose p {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
 }
 
 /* Custom smooth scrollbar */
