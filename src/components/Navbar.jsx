@@ -35,15 +35,8 @@ export default function Navbar() {
     }
   }, [isOpen]);
 
-  const handleDownload = (url, fileName) => {
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', fileName);
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -92,15 +85,17 @@ export default function Navbar() {
               {NAV_LINKS.map((link) => {
                 if (link.isDownload) {
                   return (
-                    <button
+                    <a
                       key={link.name}
-                      onClick={() => handleDownload(link.path, link.fileName)}
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-lg hover:bg-sky-50 transition-all duration-200"
-                      title={`Download official ${link.name}`}
+                      title={`Open official ${link.name}`}
                     >
                       <FileDown className="w-4 h-4 text-sky-500" />
                       <span>{link.name}</span>
-                    </button>
+                    </a>
                   );
                 }
 
@@ -193,17 +188,17 @@ export default function Navbar() {
               {NAV_LINKS.map((link) => {
                 if (link.isDownload) {
                   return (
-                    <button
+                    <a
                       key={link.name}
-                      onClick={() => {
-                        handleDownload(link.path, link.fileName);
-                        setIsOpen(false);
-                      }}
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsOpen(false)}
                       className="w-full flex items-center gap-3 px-3.5 py-3 text-base font-semibold text-slate-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-colors text-left"
                     >
                       <FileDown className="w-5 h-5 text-sky-500" />
                       <span>{link.name}</span>
-                    </button>
+                    </a>
                   );
                 }
 

@@ -58,15 +58,8 @@ export default function ProductDetails() {
   const formattedPrice = formatINR(product.price);
   const formattedOriginalPrice = product.originalPrice ? formatINR(product.originalPrice) : null;
 
-  const handleDownload = (url, fileName) => {
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', fileName);
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
