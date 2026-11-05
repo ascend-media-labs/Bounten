@@ -157,11 +157,16 @@ export default function Products() {
                   <span>Resin-Free | Salt-Free | Chemical-Free</span>
                 </div>
                 
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.15]">
-                  {PRODUCT_HIGHLIGHTS.headline}
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-[1.15]">
+                  Bounten Water Softening Systems
                 </h1>
 
-                <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                {/* Side Heading / Catalogue Headline */}
+                <div className="text-sm sm:text-base font-bold text-sky-300">
+                  {PRODUCT_HIGHLIGHTS.headline}
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                   {PRODUCT_HIGHLIGHTS.technology}
                 </p>
               </div>
@@ -236,7 +241,7 @@ export default function Products() {
                     <Check className="w-3 h-3 stroke-[3]" />
                     <span>Category 1 • All models come with a bag filter</span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-black text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
                     Zoftner Pro
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -270,7 +275,7 @@ export default function Products() {
                     <Zap className="w-3 h-3 text-sky-600" />
                     <span>Category 2 • All models come without a bag filter</span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-black text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
                     Zoftner Quick Fix
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -610,7 +615,7 @@ export default function Products() {
               <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600 bg-sky-50 px-3.5 py-1 rounded-full border border-sky-100">
                 Applications & Uses
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#081C3B] tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                 {PRODUCT_HIGHLIGHTS.applications.title}
               </h2>
               <p className="text-slate-600 text-sm sm:text-base font-normal">

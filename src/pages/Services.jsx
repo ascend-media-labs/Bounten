@@ -63,7 +63,7 @@ export default function Services() {
             <span className="text-xs font-bold uppercase tracking-wider text-sky-600">
               Dedicated Customer Care
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
               Official Service Capabilities
             </h2>
             <p className="text-slate-600 text-sm">
@@ -126,7 +126,7 @@ export default function Services() {
               <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
                 The Bounten Guarantee
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+              <h2 className="text-xl sm:text-2xl font-bold text-white">
                 Why Sign an Annual Maintenance Contract?
               </h2>
             </div>

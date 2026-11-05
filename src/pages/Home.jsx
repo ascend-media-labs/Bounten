@@ -88,17 +88,22 @@ export default function Home() {
                 </div>
               </AnimatedSection>
 
-              {/* Headline */}
+              {/* Main Headline */}
               <AnimatedSection animation="fade-right" delay={100} duration={800}>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#081C3B] tracking-tight leading-[1.12]">
-                  One Smart Solution. <br className="hidden sm:inline" />
+                  Advanced Salt-Free <br className="hidden sm:inline" />
                   <span className="bg-gradient-to-r from-sky-600 via-sky-700 to-sky-900 bg-clip-text text-transparent">
-                    Multiple Applications.
+                    Water Softeners
                   </span>
                   <span className="block text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-700 mt-1.5">
-                    Better Water for Everyday Living.
+                    For Healthy, Scale-Free Living
                   </span>
                 </h1>
+
+                {/* Side Heading / Slogan */}
+                <div className="pt-2 text-base sm:text-lg font-bold text-sky-700">
+                  One Smart Solution. Multiple Applications. Better Water for Everyday Living.
+                </div>
               </AnimatedSection>
 
               {/* Supporting Technology Description */}
@@ -222,7 +227,7 @@ export default function Home() {
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
               Product Series
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
               Two Distinct Series. Tailored to Your Water Setup.
             </h2>
             <p className="text-slate-600 text-sm lg:whitespace-nowrap">
@@ -249,7 +254,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-black text-[#081C3B]">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
                     Zoftner Pro
                   </h3>
                   <p className="text-sm font-semibold text-emerald-700 mt-1">
@@ -301,7 +306,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-black text-[#081C3B]">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
                     Zoftner Quick Fix
                   </h3>
                   <p className="text-sm font-semibold text-slate-700 mt-1">
@@ -348,7 +353,7 @@ export default function Home() {
               <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
                 Top Picks
               </span>
-              <h3 className="text-2xl font-extrabold text-[#081C3B]">
+              <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
                 Featured Water Softening Systems
               </h3>
               <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
@@ -384,7 +389,7 @@ export default function Home() {
               <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
                 Reliable Technical Support
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                 Comprehensive Services & AMC
               </h2>
               <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
@@ -440,7 +445,7 @@ export default function Home() {
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
               Applications & Uses
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#081C3B]">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
               {PRODUCT_HIGHLIGHTS.applications.title}
             </h2>
             <p className="text-slate-600 text-sm sm:text-base font-normal lg:whitespace-nowrap">
@@ -598,7 +603,7 @@ export default function Home() {
                 <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600">
                   About Bounten Global
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                   Pioneering Non-Chemical Hard Water Treatment in India
                 </h2>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
@@ -667,7 +672,7 @@ export default function Home() {
               <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
                 Field Installations
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                 Real Installations Across India
               </h2>
               <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">

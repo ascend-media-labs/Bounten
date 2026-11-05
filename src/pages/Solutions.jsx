@@ -127,7 +127,7 @@ export default function Solutions() {
                         <Icon className="w-4 h-4 animate-pulse" />
                         <span>{solution.title}</span>
                       </div>
-                      <h2 className="text-2xl sm:text-3xl font-black text-[#081C3B]">
+                      <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                         {solution.subtitle}
                       </h2>
                     </div>

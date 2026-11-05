@@ -50,7 +50,7 @@ export default function AboutUs() {
               <span className="text-xs font-bold uppercase tracking-wider text-sky-600">
                 Our Story & Heritage
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B] mt-1">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B] mt-1">
                 Solving India's Hard Water Challenge Without Salt or Pollution
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mt-3">
@@ -143,7 +143,7 @@ export default function AboutUs() {
             <span className="text-xs font-bold uppercase tracking-wider text-sky-600">
               Why We Are Different
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081C3B]">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
               Core Pillars of Bounten Innovation
             </h2>
           </div>
