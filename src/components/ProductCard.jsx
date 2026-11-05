@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { formatINR, openProductEnquiry } from '../utils/whatsapp';
 
 export default function ProductCard({ product }) {
@@ -72,7 +73,7 @@ export default function ProductCard({ product }) {
             className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 px-3 rounded-xl font-bold text-sm shadow-xs hover:shadow-md transition-all active:scale-[0.98]"
             title={`Enquire on WhatsApp about ${product.name}`}
           >
-            <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+            <WhatsAppIcon className="w-4 h-4 fill-white" />
             <span>Enquire on WhatsApp</span>
           </button>
 

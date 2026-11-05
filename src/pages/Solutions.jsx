@@ -8,13 +8,13 @@ import {
   Waves,
   Utensils,
   CheckCircle2,
-  MessageCircle,
   ArrowRight,
   ShieldCheck,
   Zap,
   PhoneCall
 } from 'lucide-react';
 import { SOLUTIONS_DATA } from '../data/solutions';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { openSolutionEnquiry, openGeneralEnquiry } from '../utils/whatsapp';
 import { COMPANY_CONFIG } from '../data/config';
 
@@ -171,7 +171,7 @@ export default function Solutions() {
                       onClick={() => openSolutionEnquiry(solution.title)}
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-6 rounded-xl font-bold text-sm shadow-md transition-all active:scale-95"
                     >
-                      <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+                      <WhatsAppIcon className="w-4 h-4 fill-white" />
                       <span>Enquire Now on WhatsApp</span>
                     </button>
 
@@ -211,7 +211,7 @@ export default function Solutions() {
             onClick={() => openSolutionEnquiry("Custom Industrial Skid / High Flow")}
             className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-md active:scale-95 flex-shrink-0"
           >
-            <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+            <WhatsAppIcon className="w-4 h-4 fill-white" />
             <span>Consult Chief Engineer</span>
           </button>
         </div>

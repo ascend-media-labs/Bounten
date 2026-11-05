@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import { X } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 import { COMPANY_CONFIG } from '../data/config';
 
@@ -36,8 +37,8 @@ export default function WhatsAppButton() {
         {/* Subtle pulsing background glow ring */}
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping group-hover:opacity-0 transition-opacity"></span>
 
-        {/* WhatsApp Icon */}
-        <MessageCircle className="w-7 h-7 fill-white stroke-none relative z-10" />
+        {/* Real Official WhatsApp Icon */}
+        <WhatsAppIcon className="w-7 h-7 fill-white relative z-10" />
 
         {/* Online Status Dot */}
         <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-emerald-300 border-2 border-white rounded-full"></span>

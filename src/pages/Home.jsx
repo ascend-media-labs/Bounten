@@ -9,7 +9,6 @@ import {
   Clock,
   Sparkles,
   ArrowRight,
-  MessageCircle,
   FileDown,
   Building2,
   Home as HomeIcon,
@@ -26,6 +25,7 @@ import { SERVICES_DATA } from '../data/services';
 import { GALLERY_ITEMS } from '../data/gallery';
 import { COMPANY_CONFIG } from '../data/config';
 import ProductCard from '../components/ProductCard';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { openGeneralEnquiry, openWhatsApp } from '../utils/whatsapp';
 
 export default function Home() {
@@ -102,7 +102,7 @@ export default function Home() {
                   onClick={openGeneralEnquiry}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-7 py-3.5 rounded-xl font-bold text-base shadow-md hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:scale-95"
                 >
-                  <MessageCircle className="w-5 h-5 fill-white stroke-none" />
+                  <WhatsAppIcon className="w-5 h-5 fill-white" />
                   <span>Contact on WhatsApp</span>
                 </button>
               </div>
@@ -240,7 +240,7 @@ export default function Home() {
                   onClick={openGeneralEnquiry}
                   className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 px-4 rounded-xl text-xs font-bold transition-all shadow-xs"
                 >
-                  <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+                  <WhatsAppIcon className="w-4 h-4 fill-white" />
                   <span>Consult an Expert</span>
                 </button>
               </div>
@@ -608,7 +608,7 @@ export default function Home() {
                 onClick={openGeneralEnquiry}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all transform hover:-translate-y-0.5 active:scale-95"
               >
-                <MessageCircle className="w-5 h-5 fill-white stroke-none" />
+                <WhatsAppIcon className="w-5 h-5 fill-white" />
                 <span>Talk to Our Experts</span>
               </button>
             </div>

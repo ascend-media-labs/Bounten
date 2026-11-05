@@ -4,11 +4,11 @@ import {
   Maximize2,
   MapPin,
   Filter,
-  CheckCircle2,
-  MessageCircle
+  CheckCircle2
 } from 'lucide-react';
 import { GALLERY_ITEMS, GALLERY_CATEGORIES } from '../data/gallery';
 import GalleryLightbox from '../components/GalleryLightbox';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 
 export default function Gallery() {
@@ -155,7 +155,7 @@ export default function Gallery() {
             onClick={openGeneralEnquiry}
             className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-md active:scale-95 flex-shrink-0"
           >
-            <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+            <WhatsAppIcon className="w-4 h-4 fill-white" />
             <span>Send Plumbing Photo</span>
           </button>
         </div>

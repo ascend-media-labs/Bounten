@@ -4,7 +4,6 @@ import {
   MapPin,
   Phone,
   Mail,
-  MessageCircle,
   FileDown,
   ShieldCheck,
   CheckCircle2,
@@ -12,6 +11,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import BountenLogo from './BountenLogo';
+import WhatsAppIcon from './WhatsAppIcon';
 import { COMPANY_CONFIG } from '../data/config';
 import { openGeneralEnquiry, openWhatsApp } from '../utils/whatsapp';
 
@@ -51,7 +51,7 @@ export default function Footer() {
                 onClick={openGeneralEnquiry}
                 className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-3 rounded-xl font-bold text-sm shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95"
               >
-                <MessageCircle className="w-5 h-5 fill-white stroke-none" />
+                <WhatsAppIcon className="w-5 h-5 fill-white" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
@@ -96,7 +96,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-3 text-slate-200">
                 <span className="w-7 h-7 rounded-lg bg-emerald-950 flex items-center justify-center text-emerald-400">
-                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
                 </span>
                 <div>
                   <span className="block text-slate-400">WhatsApp Support:</span>

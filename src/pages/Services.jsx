@@ -6,13 +6,13 @@ import {
   Clock,
   Sparkles,
   PhoneCall,
-  MessageCircle,
   FileCheck,
   Zap,
   MapPin,
   ArrowRight
 } from 'lucide-react';
 import { SERVICES_DATA, SERVICE_BENEFITS } from '../data/services';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { openServiceEnquiry, openWhatsApp } from '../utils/whatsapp';
 import { COMPANY_CONFIG } from '../data/config';
 
@@ -46,7 +46,7 @@ export default function Services() {
               onClick={() => openServiceEnquiry("General Service Enquiry")}
               className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-md transition-all active:scale-95"
             >
-              <MessageCircle className="w-5 h-5 fill-white stroke-none" />
+              <WhatsAppIcon className="w-5 h-5 fill-white" />
               <span>WhatsApp Enquiry</span>
             </button>
           </div>
@@ -110,7 +110,7 @@ export default function Services() {
                   onClick={() => openServiceEnquiry(service.title)}
                   className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 px-3 rounded-xl font-bold text-xs transition-colors shadow-xs"
                 >
-                  <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+                  <WhatsAppIcon className="w-4 h-4 fill-white" />
                   <span>Enquire for {service.title}</span>
                 </button>
               </div>
@@ -188,7 +188,7 @@ export default function Services() {
             onClick={() => openServiceEnquiry("Direct Service Booking")}
             className="inline-flex items-center gap-2.5 bg-white text-emerald-900 hover:bg-emerald-50 px-8 py-4 rounded-2xl font-black text-sm shadow-xl transition-all transform hover:-translate-y-0.5 active:scale-95 flex-shrink-0"
           >
-            <MessageCircle className="w-5 h-5 fill-emerald-600 stroke-none" />
+            <WhatsAppIcon className="w-5 h-5 fill-emerald-600" />
             <span>Book a Service via WhatsApp</span>
           </button>
         </div>

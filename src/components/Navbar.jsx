@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, MessageCircle, FileDown, PhoneCall } from 'lucide-react';
+import { Menu, X, FileDown, PhoneCall } from 'lucide-react';
 import BountenLogo from './BountenLogo';
+import WhatsAppIcon from './WhatsAppIcon';
 import { NAV_LINKS } from '../data/navigation';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 import { COMPANY_CONFIG } from '../data/config';
@@ -64,7 +65,7 @@ export default function Navbar() {
               onClick={openGeneralEnquiry}
               className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
             >
-              <MessageCircle className="w-3.5 h-3.5 fill-current" />
+              <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
               <span>WhatsApp: {COMPANY_CONFIG.displayWhatsApp}</span>
             </button>
             <span className="hidden sm:inline text-slate-600">|</span>
@@ -133,7 +134,7 @@ export default function Navbar() {
                 className="ml-3 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-sm hover:shadow transition-all duration-200 active:scale-95"
                 title="Enquire on WhatsApp"
               >
-                <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+                <WhatsAppIcon className="w-4 h-4 fill-white" />
                 <span>Enquire</span>
               </button>
             </nav>
@@ -147,7 +148,7 @@ export default function Navbar() {
                 aria-label="WhatsApp Enquiry"
                 title="WhatsApp Enquiry"
               >
-                <MessageCircle className="w-6 h-6 fill-[#25D366] stroke-none" />
+                <WhatsAppIcon className="w-6 h-6 fill-[#25D366]" />
               </button>
 
               {/* Mobile Hamburger Toggle */}
@@ -234,7 +235,7 @@ export default function Navbar() {
                 }}
                 className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded-xl font-bold shadow-md transition-all active:scale-95"
               >
-                <MessageCircle className="w-5 h-5 fill-white stroke-none" />
+                <WhatsAppIcon className="w-5 h-5 fill-white" />
                 <span>Contact on WhatsApp</span>
               </button>
 

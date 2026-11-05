@@ -12,10 +12,10 @@ import {
   Target,
   Compass,
   ArrowRight,
-  MessageCircle,
   Building2
 } from 'lucide-react';
 import { ABOUT_DATA } from '../data/about';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 import { COMPANY_CONFIG } from '../data/config';
 
@@ -260,7 +260,7 @@ export default function AboutUs() {
               onClick={openGeneralEnquiry}
               className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-6 py-3 rounded-xl transition-all shadow-md active:scale-95"
             >
-              <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+              <WhatsAppIcon className="w-4 h-4 fill-white" />
               <span>Connect with Corporate Team</span>
             </button>
           </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import {
-  MessageCircle,
   ArrowLeft,
   ShieldCheck,
   Zap,
@@ -15,6 +14,7 @@ import {
 } from 'lucide-react';
 import { PRODUCTS_DATA } from '../data/products';
 import ProductCard from '../components/ProductCard';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { formatINR, openProductEnquiry } from '../utils/whatsapp';
 import { COMPANY_CONFIG } from '../data/config';
 
@@ -170,7 +170,7 @@ export default function ProductDetails() {
                 onClick={() => openProductEnquiry(product)}
                 className="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white py-4 px-6 rounded-2xl font-bold text-base shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:scale-95"
               >
-                <MessageCircle className="w-6 h-6 fill-white stroke-none" />
+                <WhatsAppIcon className="w-6 h-6 fill-white" />
                 <span>Enquire on WhatsApp</span>
               </button>
 
