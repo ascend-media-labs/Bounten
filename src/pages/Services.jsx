@@ -155,7 +155,7 @@ export default function Services() {
 
           <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-center sm:text-left text-xs text-slate-300">
-              Need immediate technical help? Call our Toll Free helpline: <strong className="text-white text-sm">{COMPANY_CONFIG.tollFree}</strong>
+              Need immediate technical help? Call or WhatsApp us: <strong className="text-white text-sm">{COMPANY_CONFIG.displayWhatsApp}</strong>
             </div>
 
             <button
@@ -197,3 +197,4 @@ export default function Services() {
     </div>
   );
 }
+

@@ -27,3 +27,4 @@ export default function BountenLogo({ className = "h-10 sm:h-12 w-auto", link = 
 
   return content;
 }
+

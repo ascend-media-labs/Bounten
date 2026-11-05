@@ -43,3 +43,4 @@ export const FOOTER_LINKS = {
     { name: "Hospitality Solutions", path: "/solutions#hospitality" }
   ]
 };
+

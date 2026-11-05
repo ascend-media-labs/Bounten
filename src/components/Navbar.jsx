@@ -56,7 +56,7 @@ export default function Navbar() {
               India's Leading Salt-Free Water Softeners
             </span>
             <span className="hidden md:inline text-slate-500">|</span>
-            <span className="hidden md:inline">Toll Free: <strong className="text-white">{COMPANY_CONFIG.tollFree}</strong></span>
+            <span className="hidden md:inline">Call / WhatsApp: <strong className="text-white">{COMPANY_CONFIG.displayWhatsApp}</strong></span>
           </div>
 
           <div className="flex items-center gap-4 text-xs">
@@ -239,7 +239,7 @@ export default function Navbar() {
               </button>
 
               <div className="text-center text-xs text-slate-500 pt-1">
-                Toll Free: <strong className="text-slate-800">{COMPANY_CONFIG.tollFree}</strong>
+                Call / WhatsApp: <strong className="text-slate-800">{COMPANY_CONFIG.displayWhatsApp}</strong>
               </div>
             </div>
           </div>
@@ -248,3 +248,4 @@ export default function Navbar() {
     </>
   );
 }
+

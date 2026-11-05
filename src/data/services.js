@@ -76,7 +76,7 @@ export const SERVICES_DATA = [
     shortDescription: "Authorized service points, distributor networks, and technician dispatch across all major Indian states.",
     description: "From our corporate headquarters in Hyderabad to our authorized distributor hubs in Tamil Nadu, Karnataka, Maharashtra, Gujarat, Delhi NCR, and beyond, Bounten maintains an expansive service footprint so you're always supported wherever you are.",
     features: [
-      "Dedicated Toll-Free helpline: 1800 889 1262",
+      "Direct Phone Support: +91 9542666644",
       "Instant WhatsApp ticketing and dispatch tracking",
       "Active distributor network across South, North, and West India",
       "Fast dispatch of parts and on-site technical support"
@@ -103,3 +103,4 @@ export const SERVICE_BENEFITS = [
     description: "Our technicians carry test reagents to demonstrate hardness and mineral conversion live before your eyes."
   }
 ];
+

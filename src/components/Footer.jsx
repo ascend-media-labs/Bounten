@@ -87,9 +87,9 @@ export default function Footer() {
                   <Phone className="w-4 h-4" />
                 </span>
                 <div>
-                  <span className="block text-slate-400">Toll Free Helpline:</span>
-                  <a href={`tel:${COMPANY_CONFIG.tollFree}`} className="font-bold hover:text-sky-400 text-sm">
-                    {COMPANY_CONFIG.tollFree}
+                  <span className="block text-slate-400">Phone Support:</span>
+                  <a href={`tel:${COMPANY_CONFIG.phone}`} className="font-bold hover:text-sky-400 text-sm">
+                    {COMPANY_CONFIG.phone}
                   </a>
                 </div>
               </div>
@@ -384,3 +384,4 @@ export default function Footer() {
     </footer>
   );
 }
+

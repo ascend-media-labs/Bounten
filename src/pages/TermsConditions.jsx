@@ -66,7 +66,7 @@ export default function TermsConditions() {
               <p>
                 <strong>KCS Pride Products LLP (BOUNTEN)</strong><br />
                 Head Office: {COMPANY_CONFIG.headOffice.fullAddress}<br />
-                Toll Free: {COMPANY_CONFIG.tollFree} | Phone: {COMPANY_CONFIG.phone}<br />
+                Phone / WhatsApp: {COMPANY_CONFIG.phone}<br />
                 Email: <a href={`mailto:${COMPANY_CONFIG.email}`} className="text-sky-600 hover:underline">{COMPANY_CONFIG.email}</a>
               </p>
             </section>
@@ -77,3 +77,4 @@ export default function TermsConditions() {
     </div>
   );
 }
+

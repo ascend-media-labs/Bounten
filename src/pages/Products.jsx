@@ -396,7 +396,7 @@ export default function Products() {
                 <span>Chat on WhatsApp</span>
               </button>
               <div className="text-center text-[11px] text-slate-400">
-                Toll Free: <strong className="text-white">{COMPANY_CONFIG.tollFree}</strong>
+                Call / WhatsApp: <strong className="text-white">{COMPANY_CONFIG.displayWhatsApp}</strong>
               </div>
             </div>
 
@@ -499,3 +499,4 @@ export default function Products() {
     </div>
   );
 }
+

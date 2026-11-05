@@ -11,7 +11,6 @@ export const COMPANY_CONFIG = {
   displayWhatsApp: "+91 9542666644",
 
   // Phone numbers
-  tollFree: "1800 889 1262",
   phone: "+91 9542666644",
   marketingPhone: "+91 9666877577",
 
@@ -73,3 +72,4 @@ export const COMPANY_CONFIG = {
     { value: "0 ₹", label: "Recurring Salt Cost" }
   ]
 };
+

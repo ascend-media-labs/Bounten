@@ -59,7 +59,7 @@ export default function RefundPolicy() {
               <h2 className="text-base sm:text-lg font-bold text-[#081C3B]">5. Support Helpline</h2>
               <p>
                 To initiate a warranty claim or return inspection:<br />
-                WhatsApp: <strong>{COMPANY_CONFIG.displayWhatsApp}</strong> | Toll Free: <strong>{COMPANY_CONFIG.tollFree}</strong><br />
+                WhatsApp / Phone: <strong>{COMPANY_CONFIG.displayWhatsApp}</strong><br />
                 Email: <a href={`mailto:${COMPANY_CONFIG.email}`} className="text-sky-600 hover:underline">{COMPANY_CONFIG.email}</a>
               </p>
             </section>
@@ -70,3 +70,4 @@ export default function RefundPolicy() {
     </div>
   );
 }
+

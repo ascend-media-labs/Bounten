@@ -381,3 +381,4 @@ export const CATEGORIES = [
   "Water Softener",
   "Zoftnor"
 ];
+

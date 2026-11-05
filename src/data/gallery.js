@@ -104,3 +104,4 @@ export const GALLERY_ITEMS = [
     description: "Heavy-duty SS 304 inline appliance guards packaged with universal connection adapters for geysers and washing machines."
   }
 ];
+
