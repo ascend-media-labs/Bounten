@@ -66,7 +66,7 @@ export default function Home() {
   };
 
   return (
-    <div className="space-y-16 sm:space-y-24 pb-16 overflow-hidden">
+    <div className="space-y-14 sm:space-y-20 pb-8 sm:pb-10 overflow-hidden">
       
       {/* 1. HERO SECTION WITH AMBIENT WATER GLOW - id="home" */}
       <section id="home" className="scroll-mt-28 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/50 pt-8 sm:pt-16 pb-12 sm:pb-24 border-b border-slate-100">
