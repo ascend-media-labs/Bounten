@@ -198,19 +198,13 @@ export default function Navbar() {
                     key={link.name}
                     href={isHomePage ? `#${link.sectionId}` : link.path}
                     onClick={(e) => handleNavClick(e, link)}
-                    className={`whitespace-nowrap flex-shrink-0 relative px-2.5 xl:px-3 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl transition-all duration-300 cursor-pointer group ${
+                    className={`whitespace-nowrap flex-shrink-0 relative px-2.5 xl:px-3 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl transition-all duration-300 ease-in-out cursor-pointer ${
                       isActive
                         ? 'text-sky-600 bg-sky-50/90 font-bold shadow-xs'
                         : 'text-slate-700 hover:text-sky-600 hover:bg-slate-50'
                     }`}
                   >
                     <span className="relative z-10 whitespace-nowrap">{link.name}</span>
-                    {/* Animated expanding indicator line */}
-                    <span
-                      className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-sky-600 rounded-full transition-transform duration-300 ${
-                        isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                      }`}
-                    />
                   </a>
                 );
               })}
@@ -293,9 +287,9 @@ export default function Navbar() {
                       key={link.name}
                       href={isHomePage ? `#${link.sectionId}` : link.path}
                       onClick={(e) => handleNavClick(e, link)}
-                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${
+                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ease-in-out whitespace-nowrap ${
                         isActive
-                          ? 'text-sky-600 bg-sky-50 font-bold border-l-4 border-sky-600'
+                          ? 'text-sky-600 bg-sky-50 font-bold'
                           : 'text-slate-700 hover:bg-slate-50 hover:text-sky-600'
                       }`}
                     >
