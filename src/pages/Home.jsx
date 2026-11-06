@@ -596,7 +596,7 @@ export default function Home() {
       </section>
 
       {/* 4. ABOUT BOUNTEN SUMMARY SECTION - id="about" */}
-      <section id="about" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="about" className="scroll-mt-14 sm:scroll-mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/80 hover-lift transition-all">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">

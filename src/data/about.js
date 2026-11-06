@@ -89,6 +89,25 @@ These Aragonite particles flow harmlessly through pipelines and fixtures without
     }
   ],
 
+  pillars: [
+    {
+      title: "Zero Chemical Scale Prevention",
+      description: "Proprietary electrolysis conditions calcite into non-adherent aragonite without resins, salt, or chemicals."
+    },
+    {
+      title: "Mineral Preserving Science",
+      description: "Preserves essential, beneficial calcium and magnesium ions in drinking water rather than replacing them with harmful sodium."
+    },
+    {
+      title: "Engineering Durability",
+      description: "Constructed with food-grade SS 304 reactor chambers and MMO electrodes designed for 15 to 18 years of continuous performance."
+    },
+    {
+      title: "Zero Waste & Energy Efficient",
+      description: "100% water recovery with no backwash drainage, consuming less electricity than a standard LED light bulb."
+    }
+  ],
+
   achievements: [
     {
       number: "15,000+",

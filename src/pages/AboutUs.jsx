@@ -58,7 +58,7 @@ export default function AboutUs() {
               </p>
 
               <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                {ABOUT_DATA.achievements.map((item, idx) => (
+                {(ABOUT_DATA.achievements || []).map((item, idx) => (
                   <div key={idx} className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs text-center hover-lift transition-all">
                     <div className="text-xl sm:text-2xl font-black text-sky-600">{item.number}</div>
                     <div className="text-[11px] text-slate-500 font-medium mt-0.5">{item.label}</div>
@@ -150,7 +150,7 @@ export default function AboutUs() {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {ABOUT_DATA.pillars.map((pillar, idx) => (
+          {(ABOUT_DATA.pillars || ABOUT_DATA.coreCommitments || []).map((pillar, idx) => (
             <AnimatedSection key={idx} animation="fade-up" delay={idx * 80} duration={600}>
               <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover-lift transition-all space-y-3 h-full">
                 <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
