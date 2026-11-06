@@ -38,13 +38,16 @@ export const formatINR = (amount) => {
  * 
  * Thank you."
  */
-export const openProductEnquiry = (product) => {
-  const priceDisplay = formatINR(product.price);
+export const openProductEnquiry = (product, quantity = 1) => {
+  const unitPrice = formatINR(product.price);
+  const totalPrice = formatINR(product.price * quantity);
+  const qtySection = quantity > 1 
+    ? `\nQuantity: ${quantity} units\nTotal Price: ${totalPrice} (${unitPrice} each)`
+    : `\nProduct Price: ${unitPrice}`;
+
   const message = `Hello Bounten Team,
 
-I am interested in your product: ${product.name}.
-
-Product Price: ${priceDisplay}
+I am interested in your product: ${product.name}.${qtySection}
 
 Please share more details about this product.
 

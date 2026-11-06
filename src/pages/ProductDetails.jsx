@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -13,7 +13,9 @@ import {
   ChevronRight,
   Check,
   Award,
-  AlertCircle
+  AlertCircle,
+  Plus,
+  Minus
 } from 'lucide-react';
 import { PRODUCTS_DATA, PRODUCT_HIGHLIGHTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
@@ -25,10 +27,12 @@ import { COMPANY_CONFIG } from '../data/config';
 export default function ProductDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [quantity, setQuantity] = useState(1);
 
-  // Scroll to top on id change
+  // Scroll to top on id change and reset quantity
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setQuantity(1);
   }, [id]);
 
   const product = useMemo(() => {
@@ -158,11 +162,16 @@ export default function ProductDetails() {
               {/* Price Box */}
               <div className="bg-slate-50 py-2 sm:py-2.5 px-3.5 sm:px-4 rounded-xl border border-slate-200/80 flex items-baseline gap-2.5 flex-wrap">
                 <span className="text-2xl sm:text-3xl font-black text-[#081C3B]">
-                  {formattedPrice}
+                  {formatINR(product.price * quantity)}
                 </span>
-                {formattedOriginalPrice && (
+                {product.originalPrice && (
                   <span className="text-sm sm:text-base text-slate-400 font-medium line-through">
-                    {formattedOriginalPrice}
+                    {formatINR(product.originalPrice * quantity)}
+                  </span>
+                )}
+                {quantity > 1 && (
+                  <span className="text-xs font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-md border border-sky-100">
+                    {formattedPrice} × {quantity}
                   </span>
                 )}
                 <span className="text-[11px] text-emerald-700 bg-emerald-100/70 font-bold px-2 py-0.5 rounded-full sm:ml-auto">
@@ -207,15 +216,42 @@ export default function ProductDetails() {
                 </div>
               </div>
 
-              {/* Primary Action Button: WhatsApp Enquiry */}
+              {/* Primary Action Section: Quantity (+/-) & WhatsApp Enquiry */}
               <div className="pt-1 space-y-2">
-                <button
-                  onClick={() => openProductEnquiry(product)}
-                  className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 sm:py-3 px-5 rounded-xl font-bold text-sm shadow-md hover:shadow-lg transition-all"
-                >
-                  <WhatsAppIcon className="w-5 h-5 fill-white" />
-                  <span>Enquire on WhatsApp about {product.name}</span>
-                </button>
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  {/* Quantity Selector Matching User Design */}
+                  <div className="inline-flex items-center border border-sky-500 rounded-lg bg-white overflow-hidden shadow-xs h-11 flex-shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                      disabled={quantity <= 1}
+                      className="w-9 sm:w-10 h-full flex items-center justify-center text-slate-700 hover:text-sky-600 hover:bg-sky-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                      aria-label="Decrease quantity"
+                    >
+                      <Minus className="w-4 h-4 stroke-[2.5]" />
+                    </button>
+                    <span className="w-9 sm:w-11 text-center font-bold text-sm sm:text-base text-[#081C3B] select-none">
+                      {quantity}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setQuantity((q) => q + 1)}
+                      className="w-9 sm:w-10 h-full flex items-center justify-center text-slate-700 hover:text-sky-600 hover:bg-sky-50 transition-colors"
+                      aria-label="Increase quantity"
+                    >
+                      <Plus className="w-4 h-4 stroke-[2.5]" />
+                    </button>
+                  </div>
+
+                  {/* Primary Action Button: WhatsApp Enquiry */}
+                  <button
+                    onClick={() => openProductEnquiry(product, quantity)}
+                    className="btn-press flex-1 flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-3 sm:px-5 rounded-xl font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all h-11"
+                  >
+                    <WhatsAppIcon className="w-5 h-5 fill-white flex-shrink-0" />
+                    <span className="truncate">Enquire on WhatsApp {quantity > 1 ? `(${quantity})` : ''}</span>
+                  </button>
+                </div>
 
                 <div className="flex items-center justify-between text-[11px] text-slate-500 px-1">
                   <span>Direct WhatsApp: <strong>{COMPANY_CONFIG.displayWhatsApp}</strong></span>
