@@ -11,7 +11,9 @@ import {
   ArrowRight,
   ShieldCheck,
   Zap,
-  PhoneCall
+  PhoneCall,
+  ChevronRight,
+  Sparkles
 } from 'lucide-react';
 import { SOLUTIONS_DATA } from '../data/solutions';
 import AnimatedSection from '../components/AnimatedSection';
@@ -44,40 +46,48 @@ export default function Solutions() {
   };
 
   return (
-    <div className="bg-slate-50/50 min-h-screen pt-2 sm:pt-3 pb-8 sm:pb-10 space-y-4 sm:space-y-6">
-      
-      {/* 1. Page Header - Compact & Perfectly Spaced */}
-      <section className="max-w-6xl mx-auto px-3 sm:px-5 lg:px-6">
-        <AnimatedSection animation="fade-down" duration={700}>
-          <div className="bg-white rounded-2xl sm:rounded-3xl py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 border border-slate-200/80 shadow-sm text-center max-w-4xl mx-auto space-y-2 sm:space-y-2.5 hover-lift transition-all">
-            <span className="inline-block text-[10px] sm:text-[11px] uppercase font-extrabold tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
-              Engineered Across All Flow Rates
-            </span>
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-[#081C3B] tracking-tight leading-snug">
-              Tailored Water Treatment Solutions
-            </h1>
-            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto font-normal">
-              From single-point bathroom fixtures and whole-home villas to multi-building corporate campuses, boilers, and agriculture, Bounten delivers custom-calibrated salt-free systems.
-            </p>
+    <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
+      <div className="w-full max-w-[1380px] mx-auto px-3 sm:px-5 lg:px-6 space-y-6 sm:space-y-7">
+        
+        {/* Page Breadcrumb & Header - Plain without card, exact same as Benefits */}
+        <div className="space-y-2">
+          <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
+            <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
+            <ChevronRight className="w-3 h-3 text-slate-400" />
+            <span className="font-semibold text-slate-800">Applications & Solutions</span>
+          </nav>
 
-            {/* Quick jump navigation pills with hover bounce */}
-            <div className="pt-1.5 sm:pt-2 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
-              {SOLUTIONS_DATA.map((sol) => (
-                <a
-                  key={sol.id}
-                  href={`#${sol.id}`}
-                  className="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-700 text-[11px] sm:text-xs font-bold px-3 py-1 rounded-full transition-all border border-slate-200 hover:border-sky-300 hover:scale-105 active:scale-95"
-                >
-                  {sol.title}
-                </a>
-              ))}
+          <AnimatedSection animation="fade-up" duration={500}>
+            <div className="text-center max-w-3xl mx-auto space-y-1.5 pt-0.5">
+              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200">
+                <Sparkles className="w-3 h-3 text-sky-600" />
+                Engineered Across All Flow Rates
+              </span>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#081C3B] tracking-tight">
+                Tailored Water Treatment Solutions
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
+                From single-point bathroom fixtures and whole-home villas to multi-building corporate campuses, boilers, and agriculture, Bounten delivers custom-calibrated salt-free systems.
+              </p>
+
+              {/* Quick jump navigation pills with hover bounce */}
+              <div className="pt-2 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                {SOLUTIONS_DATA.map((sol) => (
+                  <a
+                    key={sol.id}
+                    href={`#${sol.id}`}
+                    className="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 text-xs font-bold px-3.5 py-1.5 rounded-full transition-all border border-slate-200 shadow-xs hover:border-sky-300 hover:scale-105 active:scale-95"
+                  >
+                    {sol.title}
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        </AnimatedSection>
-      </section>
+          </AnimatedSection>
+        </div>
 
-      {/* 2. Detailed Solutions Sections (6 Categories) */}
-      <div className="max-w-6xl mx-auto px-3 sm:px-5 lg:px-6 space-y-6 sm:space-y-8">
+        {/* 2. Detailed Solutions Sections (6 Categories) */}
+        <div className="space-y-6 sm:space-y-8">
         {SOLUTIONS_DATA.map((solution, index) => {
           const Icon = icons[solution.id] || Zap;
           const isReversed = index % 2 !== 0;
@@ -196,33 +206,34 @@ export default function Solutions() {
         })}
       </div>
 
-      {/* 3. Bottom Consultation Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection animation="zoom" duration={700}>
-          <div className="bg-gradient-to-r from-[#081C3B] via-slate-900 to-[#081C3B] text-white rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800 hover-lift transition-all">
-            <div className="space-y-2 text-center md:text-left">
-              <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
-                Custom Flow Calibration
-              </span>
-              <h3 className="text-2xl font-bold text-white">
-                Need a custom high-flow skid up to 2,00,000 LPH?
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300">
-                Our engineering team designs bespoke SS 304 skid assemblies for industrial plants and large institutions.
-              </p>
+        {/* 3. Bottom Consultation Banner */}
+        <section>
+          <AnimatedSection animation="zoom" duration={700}>
+            <div className="bg-gradient-to-r from-[#081C3B] via-slate-900 to-[#081C3B] text-white rounded-3xl p-6 sm:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800 hover-lift transition-all">
+              <div className="space-y-2 text-center md:text-left">
+                <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
+                  Custom Flow Calibration
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">
+                  Need a custom high-flow skid up to 2,00,000 LPH?
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300">
+                  Our engineering team designs bespoke SS 304 skid assemblies for industrial plants and large institutions.
+                </p>
+              </div>
+
+              <button
+                onClick={() => openSolutionEnquiry("Custom Industrial Skid / High Flow")}
+                className="btn-press inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg flex-shrink-0"
+              >
+                <WhatsAppIcon className="w-4 h-4 fill-white" />
+                <span>Consult Chief Engineer</span>
+              </button>
             </div>
+          </AnimatedSection>
+        </section>
 
-            <button
-              onClick={() => openSolutionEnquiry("Custom Industrial Skid / High Flow")}
-              className="btn-press inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg flex-shrink-0"
-            >
-              <WhatsAppIcon className="w-4 h-4 fill-white" />
-              <span>Consult Chief Engineer</span>
-            </button>
-          </div>
-        </AnimatedSection>
-      </section>
-
+      </div>
     </div>
   );
 }

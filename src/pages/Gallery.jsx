@@ -1,10 +1,13 @@
 import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Camera,
   Maximize2,
   MapPin,
   Filter,
-  CheckCircle2
+  CheckCircle2,
+  ChevronRight,
+  Sparkles
 } from 'lucide-react';
 import { GALLERY_ITEMS, GALLERY_CATEGORIES } from '../data/gallery';
 import GalleryLightbox from '../components/GalleryLightbox';
@@ -37,45 +40,53 @@ export default function Gallery() {
   };
 
   return (
-    <div className="bg-slate-50/50 min-h-screen py-6 sm:py-10 space-y-6 sm:space-y-8">
-      
-      {/* 1. Header Hero */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection animation="fade-down" duration={700}>
-          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-md text-center max-w-4xl mx-auto space-y-4 hover-lift transition-all">
-            <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600 bg-sky-50 px-3.5 py-1 rounded-full border border-sky-100">
-              Visual Proof of Excellence
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#081C3B] tracking-tight">
-              BOUNTEN Media & Installation Gallery
-            </h1>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-normal">
-              Explore authentic photographs of real residential villa installations, commercial cooling plants, manufacturing assembly lines, certified water testing labs, and company leadership.
-            </p>
+    <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
+      <div className="w-full max-w-[1380px] mx-auto px-3 sm:px-5 lg:px-6 space-y-6 sm:space-y-7">
+        
+        {/* Page Breadcrumb & Header - Plain without card, exact same as Benefits */}
+        <div className="space-y-2">
+          <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
+            <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
+            <ChevronRight className="w-3 h-3 text-slate-400" />
+            <span className="font-semibold text-slate-800">Media & Installation Gallery</span>
+          </nav>
 
-            {/* Category Filter Tabs */}
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-2">
-              {GALLERY_CATEGORIES.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`btn-press px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
-                    selectedCategory === cat
-                      ? 'bg-[#081C3B] text-white shadow-md scale-105'
-                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+          <AnimatedSection animation="fade-up" duration={500}>
+            <div className="text-center max-w-3xl mx-auto space-y-1.5 pt-0.5">
+              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200">
+                <Sparkles className="w-3 h-3 text-sky-600" />
+                Visual Proof of Excellence
+              </span>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#081C3B] tracking-tight">
+                BOUNTEN Media & Installation Gallery
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
+                Explore authentic photographs of real residential villa installations, commercial cooling plants, manufacturing assembly lines, certified water testing labs, and company leadership.
+              </p>
+
+              {/* Category Filter Tabs */}
+              <div className="pt-2 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                {GALLERY_CATEGORIES.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`btn-press px-3.5 py-1.5 rounded-full text-xs font-bold transition-all border ${
+                      selectedCategory === cat
+                        ? 'bg-[#081C3B] text-white border-[#081C3B] shadow-md scale-105'
+                        : 'bg-white hover:bg-sky-50 text-slate-700 border-slate-200 hover:border-sky-300 shadow-xs'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        </AnimatedSection>
-      </section>
+          </AnimatedSection>
+        </div>
 
-      {/* 2. Responsive Image Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* 2. Responsive Image Grid */}
+        <section>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {filteredItems.map((item, index) => (
             <AnimatedSection key={item.id} animation="fade-up" delay={(index % 6) * 80} duration={600}>
               <div
@@ -130,16 +141,17 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Lightbox Modal for enlarged view */}
-      {lightboxOpen && (
-        <GalleryLightbox
-          items={filteredItems}
-          currentIndex={activeImageIndex}
-          onClose={() => setLightboxOpen(false)}
-          onPrev={handlePrev}
-          onNext={handleNext}
-        />
-      )}
+        {/* Lightbox Modal for enlarged view */}
+        {lightboxOpen && (
+          <GalleryLightbox
+            items={filteredItems}
+            currentIndex={activeImageIndex}
+            onClose={() => setLightboxOpen(false)}
+            onPrev={handlePrev}
+            onNext={handleNext}
+          />
+        )}
+      </div>
     </div>
   );
 }

@@ -12,7 +12,8 @@ import {
   Target,
   Compass,
   ArrowRight,
-  Building2
+  Building2,
+  ChevronRight
 } from 'lucide-react';
 import { ABOUT_DATA } from '../data/about';
 import AnimatedSection from '../components/AnimatedSection';
@@ -22,27 +23,35 @@ import { COMPANY_CONFIG } from '../data/config';
 
 export default function AboutUs() {
   return (
-    <div className="bg-slate-50/50 min-h-screen py-6 sm:py-10 space-y-8 sm:space-y-10">
-      
-      {/* 1. Hero Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection animation="fade-down" duration={700}>
-          <div className="bg-white rounded-3xl p-8 sm:p-14 border border-slate-200/80 shadow-md text-center max-w-4xl mx-auto space-y-4 hover-lift transition-all">
-            <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600 bg-sky-50 px-3.5 py-1 rounded-full border border-sky-100">
-              About Bounten Global
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#081C3B] tracking-tight">
-              Advancing Water Science Through Sustainable Innovation
-            </h1>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-normal">
-              {ABOUT_DATA.tagline}. Headquartered in Banjara Hills, Hyderabad, {ABOUT_DATA.fullName} is redefining how residential, commercial, and industrial properties resolve hard water scaling.
-            </p>
-          </div>
-        </AnimatedSection>
-      </section>
+    <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
+      <div className="w-full max-w-[1380px] mx-auto px-3 sm:px-5 lg:px-6 space-y-6 sm:space-y-7">
+        
+        {/* Page Breadcrumb & Header - Plain without card, exact same as Benefits */}
+        <div className="space-y-2">
+          <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
+            <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
+            <ChevronRight className="w-3 h-3 text-slate-400" />
+            <span className="font-semibold text-slate-800">About Us</span>
+          </nav>
 
-      {/* 2. Company Overview & Core Commitments */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection animation="fade-up" duration={500}>
+            <div className="text-center max-w-3xl mx-auto space-y-1.5 pt-0.5">
+              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200">
+                <Sparkles className="w-3 h-3 text-sky-600" />
+                About Bounten Global
+              </span>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#081C3B] tracking-tight">
+                Advancing Water Science Through Sustainable Innovation
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
+                {ABOUT_DATA.tagline}. Headquartered in Banjara Hills, Hyderabad, {ABOUT_DATA.fullName} is redefining how residential, commercial, and industrial properties resolve hard water scaling.
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+
+        {/* 2. Company Overview & Core Commitments */}
+        <section>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           <div className="lg:col-span-7 space-y-5">
@@ -164,33 +173,34 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* 5. WhatsApp Consultation Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection animation="zoom" duration={700}>
-          <div className="bg-gradient-to-r from-[#081C3B] via-slate-900 to-[#081C3B] text-white rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6 border border-slate-800 hover-lift transition-all">
-            <div className="space-y-2 text-center sm:text-left">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
-                Direct Engineering Connect
-              </span>
-              <h3 className="text-2xl font-bold text-white">
-                Have questions about your local borewell water TDS?
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300">
-                Connect directly with our Hyderabad headquarters technical team on WhatsApp.
-              </p>
+        {/* 5. WhatsApp Consultation Banner */}
+        <section>
+          <AnimatedSection animation="zoom" duration={700}>
+            <div className="bg-gradient-to-r from-[#081C3B] via-slate-900 to-[#081C3B] text-white rounded-3xl p-6 sm:p-10 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6 border border-slate-800 hover-lift transition-all">
+              <div className="space-y-2 text-center sm:text-left">
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+                  Direct Engineering Connect
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">
+                  Have questions about your local borewell water TDS?
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300">
+                  Connect directly with our Hyderabad headquarters technical team on WhatsApp.
+                </p>
+              </div>
+
+              <button
+                onClick={openGeneralEnquiry}
+                className="btn-press inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg flex-shrink-0"
+              >
+                <WhatsAppIcon className="w-4 h-4 fill-white" />
+                <span>Connect on WhatsApp</span>
+              </button>
             </div>
+          </AnimatedSection>
+        </section>
 
-            <button
-              onClick={openGeneralEnquiry}
-              className="btn-press inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg flex-shrink-0"
-            >
-              <WhatsAppIcon className="w-4 h-4 fill-white" />
-              <span>Connect on WhatsApp</span>
-            </button>
-          </div>
-        </AnimatedSection>
-      </section>
-
+      </div>
     </div>
   );
 }
