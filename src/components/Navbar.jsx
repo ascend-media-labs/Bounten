@@ -38,7 +38,7 @@ export default function Navbar() {
       return;
     }
 
-    const sections = ['home', 'products', 'services', 'solutions', 'about', 'gallery'];
+    const sections = ['home', 'products', 'services', 'solutions', 'benefits', 'about', 'gallery'];
 
     const handleScrollSpy = () => {
       // Top of page
@@ -75,9 +75,29 @@ export default function Navbar() {
   const handleNavClick = (e, link) => {
     if (link.isDownload) return; // native download
 
-    if (link.name === 'Products') {
+    if (link.name === 'Benefits') {
       e.preventDefault();
-      navigate('/products');
+      if (isHomePage) {
+        const el = document.getElementById('benefits');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          setActiveSection('benefits');
+        }
+      } else {
+        navigate('/#benefits');
+      }
+      setIsOpen(false);
+      return;
+    }
+
+    if (link.name === 'Home') {
+      e.preventDefault();
+      if (isHomePage) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setActiveSection('home');
+      } else {
+        navigate('/');
+      }
       setIsOpen(false);
       return;
     }
@@ -94,12 +114,13 @@ export default function Navbar() {
         setActiveSection('home');
       }
     } else {
-      // If on another page and clicking Home or section anchor
-      if (link.sectionId) {
+      // If on another page, navigate directly to page path or home anchor
+      if (link.path && !link.path.includes('#') && link.path !== '/') {
+        navigate(link.path);
+      } else if (link.sectionId) {
         e.preventDefault();
         navigate(`/#${link.sectionId}`);
       } else {
-        // regular navigation
         navigate(link.path);
       }
     }

@@ -1,9 +1,9 @@
 export const NAV_LINKS = [
   { name: "Home", path: "/", sectionId: "home" },
-  { name: "Products", path: "/products", sectionId: "products" },
-  { name: "Services", path: "/services", sectionId: "services" },
-  { name: "Solutions", path: "/solutions", sectionId: "solutions" },
   { name: "About Us", path: "/about", sectionId: "about" },
+  { name: "Services", path: "/services", sectionId: "services" },
+  { name: "Benefits", path: "/#benefits", sectionId: "benefits" },
+  { name: "Solutions", path: "/solutions", sectionId: "solutions" },
   { name: "Gallery", path: "/gallery", sectionId: "gallery" },
   { 
     name: "Download Brochure", 
@@ -22,11 +22,12 @@ export const NAV_LINKS = [
 export const FOOTER_LINKS = {
   quickLinks: [
     { name: "Home", path: "/" },
-    { name: "Products", path: "/products" },
-    { name: "Services", path: "/services" },
-    { name: "Solutions", path: "/solutions" },
     { name: "About Us", path: "/about" },
-    { name: "Gallery", path: "/gallery" }
+    { name: "Services", path: "/services" },
+    { name: "Benefits", path: "/#benefits" },
+    { name: "Solutions", path: "/solutions" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Products", path: "/products" }
   ],
   policies: [
     { name: "Privacy Policy", path: "/privacy-policy" },

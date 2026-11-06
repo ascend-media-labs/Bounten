@@ -17,13 +17,21 @@ import ShippingPolicy from './pages/ShippingPolicy';
 import RefundPolicy from './pages/RefundPolicy';
 import TermsConditions from './pages/TermsConditions';
 
-// Automatically scroll window to top on route transition
+// Automatically scroll window to top on route transition, or smooth scroll to hash anchor
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (!hash) {
       window.scrollTo(0, 0);
+    } else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 120);
     }
   }, [pathname, hash]);
 
@@ -49,6 +57,7 @@ function AppContent() {
             <Route path="/services" element={<Services />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/benefits" element={<Home />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/shipping-policy" element={<ShippingPolicy />} />

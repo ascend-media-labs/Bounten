@@ -523,9 +523,9 @@ export default function Home() {
 
         </div>
 
-        {/* 4. KEY BENEFITS ROW */}
+        {/* 4. KEY BENEFITS ROW - id="benefits" */}
         <AnimatedSection animation="fade-up" delay={150} duration={800}>
-          <div className="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-3">
+          <div id="benefits" className="scroll-mt-28 bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
               <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
                 {PRODUCT_HIGHLIGHTS.applications.keyBenefits.title}
