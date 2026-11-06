@@ -1031,7 +1031,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 41,
     "popularity": 94,
     "dateAdded": "2024-03-08",
-    "image": "/images/products/zoftnor-max-w2.png",
+    "image": "/images/products/zoftnor-inline-w2.png",
     "shortDescription": "High-efficiency 2,000 LPH inline water softener without bag filter for 2-3 BHK homes and independent duplexes.",
     "description": "The Zoftnor Max W2 offers 2,000 LPH capacity in a space-saving configuration without a bag filter. Designed for direct overhead tank outlet or inlet line connection, it protects bathrooms, kitchens, and water heaters from scale build-up while keeping natural minerals intact.",
     "specifications": [
