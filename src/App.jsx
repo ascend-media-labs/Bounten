@@ -11,6 +11,7 @@ import ProductDetails from './pages/ProductDetails';
 import Services from './pages/Services';
 import Solutions from './pages/Solutions';
 import AboutUs from './pages/AboutUs';
+import Benefits from './pages/Benefits';
 import Gallery from './pages/Gallery';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ShippingPolicy from './pages/ShippingPolicy';
@@ -57,7 +58,7 @@ function AppContent() {
             <Route path="/services" element={<Services />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/benefits" element={<Home />} />
+            <Route path="/benefits" element={<Benefits />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/shipping-policy" element={<ShippingPolicy />} />

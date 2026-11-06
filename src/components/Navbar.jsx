@@ -77,15 +77,7 @@ export default function Navbar() {
 
     if (link.name === 'Benefits') {
       e.preventDefault();
-      if (isHomePage) {
-        const el = document.getElementById('benefits');
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-          setActiveSection('benefits');
-        }
-      } else {
-        navigate('/#benefits');
-      }
+      navigate('/benefits');
       setIsOpen(false);
       return;
     }

@@ -525,14 +525,21 @@ export default function Home() {
 
         {/* 4. KEY BENEFITS ROW - id="benefits" */}
         <AnimatedSection animation="fade-up" delay={150} duration={800}>
-          <div id="benefits" className="scroll-mt-28 bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-3">
+          <div id="benefits" className="scroll-mt-28 bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-              <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
-                {PRODUCT_HIGHLIGHTS.applications.keyBenefits.title}
-              </h3>
-              <span className="text-xs font-bold text-sky-700 bg-sky-100 px-3 py-0.5 rounded-full w-fit">
-                Resin-Free | Salt-Free | Chemical-Free
-              </span>
+              <div>
+                <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
+                  Bounten Water Softener Key Benefits
+                </h3>
+                <p className="text-xs text-slate-500 font-medium">Advanced Electrolysis Technology for Scale-Free Living</p>
+              </div>
+              <Link
+                to="/benefits"
+                className="btn-press inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 bg-sky-100 hover:bg-sky-200 px-3.5 py-1.5 rounded-full transition-colors w-fit"
+              >
+                <span>View Full Benefits & Technology Guide</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-0.5">

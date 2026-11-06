@@ -2,7 +2,7 @@ export const NAV_LINKS = [
   { name: "Home", path: "/", sectionId: "home" },
   { name: "About Us", path: "/about", sectionId: "about" },
   { name: "Services", path: "/services", sectionId: "services" },
-  { name: "Benefits", path: "/#benefits", sectionId: "benefits" },
+  { name: "Benefits", path: "/benefits", sectionId: "benefits" },
   { name: "Solutions", path: "/solutions", sectionId: "solutions" },
   { name: "Gallery", path: "/gallery", sectionId: "gallery" },
   { 
@@ -24,7 +24,7 @@ export const FOOTER_LINKS = {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Benefits", path: "/#benefits" },
+    { name: "Benefits", path: "/benefits" },
     { name: "Solutions", path: "/solutions" },
     { name: "Gallery", path: "/gallery" },
     { name: "Products", path: "/products" }
