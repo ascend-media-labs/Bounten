@@ -36,7 +36,7 @@ export const GALLERY_ITEMS = [
     category: "Products",
     title: "Zoftnor Pro Reactor Chamber",
     location: "Bounten Manufacturing Unit",
-    image: "/images/products/zoftnor-pro-w1.jpg",
+    image: "/images/gallery/reactor-chamber.jpg",
     description: "Precision-machined SS 304 reactor chamber engineered with 0.06-micron Iridium mesh for high-frequency hard mineral neutralization."
   },
   {
@@ -90,18 +90,17 @@ export const GALLERY_ITEMS = [
   {
     id: 11,
     category: "Products",
-    title: "Zoftnor Max Easyfit W2 Unit",
+    title: "Zoftnor Max Easyfit System Skid",
     location: "Quality Inspection Station",
-    image: "/images/products/zoftnor-max-w2.jpg",
-    description: "Flagship 2,000 LPH residential model with dual-action sediment filtration ready for customer dispatch."
+    image: "/images/gallery/system-skid.jpg",
+    description: "Flagship residential system with electronic control module, electrolysis reactor, bypass valves, and pre-filter mounted on stainless frame."
   },
   {
     id: 12,
     category: "Products",
     title: "Bounten Descaler Inline Units",
     location: "Packaging & Dispatch Bay",
-    image: "/images/products/descaler.jpg",
+    image: "/images/gallery/descaler-packaging.jpg",
     description: "Heavy-duty SS 304 inline appliance guards packaged with universal connection adapters for geysers and washing machines."
   }
 ];
-
