@@ -96,27 +96,31 @@ export default function ProductDetails() {
 
             {/* Left: Product Image & Badges (5 cols) */}
             <div className="lg:col-span-5 space-y-4">
-              <div className="relative aspect-square rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100 border border-slate-100 p-8 flex items-center justify-center overflow-hidden shine-sweep group">
-                <span className="absolute top-4 left-4 bg-[#081C3B] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
-                  {product.category}
-                </span>
-                
-                {product.hasBagFilter ? (
-                  <span className="absolute top-4 right-4 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs flex items-center gap-1">
-                    <Check className="w-3 h-3 stroke-[3]" />
-                    <span>With Bag Filter</span>
+              <div className="relative aspect-square rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100 border border-slate-100 p-6 flex flex-col items-center justify-between overflow-hidden group">
+                <div className="w-full flex items-center justify-between z-10">
+                  <span className="bg-[#081C3B] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
+                    {product.category}
                   </span>
-                ) : (
-                  <span className="absolute top-4 right-4 bg-slate-700 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
-                    Without Bag Filter
-                  </span>
-                )}
+                  
+                  {product.hasBagFilter ? (
+                    <span className="bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs flex items-center gap-1">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>With Bag Filter</span>
+                    </span>
+                  ) : (
+                    <span className="bg-slate-700 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
+                      Without Bag Filter
+                    </span>
+                  )}
+                </div>
 
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-contain transform group-hover:scale-108 transition-transform duration-700 ease-out drop-shadow-md"
-                />
+                <div className="w-full flex-1 flex items-center justify-center p-3">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="max-w-full max-h-full w-auto h-auto object-contain drop-shadow-md"
+                  />
+                </div>
               </div>
 
               {/* Quality Seals Row */}

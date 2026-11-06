@@ -10,35 +10,34 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="group bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400 hover-lift shine-sweep shadow-xs hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden relative">
-      {/* Product Image Section */}
-      <div className="relative aspect-[4/3] bg-gradient-to-b from-slate-50 via-slate-100/60 to-slate-100 overflow-hidden flex items-center justify-center p-4">
-        {/* Category Pill with smooth hover transition */}
-        <div className="absolute top-3 left-3 z-10">
-          <span className="inline-flex items-center gap-1.5 bg-[#081C3B]/90 backdrop-blur-md text-white font-bold text-xs px-2.5 py-1 rounded-lg shadow-sm border border-white/10 group-hover:bg-[#0B2447] transition-colors">
-            <Zap className="w-3 h-3 text-sky-400 fill-sky-400 animate-pulse" />
-            {product.category}
-          </span>
-        </div>
+      {/* Top Badges Row: Dedicated header so badges NEVER overlap or cut off the product image */}
+      <div className="pt-3.5 px-3.5 pb-2 flex items-center justify-between gap-2 z-10 bg-white border-b border-slate-50">
+        {/* Category Pill */}
+        <span className="inline-flex items-center gap-1.5 bg-[#081C3B] text-white font-bold text-xs px-2.5 py-1 rounded-lg shadow-2xs border border-white/10 shrink-0">
+          <Zap className="w-3 h-3 text-sky-400 fill-sky-400" />
+          <span>{product.category}</span>
+        </span>
 
         {/* Bag Filter Status Badge */}
-        <div className="absolute top-3 right-3 z-10">
-          {product.hasBagFilter ? (
-            <span className="bg-emerald-600/95 backdrop-blur-xs text-white font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow-xs flex items-center gap-1 border border-emerald-400/30 group-hover:scale-105 transition-transform duration-300">
-              <Check className="w-3 h-3 stroke-[3]" />
-              <span>With Bag Filter</span>
-            </span>
-          ) : (
-            <span className="bg-slate-800/90 backdrop-blur-xs text-slate-100 font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow-xs border border-slate-700 group-hover:scale-105 transition-transform duration-300">
-              Without Bag Filter
-            </span>
-          )}
-        </div>
+        {product.hasBagFilter ? (
+          <span className="bg-emerald-600 text-white font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow-2xs flex items-center gap-1 border border-emerald-400/30 shrink-0">
+            <Check className="w-3 h-3 stroke-[3]" />
+            <span>With Bag Filter</span>
+          </span>
+        ) : (
+          <span className="bg-slate-800 text-slate-100 font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow-2xs border border-slate-700 shrink-0">
+            Without Bag Filter
+          </span>
+        )}
+      </div>
 
+      {/* Product Image Section: Full Unobstructed Display, Zero Cropping, Zero Cutting */}
+      <div className="relative h-60 sm:h-64 px-4 py-3 flex items-center justify-center bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30 overflow-hidden">
         <Link to={`/products/${product.id}`} className="w-full h-full flex items-center justify-center">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-700 ease-out drop-shadow-sm group-hover:drop-shadow-md"
+            className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-300 drop-shadow-xs"
             loading="lazy"
           />
         </Link>
