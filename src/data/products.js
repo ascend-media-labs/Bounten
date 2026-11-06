@@ -378,7 +378,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 46,
     "popularity": 96,
     "dateAdded": "2024-03-01",
-    "image": "/images/products/zoftnor-pro-w1.jpg",
+    "image": "/images/products/zoftnor-pro-w1.png",
     "shortDescription": "Professional-grade 1,000 LPH electrolysis conditioning system with integrated Bag Filter for 1-2 BHK apartments and small villas.",
     "description": "Zoftner Pro W1 is an advanced salt-free, resin-free, chemical-free whole-property water softener featuring an integrated high-efficiency bag filter. It combines pre-stage physical particulate removal with 18-level electrolysis technology, restructuring hard minerals into harmless Aragonite micro-crystals that will not adhere to pipes, geysers, or bathroom fixtures.",
     "specifications": [
