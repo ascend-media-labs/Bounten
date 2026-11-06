@@ -182,10 +182,10 @@ export default function Navbar() {
 
       {/* Main Sticky Navbar */}
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-50 w-full transition-all duration-300 relative ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200/80 py-2.5' 
-            : 'bg-white/95 backdrop-blur-sm border-b border-slate-100 py-3'
+            ? 'bg-white shadow-md border-b border-slate-200/80 py-2.5' 
+            : 'bg-white border-b border-slate-100 py-3'
         }`}
       >
         <div className="w-full max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6">
@@ -260,121 +260,106 @@ export default function Navbar() {
             </nav>
 
             {/* Tablet & Compact Menu Actions (< 1024px) */}
-            <div className="flex items-center lg:hidden space-x-2 flex-shrink-0">
-              {/* Mobile WhatsApp Button */}
-              <button
-                onClick={openGeneralEnquiry}
-                className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-xl transition-colors btn-press"
-                aria-label="WhatsApp Enquiry"
-                title="WhatsApp Enquiry"
-              >
-                <WhatsAppIcon className="w-6 h-6 fill-[#25D366]" />
-              </button>
+            <div className="flex items-center lg:hidden space-x-1.5 flex-shrink-0">
+              {/* Mobile WhatsApp Button (visible when menu is closed) */}
+              {!isOpen && (
+                <button
+                  onClick={openGeneralEnquiry}
+                  className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-xl transition-colors btn-press"
+                  aria-label="WhatsApp Enquiry"
+                  title="WhatsApp Enquiry"
+                >
+                  <WhatsAppIcon className="w-6 h-6 fill-[#25D366]" />
+                </button>
+              )}
 
-              {/* Mobile Hamburger Toggle */}
+              {/* Mobile Hamburger / Close Toggle on Top-Right */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-xl focus:outline-none transition-colors"
+                className={`p-2 rounded-xl transition-colors focus:outline-none ${
+                  isOpen
+                    ? 'bg-slate-100 text-slate-900 hover:bg-slate-200'
+                    : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'
+                }`}
                 aria-expanded={isOpen}
-                aria-label="Toggle Navigation Menu"
+                aria-label={isOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
               >
-                {isOpen ? <X className="w-6 h-6 text-sky-600" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className="w-6 h-6 text-slate-900" /> : <Menu className="w-6 h-6 text-slate-800" />}
               </button>
             </div>
 
           </div>
         </div>
 
-        {/* Full-Screen Mobile Navigation Menu with Top-Right Close Button & Zero Gaps */}
+        {/* Mobile Navigation Dropdown directly attached under navbar with ZERO GAP */}
         {isOpen && (
-          <div className="fixed inset-0 z-50 lg:hidden bg-white flex flex-col animate-in fade-in slide-in-from-top-2 duration-200">
-            {/* Top Header inside Drawer: Logo on left, Close button on top-right */}
-            <div className="flex items-center justify-between px-5 py-3.5 border-b border-slate-200 bg-white flex-shrink-0">
-              <Link
-                to="/"
-                onClick={(e) => {
-                  setIsOpen(false);
-                  if (isHomePage) {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    setActiveSection('home');
-                  }
-                }}
-                className="flex items-center"
-              >
-                <BountenLogo className="h-8 w-auto flex-shrink-0" />
-              </Link>
-
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-2 -mr-1.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-colors focus:outline-none"
-                aria-label="Close Navigation Menu"
-              >
-                <X className="w-6 h-6 text-slate-800" />
-              </button>
-            </div>
-
-            {/* Scrollable Navigation Links - perfectly fitted without unnecessary spaces */}
-            <div className="flex-1 overflow-y-auto px-5 py-3 space-y-2.5">
-              <nav className="flex flex-col space-y-1">
-                {NAV_LINKS.map((link) => {
-                  if (link.isDownload) {
-                    return (
-                      <a
-                        key={link.name}
-                        href={link.path}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => setIsOpen(false)}
-                        className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold text-sky-700 bg-sky-50/70 hover:bg-sky-100 border border-sky-100 transition-colors my-0.5 whitespace-nowrap"
-                      >
-                        <span className="flex items-center gap-2 whitespace-nowrap">
-                          <FileDown className="w-4 h-4 text-sky-600 flex-shrink-0" />
-                          <span className="whitespace-nowrap">{link.name}</span>
-                        </span>
-                        <span className="text-[11px] bg-white text-sky-800 px-2 py-0.5 rounded-full font-bold shadow-xs">PDF</span>
-                      </a>
-                    );
-                  }
-
-                  const isActive = isHomePage
-                    ? activeSection === link.sectionId
-                    : location.pathname === link.path;
-
+          <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-2xl z-50 lg:hidden max-h-[calc(100vh-65px)] overflow-y-auto px-5 pt-3 pb-8 space-y-2.5 animate-in slide-in-from-top-2 duration-200">
+            <nav className="flex flex-col space-y-1">
+              {NAV_LINKS.map((link) => {
+                if (link.isDownload) {
                   return (
                     <a
                       key={link.name}
-                      href={isHomePage ? `#${link.sectionId}` : link.path}
-                      onClick={(e) => handleNavClick(e, link)}
-                      className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ease-in-out whitespace-nowrap ${
-                        isActive
-                          ? 'text-sky-600 bg-sky-50 font-bold'
-                          : 'text-slate-700 hover:bg-slate-50 hover:text-sky-600'
-                      }`}
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold text-sky-700 bg-sky-50/70 hover:bg-sky-100 border border-sky-100 transition-colors my-0.5 whitespace-nowrap"
                     >
-                      <span className="whitespace-nowrap">{link.name}</span>
+                      <span className="flex items-center gap-2 whitespace-nowrap">
+                        <FileDown className="w-4 h-4 text-sky-600 flex-shrink-0" />
+                        <span className="whitespace-nowrap">{link.name}</span>
+                      </span>
+                      <span className="text-[11px] bg-white text-sky-800 px-2 py-0.5 rounded-full font-bold shadow-xs">PDF</span>
                     </a>
                   );
-                })}
-              </nav>
+                }
 
-              {/* Bottom Quick Contact on Mobile Menu */}
-              <div className="pt-3 pb-6 border-t border-slate-100">
-                <button
-                  onClick={() => {
-                    openGeneralEnquiry();
-                    setIsOpen(false);
-                  }}
-                  className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap"
-                >
-                  <WhatsAppIcon className="w-5 h-5 fill-white flex-shrink-0" />
-                  <span>Enquire on WhatsApp</span>
-                </button>
-              </div>
+                const isActive = isHomePage
+                  ? activeSection === link.sectionId
+                  : location.pathname === link.path;
+
+                return (
+                  <a
+                    key={link.name}
+                    href={isHomePage ? `#${link.sectionId}` : link.path}
+                    onClick={(e) => handleNavClick(e, link)}
+                    className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ease-in-out whitespace-nowrap ${
+                      isActive
+                        ? 'text-sky-600 bg-sky-50 font-bold'
+                        : 'text-slate-700 hover:bg-slate-50 hover:text-sky-600'
+                    }`}
+                  >
+                    <span className="whitespace-nowrap">{link.name}</span>
+                  </a>
+                );
+              })}
+            </nav>
+
+            {/* Bottom Quick Contact on Mobile Menu */}
+            <div className="pt-3 pb-2 border-t border-slate-100">
+              <button
+                onClick={() => {
+                  openGeneralEnquiry();
+                  setIsOpen(false);
+                }}
+                className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap"
+              >
+                <WhatsAppIcon className="w-5 h-5 fill-white flex-shrink-0" />
+                <span>Enquire on WhatsApp</span>
+              </button>
             </div>
           </div>
         )}
       </header>
+
+      {/* Backdrop overlay for mobile menu */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-slate-950/40 backdrop-blur-xs lg:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
     </>
   );
 }
