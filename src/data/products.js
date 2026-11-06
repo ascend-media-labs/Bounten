@@ -112,19 +112,49 @@ export const PRODUCTS_DATA = [
     "dateAdded": "2024-01-15",
     "image": "/images/products/descaler.png",
     "shortDescription": "Compact inline descaling device without bag filter for geysers, washing machines, and household inlet pipelines.",
-    "description": "Bounten Zoftner Quick Fix Descaler is an advanced physical scale conditioning solution engineered to stop fresh limescale encrustation and gradually loosen pre-existing mineral deposits across appliances. Installed directly in-line without a bag filter, electricity, or salts.",
+    "description": "Bounten’s Descaler helps prevent limescale formation caused by hard water on tiles, taps, pipes, and other household appliances. You can choose from two variants (the ¾-inch Descaler and the 1-inch Descaler) based on your requirements. Both of the variants gradually remove the existing scaling over a period of time, and prevents future scaling also.",
+    "otherDetails": [
+      "We at Bounten, are on a mission to eliminate hard water problems from your everyday life. And owing to this philosophy, we have grown into one of the most reliable brands in the water treatment industry. We engineer our products with cutting-edge technology making them smart, efficient, and eco-friendly, and having the capability to tackle a vast variety of hard water problems.",
+      "Bounten’s Descaler helps prevent limescale formation caused by hard water on tiles, taps, pipes, and other household appliances. You can choose from two variants ( the ¾ the inch Descaler and the 1-inch Descaler) based on your requirements. Both of the variants gradually remove the existing scaling over a period of time. And prevents future scaling also.",
+      "Along with being unsightly and hard to clean, limescale formation can also lead to rusty and blocked plumbing pipes which can seriously impair the working of your plumbing and heating systems including geysers, showers, taps, pipes, etc.",
+      "Installing Bounten’s Descaler will help you deal with all these problems by giving you the following benefits:\n• Reduced blockages in plumbing pipes\n• Reduced maintenance costs of home appliances\n• Improved efficiency in home appliances\n• Scale-free home appliances\n• Increase the lifespan of home appliances\n\nGet yourself the all-new Descaler and get rid of scaling on a large scale."
+    ],
     "specifications": [
       {
-        "label": "Category",
-        "value": "Zoftner Quick Fix (Without Bag Filter)"
+        "label": "Material",
+        "value": "Stainless Steel"
       },
       {
-        "label": "Bag Filter Included",
-        "value": "No (Direct Point-of-Use Fitment)"
+        "label": "Capacity (LPH)",
+        "value": "1500 LPH"
       },
       {
-        "label": "Flow Capacity",
-        "value": "Up to 1,500 LPH"
+        "label": "Usage/Application",
+        "value": "domestical"
+      },
+      {
+        "label": "Automation Grade",
+        "value": "Manual"
+      },
+      {
+        "label": "Water Source",
+        "value": "Salt Water"
+      },
+      {
+        "label": "Softener Tank Type",
+        "value": "Vertical"
+      },
+      {
+        "label": "Color",
+        "value": "Silver"
+      },
+      {
+        "label": "Availability",
+        "value": "In Stock"
+      },
+      {
+        "label": "Variants / Connection Size",
+        "value": "3/4 inch & 1 inch standard threaded"
       },
       {
         "label": "Technology",
@@ -145,35 +175,19 @@ export const PRODUCTS_DATA = [
       {
         "label": "Certifications",
         "value": "ISO 9001, ISO 14001"
-      },
-      {
-        "label": "Material",
-        "value": "Food Grade SS304 Alloy"
-      },
-      {
-        "label": "Connection Size",
-        "value": "3/4 inch & 1 inch standard threaded"
-      },
-      {
-        "label": "Power Requirement",
-        "value": "Zero Electricity / Pure Hydrodynamic"
-      },
-      {
-        "label": "Maintenance",
-        "value": "Zero Consumables / Fit & Forget"
       }
     ],
     "features": [
+      "Reduced blockages in plumbing pipes",
+      "Reduced maintenance costs of home appliances",
+      "Improved efficiency in home appliances",
+      "Scale-free home appliances",
+      "Increase the lifespan of home appliances",
+      "Get yourself the all-new Descaler and get rid of scaling on a large scale",
+      "Available in two variants: ¾-inch and 1-inch based on requirements",
+      "Gradually removes existing scaling over time and prevents future scaling",
       "Inline installation without bag filter — fits directly before appliances",
-      "Resin-Free | Salt-Free | Chemical-Free eco-friendly operation",
-      "Stops fresh limescale formation on geyser heating coils and washing machines",
-      "Works with input water TDS up to 1,999 ppm",
-      "1-Year Unconditional Warranty on the body and components",
-      "5-Year Unconditional Warranty on internal conditioning elements",
-      "ISO 9001 and ISO 14001 certified",
-      "Manufactured from Food grade SS304 alloy",
-      "Extends appliance lifespan and reduces electricity consumption",
-      "Zero salt refills, zero water wastage, quick DIY or plumber installation"
+      "Resin-Free | Salt-Free | Chemical-Free eco-friendly operation"
     ],
     "applications": [
       "Geysers & Water Heaters",

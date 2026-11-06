@@ -345,6 +345,26 @@ export default function ProductDetails() {
 
         </div>
 
+        {/* Other Details / Comprehensive Overview */}
+        {product.otherDetails && (
+          <AnimatedSection animation="fade-up" duration={600}>
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm space-y-3 hover-lift transition-all">
+              <h2 className="text-base sm:text-lg font-bold text-[#081C3B] border-l-4 border-sky-600 pl-2.5">
+                Other Details
+              </h2>
+              <div className="text-xs sm:text-[13px] text-slate-700 leading-relaxed space-y-3">
+                {Array.isArray(product.otherDetails) ? (
+                  product.otherDetails.map((paragraph, idx) => (
+                    <p key={idx} className="whitespace-pre-line">{paragraph}</p>
+                  ))
+                ) : (
+                  <p className="whitespace-pre-line">{product.otherDetails}</p>
+                )}
+              </div>
+            </div>
+          </AnimatedSection>
+        )}
+
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
           <div className="space-y-6 pt-6">
