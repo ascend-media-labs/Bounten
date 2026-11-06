@@ -71,7 +71,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScrollSpy);
   }, [isHomePage, location.pathname]);
 
-  // Handle clicking on nav items (smooth scroll on home, navigate otherwise)
+  // Handle clicking on nav items (navigate inside to page content, Home scrolls to top)
   const handleNavClick = (e, link) => {
     if (link.isDownload) return; // native download
 
@@ -87,28 +87,9 @@ export default function Navbar() {
       return;
     }
 
-    if (isHomePage) {
-      e.preventDefault();
-      const secId = link.sectionId || 'home';
-      const el = document.getElementById(secId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-        setActiveSection(secId);
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        setActiveSection('home');
-      }
-    } else {
-      // If on another page, navigate directly to page path or home anchor
-      if (link.path && !link.path.includes('#') && link.path !== '/') {
-        navigate(link.path);
-      } else if (link.sectionId) {
-        e.preventDefault();
-        navigate(`/#${link.sectionId}`);
-      } else {
-        navigate(link.path);
-      }
-    }
+    // Always navigate inside to the dedicated page content
+    e.preventDefault();
+    navigate(link.path);
     setIsOpen(false);
   };
 
@@ -221,7 +202,7 @@ export default function Navbar() {
                 return (
                   <a
                     key={link.name}
-                    href={isHomePage ? `#${link.sectionId}` : link.path}
+                    href={link.path}
                     onClick={(e) => handleNavClick(e, link)}
                     className={`whitespace-nowrap flex-shrink-0 relative px-2 xl:px-2.5 py-1.5 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl transition-all duration-300 ease-in-out cursor-pointer ${
                       isActive
@@ -308,7 +289,7 @@ export default function Navbar() {
                 return (
                   <a
                     key={link.name}
-                    href={isHomePage ? `#${link.sectionId}` : link.path}
+                    href={link.path}
                     onClick={(e) => handleNavClick(e, link)}
                     className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ease-in-out whitespace-nowrap ${
                       isActive
