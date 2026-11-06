@@ -13,6 +13,7 @@ export const GALLERY_ITEMS = [
     title: "Luxury Villa Whole-Home Installation",
     location: "Jubilee Hills, Hyderabad",
     image: "/images/gallery/installation-1.jpg",
+    src: "/images/gallery/installation-1.jpg",
     description: "Zoftnor Max Easyfit W3 installed at the main overhead inlet supplying softened water across 5 bathrooms and solar water heating panels."
   },
   {
@@ -21,6 +22,7 @@ export const GALLERY_ITEMS = [
     title: "Dual Reactor Commercial Plant",
     location: "Industrial Corridor, Telangana",
     image: "/images/gallery/installation-2.jpg",
+    src: "/images/gallery/installation-2.jpg",
     description: "High-volume 12,000 LPH continuous conditioning skid protecting cooling tower circuits and boiler feed units from calcium crusting."
   },
   {
@@ -29,6 +31,7 @@ export const GALLERY_ITEMS = [
     title: "Apartment Overhead Tank System",
     location: "Gachibowli High-Rise Society",
     image: "/images/gallery/installation-3.jpg",
+    src: "/images/gallery/installation-3.jpg",
     description: "Centralized installation delivering scale-free water to 32 residential units with zero pressure loss."
   },
   {
@@ -37,6 +40,7 @@ export const GALLERY_ITEMS = [
     title: "Zoftnor Pro Reactor Chamber",
     location: "Bounten Manufacturing Unit",
     image: "/images/gallery/reactor-chamber.jpg",
+    src: "/images/gallery/reactor-chamber.jpg",
     description: "Precision-machined SS 304 reactor chamber engineered with 0.06-micron Iridium mesh for high-frequency hard mineral neutralization."
   },
   {
@@ -45,6 +49,7 @@ export const GALLERY_ITEMS = [
     title: "Bounten Precision Assembly Line",
     location: "Assembly & Quality Assurance Wing",
     image: "/images/gallery/factory-1.jpg",
+    src: "/images/gallery/factory-1.jpg",
     description: "Technicians conducting 10-bar hydraulic pressure resistance and electrode continuity testing on Zoftnor Max Easyfit units."
   },
   {
@@ -53,6 +58,7 @@ export const GALLERY_ITEMS = [
     title: "Certified Water Testing & R&D Lab",
     location: "Hyderabad Technology Center",
     image: "/images/gallery/testing-lab.jpg",
+    src: "/images/gallery/testing-lab.jpg",
     description: "In-house lab performing automated titration and spectrophotometry to assess Aragonite crystal transformation efficiency."
   },
   {
@@ -61,6 +67,7 @@ export const GALLERY_ITEMS = [
     title: "Mr. Chandra Shekhar - CEO",
     location: "Executive Leadership",
     image: "/images/gallery/ceo-chandra-shekhar.jpg",
+    src: "/images/gallery/ceo-chandra-shekhar.jpg",
     description: "Chief Executive Officer steering Bounten's technological innovations and eco-friendly water treatment solutions."
   },
   {
@@ -69,6 +76,7 @@ export const GALLERY_ITEMS = [
     title: "Mr. B. Krishna Murthy - COO",
     location: "Corporate Operations",
     image: "/images/gallery/coo-krishna-murthy.jpg",
+    src: "/images/gallery/coo-krishna-murthy.jpg",
     description: "Chief Operating Officer directing operations, nationwide dealer logistics, and service standards across India."
   },
   {
@@ -77,6 +85,7 @@ export const GALLERY_ITEMS = [
     title: "Water Tech Excellence Recognition",
     location: "National Sustainability Summit",
     image: "/images/gallery/award-ceremony.jpg",
+    src: "/images/gallery/award-ceremony.jpg",
     description: "Bounten recognized for outstanding innovation in non-chemical, zero-waste hard water treatment technology."
   },
   {
@@ -85,6 +94,7 @@ export const GALLERY_ITEMS = [
     title: "National Water Expo Showcase",
     location: "HITEX Exhibition Centre, Hyderabad",
     image: "/images/gallery/expo-booth.jpg",
+    src: "/images/gallery/expo-booth.jpg",
     description: "Bounten engineering team presenting live scale-prevention demonstrations to architects, builders, and plumbing consultants."
   },
   {
@@ -93,6 +103,7 @@ export const GALLERY_ITEMS = [
     title: "Zoftnor Max Easyfit System Skid",
     location: "Quality Inspection Station",
     image: "/images/gallery/system-skid.jpg",
+    src: "/images/gallery/system-skid.jpg",
     description: "Flagship residential system with electronic control module, electrolysis reactor, bypass valves, and pre-filter mounted on stainless frame."
   },
   {
@@ -101,6 +112,7 @@ export const GALLERY_ITEMS = [
     title: "Bounten Descaler Inline Units",
     location: "Packaging & Dispatch Bay",
     image: "/images/gallery/descaler-packaging.jpg",
+    src: "/images/gallery/descaler-packaging.jpg",
     description: "Heavy-duty SS 304 inline appliance guards packaged with universal connection adapters for geysers and washing machines."
   }
 ];

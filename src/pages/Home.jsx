@@ -709,7 +709,7 @@ export default function Home() {
             <AnimatedSection key={item.id} animation="zoom" delay={idx * 80} duration={600}>
               <div className="group relative aspect-square rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xs hover:shadow-lg hover-lift transition-all duration-400">
                 <img
-                  src={item.src}
+                  src={item.image || item.src}
                   alt={item.title}
                   className="w-full h-full object-cover transform group-hover:scale-115 transition-transform duration-700 ease-out"
                   loading="lazy"
