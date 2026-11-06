@@ -75,6 +75,12 @@ export default function Navbar() {
   const handleNavClick = (e, link) => {
     if (link.isDownload) return; // native download
 
+    if (link.name === 'Products') {
+      navigate('/products');
+      setIsOpen(false);
+      return;
+    }
+
     if (isHomePage) {
       e.preventDefault();
       const secId = link.sectionId || 'home';
