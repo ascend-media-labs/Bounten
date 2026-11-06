@@ -570,7 +570,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 88,
     "popularity": 100,
     "dateAdded": "2024-03-05",
-    "image": "/images/products/zoftnor-max-w2.jpg",
+    "image": "/images/products/zoftnor-max-w2.png",
     "shortDescription": "Best-selling 2,000 LPH whole-property water softener with Bag Filter for 2-3 BHK homes and independent duplexes.",
     "description": "Bounten's flagship Zoftner Pro Max W2 delivers 2,000 Litres Per Hour of scale-free water backed by an industrial-grade bag filter. It provides comprehensive scale prevention for multi-bathroom homes, geysers, washing machines, and luxury shower fittings without requiring salt bags or chemical regenerants.",
     "specifications": [
