@@ -89,6 +89,13 @@ export default function Navbar() {
       return;
     }
 
+    if (link.name === 'Services') {
+      e.preventDefault();
+      navigate('/services');
+      setIsOpen(false);
+      return;
+    }
+
     if (link.name === 'Home') {
       e.preventDefault();
       if (isHomePage) {
