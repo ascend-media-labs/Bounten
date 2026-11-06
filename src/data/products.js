@@ -939,7 +939,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 35,
     "popularity": 92,
     "dateAdded": "2024-03-02",
-    "image": "/images/products/zoftnor-max-w1.png",
+    "image": "/images/products/zoftnor-inline-w1.png",
     "shortDescription": "Streamlined 1,000 LPH inline electrolysis water softener without bag filter for direct plumbing in 1-2 BHK homes.",
     "description": "Zoftnor Max W1 delivers 1,000 LPH of electrolytic hard water conditioning in a streamlined, compact inline design without a bag filter. Ideal for properties where pre-filtration is already installed or water has low suspended silt, it neutralizes limescale bonding directly on inlet pipes with zero salt and zero chemicals.",
     "specifications": [
