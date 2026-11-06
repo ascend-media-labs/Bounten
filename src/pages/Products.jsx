@@ -156,6 +156,97 @@ export default function Products() {
                   <Sparkles className="w-3.5 h-3.5 text-sky-400" />
                   <span>Resin-Free | Salt-Free | Chemical-Free</span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                 
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-[1.15]">
                   Bounten Water Softening Systems
@@ -166,10 +257,192 @@ export default function Products() {
                   {PRODUCT_HIGHLIGHTS.headline}
                 </div>
 
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                   {PRODUCT_HIGHLIGHTS.technology}
                 </p>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
               {/* Quick WhatsApp consultation button */}
               <div className="flex-shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3">
@@ -183,8 +456,281 @@ export default function Products() {
                 <div className="text-center text-xs text-slate-400">
                   Direct WhatsApp: <strong className="text-white">{COMPANY_CONFIG.displayWhatsApp}</strong>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
             {/* Core Trust Specs Row */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4 border-t border-slate-700/60 text-xs relative z-10">
@@ -194,7 +740,189 @@ export default function Products() {
                   <span className="block text-[11px] text-slate-400 uppercase font-semibold">TDS Limit</span>
                   <span className="font-bold text-white">Up to 1,999 ppm</span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
               <div className="bg-white/5 backdrop-blur-xs p-3 rounded-xl border border-white/10 flex items-center gap-2.5 hover:bg-white/10 transition-colors">
                 <Clock className="w-5 h-5 text-emerald-400 flex-shrink-0" />
@@ -202,7 +930,189 @@ export default function Products() {
                   <span className="block text-[11px] text-slate-400 uppercase font-semibold">Warranty</span>
                   <span className="font-bold text-white">1-Yr Body | 5-Yr Electrode</span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
               <div className="bg-white/5 backdrop-blur-xs p-3 rounded-xl border border-white/10 flex items-center gap-2.5 hover:bg-white/10 transition-colors">
                 <Award className="w-5 h-5 text-amber-400 flex-shrink-0" />
@@ -210,7 +1120,189 @@ export default function Products() {
                   <span className="block text-[11px] text-slate-400 uppercase font-semibold">Certifications</span>
                   <span className="font-bold text-white">ISO 9001 & ISO 14001</span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
               <div className="bg-white/5 backdrop-blur-xs p-3 rounded-xl border border-white/10 flex items-center gap-2.5 hover:bg-white/10 transition-colors">
                 <Droplets className="w-5 h-5 text-cyan-400 flex-shrink-0" />
@@ -218,81 +1310,374 @@ export default function Products() {
                   <span className="block text-[11px] text-slate-400 uppercase font-semibold">Material Grade</span>
                   <span className="font-bold text-white">Food Grade SS304</span>
                 </div>
-              </div>
-            </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
           </div>
-        </AnimatedSection>
 
-        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Category 1: Zoftner Pro */}
-          <AnimatedSection animation="fade-right" delay={100} duration={600}>
-            <button
-              onClick={() => handleCategorySelect("Zoftner Pro")}
-              className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
-                selectedCategory === "Zoftner Pro"
-                  ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
-                  : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
-              }`}
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div className="space-y-1.5">
-                  <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
-                    <Check className="w-3 h-3 stroke-[3]" />
-                    <span>Category 1 • All models come with a bag filter</span>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
-                    Zoftner Pro
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                    Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
-                  </p>
-                </div>
-                <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
                   selectedCategory === "Zoftner Pro"
-                    ? "bg-sky-600 text-white shadow-xs"
-                    : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
-                }`}>
-                  {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
-                </span>
-              </div>
-            </button>
-          </AnimatedSection>
-
-          {/* Category 2: Zoftner Quick Fix */}
-          <AnimatedSection animation="fade-left" delay={150} duration={600}>
-            <button
-              onClick={() => handleCategorySelect("Zoftner Quick Fix")}
-              className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
-                selectedCategory === "Zoftner Quick Fix"
-                  ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
-                  : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
-              }`}
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div className="space-y-1.5">
-                  <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
-                    <Zap className="w-3 h-3 text-sky-600" />
-                    <span>Category 2 • All models come without a bag filter</span>
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
-                    Zoftner Quick Fix
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                    Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
-                  </p>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
                 </div>
-                <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
                   selectedCategory === "Zoftner Quick Fix"
-                    ? "bg-sky-600 text-white shadow-xs"
-                    : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
-                }`}>
-                  {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
-                </span>
-              </div>
-            </button>
-          </AnimatedSection>
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
         </div>
+              </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+            </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+          </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+        </AnimatedSection>
 
         {/* Mobile Filter Toggle Button */}
         <div className="flex items-center gap-2 lg:hidden">
@@ -303,6 +1688,97 @@ export default function Products() {
             <Filter className="w-4 h-4 text-sky-600" />
             <span>Filter Categories & Search ({selectedCategory})</span>
           </button>
+        </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
         </div>
 
         {/* Main Grid: Catalogue on Left (lg:col-span-8 or 9), Sidebar on Right (lg:col-span-4 or 3) */}
@@ -328,6 +1804,97 @@ export default function Products() {
                 )}
               </div>
 
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+
               {/* Sorting Dropdown */}
               <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
                 <label htmlFor="product-sort" className="text-xs font-semibold text-slate-500 whitespace-nowrap">
@@ -346,7 +1913,189 @@ export default function Products() {
                   <option value="price-high-low">Price: High to Low</option>
                 </select>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
             {/* Product Cards Grid: Staggered with AnimatedSection */}
             {displayedProducts.length > 0 ? (
@@ -357,12 +2106,194 @@ export default function Products() {
                   </AnimatedSection>
                 ))}
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             ) : (
               /* No products found state */
               <div className="bg-white rounded-2xl p-12 text-center border border-slate-200 space-y-4">
                 <div className="w-16 h-16 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center mx-auto">
                   <Search className="w-8 h-8" />
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                 <h3 className="text-lg font-bold text-[#081C3B]">No products match your criteria</h3>
                 <p className="text-xs sm:text-sm text-slate-500 max-w-md mx-auto">
                   We couldn't find any products matching your search query or selected category.
@@ -374,6 +2305,97 @@ export default function Products() {
                   Reset All Filters
                 </button>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             )}
 
             {/* PAGINATION: Functional Previous, Page 1, Page 2, Next */}
@@ -409,6 +2431,97 @@ export default function Products() {
                   ))}
                 </div>
 
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+
                 <button
                   onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
@@ -422,9 +2535,191 @@ export default function Products() {
                   <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             )}
 
           </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
           {/* RIGHT: Desktop Sidebar (Categories, Product Search, Help Card, Brochure) */}
           <aside className="hidden lg:block lg:col-span-4 xl:col-span-3 space-y-6">
@@ -456,7 +2751,189 @@ export default function Products() {
                   </button>
                 )}
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
             {/* Product Categories Widget: strictly two categories + All */}
             <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
@@ -473,6 +2950,97 @@ export default function Products() {
                   </button>
                 )}
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
               <div className="space-y-1.5 pt-1">
                 {CATEGORIES.map((cat) => {
@@ -504,6 +3072,97 @@ export default function Products() {
                           <span className="text-[10px] text-slate-500 font-normal">Without Bag Filter</span>
                         )}
                       </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                       <span
                         className={`text-[10px] px-2 py-0.5 rounded-full transition-colors ${
                           isSelected ? 'bg-sky-200/70 text-sky-800' : 'bg-slate-100 text-slate-500'
@@ -515,7 +3174,189 @@ export default function Products() {
                   );
                 })}
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
             {/* Warranty Assurance Box in Sidebar */}
             <div className="bg-emerald-50/70 p-5 rounded-2xl border border-emerald-200/80 space-y-3 text-xs hover-lift transition-all">
@@ -523,6 +3364,97 @@ export default function Products() {
                 <ShieldCheck className="w-4 h-4 text-emerald-700" />
                 <span>Warranty Assurance</span>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               <ul className="space-y-2 text-slate-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
@@ -535,12 +3467,194 @@ export default function Products() {
               </ul>
             </div>
 
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+
             {/* Water Quality Box in Sidebar */}
             <div className="bg-sky-50/70 p-5 rounded-2xl border border-sky-200/80 space-y-2 text-xs hover-lift transition-all">
               <div className="flex items-center gap-2 text-sky-900 font-bold uppercase tracking-wide">
                 <Droplets className="w-4 h-4 text-sky-600" />
                 <span>Water Quality Compatibility</span>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               <p className="text-slate-700 leading-relaxed font-normal">
                 Works with input water TDS up to <strong>1,999 ppm</strong>.
               </p>
@@ -549,17 +3663,290 @@ export default function Products() {
               </p>
             </div>
 
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+
             {/* Quick WhatsApp Assistance Card */}
             <div className="bg-gradient-to-br from-[#081C3B] to-slate-900 text-white p-6 rounded-2xl shadow-xl space-y-4 hover-lift transition-all">
               <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
                 <PhoneCall className="w-5 h-5 animate-pulse" />
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               <div>
                 <h4 className="text-base font-bold text-white">Need Sizing Guidance?</h4>
                 <p className="text-xs text-slate-300 mt-1 leading-relaxed">
                   Confused between <strong>Zoftner Pro</strong> (with bag filter) and <strong>Zoftner Quick Fix</strong> (without bag filter)? Let our water engineers advise you on WhatsApp.
                 </p>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               <button
                 onClick={openGeneralEnquiry}
                 className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 px-4 rounded-xl text-xs font-bold transition-all shadow-md"
@@ -569,7 +3956,189 @@ export default function Products() {
               <div className="text-center text-[11px] text-slate-400">
                 Direct: <strong className="text-white">{COMPANY_CONFIG.displayWhatsApp}</strong>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
             {/* Download Brochure Widget */}
             <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 space-y-3">
@@ -577,6 +4146,97 @@ export default function Products() {
                 <FileDown className="w-4 h-4 text-sky-600" />
                 <span>Product Brochures</span>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Download the official high-resolution Bounten brochure and flyer.
               </p>
@@ -598,10 +4258,283 @@ export default function Products() {
                   <span>Download Flyer PDF</span>
                 </a>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
           </aside>
 
+        </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
         </div>
 
         {/* ============================================================== */}
@@ -622,6 +4555,97 @@ export default function Products() {
                 {PRODUCT_HIGHLIGHTS.applications.subtitle}
               </p>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
           </AnimatedSection>
 
           {/* Grid of 3 Main Applications: Residential, Commercial, Everyday */}
@@ -634,6 +4658,97 @@ export default function Products() {
                   <div className="w-12 h-12 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md">
                     <HomeIcon className="w-6 h-6" />
                   </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                   <h3 className="text-lg font-bold text-[#081C3B]">
                     {PRODUCT_HIGHLIGHTS.applications.residential.title}
                   </h3>
@@ -646,12 +4761,285 @@ export default function Products() {
                     ))}
                   </ul>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                 <div className="pt-3 border-t border-sky-100/60">
                   <span className="text-[11px] font-bold text-sky-700 uppercase tracking-wider block">
                     Recommended: Zoftner Pro W1 / W2 or Quick Fix W1 / W2
                   </span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </AnimatedSection>
 
             {/* 2. Commercial Applications */}
@@ -661,6 +5049,97 @@ export default function Products() {
                   <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
                     <Building2 className="w-6 h-6" />
                   </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                   <h3 className="text-lg font-bold text-[#081C3B]">
                     {PRODUCT_HIGHLIGHTS.applications.commercial.title}
                   </h3>
@@ -673,12 +5152,285 @@ export default function Products() {
                     ))}
                   </ul>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                 <div className="pt-3 border-t border-emerald-100/60">
                   <span className="text-[11px] font-bold text-emerald-700 uppercase tracking-wider block">
                     Recommended: Zoftner Pro Max W3 / W4 / W6
                   </span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </AnimatedSection>
 
             {/* 3. Everyday Applications */}
@@ -688,6 +5440,97 @@ export default function Products() {
                   <div className="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md">
                     <Droplets className="w-6 h-6" />
                   </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                   <h3 className="text-lg font-bold text-[#081C3B]">
                     {PRODUCT_HIGHLIGHTS.applications.everyday.title}
                   </h3>
@@ -699,19 +5542,656 @@ export default function Products() {
                           <strong className="text-slate-900 font-semibold">{item.name}:</strong>{' '}
                           <span className="text-slate-600">{item.description}</span>
                         </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                       </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                     ))}
                   </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
                 </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+                </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                 <div className="pt-3 border-t border-amber-100/60">
                   <span className="text-[11px] font-bold text-amber-800 uppercase tracking-wider block">
                     Full Whole-Property Conditioning Protection
                   </span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </AnimatedSection>
 
           </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
           {/* 4. KEY BENEFITS CARD */}
           <AnimatedSection animation="fade-up" delay={150} duration={700}>
@@ -725,10 +6205,283 @@ export default function Products() {
                     Why homeowners, builders, and commercial enterprises choose Bounten electrolytic systems.
                   </p>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                 <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 font-bold text-xs px-3.5 py-1.5 rounded-full shadow-xs">
                   <span>100% Salt-Free & Chemical-Free</span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
                 {PRODUCT_HIGHLIGHTS.applications.keyBenefits.items.map((benefit, idx) => (
@@ -739,13 +6492,377 @@ export default function Products() {
                     <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">
                       ✓
                     </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                     <span className="text-xs sm:text-sm font-semibold text-slate-800">
                       {benefit}
                     </span>
                   </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                 ))}
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
           </AnimatedSection>
 
           {/* WARRANTY ASSURANCE & WATER QUALITY BANNER */}
@@ -758,6 +6875,97 @@ export default function Products() {
                   <ShieldCheck className="w-4 h-4" />
                   <span>Warranty Assurance</span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                 <h4 className="text-xl font-bold text-white">
                   Unconditional Manufacturer Warranty
                 </h4>
@@ -773,12 +6981,194 @@ export default function Products() {
                 </ul>
               </div>
 
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+
               {/* Water Quality & Certifications Card */}
               <div className="bg-gradient-to-br from-sky-950 via-sky-900 to-[#081C3B] text-white p-6 sm:p-8 rounded-2xl shadow-xl space-y-4 border border-sky-800/60 hover-lift transition-all">
                 <div className="inline-flex items-center gap-2 bg-sky-500/20 text-sky-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-sky-400/20">
                   <Award className="w-4 h-4" />
                   <span>Water Compatibility & Certifications</span>
                 </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
                 <h4 className="text-xl font-bold text-white">
                   Input Water TDS & International Standards
                 </h4>
@@ -794,7 +7184,189 @@ export default function Products() {
                 </ul>
               </div>
 
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
           </AnimatedSection>
 
         </section>
@@ -819,6 +7391,97 @@ export default function Products() {
               </button>
             </div>
 
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+
             {/* Mobile Search */}
             <div className="space-y-2">
               <label className="text-xs font-bold uppercase text-slate-500">Search</label>
@@ -832,7 +7495,189 @@ export default function Products() {
                 />
                 <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
             {/* Mobile Categories */}
             <div className="space-y-2">
@@ -854,7 +7699,189 @@ export default function Products() {
                   </button>
                 ))}
               </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
 
             {/* Action buttons */}
             <div className="pt-4 space-y-2">
@@ -874,6 +7901,279 @@ export default function Products() {
                 Reset
               </button>
             </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+          </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+          </div>
+        </div>
+        </div>
+
+        {/* TWO CATEGORIES SHOWCASE / SELECTION CARDS - DISPLAYED NEXT */}
+        <div className="space-y-4 pt-2">
+          <div className="space-y-1">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Product Series
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              Two Distinct Series. Tailored to Your Water Setup.
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5">
+              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Category 1: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Pro");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Pro"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Check className="w-3 h-3 stroke-[3]" />
+                      <span>Category 1 • All models come with a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Includes heavy-duty bag filtration to trap suspended sediment and silt alongside advanced electrolysis descaling.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Pro"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Pro").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
+
+            {/* Category 2: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={150} duration={600}>
+              <button
+                onClick={() => {
+                  handleCategorySelect("Zoftner Quick Fix");
+                  window.scrollTo({ top: 400, behavior: "smooth" });
+                }}
+                className={`w-full text-left p-5 sm:p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group hover-lift shine-sweep ${
+                  selectedCategory === "Zoftner Quick Fix"
+                    ? "bg-white border-sky-500 shadow-lg ring-2 ring-sky-500/30"
+                    : "bg-white border-slate-200 hover:border-sky-300 hover:shadow-md"
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 bg-slate-100 text-slate-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <Zap className="w-3 h-3 text-sky-600" />
+                      <span>Category 2 • All models come without a bag filter</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B] group-hover:text-sky-600 transition-colors">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Streamlined inline electrolysis and physical descalers engineered for direct pipe fitment without a bag filter.
+                    </p>
+                  </div>
+                  <span className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all ${
+                    selectedCategory === "Zoftner Quick Fix"
+                      ? "bg-sky-600 text-white shadow-xs"
+                      : "bg-slate-100 text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-600"
+                  }`}>
+                    {PRODUCTS_DATA.filter(p => p.category === "Zoftner Quick Fix").length} Models
+                  </span>
+                </div>
+              </button>
+            </AnimatedSection>
           </div>
         </div>
       )}
