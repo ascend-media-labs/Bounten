@@ -69,7 +69,7 @@ export default function Home() {
     <div className="space-y-6 sm:space-y-8 pb-6 sm:pb-8 overflow-hidden">
       
       {/* 1. HERO SECTION WITH AMBIENT WATER GLOW - id="home" */}
-      <section id="home" className="scroll-mt-24 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/50 py-4 sm:py-6 lg:py-7 border-b border-slate-100">
+      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/50 py-4 sm:py-6 lg:py-7 border-b border-slate-100">
         {/* Soft Ambient Floating Water Glow Rings */}
         <div className="absolute top-0 right-0 -mr-28 -mt-28 w-[450px] h-[450px] rounded-full bg-sky-200/40 blur-3xl pointer-events-none animate-ambient-glow" />
         <div className="absolute bottom-0 left-0 -ml-28 -mb-28 w-[400px] h-[400px] rounded-full bg-blue-100/50 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '2.5s' }} />
@@ -218,8 +218,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. TWO CATEGORIES SHOWCASE & FEATURED PRODUCTS - id="products" */}
-      <section id="products" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
+      {/* 2. ABOUT BOUNTEN SUMMARY SECTION - id="about" */}
+      <section id="about" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimatedSection animation="fade-up" duration={700}>
+          <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/80 hover-lift transition-all">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              
+              <div className="lg:col-span-8 space-y-3.5">
+                <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600">
+                  About Bounten Global
+                </span>
+                <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+                  Pioneering Non-Chemical Hard Water Treatment in India
+                </h2>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                  Headquartered in Banjara Hills, Hyderabad, <strong>BOUNTEN</strong> (KCS Pride Products LLP) was founded to end the cycle of salt dependency and groundwater pollution caused by outdated water softeners. Our advanced Zoftner systems treat hard water at a molecular level, preventing limescale encrustation while preserving vital healthy minerals like calcium and magnesium.
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-slate-700 font-semibold">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>Food-Grade SS 304 Reactor Materials</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>0.06-Micron Iridium Mesh Technology</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>100% Retained Healthy Minerals</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>Certified PAN India Technical Network</span>
+                  </div>
+                </div>
+
+                <div className="pt-1">
+                  <Link
+                    to="/about"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 group"
+                  >
+                    <span>Learn more about our company & technology</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="lg:col-span-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 space-y-3 text-center">
+                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mx-auto">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <h3 className="text-base font-bold text-[#081C3B]">Our Quality Commitment</h3>
+                <p className="text-xs text-slate-500 leading-relaxed font-normal">
+                  Every Bounten unit undergoes strict 10-bar hydraulic pressure validation, electrode calibration, and electrical safety testing before dispatch.
+                </p>
+                <div className="pt-1">
+                  <button
+                    onClick={openGeneralEnquiry}
+                    className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2 px-3.5 rounded-xl text-xs font-bold transition-all shadow-xs"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 fill-white" />
+                    <span>Consult an Expert</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* 3. TWO CATEGORIES SHOWCASE & FEATURED PRODUCTS - id="products" */}
+      <section id="products" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         
         {/* 1. Featured Products Grid (Image 1) - Displayed First */}
         <div className="space-y-4">
@@ -376,8 +447,8 @@ export default function Home() {
 
       </section>
 
-      {/* 3. SERVICES OVERVIEW - id="services" */}
-      <section id="services" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
+      {/* 4. SERVICES OVERVIEW - id="services" */}
+      <section id="services" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
@@ -433,19 +504,102 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. WATER SOFTENER - APPLICATIONS & USES - id="solutions" */}
-      <section id="solutions" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
+      {/* 5. BOUNTEN WATER SOFTENER BENEFITS - id="benefits" */}
+      <section id="benefits" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="space-y-1">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-              Applications & Uses
-            </span>
-            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
-              {PRODUCT_HIGHLIGHTS.applications.title}
-            </h2>
-            <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
-              {PRODUCT_HIGHLIGHTS.applications.subtitle}
-            </p>
+          <div className="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+              <div>
+                <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
+                  Bounten Water Softener Key Benefits
+                </h3>
+                <p className="text-xs text-slate-500 font-medium">Advanced Electrolysis Technology for Scale-Free Living</p>
+              </div>
+              <Link
+                to="/benefits"
+                className="btn-press inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 bg-sky-100 hover:bg-sky-200 px-3.5 py-1.5 rounded-full transition-colors w-fit"
+              >
+                <span>View Full Benefits & Technology Guide</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-0.5">
+              {PRODUCT_HIGHLIGHTS.applications.keyBenefits.items.map((benefit, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-xs flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800 hover:border-emerald-300 transition-colors"
+                >
+                  <div className="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 font-bold text-xs">
+                    ✓
+                  </div>
+                  <span>{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* WARRANTY & TDS BAR */}
+        <AnimatedSection animation="zoom" delay={150} duration={800}>
+          <div className="bg-gradient-to-r from-[#081C3B] via-slate-900 to-[#081C3B] text-white p-5 sm:p-6 rounded-2xl shadow-xl grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-center border border-slate-800">
+            <div className="space-y-0.5">
+              <span className="text-emerald-400 font-bold text-xs uppercase tracking-wider block">
+                Warranty Assurance
+              </span>
+              <h4 className="text-base font-bold text-white">Unconditional Manufacturer Warranty</h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                1-Year Unconditional on Cabinet & Electricals.<br />
+                5-Year Unconditional on Electrode.
+              </p>
+            </div>
+
+            <div className="space-y-0.5">
+              <span className="text-sky-400 font-bold text-xs uppercase tracking-wider block">
+                Water Quality Compatibility
+              </span>
+              <h4 className="text-base font-bold text-white">Input TDS up to 1,999 ppm</h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Works with water TDS up to 1,999 ppm. For TDS above 2,000 ppm, backwashing is recommended.
+              </p>
+            </div>
+
+            <div className="space-y-0.5">
+              <span className="text-amber-400 font-bold text-xs uppercase tracking-wider block">
+                Standards & Materials
+              </span>
+              <h4 className="text-base font-bold text-white">ISO 9001 & ISO 14001</h4>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Food grade material: SS304 stainless steel. Non-toxic, safe for drinking lines and skin contact.
+              </p>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* 6. WATER SOFTENER - APPLICATIONS & USES - id="solutions" */}
+      <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
+        <AnimatedSection animation="fade-up" duration={700}>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+            <div>
+              <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+                Applications & Uses
+              </span>
+              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+                {PRODUCT_HIGHLIGHTS.applications.title}
+              </h2>
+              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
+                {PRODUCT_HIGHLIGHTS.applications.subtitle}
+              </p>
+            </div>
+
+            <Link
+              to="/solutions"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group flex-shrink-0"
+            >
+              <span>View All Solutions</span>
+              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </AnimatedSection>
 
@@ -522,152 +676,10 @@ export default function Home() {
           </AnimatedSection>
 
         </div>
-
-        {/* 4. KEY BENEFITS ROW - id="benefits" */}
-        <AnimatedSection animation="fade-up" delay={150} duration={800}>
-          <div id="benefits" className="scroll-mt-28 bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-4">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
-                  Bounten Water Softener Key Benefits
-                </h3>
-                <p className="text-xs text-slate-500 font-medium">Advanced Electrolysis Technology for Scale-Free Living</p>
-              </div>
-              <Link
-                to="/benefits"
-                className="btn-press inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 bg-sky-100 hover:bg-sky-200 px-3.5 py-1.5 rounded-full transition-colors w-fit"
-              >
-                <span>View Full Benefits & Technology Guide</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-0.5">
-              {PRODUCT_HIGHLIGHTS.applications.keyBenefits.items.map((benefit, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-xs flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800 hover:border-emerald-300 transition-colors"
-                >
-                  <div className="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 font-bold text-xs">
-                    ✓
-                  </div>
-                  <span>{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* WARRANTY & TDS BAR */}
-        <AnimatedSection animation="zoom" delay={200} duration={800}>
-          <div className="bg-gradient-to-r from-[#081C3B] via-slate-900 to-[#081C3B] text-white p-5 sm:p-6 rounded-2xl shadow-xl grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-center border border-slate-800">
-            <div className="space-y-0.5">
-              <span className="text-emerald-400 font-bold text-xs uppercase tracking-wider block">
-                Warranty Assurance
-              </span>
-              <h4 className="text-base font-bold text-white">Unconditional Manufacturer Warranty</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                1-Year Unconditional on Cabinet & Electricals.<br />
-                5-Year Unconditional on Electrode.
-              </p>
-            </div>
-
-            <div className="space-y-0.5">
-              <span className="text-sky-400 font-bold text-xs uppercase tracking-wider block">
-                Water Quality Compatibility
-              </span>
-              <h4 className="text-base font-bold text-white">Input TDS up to 1,999 ppm</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Works with water TDS up to 1,999 ppm. For TDS above 2,000 ppm, backwashing is recommended.
-              </p>
-            </div>
-
-            <div className="space-y-0.5">
-              <span className="text-amber-400 font-bold text-xs uppercase tracking-wider block">
-                Standards & Materials
-              </span>
-              <h4 className="text-base font-bold text-white">ISO 9001 & ISO 14001</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Food grade material: SS304 stainless steel. Non-toxic, safe for drinking lines and skin contact.
-              </p>
-            </div>
-          </div>
-        </AnimatedSection>
       </section>
 
-      {/* 4. ABOUT BOUNTEN SUMMARY SECTION - id="about" */}
-      <section id="about" className="scroll-mt-14 sm:scroll-mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/80 hover-lift transition-all">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              
-              <div className="lg:col-span-8 space-y-3.5">
-                <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600">
-                  About Bounten Global
-                </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
-                  Pioneering Non-Chemical Hard Water Treatment in India
-                </h2>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-                  Headquartered in Banjara Hills, Hyderabad, <strong>BOUNTEN</strong> (KCS Pride Products LLP) was founded to end the cycle of salt dependency and groundwater pollution caused by outdated water softeners. Our advanced Zoftner systems treat hard water at a molecular level, preventing limescale encrustation while preserving vital healthy minerals like calcium and magnesium.
-                </p>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-slate-700 font-semibold">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>Food-Grade SS 304 Reactor Materials</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>0.06-Micron Iridium Mesh Technology</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>100% Retained Healthy Minerals</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>Certified PAN India Technical Network</span>
-                  </div>
-                </div>
-
-                <div className="pt-1">
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 group"
-                  >
-                    <span>Learn more about our company & technology</span>
-                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="lg:col-span-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 space-y-3 text-center">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mx-auto">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <h3 className="text-base font-bold text-[#081C3B]">Our Quality Commitment</h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-normal">
-                  Every Bounten unit undergoes strict 10-bar hydraulic pressure validation, electrode calibration, and electrical safety testing before dispatch.
-                </p>
-                <div className="pt-1">
-                  <button
-                    onClick={openGeneralEnquiry}
-                    className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2 px-3.5 rounded-xl text-xs font-bold transition-all shadow-xs"
-                  >
-                    <WhatsAppIcon className="w-4 h-4 fill-white" />
-                    <span>Consult an Expert</span>
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </AnimatedSection>
-      </section>
-
-      {/* 6. GALLERY PREVIEW - id="gallery" */}
-      <section id="gallery" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
+      {/* 7. GALLERY PREVIEW - id="gallery" */}
+      <section id="gallery" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>

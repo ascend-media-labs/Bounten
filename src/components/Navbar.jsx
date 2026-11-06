@@ -38,7 +38,7 @@ export default function Navbar() {
       return;
     }
 
-    const sections = ['home', 'products', 'services', 'solutions', 'benefits', 'about', 'gallery'];
+    const sections = ['home', 'about', 'products', 'services', 'benefits', 'solutions', 'gallery'];
 
     const handleScrollSpy = () => {
       // Top of page
@@ -74,27 +74,6 @@ export default function Navbar() {
   // Handle clicking on nav items (smooth scroll on home, navigate otherwise)
   const handleNavClick = (e, link) => {
     if (link.isDownload) return; // native download
-
-    if (link.name === 'Products') {
-      e.preventDefault();
-      navigate('/products');
-      setIsOpen(false);
-      return;
-    }
-
-    if (link.name === 'Benefits') {
-      e.preventDefault();
-      navigate('/benefits');
-      setIsOpen(false);
-      return;
-    }
-
-    if (link.name === 'Services') {
-      e.preventDefault();
-      navigate('/services');
-      setIsOpen(false);
-      return;
-    }
 
     if (link.name === 'Home') {
       e.preventDefault();
