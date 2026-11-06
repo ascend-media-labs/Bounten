@@ -286,7 +286,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 64,
     "popularity": 97,
     "dateAdded": "2024-03-01",
-    "image": "/images/products/zoftnor-max-w1.jpg",
+    "image": "/images/products/zoftnor-max-w1.png",
     "shortDescription": "Compact whole-house 1,000 LPH electrolysis water softener bundled with bag filter for apartments and compact residences.",
     "description": "Zoftner Pro Max W1 combines Bounten's signature electrolytic water treatment reactor with an integrated sediment bag filter. Designed for 1-2 BHK apartments and compact independent homes, it transforms scale-forming hardness into soft Aragonite crystals with zero salt refills, zero water wastage, and no chemical additives.",
     "specifications": [
