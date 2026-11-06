@@ -188,9 +188,20 @@ export default function Products() {
               </div>
             )}
 
-            {/* Bottom Left Pagination: 1 2 Next > */}
+            {/* Bottom Left Pagination: < Prev 1 2 Next > */}
             {totalPages > 1 && (
               <div className="flex items-center gap-2 pt-6 text-xs sm:text-sm">
+                {currentPage > 1 && (
+                  <button
+                    onClick={() => {
+                      setCurrentPage((prev) => prev - 1);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="px-2.5 py-1 text-slate-600 hover:text-blue-600 font-semibold cursor-pointer"
+                  >
+                    &lt; Prev
+                  </button>
+                )}
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
                   <button
                     key={pageNum}
@@ -273,7 +284,7 @@ export default function Products() {
                       selectedCategory === 'All Products' ? 'text-blue-600 font-bold' : 'text-slate-600'
                     }`}
                   >
-                    All Products 16
+                    All Products {PRODUCTS_DATA.length}
                   </button>
                 </div>
                 <div>
