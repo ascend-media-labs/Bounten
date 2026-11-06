@@ -44,29 +44,29 @@ export default function Solutions() {
   };
 
   return (
-    <div className="bg-slate-50/50 min-h-screen py-6 sm:py-10 space-y-8 sm:space-y-10">
+    <div className="bg-slate-50/50 min-h-screen pt-2 sm:pt-3 pb-8 sm:pb-10 space-y-4 sm:space-y-6">
       
-      {/* 1. Page Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 1. Page Header - Compact & Perfectly Spaced */}
+      <section className="max-w-6xl mx-auto px-3 sm:px-5 lg:px-6">
         <AnimatedSection animation="fade-down" duration={700}>
-          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-md text-center max-w-4xl mx-auto space-y-4 hover-lift transition-all">
-            <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600 bg-sky-50 px-3.5 py-1 rounded-full border border-sky-100">
+          <div className="bg-white rounded-2xl sm:rounded-3xl py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 border border-slate-200/80 shadow-sm text-center max-w-4xl mx-auto space-y-2 sm:space-y-2.5 hover-lift transition-all">
+            <span className="inline-block text-[10px] sm:text-[11px] uppercase font-extrabold tracking-wider text-sky-600 bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100">
               Engineered Across All Flow Rates
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#081C3B] tracking-tight">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-[#081C3B] tracking-tight leading-snug">
               Tailored Water Treatment Solutions
             </h1>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-normal">
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto font-normal">
               From single-point bathroom fixtures and whole-home villas to multi-building corporate campuses, boilers, and agriculture, Bounten delivers custom-calibrated salt-free systems.
             </p>
 
             {/* Quick jump navigation pills with hover bounce */}
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-2">
+            <div className="pt-1.5 sm:pt-2 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
               {SOLUTIONS_DATA.map((sol) => (
                 <a
                   key={sol.id}
                   href={`#${sol.id}`}
-                  className="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-700 text-xs font-bold px-3.5 py-1.5 rounded-full transition-all border border-slate-200 hover:border-sky-300 hover:scale-105 active:scale-95"
+                  className="bg-slate-100 hover:bg-sky-50 hover:text-sky-700 text-slate-700 text-[11px] sm:text-xs font-bold px-3 py-1 rounded-full transition-all border border-slate-200 hover:border-sky-300 hover:scale-105 active:scale-95"
                 >
                   {sol.title}
                 </a>
@@ -77,7 +77,7 @@ export default function Solutions() {
       </section>
 
       {/* 2. Detailed Solutions Sections (6 Categories) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="max-w-6xl mx-auto px-3 sm:px-5 lg:px-6 space-y-6 sm:space-y-8">
         {SOLUTIONS_DATA.map((solution, index) => {
           const Icon = icons[solution.id] || Zap;
           const isReversed = index % 2 !== 0;
@@ -86,7 +86,7 @@ export default function Solutions() {
             <AnimatedSection key={solution.id} animation="fade-up" delay={index * 80} duration={700}>
               <section
                 id={solution.id}
-                className="scroll-mt-28 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-sm hover:shadow-2xl hover-lift transition-all duration-400 overflow-hidden"
+                className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 overflow-hidden"
               >
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
