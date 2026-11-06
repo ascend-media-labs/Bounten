@@ -1298,7 +1298,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 26,
     "popularity": 87,
     "dateAdded": "2024-03-24",
-    "image": "/images/products/zoftnor-max-w6.png",
+    "image": "/images/products/zoftnor-inline-w6.png",
     "shortDescription": "Ultra-capacity 6,000 LPH commercial inline water softener without bag filter for societies, clinics, and resorts.",
     "description": "Zoftnor Max W6 delivers 6,000 Litres Per Hour scale conditioning for apartment blocks, hospitals, and resorts, connecting directly into main water lines.",
     "specifications": [
