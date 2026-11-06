@@ -110,7 +110,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 38,
     "popularity": 92,
     "dateAdded": "2024-01-15",
-    "image": "/images/products/descaler.jpg",
+    "image": "/images/products/descaler.png",
     "shortDescription": "Compact inline descaling device without bag filter for geysers, washing machines, and household inlet pipelines.",
     "description": "Bounten Zoftner Quick Fix Descaler is an advanced physical scale conditioning solution engineered to stop fresh limescale encrustation and gradually loosen pre-existing mineral deposits across appliances. Installed directly in-line without a bag filter, electricity, or salts.",
     "specifications": [
