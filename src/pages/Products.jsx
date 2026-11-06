@@ -26,8 +26,6 @@ export default function Products() {
   const [selectedAttribute, setSelectedAttribute] = useState('all');
   const [sortBy, setSortBy] = useState('default');
   const [currentPage, setCurrentPage] = useState(1);
-  const [cartItems, setCartItems] = useState([]);
-  const [addedNotice, setAddedNotice] = useState(null);
 
   // Exactly 9 products per page as shown in example screenshot
   const ITEMS_PER_PAGE = 9;
@@ -54,20 +52,6 @@ export default function Products() {
       searchParams.delete('q');
     }
     setSearchParams(searchParams);
-  };
-
-  const handleAddToCart = (product) => {
-    setCartItems((prev) => {
-      const existing = prev.find((item) => item.id === product.id);
-      if (existing) {
-        return prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-        );
-      }
-      return [...prev, { ...product, quantity: 1 }];
-    });
-    setAddedNotice(`Added "${product.name}" to cart! Opening WhatsApp enquiry...`);
-    setTimeout(() => setAddedNotice(null), 4000);
   };
 
   // Filter & Sort Logic
@@ -146,14 +130,6 @@ export default function Products() {
   return (
     <div className="bg-white min-h-screen py-6 sm:py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        
-        {/* Success toast notification when Add to Cart is clicked */}
-        {addedNotice && (
-          <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-lg flex items-center justify-between shadow-xs transition-all animate-in fade-in">
-            <span>{addedNotice}</span>
-            <button onClick={() => setAddedNotice(null)} className="text-emerald-600 hover:text-emerald-900 ml-4 font-bold">✕</button>
-          </div>
-        )}
 
         {/* ============================================================== */}
         {/* MAIN STORE CONTAINER (GRID ON LEFT + SIDEBAR ON RIGHT)        */}
@@ -184,50 +160,13 @@ export default function Products() {
               </select>
             </div>
 
-            {/* 3 Columns Grid of Products */}
+            {/* 3 Columns Grid of Products (9 items per page) */}
             {displayedProducts.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-                {displayedProducts.map((product) => (
-                  <div key={product.id} className="flex flex-col space-y-2.5 group text-left">
-                    {/* Square Product Image */}
-                    <Link
-                      to={`/products/${product.id}`}
-                      className="w-full aspect-square bg-white border border-slate-200/90 rounded-lg p-4 flex items-center justify-center overflow-hidden hover:border-blue-500 transition-colors shadow-2xs"
-                    >
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                    </Link>
-
-                    {/* Product Name */}
-                    <Link to={`/products/${product.id}`}>
-                      <h3 className="font-bold text-[#081C3B] text-sm hover:text-blue-600 transition-colors line-clamp-1">
-                        {product.name}
-                      </h3>
-                    </Link>
-
-                    {/* Price */}
-                    <div className="text-slate-800 font-bold text-xs sm:text-sm">
-                      ₹{product.price.toLocaleString('en-IN')}
-                    </div>
-
-                    {/* Blue Add to Cart Button */}
-                    <div className="pt-1">
-                      <button
-                        onClick={() => {
-                          handleAddToCart(product);
-                          openProductEnquiry(product);
-                        }}
-                        className="bg-[#1d5ed8] hover:bg-[#154db8] active:bg-[#103e96] text-white px-4 py-2 rounded text-xs font-semibold shadow-xs transition-colors cursor-pointer"
-                        title="Add to cart & Enquire on WhatsApp"
-                      >
-                        Add to cart
-                      </button>
-                    </div>
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-7">
+                {displayedProducts.map((product, idx) => (
+                  <AnimatedSection key={product.id} animation="fade-up" delay={idx * 50} duration={500}>
+                    <ProductCard product={product} />
+                  </AnimatedSection>
                 ))}
               </div>
             ) : (
@@ -349,61 +288,27 @@ export default function Products() {
               </div>
             </div>
 
-            {/* 2. Cart Section */}
+            {/* 2. Direct WhatsApp Assistance */}
             <div className="space-y-3 pt-4 border-t border-slate-100">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                Cart
+                Direct Consultation
               </h2>
-
-              {cartItems.length === 0 ? (
-                <div className="space-y-3">
-                  <div className="bg-slate-100 rounded-lg p-3.5 flex items-center gap-2.5 text-xs text-slate-600">
-                    <Bell className="w-4 h-4 text-slate-500 flex-shrink-0" />
-                    <span>Your cart is currently empty.</span>
-                  </div>
-                  <button
-                    onClick={() => {
-                      setSelectedCategory('All Products');
-                      setSearchQuery('');
-                      setSearchInputText('');
-                      setSelectedAttribute('all');
-                      setCurrentPage(1);
-                    }}
-                    className="bg-[#1d5ed8] hover:bg-[#154db8] text-white px-4 py-2 rounded text-xs font-semibold transition-colors shadow-2xs cursor-pointer"
-                  >
-                    Return to shop
-                  </button>
+              <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-4 space-y-3">
+                <div className="flex items-center gap-2 text-xs font-bold text-emerald-800">
+                  <WhatsAppIcon className="w-4 h-4 fill-[#25D366]" />
+                  <span>Instant Technical Guidance</span>
                 </div>
-              ) : (
-                <div className="space-y-3 bg-slate-50 p-3.5 rounded-lg border border-slate-200">
-                  <div className="space-y-2 text-xs">
-                    {cartItems.map((item) => (
-                      <div key={item.id} className="flex justify-between items-center text-slate-800">
-                        <span className="font-medium line-clamp-1">{item.name} × {item.quantity}</span>
-                        <span className="font-bold">₹{(item.price * item.quantity).toLocaleString('en-IN')}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="pt-2 border-t border-slate-200 flex justify-between font-bold text-xs text-slate-900">
-                    <span>Total:</span>
-                    <span>
-                      ₹{cartItems.reduce((acc, curr) => acc + curr.price * curr.quantity, 0).toLocaleString('en-IN')}
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => {
-                      const summary = cartItems.map((i) => `${i.name} (Qty: ${i.quantity}) - ₹${i.price}`).join('\n');
-                      const total = cartItems.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
-                      const message = `Hello Bounten Team,\n\nI want to order:\n${summary}\n\nTotal: ₹${total.toLocaleString('en-IN')}\n\nPlease proceed with my order.`;
-                      window.open(`https://wa.me/${COMPANY_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
-                    }}
-                    className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2 px-3 rounded text-xs font-bold shadow-xs transition-colors"
-                  >
-                    <WhatsAppIcon className="w-4 h-4 fill-white" />
-                    <span>Checkout on WhatsApp</span>
-                  </button>
-                </div>
-              )}
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Need help choosing the right capacity or model? Connect directly with our certified water specialists on WhatsApp.
+                </p>
+                <button
+                  onClick={openGeneralEnquiry}
+                  className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 px-3 rounded-lg text-xs font-bold shadow-xs transition-colors"
+                >
+                  <WhatsAppIcon className="w-4 h-4 fill-white" />
+                  <span>Enquire on WhatsApp</span>
+                </button>
+              </div>
             </div>
 
             {/* 3. Filter by attribute Section */}
