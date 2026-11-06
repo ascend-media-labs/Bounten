@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import {
   ShieldCheck,
@@ -13,9 +14,14 @@ import {
   Wrench,
   Heart,
   ChevronRight,
+  ChevronLeft,
   Check,
   X,
-  Maximize2
+  Maximize2,
+  ZoomIn,
+  ZoomOut,
+  RotateCcw,
+  ExternalLink
 } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import WhatsAppIcon from '../components/WhatsAppIcon';
@@ -23,6 +29,7 @@ import { openGeneralEnquiry, formatINR } from '../utils/whatsapp';
 
 export default function Benefits() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   const priceListData = [
     {
@@ -75,6 +82,51 @@ export default function Benefits() {
       subtitle: "Complete Specifications & Capacity Pricing"
     }
   ];
+
+  const currentIndex = selectedImage ? leafletImages.findIndex(img => img.src === selectedImage.src) : -1;
+
+  const handlePrev = (e) => {
+    if (e) e.stopPropagation();
+    if (currentIndex > 0) {
+      setSelectedImage(leafletImages[currentIndex - 1]);
+    } else {
+      setSelectedImage(leafletImages[leafletImages.length - 1]);
+    }
+    setZoomLevel(1);
+  };
+
+  const handleNext = (e) => {
+    if (e) e.stopPropagation();
+    if (currentIndex < leafletImages.length - 1) {
+      setSelectedImage(leafletImages[currentIndex + 1]);
+    } else {
+      setSelectedImage(leafletImages[0]);
+    }
+    setZoomLevel(1);
+  };
+
+  useEffect(() => {
+    if (!selectedImage) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setSelectedImage(null);
+        setZoomLevel(1);
+      } else if (e.key === 'ArrowLeft') {
+        handlePrev();
+      } else if (e.key === 'ArrowRight') {
+        handleNext();
+      }
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedImage, currentIndex]);
 
   return (
     <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
@@ -612,25 +664,37 @@ export default function Benefits() {
               {leafletImages.map((item, idx) => (
                 <div
                   key={idx}
-                  onClick={() => setSelectedImage(item)}
-                  className="group bg-slate-50 hover:bg-white rounded-2xl border border-slate-200 hover:border-sky-400 p-2.5 transition-all duration-300 shadow-xs hover:shadow-md cursor-pointer flex flex-col justify-between"
-                  title="Click to view full size"
+                  onClick={() => {
+                    setSelectedImage(item);
+                    setZoomLevel(1);
+                  }}
+                  className="group bg-slate-50 hover:bg-white rounded-2xl border border-slate-200 hover:border-sky-400 p-2.5 transition-all duration-300 shadow-xs hover:shadow-md cursor-pointer flex flex-col justify-between select-none"
+                  title="Click to expand & view full size"
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setSelectedImage(item);
+                      setZoomLevel(1);
+                    }
+                  }}
                 >
                   <div className="relative h-44 sm:h-52 w-full bg-white rounded-xl border border-slate-100 flex items-center justify-center overflow-hidden p-1.5">
                     <img
                       src={item.src}
                       alt={item.title}
-                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-xs"
+                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-xs pointer-events-none"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                      <span className="bg-white/95 text-slate-900 text-[10px] font-bold px-2 py-1 rounded-md shadow-xs flex items-center gap-1">
-                        <Maximize2 className="w-3 h-3 text-sky-600" />
+                    <div className="absolute inset-0 bg-slate-900/15 group-hover:bg-slate-900/25 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
+                      <span className="bg-sky-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1.5 transform group-hover:scale-105 transition-all">
+                        <Maximize2 className="w-3.5 h-3.5 text-white" />
                         Expand
                       </span>
                     </div>
                   </div>
-                  <div className="pt-2 text-center">
+                  <div className="pt-2 text-center pointer-events-none">
                     <p className="text-xs font-bold text-slate-800 group-hover:text-sky-600 transition-colors line-clamp-1">
                       {item.title}
                     </p>
@@ -646,45 +710,128 @@ export default function Benefits() {
 
       </div>
 
-      {/* Lightbox Modal for Full Image Viewing */}
-      {selectedImage && (
+      {/* Lightbox Modal for Full Image Viewing with Zoom & Controls */}
+      {selectedImage && createPortal(
         <div
-          className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-200"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-[99999] bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 md:p-6 select-none"
+          onClick={() => {
+            setSelectedImage(null);
+            setZoomLevel(1);
+          }}
         >
+          {/* Previous Button */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-2 sm:left-4 z-20 p-2.5 sm:p-3 rounded-full bg-white/10 hover:bg-white/25 active:scale-95 text-white transition-all backdrop-blur-sm shadow-lg border border-white/10 focus:outline-none"
+            aria-label="Previous image"
+            title="Previous (Left Arrow)"
+          >
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={handleNext}
+            className="absolute right-2 sm:right-4 z-20 p-2.5 sm:p-3 rounded-full bg-white/10 hover:bg-white/25 active:scale-95 text-white transition-all backdrop-blur-sm shadow-lg border border-white/10 focus:outline-none"
+            aria-label="Next image"
+            title="Next (Right Arrow)"
+          >
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+          </button>
+
+          {/* Modal Container */}
           <div
-            className="relative max-w-4xl max-h-[92vh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col p-2"
+            className="relative w-full max-w-5xl max-h-[94vh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-slate-200"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between p-3 border-b border-slate-100">
-              <div>
-                <h4 className="font-bold text-sm sm:text-base text-[#081C3B]">
-                  {selectedImage.title}
-                </h4>
-                <p className="text-xs text-slate-500 font-medium">
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-slate-100 bg-slate-50/80 flex-shrink-0">
+              <div className="flex-1 min-w-0 pr-3">
+                <div className="flex items-center gap-2">
+                  <h4 className="font-bold text-sm sm:text-base text-[#081C3B] truncate">
+                    {selectedImage.title}
+                  </h4>
+                  <span className="text-[10px] font-bold text-sky-700 bg-sky-100 px-2 py-0.5 rounded-full flex-shrink-0">
+                    {currentIndex + 1} of {leafletImages.length}
+                  </span>
+                </div>
+                <p className="text-xs text-slate-500 font-medium truncate">
                   {selectedImage.subtitle}
                 </p>
               </div>
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors btn-press"
-                aria-label="Close modal"
-              >
-                <X className="w-4 h-4" />
-              </button>
+
+              {/* Action Toolbar */}
+              <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+                {/* Zoom Out */}
+                <button
+                  onClick={() => setZoomLevel(prev => Math.max(prev - 0.25, 0.5))}
+                  className="p-1.5 sm:p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-colors shadow-xs"
+                  title="Zoom Out"
+                >
+                  <ZoomOut className="w-4 h-4" />
+                </button>
+
+                {/* Zoom Percentage / Reset */}
+                <button
+                  onClick={() => setZoomLevel(1)}
+                  className="px-2 py-1 text-xs font-semibold rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-colors shadow-xs"
+                  title="Reset Zoom"
+                >
+                  {Math.round(zoomLevel * 100)}%
+                </button>
+
+                {/* Zoom In */}
+                <button
+                  onClick={() => setZoomLevel(prev => Math.min(prev + 0.25, 3))}
+                  className="p-1.5 sm:p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-colors shadow-xs"
+                  title="Zoom In"
+                >
+                  <ZoomIn className="w-4 h-4" />
+                </button>
+
+                {/* Open Original */}
+                <a
+                  href={selectedImage.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-1.5 sm:p-2 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-colors shadow-xs"
+                  title="Open full resolution in new tab"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+
+                {/* Close Button */}
+                <button
+                  onClick={() => {
+                    setSelectedImage(null);
+                    setZoomLevel(1);
+                  }}
+                  className="p-1.5 sm:p-2 rounded-lg bg-slate-900 hover:bg-red-600 text-white transition-colors shadow-xs ml-1"
+                  aria-label="Close modal"
+                  title="Close (Esc)"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
             </div>
 
-            {/* Modal Image */}
-            <div className="p-2 overflow-auto max-h-[calc(92vh-100px)] flex items-center justify-center bg-slate-50 rounded-xl">
+            {/* Modal Image Viewport */}
+            <div className="flex-1 overflow-auto p-3 sm:p-4 flex items-center justify-center bg-slate-900/5 min-h-[50vh] max-h-[calc(94vh-80px)]">
               <img
                 src={selectedImage.src}
                 alt={selectedImage.title}
-                className="max-h-[80vh] w-auto object-contain rounded-lg shadow-sm"
+                style={{
+                  transform: `scale(${zoomLevel})`,
+                  transformOrigin: 'center center',
+                  transition: 'transform 0.2s ease-out'
+                }}
+                className="max-h-[75vh] w-auto max-w-full object-contain rounded-lg shadow-md"
+                draggable={false}
               />
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
     </div>
