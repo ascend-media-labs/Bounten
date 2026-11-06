@@ -176,11 +176,11 @@ export default function Navbar() {
             : 'bg-white/95 backdrop-blur-sm border-b border-slate-100 py-3'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-2 lg:gap-4">
+        <div className="w-full max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6">
+          <div className="flex items-center justify-between gap-2 lg:gap-3">
             
             {/* Logo on Left - strictly flex-shrink-0 */}
-            <div className="flex-shrink-0 flex items-center mr-1 sm:mr-3">
+            <div className="flex-shrink-0 flex items-center mr-1 sm:mr-2">
               <Link
                 to="/"
                 onClick={(e) => {
@@ -197,7 +197,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Navigation Links - STRICTLY SINGLE LINE WITH whitespace-nowrap */}
-            <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5 2xl:space-x-2 flex-nowrap whitespace-nowrap flex-shrink-0">
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 flex-nowrap whitespace-nowrap flex-shrink-0">
               {NAV_LINKS.map((link) => {
                 if (link.isDownload) {
                   return (
@@ -206,10 +206,10 @@ export default function Navbar() {
                       href={link.path}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="whitespace-nowrap flex-shrink-0 group inline-flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-xl hover:bg-sky-50 transition-all duration-300 relative"
+                      className="whitespace-nowrap flex-shrink-0 group inline-flex items-center gap-1 px-2 xl:px-2.5 py-1.5 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-xl hover:bg-sky-50 transition-all duration-300 relative"
                       title={`Open official ${link.name}`}
                     >
-                      <FileDown className="w-4 h-4 text-sky-500 flex-shrink-0 transform group-hover:translate-y-0.5 transition-transform duration-200" />
+                      <FileDown className="w-3.5 h-3.5 text-sky-500 flex-shrink-0 transform group-hover:translate-y-0.5 transition-transform duration-200" />
                       <span className="whitespace-nowrap">{link.name}</span>
                     </a>
                   );
@@ -225,7 +225,7 @@ export default function Navbar() {
                     key={link.name}
                     href={isHomePage ? `#${link.sectionId}` : link.path}
                     onClick={(e) => handleNavClick(e, link)}
-                    className={`whitespace-nowrap flex-shrink-0 relative px-2.5 xl:px-3 py-1.5 xl:py-2 text-xs xl:text-sm font-semibold rounded-xl transition-all duration-300 ease-in-out cursor-pointer ${
+                    className={`whitespace-nowrap flex-shrink-0 relative px-2 xl:px-2.5 py-1.5 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl transition-all duration-300 ease-in-out cursor-pointer ${
                       isActive
                         ? 'text-sky-600 bg-sky-50/90 font-bold shadow-xs'
                         : 'text-slate-700 hover:text-sky-600 hover:bg-slate-50'
@@ -236,14 +236,14 @@ export default function Navbar() {
                 );
               })}
 
-              {/* WhatsApp Quick Icon Button - strictly single line */}
+              {/* WhatsApp Quick Icon Button - strictly single line, no cut off */}
               <button
                 onClick={openGeneralEnquiry}
-                className="btn-press ml-1.5 xl:ml-3 inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white px-3 xl:px-4 py-1.5 xl:py-2 rounded-xl text-xs xl:text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="btn-press ml-1.5 xl:ml-2.5 inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white px-3 xl:px-3.5 py-1.5 xl:py-2 rounded-xl text-xs xl:text-sm font-bold shadow-sm hover:shadow-md transition-all duration-300 whitespace-nowrap flex-shrink-0"
                 title="Enquire on WhatsApp"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-white flex-shrink-0" />
-                <span className="whitespace-nowrap">Enquire</span>
+                <span className="whitespace-nowrap">Enquire on WhatsApp</span>
               </button>
             </nav>
 
