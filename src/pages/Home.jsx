@@ -277,12 +277,8 @@ export default function Home() {
             <AnimatedSection animation="fade-right" delay={100} duration={800}>
               <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-sky-200/80 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
                 <div className="space-y-3.5">
-                  <div className="flex items-center justify-between">
-                    <span className="bg-emerald-600 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-xs">
-                      <Check className="w-3.5 h-3.5 stroke-[3]" />
-                      <span>With Bag Filter</span>
-                    </span>
-                    <span className="text-xs font-bold text-sky-600">
+                  <div className="flex items-center justify-end">
+                    <span className="text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
                       {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Pro').length} Models Available
                     </span>
                   </div>
@@ -330,11 +326,8 @@ export default function Home() {
             <AnimatedSection animation="fade-left" delay={200} duration={800}>
               <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-slate-200 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
                 <div className="space-y-3.5">
-                  <div className="flex items-center justify-between">
-                    <span className="bg-slate-800 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
-                      Without Bag Filter
-                    </span>
-                    <span className="text-xs font-bold text-slate-600">
+                  <div className="flex items-center justify-end">
+                    <span className="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
                       {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Quick Fix').length} Models Available
                     </span>
                   </div>

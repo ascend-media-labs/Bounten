@@ -10,29 +10,8 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="group bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400 hover-lift shine-sweep shadow-xs hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden relative">
-      {/* Top Badges Row: Dedicated header so badges NEVER overlap or cut off the product image */}
-      <div className="pt-3.5 px-3.5 pb-2 flex items-center justify-between gap-2 z-10 bg-white border-b border-slate-50">
-        {/* Category Pill */}
-        <span className="inline-flex items-center gap-1.5 bg-[#081C3B] text-white font-bold text-xs px-2.5 py-1 rounded-lg shadow-2xs border border-white/10 shrink-0">
-          <Zap className="w-3 h-3 text-sky-400 fill-sky-400" />
-          <span>{product.category}</span>
-        </span>
-
-        {/* Bag Filter Status Badge */}
-        {product.hasBagFilter ? (
-          <span className="bg-emerald-600 text-white font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow-2xs flex items-center gap-1 border border-emerald-400/30 shrink-0">
-            <Check className="w-3 h-3 stroke-[3]" />
-            <span>With Bag Filter</span>
-          </span>
-        ) : (
-          <span className="bg-slate-800 text-slate-100 font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow-2xs border border-slate-700 shrink-0">
-            Without Bag Filter
-          </span>
-        )}
-      </div>
-
-      {/* Product Image Section: Full Unobstructed Display, Zero Cropping, Zero Cutting */}
-      <div className="relative h-60 sm:h-64 px-4 py-3 flex items-center justify-center bg-gradient-to-b from-slate-50/50 via-white to-slate-50/30 overflow-hidden">
+      {/* Product Image Section: Clean, Full Display, No Badges */}
+      <div className="relative h-64 sm:h-72 p-5 flex items-center justify-center bg-gradient-to-b from-slate-50/60 via-white to-slate-50/30 overflow-hidden">
         <Link to={`/products/${product.id}`} className="w-full h-full flex items-center justify-center">
           <img
             src={product.image}
