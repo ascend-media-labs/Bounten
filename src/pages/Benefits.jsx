@@ -77,27 +77,27 @@ export default function Benefits() {
   ];
 
   return (
-    <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+    <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
+      <div className="w-full max-w-[1380px] mx-auto px-3 sm:px-5 lg:px-6 space-y-6 sm:space-y-7">
 
         {/* Page Breadcrumb & Header */}
-        <div className="space-y-4">
-          <nav className="flex items-center space-x-2 text-xs sm:text-sm text-slate-500">
+        <div className="space-y-2">
+          <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+            <ChevronRight className="w-3 h-3 text-slate-400" />
             <span className="font-semibold text-slate-800">Benefits & Technology</span>
           </nav>
 
-          <AnimatedSection animation="fade-up" duration={600}>
-            <div className="text-center max-w-3xl mx-auto space-y-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-sky-100 text-sky-800 border border-sky-200">
-                <Sparkles className="w-3.5 h-3.5 text-sky-600" />
+          <AnimatedSection animation="fade-up" duration={500}>
+            <div className="text-center max-w-3xl mx-auto space-y-1.5 pt-0.5">
+              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200">
+                <Sparkles className="w-3 h-3 text-sky-600" />
                 Comprehensive Technology & Value Guide
               </span>
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#081C3B] tracking-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#081C3B] tracking-tight">
                 Bounten Water Softener Benefits
               </h1>
-              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
                 Advanced Electrolysis Technology for Soft, Healthy & Scale-Free Living. Explore our complete engineering specifications, maintenance details, operational guidelines, and model pricing below.
               </p>
             </div>
@@ -107,8 +107,8 @@ export default function Benefits() {
         {/* ============================================================== */}
         {/* SECTION 1: BOUNTEN PRO WATER SOFTENER (Text & Data Only) */}
         {/* ============================================================== */}
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-8 lg:p-10 space-y-6">
+        <AnimatedSection animation="fade-up" duration={600}>
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-5 sm:p-7 space-y-5">
             
             {/* Header & Badges */}
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
@@ -236,8 +236,8 @@ export default function Benefits() {
         {/* ============================================================== */}
         {/* SECTION 2: BETTER WATER FOR BETTER LIVING (Text & Data Only) */}
         {/* ============================================================== */}
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-8 lg:p-10 space-y-6">
+        <AnimatedSection animation="fade-up" duration={600}>
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-5 sm:p-7 space-y-5">
             
             <div className="border-b border-slate-100 pb-4">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#081C3B]">
@@ -348,8 +348,8 @@ export default function Benefits() {
         {/* ============================================================== */}
         {/* SECTION 3: THE BOUNTEN DIFFERENCE (Text & Data Only) */}
         {/* ============================================================== */}
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-8 lg:p-10 space-y-6">
+        <AnimatedSection animation="fade-up" duration={600}>
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-5 sm:p-7 space-y-5">
             
             <div className="border-b border-slate-100 pb-4">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#081C3B]">
@@ -499,8 +499,8 @@ export default function Benefits() {
         {/* ============================================================== */}
         {/* SECTION 4: COMPLETE MODEL PRICE & CAPACITY LIST (Text & Data Only) */}
         {/* ============================================================== */}
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-8 lg:p-10 space-y-6">
+        <AnimatedSection animation="fade-up" duration={600}>
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-5 sm:p-7 space-y-5">
             
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
@@ -591,8 +591,8 @@ export default function Benefits() {
         {/* ============================================================== */}
         {/* BOTTOM SECTION: 4 IMAGES IN SMALL SIZE HORIZONTAL ALIGNMENT */}
         {/* ============================================================== */}
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-8 space-y-5">
+        <AnimatedSection animation="fade-up" duration={600}>
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-5 sm:p-7 space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
               <div>
                 <h3 className="text-lg sm:text-xl font-black text-[#081C3B]">
