@@ -19,10 +19,10 @@ export default function Services() {
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
               Dedicated Customer Care
             </span>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#081C3B] tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B] tracking-tight">
               Official Service Capabilities
-            </h1>
-            <p className="text-slate-600 text-sm sm:text-base mt-1 max-w-3xl">
+            </h2>
+            <p className="text-slate-600 text-xs sm:text-sm mt-1 max-w-3xl leading-relaxed text-justify">
               We don't rely on unverified third-party contractors. Every Bounten service call is attended by certified in-house technical personnel.
             </p>
           </div>

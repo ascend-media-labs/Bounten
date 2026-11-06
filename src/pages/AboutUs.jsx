@@ -26,7 +26,7 @@ export default function AboutUs() {
     <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
       <div className="w-full max-w-[1380px] mx-auto px-3 sm:px-5 lg:px-6 space-y-6 sm:space-y-7">
         
-        {/* Page Breadcrumb & Header - Plain without card, exact same as Benefits */}
+        {/* Page Breadcrumb & Side Heading Header */}
         <div className="space-y-2">
           <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
@@ -35,15 +35,15 @@ export default function AboutUs() {
           </nav>
 
           <AnimatedSection animation="fade-up" duration={500}>
-            <div className="text-center max-w-3xl mx-auto space-y-1.5 pt-0.5">
-              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200">
+            <div className="space-y-1.5 pt-0.5 max-w-4xl text-left">
+              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200 w-fit">
                 <Sparkles className="w-3 h-3 text-sky-600" />
                 About Bounten Global
               </span>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#081C3B] tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B] tracking-tight">
                 Advancing Water Science Through Sustainable Innovation
-              </h1>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal text-justify">
                 {ABOUT_DATA.tagline}. Headquartered in Banjara Hills, Hyderabad, {ABOUT_DATA.fullName} is redefining how residential, commercial, and industrial properties resolve hard water scaling.
               </p>
             </div>

@@ -34,11 +34,15 @@
   }
 }
 
-/* Universal Text Justification for Website Content */
+/* Universal Text Justification for Entire Website */
 p, 
 .text-justify,
-.prose p {
-  text-align: justify;
+.prose p,
+article p,
+section p,
+main p,
+div > p {
+  text-align: justify !important;
   text-justify: inter-word;
   text-align-last: left;
 }
