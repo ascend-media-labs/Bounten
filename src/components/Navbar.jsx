@@ -16,6 +16,18 @@ export default function Navbar() {
 
   const isHomePage = location.pathname === '/';
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   // Sticky navbar shadow on scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -273,17 +285,38 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer with Smooth Slide & Single Line Items */}
+        {/* Full-Screen Mobile Navigation Drawer with Dedicated Top-Right Close Button */}
         {isOpen && (
-          <div className="fixed inset-0 top-[108px] z-50 lg:hidden">
-            {/* Backdrop Fade */}
-            <div
-              className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300"
-              onClick={() => setIsOpen(false)}
-            />
+          <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-white animate-in fade-in duration-200">
+            {/* Mobile Header Bar inside Drawer */}
+            <div className="flex items-center justify-between px-4 sm:px-5 py-3.5 border-b border-slate-200 bg-white flex-shrink-0">
+              <Link
+                to="/"
+                onClick={(e) => {
+                  setIsOpen(false);
+                  if (isHomePage) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    setActiveSection('home');
+                  }
+                }}
+                className="inline-block"
+              >
+                <BountenLogo className="h-8 w-auto" />
+              </Link>
 
-            {/* Slide-Down Menu Content */}
-            <div className="relative bg-white border-b border-slate-200 px-5 pt-3 pb-8 shadow-2xl max-h-[calc(100vh-120px)] overflow-y-auto animate-in slide-in-from-top-4 duration-300 space-y-3">
+              {/* Dedicated Top-Right Close Button */}
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 hover:text-slate-900 transition-all flex items-center justify-center btn-press shadow-xs"
+                aria-label="Close Navigation Menu"
+              >
+                <X className="w-6 h-6 text-slate-800" />
+              </button>
+            </div>
+
+            {/* Scrollable Navigation Links */}
+            <div className="flex-1 overflow-y-auto px-4 sm:px-5 py-3 space-y-3">
               <nav className="flex flex-col space-y-1">
                 {NAV_LINKS.map((link) => {
                   if (link.isDownload) {
@@ -314,7 +347,7 @@ export default function Navbar() {
                       key={link.name}
                       href={isHomePage ? `#${link.sectionId}` : link.path}
                       onClick={(e) => handleNavClick(e, link)}
-                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ease-in-out whitespace-nowrap ${
+                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
                         isActive
                           ? 'text-sky-600 bg-sky-50 font-bold'
                           : 'text-slate-700 hover:bg-slate-50 hover:text-sky-600'
@@ -327,13 +360,13 @@ export default function Navbar() {
               </nav>
 
               {/* Bottom Quick Contact on Mobile Menu */}
-              <div className="pt-4 border-t border-slate-100 space-y-2">
+              <div className="pt-3 border-t border-slate-100 space-y-2 pb-6">
                 <button
                   onClick={() => {
                     openGeneralEnquiry();
                     setIsOpen(false);
                   }}
-                  className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap"
+                  className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 px-4 rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap"
                 >
                   <WhatsAppIcon className="w-5 h-5 fill-white flex-shrink-0" />
                   <span>Enquire on WhatsApp</span>
