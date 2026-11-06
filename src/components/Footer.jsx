@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import BountenLogo from './BountenLogo';
 import WhatsAppIcon from './WhatsAppIcon';
+import SocialIcons from './SocialIcons';
 import { COMPANY_CONFIG } from '../data/config';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 
@@ -120,6 +121,14 @@ export default function Footer() {
                   </a>
                 </div>
               </div>
+            </div>
+
+            {/* Original Social Media Icons Section */}
+            <div className="pt-2.5 border-t border-slate-800/80 space-y-2">
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-sky-400">
+                Official Social Channels
+              </span>
+              <SocialIcons />
             </div>
           </div>
 
