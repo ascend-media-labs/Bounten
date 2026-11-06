@@ -754,7 +754,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 39,
     "popularity": 88,
     "dateAdded": "2024-03-18",
-    "image": "/images/products/zoftnor-max-w4.jpg",
+    "image": "/images/products/zoftnor-max-w4.png",
     "shortDescription": "Heavy-duty 4,000 LPH water softener with Bag Filter for grand villas, multi-family homes, and boutique commercial spaces.",
     "description": "The Zoftner Pro Max W4 handles 4,000 Litres Per Hour with an industrial bag filtration assembly. It is engineered for large multi-story estates, commercial kitchens, clinics, and boutique hotels requiring uninterrupted high-volume scale protection without salt maintenance.",
     "specifications": [
