@@ -846,7 +846,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 31,
     "popularity": 89,
     "dateAdded": "2024-03-25",
-    "image": "/images/products/zoftnor-max-w6.jpg",
+    "image": "/images/products/zoftnor-max-w6.png",
     "shortDescription": "Ultra-capacity 6,000 LPH commercial water softener with Bag Filter for apartment societies, hospitals, and resorts.",
     "description": "The peak model of the Pro series, Zoftner Pro Max W6 delivers an ultra-high 6,000 Litres Per Hour flow capacity accompanied by high-volume bag filtration. It conditions water for entire residential towers, hospital facilities, commercial laundry plants, and luxury resorts with zero salt bags and zero backwash wastewater.",
     "specifications": [
