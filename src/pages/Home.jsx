@@ -221,141 +221,16 @@ export default function Home() {
       {/* 2. TWO CATEGORIES SHOWCASE & FEATURED PRODUCTS - id="products" */}
       <section id="products" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         
-        {/* Categories Header */}
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="space-y-1">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-              Product Series
-            </span>
-            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
-              Two Distinct Series. Tailored to Your Water Setup.
-            </h2>
-            <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
-              Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
-            </p>
-          </div>
-        </AnimatedSection>
-
-        {/* Categories Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-          
-          {/* Category 1 Card: Zoftner Pro */}
-          <AnimatedSection animation="fade-right" delay={100} duration={800}>
-            <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-sky-200/80 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
-              <div className="space-y-3.5">
-                <div className="flex items-center justify-between">
-                  <span className="bg-emerald-600 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-xs">
-                    <Check className="w-3.5 h-3.5 stroke-[3]" />
-                    <span>With Bag Filter</span>
-                  </span>
-                  <span className="text-xs font-bold text-sky-600">
-                    {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Pro').length} Models Available
-                  </span>
-                </div>
-
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
-                    Zoftner Pro
-                  </h3>
-                  <p className="text-sm font-semibold text-emerald-700 mt-1">
-                    All models come with a bag filter.
-                  </p>
-                </div>
-
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                  Engineered for households and commercial spaces seeking complete scale prevention along with heavy sediment, silt, and turbidity filtration in one integrated package.
-                </p>
-
-                <ul className="space-y-2 text-xs text-slate-700 pt-1">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>Integrated washable high-efficiency bag filter</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>Resin-Free | Salt-Free | Chemical-Free Electrolysis</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>1-Year Body & 5-Year Electrode Unconditional Warranty</span>
-                  </li>
-                </ul>
-              </div>
-
-              <Link
-                to="/products?cat=Zoftner+Pro"
-                className="btn-press w-full inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white py-3 px-4 rounded-xl font-bold text-xs transition-colors shadow-sm"
-              >
-                <span>Explore Zoftner Pro Models</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </AnimatedSection>
-
-          {/* Category 2 Card: Zoftner Quick Fix */}
-          <AnimatedSection animation="fade-left" delay={200} duration={800}>
-            <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-slate-200 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
-              <div className="space-y-3.5">
-                <div className="flex items-center justify-between">
-                  <span className="bg-slate-800 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
-                    Without Bag Filter
-                  </span>
-                  <span className="text-xs font-bold text-slate-600">
-                    {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Quick Fix').length} Models Available
-                  </span>
-                </div>
-
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
-                    Zoftner Quick Fix
-                  </h3>
-                  <p className="text-sm font-semibold text-slate-700 mt-1">
-                    All models come without a bag filter.
-                  </p>
-                </div>
-
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                  Streamlined, compact electrolytic conditioners and appliance descalers designed for direct inline plumbing connections where pre-filtration is already present.
-                </p>
-
-                <ul className="space-y-2 text-xs text-slate-700 pt-1">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0" />
-                    <span>Fast, direct inline connection without bag housing</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0" />
-                    <span>Resin-Free | Salt-Free | Chemical-Free Electrolysis</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0" />
-                    <span>1-Year Body & 5-Year Electrode Unconditional Warranty</span>
-                  </li>
-                </ul>
-              </div>
-
-              <Link
-                to="/products?cat=Zoftner+Quick+Fix"
-                className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white py-3 px-4 rounded-xl font-bold text-xs transition-colors shadow-sm"
-              >
-                <span>Explore Zoftner Quick Fix Models</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </AnimatedSection>
-
-        </div>
-
-        {/* Featured Models Grid */}
-        <div className="space-y-4 pt-1">
+        {/* 1. Featured Products Grid (Image 1) - Displayed First */}
+        <div className="space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
               <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
                 Top Picks
               </span>
-              <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                 Featured Water Softening Systems
-              </h3>
+              </h2>
               <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
                 Direct WhatsApp enquiry with pre-filled model specifications and immediate assistance.
               </p>
@@ -376,6 +251,133 @@ export default function Home() {
                 <ProductCard product={product} />
               </AnimatedSection>
             ))}
+          </div>
+        </div>
+
+        {/* 2. Product Series Categories Overview (Image 2) - Displayed Next */}
+        <div className="space-y-4 pt-4 border-t border-slate-100">
+          <AnimatedSection animation="fade-up" duration={700}>
+            <div className="space-y-1">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+                Product Series
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+                Two Distinct Series. Tailored to Your Water Setup.
+              </h3>
+              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
+                Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          {/* Categories Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+            
+            {/* Category 1 Card: Zoftner Pro */}
+            <AnimatedSection animation="fade-right" delay={100} duration={800}>
+              <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-sky-200/80 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
+                <div className="space-y-3.5">
+                  <div className="flex items-center justify-between">
+                    <span className="bg-emerald-600 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-xs">
+                      <Check className="w-3.5 h-3.5 stroke-[3]" />
+                      <span>With Bag Filter</span>
+                    </span>
+                    <span className="text-xs font-bold text-sky-600">
+                      {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Pro').length} Models Available
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
+                      Zoftner Pro
+                    </h3>
+                    <p className="text-sm font-semibold text-emerald-700 mt-1">
+                      All models come with a bag filter.
+                    </p>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    Engineered for households and commercial spaces seeking complete scale prevention along with heavy sediment, silt, and turbidity filtration in one integrated package.
+                  </p>
+
+                  <ul className="space-y-2 text-xs text-slate-700 pt-1">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                      <span>Integrated washable high-efficiency bag filter</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                      <span>Resin-Free | Salt-Free | Chemical-Free Electrolysis</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                      <span>1-Year Body & 5-Year Electrode Unconditional Warranty</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <Link
+                  to="/products?cat=Zoftner+Pro"
+                  className="btn-press w-full inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white py-3 px-4 rounded-xl font-bold text-xs transition-colors shadow-sm"
+                >
+                  <span>Explore Zoftner Pro Models</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </AnimatedSection>
+
+            {/* Category 2 Card: Zoftner Quick Fix */}
+            <AnimatedSection animation="fade-left" delay={200} duration={800}>
+              <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-slate-200 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
+                <div className="space-y-3.5">
+                  <div className="flex items-center justify-between">
+                    <span className="bg-slate-800 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
+                      Without Bag Filter
+                    </span>
+                    <span className="text-xs font-bold text-slate-600">
+                      {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Quick Fix').length} Models Available
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
+                      Zoftner Quick Fix
+                    </h3>
+                    <p className="text-sm font-semibold text-slate-700 mt-1">
+                      All models come without a bag filter.
+                    </p>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    Streamlined, compact electrolytic conditioners and appliance descalers designed for direct inline plumbing connections where pre-filtration is already present.
+                  </p>
+
+                  <ul className="space-y-2 text-xs text-slate-700 pt-1">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0" />
+                      <span>Fast, direct inline connection without bag housing</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0" />
+                      <span>Resin-Free | Salt-Free | Chemical-Free Electrolysis</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0" />
+                      <span>1-Year Body & 5-Year Electrode Unconditional Warranty</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <Link
+                  to="/products?cat=Zoftner+Quick+Fix"
+                  className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white py-3 px-4 rounded-xl font-bold text-xs transition-colors shadow-sm"
+                >
+                  <span>Explore Zoftner Quick Fix Models</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </AnimatedSection>
+
           </div>
         </div>
 
