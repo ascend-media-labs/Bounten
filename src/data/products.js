@@ -1213,7 +1213,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 29,
     "popularity": 88,
     "dateAdded": "2024-03-20",
-    "image": "/images/products/zoftnor-max-w4.png",
+    "image": "/images/products/zoftnor-inline-w4.png",
     "shortDescription": "Heavy-duty 4,000 LPH inline water conditioner without bag filter for luxury villas and boutique commercial spaces.",
     "description": "Zoftnor Max W4 provides powerful 4,000 LPH flow treatment in a direct inline configuration. Designed for large estates, multi-bathroom residences, and commercial kitchens with pre-existing sediment filters.",
     "specifications": [
