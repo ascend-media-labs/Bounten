@@ -66,69 +66,69 @@ export default function Home() {
   };
 
   return (
-    <div className="space-y-8 sm:space-y-12 pb-6 sm:pb-8 overflow-hidden">
+    <div className="space-y-6 sm:space-y-8 pb-6 sm:pb-8 overflow-hidden">
       
       {/* 1. HERO SECTION WITH AMBIENT WATER GLOW - id="home" */}
-      <section id="home" className="scroll-mt-24 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/50 pt-6 sm:pt-10 pb-8 sm:pb-12 border-b border-slate-100">
+      <section id="home" className="scroll-mt-24 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/50 py-4 sm:py-6 lg:py-7 border-b border-slate-100">
         {/* Soft Ambient Floating Water Glow Rings */}
         <div className="absolute top-0 right-0 -mr-28 -mt-28 w-[450px] h-[450px] rounded-full bg-sky-200/40 blur-3xl pointer-events-none animate-ambient-glow" />
         <div className="absolute bottom-0 left-0 -ml-28 -mb-28 w-[400px] h-[400px] rounded-full bg-blue-100/50 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '2.5s' }} />
         <div className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full bg-cyan-100/30 blur-2xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '4s' }} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             
             {/* Left Content (7 cols) - Slide in from Right */}
-            <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left">
+            <div className="lg:col-span-7 space-y-2.5 sm:space-y-3 lg:space-y-3.5 text-center lg:text-left">
               <AnimatedSection animation="fade-right" duration={700}>
                 {/* Trust Tag with animated pulse */}
-                <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md border border-sky-200 text-[#081C3B] font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full shadow-xs hover:border-sky-400 transition-colors">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <div className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md border border-sky-200 text-[#081C3B] font-bold text-[11px] uppercase tracking-wider py-0.5 px-2.5 rounded-full shadow-xs hover:border-sky-400 transition-colors">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   <span>Resin-Free | Salt-Free | Chemical-Free</span>
                 </div>
               </AnimatedSection>
 
               {/* Main Headline */}
               <AnimatedSection animation="fade-right" delay={100} duration={800}>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#081C3B] tracking-tight leading-[1.12]">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-black text-[#081C3B] tracking-tight leading-[1.14]">
                   Advanced Salt-Free <br className="hidden sm:inline" />
                   <span className="bg-gradient-to-r from-sky-600 via-sky-700 to-sky-900 bg-clip-text text-transparent">
                     Water Softeners
                   </span>
-                  <span className="block text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-700 mt-1.5">
+                  <span className="block text-lg sm:text-xl md:text-2xl lg:text-[23px] font-extrabold text-slate-700 mt-1">
                     For Healthy, Scale-Free Living
                   </span>
                 </h1>
 
                 {/* Side Heading / Slogan */}
-                <div className="pt-2 text-base sm:text-lg font-bold text-sky-700">
+                <div className="pt-1 text-xs sm:text-sm md:text-base font-bold text-sky-700">
                   One Smart Solution. Multiple Applications. Better Water for Everyday Living.
                 </div>
               </AnimatedSection>
 
               {/* Supporting Technology Description */}
               <AnimatedSection animation="fade-right" delay={200} duration={800}>
-                <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
                   {PRODUCT_HIGHLIGHTS.technology} BOUNTEN restructures hard minerals into soft, non-adherent crystals—protecting pipes, geysers, appliances, skin, and hair with zero salt refills, zero chemicals, and zero water wastage.
                 </p>
               </AnimatedSection>
 
               {/* Two CTA Buttons */}
               <AnimatedSection animation="fade-right" delay={300} duration={800}>
-                <div className="pt-1 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                <div className="pt-1 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-3">
                   <a
                     href="#products"
-                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-6 py-3 rounded-xl font-bold text-base shadow-md hover:shadow-xl transition-all"
+                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-[#081C3B] hover:bg-[#0B2447] text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md hover:shadow-xl transition-all"
                   >
                     <span>Explore Products</span>
-                    <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </a>
 
                   <button
                     onClick={openGeneralEnquiry}
-                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-xl font-bold text-base shadow-md hover:shadow-xl transition-all"
+                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md hover:shadow-xl transition-all"
                   >
-                    <WhatsAppIcon className="w-5 h-5 fill-white" />
+                    <WhatsAppIcon className="w-4 h-4 fill-white" />
                     <span>Contact on WhatsApp</span>
                   </button>
                 </div>
@@ -136,22 +136,22 @@ export default function Home() {
 
               {/* Key Trust Specifications */}
               <AnimatedSection animation="fade-up" delay={400} duration={800}>
-                <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 border-t border-slate-200/80 max-w-2xl mx-auto lg:mx-0 text-left">
-                  <div className="bg-white/60 backdrop-blur-xs p-3 rounded-xl border border-slate-100 hover:border-sky-200 transition-colors">
-                    <div className="text-xl font-black text-[#081C3B]">≤ 1,999 ppm</div>
-                    <div className="text-xs text-slate-500 font-medium">TDS Compatibility</div>
+                <div className="pt-2.5 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 border-t border-slate-200/80 max-w-2xl mx-auto lg:mx-0 text-left">
+                  <div className="bg-white/60 backdrop-blur-xs p-2 sm:p-2.5 rounded-lg border border-slate-100 hover:border-sky-200 transition-colors">
+                    <div className="text-base sm:text-lg font-black text-[#081C3B]">≤ 1,999 ppm</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium">TDS Compatibility</div>
                   </div>
-                  <div className="bg-white/60 backdrop-blur-xs p-3 rounded-xl border border-slate-100 hover:border-emerald-200 transition-colors">
-                    <div className="text-xl font-black text-emerald-600">5 Years</div>
-                    <div className="text-xs text-slate-500 font-medium">Electrode Warranty</div>
+                  <div className="bg-white/60 backdrop-blur-xs p-2 sm:p-2.5 rounded-lg border border-slate-100 hover:border-emerald-200 transition-colors">
+                    <div className="text-base sm:text-lg font-black text-emerald-600">5 Years</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium">Electrode Warranty</div>
                   </div>
-                  <div className="bg-white/60 backdrop-blur-xs p-3 rounded-xl border border-slate-100 hover:border-sky-200 transition-colors">
-                    <div className="text-xl font-black text-sky-600">1 Year</div>
-                    <div className="text-xs text-slate-500 font-medium">Cabinet Warranty</div>
+                  <div className="bg-white/60 backdrop-blur-xs p-2 sm:p-2.5 rounded-lg border border-slate-100 hover:border-sky-200 transition-colors">
+                    <div className="text-base sm:text-lg font-black text-sky-600">1 Year</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium">Cabinet Warranty</div>
                   </div>
-                  <div className="bg-white/60 backdrop-blur-xs p-3 rounded-xl border border-slate-100 hover:border-amber-200 transition-colors">
-                    <div className="text-xl font-black text-amber-600">SS304</div>
-                    <div className="text-xs text-slate-500 font-medium">Food Grade Alloy</div>
+                  <div className="bg-white/60 backdrop-blur-xs p-2 sm:p-2.5 rounded-lg border border-slate-100 hover:border-amber-200 transition-colors">
+                    <div className="text-base sm:text-lg font-black text-amber-600">SS304</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium">Food Grade Alloy</div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -160,20 +160,20 @@ export default function Home() {
             {/* Right Showcase Card (5 cols) - Floating Motion & Ambient Glow */}
             <div className="lg:col-span-5 relative">
               <AnimatedSection animation="fade-left" delay={200} duration={900}>
-                <div className="relative mx-auto max-w-md lg:max-w-none bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200/80 hover:border-sky-300 transition-all duration-500 space-y-5 hover-lift shine-sweep">
+                <div className="relative mx-auto max-w-sm lg:max-w-[370px] bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-200/80 hover:border-sky-300 transition-all duration-500 space-y-3 hover-lift shine-sweep">
                   
                   {/* Subtle top badges */}
                   <div className="flex items-center justify-between">
-                    <span className="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    <span className="bg-sky-100 text-sky-800 text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                       ISO 9001 & ISO 14001
                     </span>
-                    <span className="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    <span className="bg-emerald-100 text-emerald-800 text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                       Salt-Free
                     </span>
                   </div>
 
                   {/* Hero Product Image with Gentle Floating Breath Animation */}
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100/70 flex items-center justify-center p-4">
+                  <div className="relative h-32 sm:h-40 rounded-xl overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100/70 flex items-center justify-center p-2.5">
                     <img
                       src="/images/products/zoftnor-pro-w2.jpg"
                       alt="Bounten Zoftner Water Softener"
@@ -182,16 +182,16 @@ export default function Home() {
                   </div>
 
                   {/* Quick Specs Table */}
-                  <div className="space-y-2.5 text-xs">
-                    <div className="flex items-center justify-between border-b border-slate-100 pb-2">
+                  <div className="space-y-1.5 text-[11px]">
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-1.5">
                       <span className="text-slate-500 font-medium">Product Series:</span>
                       <span className="font-bold text-[#081C3B]">Zoftner Pro & Quick Fix</span>
                     </div>
-                    <div className="flex items-center justify-between border-b border-slate-100 pb-2">
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-1.5">
                       <span className="text-slate-500 font-medium">Water Quality:</span>
                       <span className="font-bold text-sky-700">TDS up to 1,999 ppm</span>
                     </div>
-                    <div className="flex items-center justify-between border-b border-slate-100 pb-2">
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-1.5">
                       <span className="text-slate-500 font-medium">Warranty Assurance:</span>
                       <span className="font-bold text-emerald-700">1-Yr Body | 5-Yr Electrode</span>
                     </div>
@@ -201,13 +201,13 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="pt-1">
+                  <div className="pt-0.5">
                     <a
                       href="#products"
-                      className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white py-3 rounded-xl font-bold text-xs transition-colors shadow-sm"
+                      className="btn-press w-full inline-flex items-center justify-center gap-1.5 bg-[#081C3B] hover:bg-[#0B2447] text-white py-2 sm:py-2.5 rounded-xl font-bold text-xs transition-colors shadow-sm"
                     >
                       <span>Explore All Models ({PRODUCTS_DATA.length})</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <ChevronRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </div>
