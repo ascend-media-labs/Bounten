@@ -16,18 +16,6 @@ export default function Navbar() {
 
   const isHomePage = location.pathname === '/';
 
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
   // Sticky navbar shadow on scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -143,13 +131,25 @@ export default function Navbar() {
     setIsOpen(false);
   }, [location.pathname]);
 
-  // Prevent body scroll when mobile drawer is open
+  // Prevent body scroll when mobile drawer is open & handle Escape key
   useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
     } else {
       document.body.style.overflow = 'unset';
     }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, [isOpen]);
 
   return (
@@ -285,11 +285,11 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Full-Screen Mobile Navigation Drawer with Dedicated Top-Right Close Button */}
+        {/* Full-Screen Mobile Navigation Menu with Top-Right Close Button & Zero Gaps */}
         {isOpen && (
-          <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-white animate-in fade-in duration-200">
-            {/* Mobile Header Bar inside Drawer */}
-            <div className="flex items-center justify-between px-4 sm:px-5 py-3.5 border-b border-slate-200 bg-white flex-shrink-0">
+          <div className="fixed inset-0 z-50 lg:hidden bg-white flex flex-col animate-in fade-in slide-in-from-top-2 duration-200">
+            {/* Top Header inside Drawer: Logo on left, Close button on top-right */}
+            <div className="flex items-center justify-between px-5 py-3.5 border-b border-slate-200 bg-white flex-shrink-0">
               <Link
                 to="/"
                 onClick={(e) => {
@@ -300,23 +300,22 @@ export default function Navbar() {
                     setActiveSection('home');
                   }
                 }}
-                className="inline-block"
+                className="flex items-center"
               >
-                <BountenLogo className="h-8 w-auto" />
+                <BountenLogo className="h-8 w-auto flex-shrink-0" />
               </Link>
 
-              {/* Dedicated Top-Right Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 hover:text-slate-900 transition-all flex items-center justify-center btn-press shadow-xs"
+                className="p-2 -mr-1.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-colors focus:outline-none"
                 aria-label="Close Navigation Menu"
               >
                 <X className="w-6 h-6 text-slate-800" />
               </button>
             </div>
 
-            {/* Scrollable Navigation Links */}
-            <div className="flex-1 overflow-y-auto px-4 sm:px-5 py-3 space-y-3">
+            {/* Scrollable Navigation Links - perfectly fitted without unnecessary spaces */}
+            <div className="flex-1 overflow-y-auto px-5 py-3 space-y-2.5">
               <nav className="flex flex-col space-y-1">
                 {NAV_LINKS.map((link) => {
                   if (link.isDownload) {
@@ -327,13 +326,13 @@ export default function Navbar() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setIsOpen(false)}
-                        className="flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold text-sky-700 bg-sky-50/70 hover:bg-sky-100 border border-sky-100 transition-colors my-1 whitespace-nowrap"
+                        className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold text-sky-700 bg-sky-50/70 hover:bg-sky-100 border border-sky-100 transition-colors my-0.5 whitespace-nowrap"
                       >
                         <span className="flex items-center gap-2 whitespace-nowrap">
                           <FileDown className="w-4 h-4 text-sky-600 flex-shrink-0" />
                           <span className="whitespace-nowrap">{link.name}</span>
                         </span>
-                        <span className="text-xs bg-white text-sky-800 px-2 py-0.5 rounded-full font-bold">PDF</span>
+                        <span className="text-[11px] bg-white text-sky-800 px-2 py-0.5 rounded-full font-bold shadow-xs">PDF</span>
                       </a>
                     );
                   }
@@ -347,7 +346,7 @@ export default function Navbar() {
                       key={link.name}
                       href={isHomePage ? `#${link.sectionId}` : link.path}
                       onClick={(e) => handleNavClick(e, link)}
-                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
+                      className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ease-in-out whitespace-nowrap ${
                         isActive
                           ? 'text-sky-600 bg-sky-50 font-bold'
                           : 'text-slate-700 hover:bg-slate-50 hover:text-sky-600'
@@ -360,13 +359,13 @@ export default function Navbar() {
               </nav>
 
               {/* Bottom Quick Contact on Mobile Menu */}
-              <div className="pt-3 border-t border-slate-100 space-y-2 pb-6">
+              <div className="pt-3 pb-6 border-t border-slate-100">
                 <button
                   onClick={() => {
                     openGeneralEnquiry();
                     setIsOpen(false);
                   }}
-                  className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 px-4 rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap"
+                  className="btn-press w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap"
                 >
                   <WhatsAppIcon className="w-5 h-5 fill-white flex-shrink-0" />
                   <span>Enquire on WhatsApp</span>
