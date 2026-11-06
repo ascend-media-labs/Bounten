@@ -76,6 +76,7 @@ export default function Navbar() {
     if (link.isDownload) return; // native download
 
     if (link.name === 'Products') {
+      e.preventDefault();
       navigate('/products');
       setIsOpen(false);
       return;

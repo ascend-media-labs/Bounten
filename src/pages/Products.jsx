@@ -11,9 +11,10 @@ import {
   ShoppingBag
 } from 'lucide-react';
 import { PRODUCTS_DATA, CATEGORIES, PRODUCT_HIGHLIGHTS } from '../data/products';
+import ProductCard from '../components/ProductCard';
 import AnimatedSection from '../components/AnimatedSection';
 import WhatsAppIcon from '../components/WhatsAppIcon';
-import { openProductEnquiry } from '../utils/whatsapp';
+import { openProductEnquiry, openGeneralEnquiry } from '../utils/whatsapp';
 import { COMPANY_CONFIG } from '../data/config';
 
 export default function Products() {
@@ -128,7 +129,7 @@ export default function Products() {
   }, [totalPages, currentPage]);
 
   return (
-    <div className="bg-white min-h-screen py-6 sm:py-10">
+    <div id="products" className="bg-white min-h-screen py-6 sm:py-10 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
         {/* ============================================================== */}
