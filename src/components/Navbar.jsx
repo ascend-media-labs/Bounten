@@ -75,6 +75,13 @@ export default function Navbar() {
   const handleNavClick = (e, link) => {
     if (link.isDownload) return; // native download
 
+    if (link.name === 'Products') {
+      e.preventDefault();
+      navigate('/products');
+      setIsOpen(false);
+      return;
+    }
+
     if (link.name === 'Benefits') {
       e.preventDefault();
       navigate('/benefits');
