@@ -662,7 +662,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 47,
     "popularity": 91,
     "dateAdded": "2024-03-12",
-    "image": "/images/products/zoftnor-max-w3.jpg",
+    "image": "/images/products/zoftnor-max-w3.png",
     "shortDescription": "Robust 3,000 LPH water conditioning system with Bag Filter for large 3-4 BHK luxury villas and joint family homes.",
     "description": "Zoftner Pro Max W3 delivers 3,000 LPH of conditioned water with an included bag filter to support large residences with multiple rain showers, high-flow diverters, and solar water heaters. It guarantees clean, scale-free water across all household pipelines with zero salt and zero chemicals.",
     "specifications": [
