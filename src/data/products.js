@@ -474,7 +474,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 52,
     "popularity": 98,
     "dateAdded": "2024-03-05",
-    "image": "/images/products/zoftnor-pro-w2.jpg",
+    "image": "/images/products/zoftnor-pro-w2.png",
     "shortDescription": "High-capacity 2,000 LPH electrolysis conditioning system with Bag Filter for 2-3 BHK homes and independent duplexes.",
     "description": "The Zoftner Pro W2 delivers 2,000 LPH continuous conditioned water with an extended 600mm Iridium MMO anode and a heavy-duty integrated bag filter. Engineered for high-flow multi-bathroom households, it stops scale build-up while removing rust, silt, and sediment without salt bags or water wastage.",
     "specifications": [
