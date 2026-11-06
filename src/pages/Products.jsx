@@ -157,7 +157,7 @@ export default function Products() {
                   Products
                 </h1>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  Showing {filteredProducts.length > 0 ? `${(currentPage - 1) * ITEMS_PER_PAGE + 1}–${Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length)} of ${filteredProducts.length} results` : '0 results'}
+                  Showing {filteredAndSortedProducts.length > 0 ? `${(currentPage - 1) * ITEMS_PER_PAGE + 1}–${Math.min(currentPage * ITEMS_PER_PAGE, filteredAndSortedProducts.length)} of ${filteredAndSortedProducts.length} results` : '0 results'}
                 </p>
               </div>
 
