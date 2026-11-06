@@ -1123,7 +1123,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 38,
     "popularity": 90,
     "dateAdded": "2024-03-15",
-    "image": "/images/products/zoftnor-max-w3.png",
+    "image": "/images/products/zoftnor-inline-w3.png",
     "shortDescription": "Robust 3,000 LPH inline water softener without bag filter for villas, joint family houses, and commercial kitchens.",
     "description": "Zoftnor Max W3 delivers 3,000 LPH flow capacity without a bag filter assembly, making it the perfect scale prevention solution for large villas and commercial facilities with existing pre-treatment lines. Eliminates hard water scaling using high-efficiency electrolysis without chemical consumables.",
     "specifications": [
