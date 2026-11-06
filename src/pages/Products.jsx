@@ -8,7 +8,8 @@ import {
   ShieldCheck,
   Award,
   Zap,
-  ShoppingBag
+  ShoppingBag,
+  ChevronRight
 } from 'lucide-react';
 import { PRODUCTS_DATA, CATEGORIES, PRODUCT_HIGHLIGHTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
@@ -129,8 +130,15 @@ export default function Products() {
   }, [totalPages, currentPage]);
 
   return (
-    <div id="products" className="bg-white min-h-screen py-6 sm:py-10 scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div id="products" className="bg-white min-h-screen py-3 sm:py-5 scroll-mt-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
+
+        {/* Page Breadcrumb */}
+        <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
+          <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
+          <ChevronRight className="w-3 h-3 text-slate-400" />
+          <span className="font-semibold text-slate-800">Products</span>
+        </nav>
 
         {/* ============================================================== */}
         {/* MAIN STORE CONTAINER (GRID ON LEFT + SIDEBAR ON RIGHT)        */}
@@ -142,23 +150,34 @@ export default function Products() {
           {/* ============================================================ */}
           <div className="lg:col-span-8 xl:col-span-9 space-y-6">
             
-            {/* Top Right: Default Sorting Dropdown */}
-            <div className="flex justify-end items-center">
-              <select
-                id="shop-sorting"
-                value={sortBy}
-                onChange={(e) => {
-                  setSortBy(e.target.value);
-                  setCurrentPage(1);
-                }}
-                className="border border-slate-300 text-slate-700 text-xs rounded px-3 py-1.5 bg-white cursor-pointer focus:outline-none focus:border-blue-500 shadow-2xs"
-              >
-                <option value="default">Default sorting</option>
-                <option value="popularity">Sort by popularity</option>
-                <option value="latest">Sort by latest</option>
-                <option value="price-low-high">Sort by price: low to high</option>
-                <option value="price-high-low">Sort by price: high to low</option>
-              </select>
+            {/* Top Toolbar: Products Side Heading on Left + Sorting Dropdown on Right */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
+              <div>
+                <h1 className="text-xl sm:text-2xl font-bold text-[#081C3B] tracking-tight">
+                  Products
+                </h1>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Showing {filteredProducts.length > 0 ? `${(currentPage - 1) * ITEMS_PER_PAGE + 1}–${Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length)} of ${filteredProducts.length} results` : '0 results'}
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2 self-end sm:self-auto">
+                <select
+                  id="shop-sorting"
+                  value={sortBy}
+                  onChange={(e) => {
+                    setSortBy(e.target.value);
+                    setCurrentPage(1);
+                  }}
+                  className="border border-slate-300 text-slate-700 text-xs rounded-lg px-3 py-1.5 bg-white cursor-pointer focus:outline-none focus:border-sky-500 shadow-2xs"
+                >
+                  <option value="default">Default sorting</option>
+                  <option value="popularity">Sort by popularity</option>
+                  <option value="latest">Sort by latest</option>
+                  <option value="price-low-high">Sort by price: low to high</option>
+                  <option value="price-high-low">Sort by price: high to low</option>
+                </select>
+              </div>
             </div>
 
             {/* 3 Columns Grid of Products (9 items per page) */}
