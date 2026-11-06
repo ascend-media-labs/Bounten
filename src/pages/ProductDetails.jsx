@@ -93,11 +93,11 @@ export default function ProductDetails() {
 
             {/* Left: Product Image & Badges (5 cols) */}
             <div className="lg:col-span-5 space-y-3">
-              <div className="relative h-56 sm:h-64 lg:h-72 rounded-xl bg-gradient-to-b from-slate-50 to-slate-100/80 border border-slate-100 p-3 sm:p-4 flex items-center justify-center overflow-hidden group">
+              <div className="relative w-full aspect-square rounded-2xl bg-white border border-slate-200/90 p-2 sm:p-3 flex items-center justify-center overflow-hidden group shadow-xs">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="max-w-full max-h-full w-auto h-auto object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
 

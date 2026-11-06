@@ -10,13 +10,13 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="group bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400 hover-lift shine-sweep shadow-xs hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden relative">
-      {/* Product Image Section: Clean, Full Display, No Badges */}
-      <div className="relative h-64 sm:h-72 p-5 flex items-center justify-center bg-gradient-to-b from-slate-50/60 via-white to-slate-50/30 overflow-hidden">
+      {/* Product Image Section: Clean, Full Display, Seamless Fit */}
+      <div className="relative aspect-square sm:h-72 p-3 sm:p-4 flex items-center justify-center bg-white overflow-hidden">
         <Link to={`/products/${product.id}`} className="w-full h-full flex items-center justify-center">
           <img
             src={product.image}
             alt={product.name}
-            className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-300 drop-shadow-xs"
+            className="w-full h-full object-contain transition-transform duration-300"
             loading="lazy"
           />
         </Link>
