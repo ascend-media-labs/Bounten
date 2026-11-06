@@ -198,7 +198,7 @@ export const PRODUCTS_DATA = [
     "reviewsCount": 52,
     "popularity": 96,
     "dateAdded": "2024-02-10",
-    "image": "/images/products/mini-zoftnor.jpg",
+    "image": "/images/products/mini-zoftnor.png",
     "shortDescription": "Point-of-use shower and tap water conditioner without bag filter for immediate skin and hair protection.",
     "description": "Zoftner Quick Fix Mini is Bounten's dedicated micro-application water conditioner designed for immediate personal wellness. Attached directly to your shower arm or bathroom tap without a bag filter, it neutralizes harsh hard water minerals to reduce hair fall, soothe dry skin, and prevent chalky stains on fixtures.",
     "specifications": [
