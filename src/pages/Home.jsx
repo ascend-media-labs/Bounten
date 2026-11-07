@@ -110,18 +110,14 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Seamless Overlays for 100% Crisp Text Readability & Zero Clutter */}
-          {/* Desktop: Clear white on left for text, completely open and transparent on right */}
-          <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent pointer-events-none" />
-          {/* Mobile: Soft translucent mist so text remains readable without clashing with photos */}
-          <div className="sm:hidden absolute inset-0 bg-white/75 backdrop-blur-[2px] pointer-events-none" />
-          {/* Subtle bottom edge blend */}
-          <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-white/90 to-transparent pointer-events-none" />
+          {/* Significantly Reduced White Fade so Images Are Rich & Vibrant */}
+          {/* Desktop: Gentle soft mist on the left for text, completely transparent on center and right */}
+          <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-white/65 via-white/25 to-transparent pointer-events-none" />
+          {/* Mobile: Light transparent tint so images are clearly visible without heavy whiteout */}
+          <div className="sm:hidden absolute inset-0 bg-white/30 pointer-events-none" />
+          {/* Delicate bottom edge blend */}
+          <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-white/40 to-transparent pointer-events-none" />
         </div>
-
-        {/* Ambient Floating Water Glow Rings */}
-        <div className="absolute top-0 right-0 -mr-28 -mt-28 w-[500px] h-[500px] rounded-full bg-sky-200/30 blur-3xl pointer-events-none animate-ambient-glow" />
-        <div className="absolute bottom-0 left-0 -ml-28 -mb-28 w-[450px] h-[450px] rounded-full bg-blue-100/30 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '2.5s' }} />
 
         {/* Content Container (Matches exact typography, styling & colors from user image) */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -143,20 +139,20 @@ export default function Home() {
                 <span className="bg-gradient-to-r from-sky-600 via-cyan-600 to-[#081C3B] bg-clip-text text-transparent">
                   Water Softeners
                 </span>
-                <span className="block text-lg sm:text-xl md:text-2xl lg:text-[24px] font-extrabold text-slate-700 mt-2">
+                <span className="block text-lg sm:text-xl md:text-2xl lg:text-[24px] font-extrabold text-[#081C3B] mt-2">
                   Pure, Scale-Free Living for Homes & Businesses
                 </span>
               </h1>
 
               {/* Subtitle / Value proposition */}
-              <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-sky-700">
+              <p className="mt-2 text-xs sm:text-sm md:text-base font-bold text-[#034078]">
                 One Smart Solution. Zero Maintenance. Better Water for Everyday Living.
               </p>
             </AnimatedSection>
 
             {/* Short Description */}
             <AnimatedSection animation="fade-right" delay={200} duration={800}>
-              <p className="text-xs sm:text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm md:text-[15px] text-slate-900 font-medium max-w-2xl leading-relaxed">
                 Engineered with innovative catalytic electrolysis to prevent limescale buildup at the molecular level without salt refills, chemicals, or water wastage —while preserving 100% of essential healthy minerals like Calcium and Magnesium.
               </p>
             </AnimatedSection>
