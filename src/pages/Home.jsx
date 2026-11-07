@@ -91,7 +91,7 @@ export default function Home() {
     <div className="space-y-6 sm:space-y-8 pb-6 sm:pb-8 overflow-hidden">
       
       {/* 1. HERO SECTION WITH BACKGROUND CAROUSEL - id="home" */}
-      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-slate-50 py-8 sm:py-12 lg:py-14 border-b border-slate-100">
+      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-slate-50 py-4 sm:py-10 lg:py-14 border-b border-slate-100">
         
         {/* RIGHT-TO-LEFT SLIDING BACKGROUND CAROUSEL */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -116,16 +116,16 @@ export default function Home() {
           {/* Mobile: Light transparent tint so images are clearly visible without heavy whiteout */}
           <div className="sm:hidden absolute inset-0 bg-white/30 pointer-events-none" />
           {/* Delicate bottom edge blend */}
-          <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-white/40 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-8 sm:h-10 bg-gradient-to-t from-white/40 to-transparent pointer-events-none" />
         </div>
 
-        {/* Content Container (Matches exact typography, styling & colors from user image) */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl space-y-4 sm:space-y-5 text-left">
+        {/* Content Container (Mobile-Optimized to Fit Screen Naturally) */}
+        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl space-y-2.5 sm:space-y-4 lg:space-y-5 text-left">
             <AnimatedSection animation="fade-right" duration={700}>
               {/* Trust Tag with animated pulse */}
-              <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md border border-sky-200/90 text-[#081C3B] font-bold text-xs uppercase tracking-wider py-1 px-3.5 rounded-full shadow-xs hover:border-sky-400 transition-colors">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-sky-200/90 text-[#081C3B] font-bold text-[10px] sm:text-xs uppercase tracking-wider py-0.5 sm:py-1 px-2.5 sm:px-3.5 rounded-full shadow-xs hover:border-sky-400 transition-colors">
+                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span className="text-sky-800 font-extrabold">Next-Gen Electrolysis</span>
                 <span className="text-slate-300">•</span>
                 <span>100% Salt-Free & Chemical-Free</span>
@@ -134,75 +134,77 @@ export default function Home() {
 
             {/* Main Headline */}
             <AnimatedSection animation="fade-right" delay={100} duration={800}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-black text-[#081C3B] tracking-tight leading-[1.12]">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[46px] font-black text-[#081C3B] tracking-tight leading-[1.15]">
                 Advanced Salt-Free <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-sky-600 via-cyan-600 to-[#081C3B] bg-clip-text text-transparent">
                   Water Softeners
                 </span>
-                <span className="block text-lg sm:text-xl md:text-2xl lg:text-[24px] font-extrabold text-[#081C3B] mt-2">
+                <span className="block text-sm sm:text-xl md:text-2xl lg:text-[24px] font-extrabold text-[#081C3B] mt-1 sm:mt-2">
                   Pure, Scale-Free Living for Homes & Businesses
                 </span>
               </h1>
 
               {/* Subtitle / Value proposition */}
-              <p className="mt-2 text-xs sm:text-sm md:text-base font-bold text-[#034078]">
+              <p className="mt-1 sm:mt-2 text-[11px] sm:text-sm md:text-base font-bold text-[#034078]">
                 One Smart Solution. Zero Maintenance. Better Water for Everyday Living.
               </p>
             </AnimatedSection>
 
             {/* Short Description */}
             <AnimatedSection animation="fade-right" delay={200} duration={800}>
-              <p className="text-xs sm:text-sm md:text-[15px] text-slate-900 font-medium max-w-2xl leading-relaxed">
+              <p className="text-[11px] sm:text-sm md:text-[15px] text-slate-900 font-medium max-w-2xl leading-relaxed">
                 Engineered with innovative catalytic electrolysis to prevent limescale buildup at the molecular level without salt refills, chemicals, or water wastage —while preserving 100% of essential healthy minerals like Calcium and Magnesium.
               </p>
             </AnimatedSection>
 
-            {/* Action Buttons: Primary "Explore Solutions" & Secondary WhatsApp */}
+            {/* Action Buttons: Compact Grid on Mobile, Row on Desktop */}
             <AnimatedSection animation="fade-right" delay={300} duration={800}>
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-start gap-3">
-                <Link
-                  to="/solutions"
-                  className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group"
-                >
-                  <span>Explore Solutions</span>
-                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
+              <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-2 sm:gap-3">
+                <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-3">
+                  <Link
+                    to="/solutions"
+                    className="btn-press inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group"
+                  >
+                    <span>Explore Solutions</span>
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </Link>
 
-                <Link
-                  to="/products"
-                  className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-sky-50/80 text-[#081C3B] border border-slate-200 hover:border-sky-300 px-5 py-3 rounded-xl font-bold text-sm shadow-xs transition-all"
-                >
-                  <span>View Products ({PRODUCTS_DATA.length})</span>
-                </Link>
+                  <Link
+                    to="/products"
+                    className="btn-press inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-white hover:bg-sky-50/80 text-[#081C3B] border border-slate-200 hover:border-sky-300 px-3 sm:px-5 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-sm shadow-xs transition-all"
+                  >
+                    <span>View Products ({PRODUCTS_DATA.length})</span>
+                  </Link>
+                </div>
 
                 <button
                   onClick={openGeneralEnquiry}
-                  className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl transition-all"
+                  className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-3.5 sm:px-5 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md hover:shadow-xl transition-all"
                 >
-                  <WhatsAppIcon className="w-4 h-4 fill-white" />
+                  <WhatsAppIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white" />
                   <span>Consult Expert</span>
                 </button>
               </div>
             </AnimatedSection>
 
-            {/* Key Trust Specifications */}
+            {/* Key Trust Specifications: Compact on Mobile, Spacious on Desktop */}
             <AnimatedSection animation="fade-up" delay={400} duration={800}>
-              <div className="pt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 border-t border-slate-200/80 max-w-3xl text-left">
-                <div className="bg-white/80 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
-                  <div className="text-base sm:text-lg font-black text-[#081C3B]">≤ 1,999 ppm</div>
-                  <div className="text-[11px] text-slate-500 font-medium">TDS Compatibility</div>
+              <div className="pt-2 sm:pt-3 grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-3 border-t border-slate-200/80 max-w-3xl text-left">
+                <div className="bg-white/85 backdrop-blur-xs p-1.5 sm:p-2.5 sm:p-3 rounded-lg sm:rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
+                  <div className="text-sm sm:text-base sm:text-lg font-black text-[#081C3B]">≤ 1,999 ppm</div>
+                  <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium">TDS Compatibility</div>
                 </div>
-                <div className="bg-white/80 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-emerald-300 transition-colors shadow-2xs">
-                  <div className="text-base sm:text-lg font-black text-emerald-600">5 Years</div>
-                  <div className="text-[11px] text-slate-500 font-medium">Electrode Warranty</div>
+                <div className="bg-white/85 backdrop-blur-xs p-1.5 sm:p-2.5 sm:p-3 rounded-lg sm:rounded-xl border border-slate-100 hover:border-emerald-300 transition-colors shadow-2xs">
+                  <div className="text-sm sm:text-base sm:text-lg font-black text-emerald-600">5 Years</div>
+                  <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium">Electrode Warranty</div>
                 </div>
-                <div className="bg-white/80 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
-                  <div className="text-base sm:text-lg font-black text-sky-600">Zero Refills</div>
-                  <div className="text-[11px] text-slate-500 font-medium">No Salt or Resin</div>
+                <div className="bg-white/85 backdrop-blur-xs p-1.5 sm:p-2.5 sm:p-3 rounded-lg sm:rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
+                  <div className="text-sm sm:text-base sm:text-lg font-black text-sky-600">Zero Refills</div>
+                  <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium">No Salt or Resin</div>
                 </div>
-                <div className="bg-white/80 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-amber-300 transition-colors shadow-2xs">
-                  <div className="text-base sm:text-lg font-black text-amber-600">SS 304</div>
-                  <div className="text-[11px] text-slate-500 font-medium">Food Grade Alloy</div>
+                <div className="bg-white/85 backdrop-blur-xs p-1.5 sm:p-2.5 sm:p-3 rounded-lg sm:rounded-xl border border-slate-100 hover:border-amber-300 transition-colors shadow-2xs">
+                  <div className="text-sm sm:text-base sm:text-lg font-black text-amber-600">SS 304</div>
+                  <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium">Food Grade Alloy</div>
                 </div>
               </div>
             </AnimatedSection>
@@ -210,15 +212,15 @@ export default function Home() {
         </div>
 
         {/* Carousel Slide Indicator Dots */}
-        <div className="absolute bottom-3 sm:bottom-4 right-4 sm:right-8 z-20 flex items-center gap-2">
+        <div className="absolute bottom-2 sm:bottom-4 right-3 sm:right-8 z-20 flex items-center gap-1.5 sm:gap-2">
           {HERO_SLIDES.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setHeroSlide(idx)}
-              className={`transition-all duration-300 rounded-full h-2 cursor-pointer ${
+              className={`transition-all duration-300 rounded-full h-1.5 sm:h-2 cursor-pointer ${
                 heroSlide === idx
-                  ? 'w-7 bg-[#081C3B]'
-                  : 'w-2 bg-slate-300 hover:bg-slate-500'
+                  ? 'w-5 sm:w-7 bg-[#081C3B]'
+                  : 'w-1.5 sm:w-2 bg-slate-300 hover:bg-slate-500'
               }`}
               aria-label={`Slide ${idx + 1}`}
             />
