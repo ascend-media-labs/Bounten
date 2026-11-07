@@ -27,7 +27,6 @@ import { SERVICES_DATA } from '../data/services';
 import { GALLERY_ITEMS } from '../data/gallery';
 import { ABOUT_DATA } from '../data/about';
 import { COMPANY_CONFIG } from '../data/config';
-import ProductCard from '../components/ProductCard';
 import AnimatedSection from '../components/AnimatedSection';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { openGeneralEnquiry } from '../utils/whatsapp';
@@ -75,11 +74,6 @@ export default function Home() {
       }
     }
   }, [location.hash]);
-
-  // Top featured products (show 2 from Zoftner Pro, 2 from Zoftner Quick Fix)
-  const proFeatured = PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Pro').slice(0, 2);
-  const quickFixFeatured = PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Quick Fix').slice(0, 2);
-  const featuredProducts = [...proFeatured, ...quickFixFeatured];
 
   // Gallery preview (top 6 images)
   const galleryPreview = GALLERY_ITEMS.slice(0, 6);
@@ -301,55 +295,32 @@ export default function Home() {
         </AnimatedSection>
       </section>
 
-      {/* 3. TWO CATEGORIES SHOWCASE & FEATURED PRODUCTS - id="products" */}
+      {/* 3. PRODUCT SERIES CATEGORIES OVERVIEW - id="products" */}
       <section id="products" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         
-        {/* 1. Featured Products Grid (Image 1) - Displayed First */}
+        {/* Product Series Categories Overview */}
         <div className="space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-            <div>
-              <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-                Top Picks
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
-                Featured Water Softening Systems
-              </h2>
-              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
-                Direct WhatsApp enquiry with pre-filled model specifications and immediate assistance.
-              </p>
-            </div>
-
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group flex-shrink-0"
-            >
-              <span>View Full Catalogue ({PRODUCTS_DATA.length})</span>
-              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-            {featuredProducts.map((product, idx) => (
-              <AnimatedSection key={product.id} animation="fade-up" delay={idx * 100} duration={600}>
-                <ProductCard product={product} />
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-
-        {/* 2. Product Series Categories Overview (Image 2) - Displayed Next */}
-        <div className="space-y-4 pt-4 border-t border-slate-100">
           <AnimatedSection animation="fade-up" duration={700}>
-            <div className="space-y-1">
-              <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-                Product Series
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
-                Two Distinct Series. Tailored to Your Water Setup.
-              </h3>
-              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
-                Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
-              </p>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+              <div className="space-y-1">
+                <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+                  Product Series
+                </span>
+                <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+                  Two Distinct Series. Tailored to Your Water Setup.
+                </h2>
+                <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
+                  Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
+                </p>
+              </div>
+
+              <Link
+                to="/products"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group flex-shrink-0"
+              >
+                <span>View Full Catalogue ({PRODUCTS_DATA.length})</span>
+                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </AnimatedSection>
 
