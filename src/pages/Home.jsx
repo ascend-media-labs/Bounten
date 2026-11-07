@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   ShieldCheck,
@@ -32,8 +32,36 @@ import AnimatedSection from '../components/AnimatedSection';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 
+// Realistic background carousel images (sliding right-to-left)
+const HERO_SLIDES = [
+  {
+    id: 1,
+    image: '/images/hero/hero-slide-1.jpg',
+    alt: 'Luxury villa bathroom with scale-free crystal water'
+  },
+  {
+    id: 2,
+    image: '/images/hero/hero-slide-2.jpg',
+    alt: 'State-of-the-art salt-free water softener system'
+  },
+  {
+    id: 3,
+    image: '/images/hero/hero-slide-3.jpg',
+    alt: 'Affluent Indian family enjoying pure soft water in kitchen'
+  }
+];
+
 export default function Home() {
   const location = useLocation();
+  const [heroSlide, setHeroSlide] = useState(0);
+
+  // Auto-advance hero background carousel every 5 seconds (right-to-left transition)
+  useEffect(() => {
+    const slideTimer = setInterval(() => {
+      setHeroSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 5000);
+    return () => clearInterval(slideTimer);
+  }, []);
 
   // Scroll to anchor on load or hash change
   useEffect(() => {
@@ -68,13 +96,36 @@ export default function Home() {
   return (
     <div className="space-y-6 sm:space-y-8 pb-6 sm:pb-8 overflow-hidden">
       
-      {/* 1. HERO SECTION WITH MODERN WATER TREATMENT THEME - id="home" */}
-      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-gradient-to-b from-sky-50/80 via-white to-slate-50/60 py-8 sm:py-12 lg:py-14 border-b border-slate-100">
-        {/* Soft Ambient Floating Water Glow Rings */}
-        <div className="absolute top-0 right-0 -mr-28 -mt-28 w-[500px] h-[500px] rounded-full bg-sky-200/40 blur-3xl pointer-events-none animate-ambient-glow" />
-        <div className="absolute bottom-0 left-0 -ml-28 -mb-28 w-[450px] h-[450px] rounded-full bg-blue-100/50 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '2.5s' }} />
-        <div className="absolute top-1/2 left-1/4 w-80 h-80 rounded-full bg-cyan-100/30 blur-2xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '4s' }} />
+      {/* 1. HERO SECTION WITH BACKGROUND CAROUSEL - id="home" */}
+      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/60 py-8 sm:py-12 lg:py-16 border-b border-slate-100">
+        
+        {/* RIGHT-TO-LEFT SLIDING BACKGROUND CAROUSEL */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+          <div
+            className="flex w-full h-full transition-transform duration-1000 ease-in-out"
+            style={{ transform: `translateX(-${heroSlide * 100}%)` }}
+          >
+            {HERO_SLIDES.map((slide) => (
+              <div key={slide.id} className="w-full h-full shrink-0 relative">
+                <img
+                  src={slide.image}
+                  alt={slide.alt}
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+            ))}
+          </div>
 
+          {/* Elegant Gradient & Frosted Overlays for 100% Crisp Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 sm:via-white/75 to-white/40 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/50" />
+        </div>
+
+        {/* Soft Ambient Floating Water Glow Rings */}
+        <div className="absolute top-0 right-0 -mr-28 -mt-28 w-[500px] h-[500px] rounded-full bg-sky-200/30 blur-3xl pointer-events-none animate-ambient-glow" />
+        <div className="absolute bottom-0 left-0 -ml-28 -mb-28 w-[450px] h-[450px] rounded-full bg-blue-100/40 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '2.5s' }} />
+
+        {/* Content Container (Matches exact typography, styling & colors from user image) */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl space-y-4 sm:space-y-5 text-left">
             <AnimatedSection animation="fade-right" duration={700}>
@@ -143,25 +194,41 @@ export default function Home() {
             {/* Key Trust Specifications */}
             <AnimatedSection animation="fade-up" delay={400} duration={800}>
               <div className="pt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 border-t border-slate-200/80 max-w-3xl text-left">
-                <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
+                <div className="bg-white/80 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
                   <div className="text-base sm:text-lg font-black text-[#081C3B]">≤ 1,999 ppm</div>
                   <div className="text-[11px] text-slate-500 font-medium">TDS Compatibility</div>
                 </div>
-                <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-emerald-300 transition-colors shadow-2xs">
+                <div className="bg-white/80 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-emerald-300 transition-colors shadow-2xs">
                   <div className="text-base sm:text-lg font-black text-emerald-600">5 Years</div>
                   <div className="text-[11px] text-slate-500 font-medium">Electrode Warranty</div>
                 </div>
-                <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
+                <div className="bg-white/80 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
                   <div className="text-base sm:text-lg font-black text-sky-600">Zero Refills</div>
                   <div className="text-[11px] text-slate-500 font-medium">No Salt or Resin</div>
                 </div>
-                <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-amber-300 transition-colors shadow-2xs">
+                <div className="bg-white/80 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-amber-300 transition-colors shadow-2xs">
                   <div className="text-base sm:text-lg font-black text-amber-600">SS 304</div>
                   <div className="text-[11px] text-slate-500 font-medium">Food Grade Alloy</div>
                 </div>
               </div>
             </AnimatedSection>
           </div>
+        </div>
+
+        {/* Carousel Slide Indicator Dots */}
+        <div className="absolute bottom-3 sm:bottom-4 right-4 sm:right-8 z-20 flex items-center gap-2">
+          {HERO_SLIDES.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setHeroSlide(idx)}
+              className={`transition-all duration-300 rounded-full h-2 cursor-pointer ${
+                heroSlide === idx
+                  ? 'w-7 bg-[#081C3B]'
+                  : 'w-2 bg-slate-300 hover:bg-slate-500'
+              }`}
+              aria-label={`Slide ${idx + 1}`}
+            />
+          ))}
         </div>
       </section>
 
