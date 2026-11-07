@@ -69,193 +69,98 @@ export default function Home() {
     <div className="space-y-6 sm:space-y-8 pb-6 sm:pb-8 overflow-hidden">
       
       {/* 1. HERO SECTION WITH MODERN WATER TREATMENT THEME - id="home" */}
-      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-gradient-to-b from-sky-50/80 via-white to-slate-50/60 py-8 sm:py-12 lg:py-16 border-b border-slate-100">
+      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-gradient-to-b from-sky-50/80 via-white to-slate-50/60 py-8 sm:py-12 lg:py-14 border-b border-slate-100">
         {/* Soft Ambient Floating Water Glow Rings */}
         <div className="absolute top-0 right-0 -mr-28 -mt-28 w-[500px] h-[500px] rounded-full bg-sky-200/40 blur-3xl pointer-events-none animate-ambient-glow" />
         <div className="absolute bottom-0 left-0 -ml-28 -mb-28 w-[450px] h-[450px] rounded-full bg-blue-100/50 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '2.5s' }} />
         <div className="absolute top-1/2 left-1/4 w-80 h-80 rounded-full bg-cyan-100/30 blur-2xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '4s' }} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
-            {/* Left Content Column (7 cols) */}
-            <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left">
-              <AnimatedSection animation="fade-right" duration={700}>
-                {/* Trust Tag with animated pulse */}
-                <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md border border-sky-200/90 text-[#081C3B] font-bold text-xs uppercase tracking-wider py-1 px-3.5 rounded-full shadow-xs hover:border-sky-400 transition-colors">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span className="text-sky-800 font-extrabold">Next-Gen Electrolysis</span>
-                  <span className="text-slate-300">•</span>
-                  <span>100% Salt-Free & Chemical-Free</span>
+          <div className="max-w-4xl space-y-4 sm:space-y-5 text-left">
+            <AnimatedSection animation="fade-right" duration={700}>
+              {/* Trust Tag with animated pulse */}
+              <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md border border-sky-200/90 text-[#081C3B] font-bold text-xs uppercase tracking-wider py-1 px-3.5 rounded-full shadow-xs hover:border-sky-400 transition-colors">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="text-sky-800 font-extrabold">Next-Gen Electrolysis</span>
+                <span className="text-slate-300">•</span>
+                <span>100% Salt-Free & Chemical-Free</span>
+              </div>
+            </AnimatedSection>
+
+            {/* Main Headline */}
+            <AnimatedSection animation="fade-right" delay={100} duration={800}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-black text-[#081C3B] tracking-tight leading-[1.12]">
+                Advanced Salt-Free <br className="hidden sm:inline" />
+                <span className="bg-gradient-to-r from-sky-600 via-cyan-600 to-[#081C3B] bg-clip-text text-transparent">
+                  Water Softeners
+                </span>
+                <span className="block text-lg sm:text-xl md:text-2xl lg:text-[24px] font-extrabold text-slate-700 mt-2">
+                  Pure, Scale-Free Living for Homes & Businesses
+                </span>
+              </h1>
+
+              {/* Subtitle / Value proposition */}
+              <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-sky-700">
+                One Smart Solution. Zero Maintenance. Better Water for Everyday Living.
+              </p>
+            </AnimatedSection>
+
+            {/* Short Description */}
+            <AnimatedSection animation="fade-right" delay={200} duration={800}>
+              <p className="text-xs sm:text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed font-normal">
+                Engineered with innovative catalytic electrolysis to prevent limescale buildup at the molecular level without salt refills, chemicals, or water wastage —while preserving 100% of essential healthy minerals like Calcium and Magnesium.
+              </p>
+            </AnimatedSection>
+
+            {/* Action Buttons: Primary "Explore Solutions" & Secondary WhatsApp */}
+            <AnimatedSection animation="fade-right" delay={300} duration={800}>
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-start gap-3">
+                <Link
+                  to="/solutions"
+                  className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group"
+                >
+                  <span>Explore Solutions</span>
+                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
+
+                <Link
+                  to="/products"
+                  className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-sky-50/80 text-[#081C3B] border border-slate-200 hover:border-sky-300 px-5 py-3 rounded-xl font-bold text-sm shadow-xs transition-all"
+                >
+                  <span>View Products ({PRODUCTS_DATA.length})</span>
+                </Link>
+
+                <button
+                  onClick={openGeneralEnquiry}
+                  className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl transition-all"
+                >
+                  <WhatsAppIcon className="w-4 h-4 fill-white" />
+                  <span>Consult Expert</span>
+                </button>
+              </div>
+            </AnimatedSection>
+
+            {/* Key Trust Specifications */}
+            <AnimatedSection animation="fade-up" delay={400} duration={800}>
+              <div className="pt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 border-t border-slate-200/80 max-w-3xl text-left">
+                <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
+                  <div className="text-base sm:text-lg font-black text-[#081C3B]">≤ 1,999 ppm</div>
+                  <div className="text-[11px] text-slate-500 font-medium">TDS Compatibility</div>
                 </div>
-              </AnimatedSection>
-
-              {/* Main Headline */}
-              <AnimatedSection animation="fade-right" delay={100} duration={800}>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-black text-[#081C3B] tracking-tight leading-[1.12]">
-                  Advanced Salt-Free <br className="hidden sm:inline" />
-                  <span className="bg-gradient-to-r from-sky-600 via-cyan-600 to-[#081C3B] bg-clip-text text-transparent">
-                    Water Softeners
-                  </span>
-                  <span className="block text-lg sm:text-xl md:text-2xl lg:text-[24px] font-extrabold text-slate-700 mt-2">
-                    Pure, Scale-Free Living for Homes & Businesses
-                  </span>
-                </h1>
-
-                {/* Subtitle / Value proposition */}
-                <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-sky-700">
-                  One Smart Solution. Zero Maintenance. Better Water for Everyday Living.
-                </p>
-              </AnimatedSection>
-
-              {/* Short Description */}
-              <AnimatedSection animation="fade-right" delay={200} duration={800}>
-                <p className="text-xs sm:text-sm md:text-base text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                  Engineered with innovative catalytic electrolysis to prevent limescale buildup at the molecular level without salt refills, chemicals, or water wastage—while preserving 100% of essential healthy minerals like Calcium and Magnesium.
-                </p>
-              </AnimatedSection>
-
-              {/* Action Buttons: Primary "Explore Solutions" & Secondary WhatsApp */}
-              <AnimatedSection animation="fade-right" delay={300} duration={800}>
-                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-                  <Link
-                    to="/solutions"
-                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group"
-                  >
-                    <span>Explore Solutions</span>
-                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
-
-                  <Link
-                    to="/products"
-                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-sky-50/80 text-[#081C3B] border border-slate-200 hover:border-sky-300 px-5 py-3 rounded-xl font-bold text-sm shadow-xs transition-all"
-                  >
-                    <span>View Products ({PRODUCTS_DATA.length})</span>
-                  </Link>
-
-                  <button
-                    onClick={openGeneralEnquiry}
-                    className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-3 rounded-xl font-bold text-sm shadow-md hover:shadow-xl transition-all"
-                  >
-                    <WhatsAppIcon className="w-4 h-4 fill-white" />
-                    <span>Consult Expert</span>
-                  </button>
+                <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-emerald-300 transition-colors shadow-2xs">
+                  <div className="text-base sm:text-lg font-black text-emerald-600">5 Years</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Electrode Warranty</div>
                 </div>
-              </AnimatedSection>
-
-              {/* Key Trust Specifications */}
-              <AnimatedSection animation="fade-up" delay={400} duration={800}>
-                <div className="pt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 border-t border-slate-200/80 max-w-2xl mx-auto lg:mx-0 text-left">
-                  <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
-                    <div className="text-base sm:text-lg font-black text-[#081C3B]">≤ 1,999 ppm</div>
-                    <div className="text-[11px] text-slate-500 font-medium">TDS Compatibility</div>
-                  </div>
-                  <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-emerald-300 transition-colors shadow-2xs">
-                    <div className="text-base sm:text-lg font-black text-emerald-600">5 Years</div>
-                    <div className="text-[11px] text-slate-500 font-medium">Electrode Warranty</div>
-                  </div>
-                  <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
-                    <div className="text-base sm:text-lg font-black text-sky-600">Zero Refills</div>
-                    <div className="text-[11px] text-slate-500 font-medium">No Salt or Resin</div>
-                  </div>
-                  <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-amber-300 transition-colors shadow-2xs">
-                    <div className="text-base sm:text-lg font-black text-amber-600">SS 304</div>
-                    <div className="text-[11px] text-slate-500 font-medium">Food Grade Alloy</div>
-                  </div>
+                <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
+                  <div className="text-base sm:text-lg font-black text-sky-600">Zero Refills</div>
+                  <div className="text-[11px] text-slate-500 font-medium">No Salt or Resin</div>
                 </div>
-              </AnimatedSection>
-            </div>
-
-            {/* Right Showcase Column (5 cols) - Premium Water Softener Showcase */}
-            <div className="lg:col-span-5 relative">
-              <AnimatedSection animation="fade-left" delay={200} duration={900}>
-                <div className="relative mx-auto max-w-md lg:max-w-none">
-                  
-                  {/* Glowing Ambient Pedestal Backdrop */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-sky-400/20 via-cyan-300/20 to-blue-500/20 rounded-3xl blur-2xl transform scale-95 pointer-events-none" />
-
-                  {/* Main Product Showcase Card */}
-                  <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-5 sm:p-6 shadow-2xl border border-sky-100/80 hover:border-sky-300 transition-all duration-500 hover-lift">
-                    
-                    {/* Header Badges */}
-                    <div className="flex items-center justify-between gap-2 pb-3 border-b border-slate-100">
-                      <div className="flex items-center gap-1.5">
-                        <span className="w-2 h-2 rounded-full bg-sky-500 animate-ping" />
-                        <span className="bg-sky-50 text-sky-800 text-[10px] sm:text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-sky-200/60">
-                          Flagship Model
-                        </span>
-                      </div>
-                      <span className="bg-emerald-50 text-emerald-800 text-[10px] sm:text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-emerald-200/60">
-                        ISO 9001 & 14001
-                      </span>
-                    </div>
-
-                    {/* High-Quality Water Softener Product Showcase */}
-                    <div className="relative h-56 sm:h-64 md:h-72 my-3 rounded-2xl overflow-hidden bg-gradient-to-b from-sky-50/60 via-slate-50 to-sky-100/40 flex items-center justify-center p-4 group">
-                      
-                      {/* Water ripple circles behind the unit */}
-                      <div className="absolute w-44 h-44 rounded-full border border-sky-300/40 animate-ping opacity-25 pointer-events-none" />
-                      <div className="absolute w-56 h-56 rounded-full border border-cyan-200/50 pointer-events-none" />
-                      
-                      <img
-                        src="/images/products/zoftnor-pro-w2.png"
-                        alt="Bounten Zoftnor Pro Salt-Free Water Softener"
-                        className="w-full h-full object-contain animate-float-slow drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
-                      />
-
-                      {/* Floating Trust Pills on image */}
-                      <div className="absolute bottom-2.5 left-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-lg shadow-sm border border-slate-100 flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-[#081C3B]">
-                        <Droplets className="w-3.5 h-3.5 text-sky-500" />
-                        <span>Zero Water Wastage</span>
-                      </div>
-
-                      <div className="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-lg shadow-sm border border-slate-100 flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-emerald-700">
-                        <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
-                        <span>Retains Minerals</span>
-                      </div>
-                    </div>
-
-                    {/* Product Model Name & Specs */}
-                    <div className="space-y-2 pt-1">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="text-xs uppercase font-bold text-sky-600 tracking-wider">Bounten Zoftnor Series</div>
-                          <h3 className="text-base sm:text-lg font-black text-[#081C3B]">Zoftnor Pro Scale Conditioner</h3>
-                        </div>
-                        <div className="text-right">
-                          <span className="inline-block text-[10px] font-semibold text-slate-500">Capacity</span>
-                          <div className="text-xs sm:text-sm font-bold text-[#081C3B]">Up to 2,500 LPH</div>
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-2 text-[11px] pt-1">
-                        <div className="bg-slate-50/80 rounded-lg p-2 border border-slate-100">
-                          <span className="text-slate-500 block text-[10px]">Technology</span>
-                          <span className="font-bold text-[#081C3B]">Catalytic Electrolysis</span>
-                        </div>
-                        <div className="bg-slate-50/80 rounded-lg p-2 border border-slate-100">
-                          <span className="text-slate-500 block text-[10px]">Warranty</span>
-                          <span className="font-bold text-emerald-700">5-Yr Electrode Life</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Bottom CTA in Showcase Card */}
-                    <div className="pt-3">
-                      <Link
-                        to="/products"
-                        className="btn-press w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#081C3B] to-sky-900 hover:from-[#0B2447] hover:to-sky-800 text-white py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-sm hover:shadow-md"
-                      >
-                        <span>Explore All Models & Sizing</span>
-                        <ChevronRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-
-                  </div>
+                <div className="bg-white/70 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-slate-100 hover:border-amber-300 transition-colors shadow-2xs">
+                  <div className="text-base sm:text-lg font-black text-amber-600">SS 304</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Food Grade Alloy</div>
                 </div>
-              </AnimatedSection>
-            </div>
-
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
