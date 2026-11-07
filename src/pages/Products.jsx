@@ -146,18 +146,129 @@ export default function Products() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* ============================================================ */}
-          {/* LEFT: 3x3 PRODUCT GRID (9 PRODUCTS PER PAGE)                */}
+          {/* LEFT: CATEGORY CARDS + 3x3 PRODUCT GRID                     */}
           {/* ============================================================ */}
           <div className="lg:col-span-8 xl:col-span-9 space-y-6">
             
+            {/* Top: Two Categories Showcase Cards (Direct Selection) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              {/* Category 1: Zoftner Pro */}
+              <button
+                type="button"
+                onClick={() => handleCategorySelect(selectedCategory === 'Zoftner Pro' ? 'All Products' : 'Zoftner Pro')}
+                className={`text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer ${
+                  selectedCategory === 'Zoftner Pro'
+                    ? 'border-sky-500 bg-sky-50/90 shadow-md ring-2 ring-sky-400/20'
+                    : 'border-slate-200 bg-white hover:border-sky-300 hover:bg-slate-50/70 shadow-xs'
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-800">
+                    {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Pro').length} Models Available
+                  </span>
+                  {selectedCategory === 'Zoftner Pro' ? (
+                    <span className="text-xs font-bold text-sky-600 flex items-center gap-1">
+                      <Check className="w-4 h-4" /> Selected
+                    </span>
+                  ) : (
+                    <span className="text-xs text-slate-400 font-medium">Click to filter</span>
+                  )}
+                </div>
+                <h2 className="text-lg sm:text-xl font-bold text-[#081C3B] mt-2">
+                  1. Zoftner Pro
+                </h2>
+                <p className="text-xs sm:text-sm font-semibold text-emerald-700 mt-0.5">
+                  All models come with a bag filter.
+                </p>
+                <p className="text-xs text-slate-500 mt-1.5 leading-relaxed font-normal">
+                  Heavy sediment & silt filtration + molecular scale prevention in one complete package.
+                </p>
+              </button>
+
+              {/* Category 2: Zoftner Quick Fix */}
+              <button
+                type="button"
+                onClick={() => handleCategorySelect(selectedCategory === 'Zoftner Quick Fix' ? 'All Products' : 'Zoftner Quick Fix')}
+                className={`text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer ${
+                  selectedCategory === 'Zoftner Quick Fix'
+                    ? 'border-[#081C3B] bg-slate-100/90 shadow-md ring-2 ring-slate-800/20'
+                    : 'border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50/70 shadow-xs'
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-800">
+                    {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Quick Fix').length} Models Available
+                  </span>
+                  {selectedCategory === 'Zoftner Quick Fix' ? (
+                    <span className="text-xs font-bold text-[#081C3B] flex items-center gap-1">
+                      <Check className="w-4 h-4" /> Selected
+                    </span>
+                  ) : (
+                    <span className="text-xs text-slate-400 font-medium">Click to filter</span>
+                  )}
+                </div>
+                <h2 className="text-lg sm:text-xl font-bold text-[#081C3B] mt-2">
+                  2. Zoftner Quick Fix
+                </h2>
+                <p className="text-xs sm:text-sm font-semibold text-slate-700 mt-0.5">
+                  All models come without a bag filter.
+                </p>
+                <p className="text-xs text-slate-500 mt-1.5 leading-relaxed font-normal">
+                  Compact inline electrolytic descalers for direct plumbing with pre-filtration.
+                </p>
+              </button>
+
+            </div>
+
+            {/* Quick Filter Status Strip */}
+            <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
+              <span className="text-slate-500 font-medium">Filter by Category:</span>
+              <button
+                type="button"
+                onClick={() => handleCategorySelect('All Products')}
+                className={`px-3 py-1 rounded-full text-xs font-bold transition-colors cursor-pointer ${
+                  selectedCategory === 'All Products'
+                    ? 'bg-[#081C3B] text-white'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                }`}
+              >
+                All Products ({PRODUCTS_DATA.length})
+              </button>
+              <button
+                type="button"
+                onClick={() => handleCategorySelect('Zoftner Pro')}
+                className={`px-3 py-1 rounded-full text-xs font-bold transition-colors cursor-pointer ${
+                  selectedCategory === 'Zoftner Pro'
+                    ? 'bg-sky-600 text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                }`}
+              >
+                Zoftner Pro ({PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Pro').length})
+              </button>
+              <button
+                type="button"
+                onClick={() => handleCategorySelect('Zoftner Quick Fix')}
+                className={`px-3 py-1 rounded-full text-xs font-bold transition-colors cursor-pointer ${
+                  selectedCategory === 'Zoftner Quick Fix'
+                    ? 'bg-[#081C3B] text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                }`}
+              >
+                Zoftner Quick Fix ({PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Quick Fix').length})
+              </button>
+            </div>
+
             {/* Top Toolbar: Products Side Heading on Left + Sorting Dropdown on Right */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
               <div>
                 <h1 className="text-xl sm:text-2xl font-bold text-[#081C3B] tracking-tight">
-                  Products
+                  {selectedCategory === 'All Products' ? 'Products' : selectedCategory}
                 </h1>
                 <p className="text-xs text-slate-500 mt-0.5">
                   Showing {filteredAndSortedProducts.length > 0 ? `${(currentPage - 1) * ITEMS_PER_PAGE + 1}–${Math.min(currentPage * ITEMS_PER_PAGE, filteredAndSortedProducts.length)} of ${filteredAndSortedProducts.length} results` : '0 results'}
+                  {selectedCategory === 'Zoftner Pro' && ' • All models come with a bag filter.'}
+                  {selectedCategory === 'Zoftner Quick Fix' && ' • All models come without a bag filter.'}
                 </p>
               </div>
 
@@ -284,36 +395,61 @@ export default function Products() {
                 </div>
               </form>
 
-              {/* Category Links List */}
-              <div className="space-y-2 pt-2 text-xs">
-                <div>
-                  <button
-                    onClick={() => handleCategorySelect('Zoftner Pro')}
-                    className={`hover:text-blue-600 cursor-pointer transition-colors ${
-                      selectedCategory === 'Zoftner Pro' ? 'text-blue-600 font-bold' : 'text-slate-600'
-                    }`}
-                  >
-                    Water Softner 2
-                  </button>
-                </div>
+              {/* Category Links List: Strictly Only Two Categories */}
+              <div className="space-y-2.5 pt-2 text-xs">
                 <div>
                   <button
                     onClick={() => handleCategorySelect('All Products')}
-                    className={`hover:text-blue-600 cursor-pointer transition-colors ${
-                      selectedCategory === 'All Products' ? 'text-blue-600 font-bold' : 'text-slate-600'
+                    className={`flex items-center justify-between w-full text-left py-1.5 px-3 rounded-lg transition-colors cursor-pointer ${
+                      selectedCategory === 'All Products'
+                        ? 'bg-[#081C3B] text-white font-bold'
+                        : 'text-slate-700 hover:bg-slate-100'
                     }`}
                   >
-                    All Products {PRODUCTS_DATA.length}
+                    <span>All Products</span>
+                    <span className="text-[11px] opacity-80">{PRODUCTS_DATA.length}</span>
                   </button>
                 </div>
+
+                <div>
+                  <button
+                    onClick={() => handleCategorySelect('Zoftner Pro')}
+                    className={`flex flex-col w-full text-left p-3 rounded-xl border transition-all cursor-pointer ${
+                      selectedCategory === 'Zoftner Pro'
+                        ? 'border-sky-500 bg-sky-50/90 text-sky-950 font-bold shadow-xs ring-1 ring-sky-400'
+                        : 'border-slate-200 text-slate-700 hover:border-sky-300 hover:bg-slate-50'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between w-full">
+                      <span className="font-bold text-xs text-[#081C3B]">1. Zoftner Pro</span>
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 font-bold">
+                        {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Pro').length}
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-semibold text-emerald-700 mt-1">
+                      All models come with a bag filter.
+                    </span>
+                  </button>
+                </div>
+
                 <div>
                   <button
                     onClick={() => handleCategorySelect('Zoftner Quick Fix')}
-                    className={`hover:text-blue-600 cursor-pointer transition-colors ${
-                      selectedCategory === 'Zoftner Quick Fix' ? 'text-blue-600 font-bold' : 'text-slate-600'
+                    className={`flex flex-col w-full text-left p-3 rounded-xl border transition-all cursor-pointer ${
+                      selectedCategory === 'Zoftner Quick Fix'
+                        ? 'border-slate-800 bg-slate-100 text-slate-900 font-bold shadow-xs ring-1 ring-slate-700'
+                        : 'border-slate-200 text-slate-700 hover:border-slate-400 hover:bg-slate-50'
                     }`}
                   >
-                    Zoftner
+                    <div className="flex items-center justify-between w-full">
+                      <span className="font-bold text-xs text-[#081C3B]">2. Zoftner Quick Fix</span>
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-200 text-slate-800 font-bold">
+                        {PRODUCTS_DATA.filter((p) => p.category === 'Zoftner Quick Fix').length}
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-semibold text-slate-600 mt-1">
+                      All models come without a bag filter.
+                    </span>
                   </button>
                 </div>
               </div>
