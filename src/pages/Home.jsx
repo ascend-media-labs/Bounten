@@ -430,7 +430,100 @@ export default function Home() {
 
       </section>
 
-      {/* 4. SERVICES OVERVIEW - id="services" */}
+      {/* 4. WATER SOFTENER - APPLICATIONS & USES (Right below Product Series, No Fade) - id="solutions" */}
+      <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div>
+            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
+              Applications & Uses
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
+              {PRODUCT_HIGHLIGHTS.applications.title}
+            </h2>
+            <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
+              {PRODUCT_HIGHLIGHTS.applications.subtitle}
+            </p>
+          </div>
+
+          <Link
+            to="/solutions"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group flex-shrink-0"
+          >
+            <span>View All Solutions</span>
+            <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+
+        {/* 3 Columns: Residential, Commercial, Everyday - 100% Solid & Crisp */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+          
+          {/* 1. Residential */}
+          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
+            <div className="space-y-2.5">
+              <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md">
+                <HomeIcon className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-[#081C3B]">
+                {PRODUCT_HIGHLIGHTS.applications.residential.title}
+              </h3>
+              <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+                {PRODUCT_HIGHLIGHTS.applications.residential.items.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* 2. Commercial */}
+          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
+            <div className="space-y-2.5">
+              <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+                <Building2 className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-[#081C3B]">
+                {PRODUCT_HIGHLIGHTS.applications.commercial.title}
+              </h3>
+              <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+                {PRODUCT_HIGHLIGHTS.applications.commercial.items.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* 3. Everyday Applications */}
+          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
+            <div className="space-y-2.5">
+              <div className="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md">
+                <Droplets className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-[#081C3B]">
+                {PRODUCT_HIGHLIGHTS.applications.everyday.title}
+              </h3>
+              <div className="space-y-1.5 text-xs sm:text-sm text-slate-700">
+                {PRODUCT_HIGHLIGHTS.applications.everyday.items.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="text-slate-900 font-semibold">{item.name}:</strong>{' '}
+                      <span className="text-slate-600">{item.description}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. SERVICES OVERVIEW - id="services" */}
       <section id="services" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
@@ -560,108 +653,7 @@ export default function Home() {
         </AnimatedSection>
       </section>
 
-      {/* 6. WATER SOFTENER - APPLICATIONS & USES - id="solutions" */}
-      <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-            <div>
-              <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-                Applications & Uses
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
-                {PRODUCT_HIGHLIGHTS.applications.title}
-              </h2>
-              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
-                {PRODUCT_HIGHLIGHTS.applications.subtitle}
-              </p>
-            </div>
-
-            <Link
-              to="/solutions"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group flex-shrink-0"
-            >
-              <span>View All Solutions</span>
-              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </AnimatedSection>
-
-        {/* 3 Columns: Residential, Commercial, Everyday */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
-          
-          {/* Residential */}
-          <AnimatedSection animation="fade-up" delay={100} duration={700}>
-            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md">
-                  <HomeIcon className="w-5 h-5" />
-                </div>
-                <h3 className="text-lg font-bold text-[#081C3B]">
-                  {PRODUCT_HIGHLIGHTS.applications.residential.title}
-                </h3>
-                <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-                  {PRODUCT_HIGHLIGHTS.applications.residential.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Commercial */}
-          <AnimatedSection animation="fade-up" delay={200} duration={700}>
-            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
-                  <Building2 className="w-5 h-5" />
-                </div>
-                <h3 className="text-lg font-bold text-[#081C3B]">
-                  {PRODUCT_HIGHLIGHTS.applications.commercial.title}
-                </h3>
-                <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-                  {PRODUCT_HIGHLIGHTS.applications.commercial.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Everyday Applications */}
-          <AnimatedSection animation="fade-up" delay={300} duration={700}>
-            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
-              <div className="space-y-2.5">
-                <div className="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md">
-                  <Droplets className="w-5 h-5" />
-                </div>
-                <h3 className="text-lg font-bold text-[#081C3B]">
-                  {PRODUCT_HIGHLIGHTS.applications.everyday.title}
-                </h3>
-                <div className="space-y-1.5 text-xs sm:text-sm text-slate-700">
-                  {PRODUCT_HIGHLIGHTS.applications.everyday.items.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-slate-900 font-semibold">{item.name}:</strong>{' '}
-                        <span className="text-slate-600">{item.description}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-
-        </div>
-      </section>
-
-      {/* 7. GALLERY PREVIEW - id="gallery" */}
+      {/* 6. GALLERY PREVIEW - id="gallery" */}
       <section id="gallery" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
