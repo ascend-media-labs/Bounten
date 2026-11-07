@@ -97,7 +97,7 @@ export default function Home() {
     <div className="space-y-6 sm:space-y-8 pb-6 sm:pb-8 overflow-hidden">
       
       {/* 1. HERO SECTION WITH BACKGROUND CAROUSEL - id="home" */}
-      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50/60 py-8 sm:py-12 lg:py-16 border-b border-slate-100">
+      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-slate-100/80 py-8 sm:py-12 lg:py-16 border-b border-slate-100">
         
         {/* RIGHT-TO-LEFT SLIDING BACKGROUND CAROUSEL */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -116,14 +116,12 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Elegant Gradient & Frosted Overlays for 100% Crisp Text Readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 sm:via-white/75 to-white/40 backdrop-blur-[1px]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/50" />
+          {/* Light, Reduced Gradient Overlay so Images Are Clearly Visible & Crisp */}
+          {/* Left-side soft mist to maintain perfect text contrast, open transparency on center and right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent sm:from-white/75 sm:via-white/30 sm:to-transparent" />
+          {/* Subtle bottom edge blend */}
+          <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-white/70 to-transparent" />
         </div>
-
-        {/* Soft Ambient Floating Water Glow Rings */}
-        <div className="absolute top-0 right-0 -mr-28 -mt-28 w-[500px] h-[500px] rounded-full bg-sky-200/30 blur-3xl pointer-events-none animate-ambient-glow" />
-        <div className="absolute bottom-0 left-0 -ml-28 -mb-28 w-[450px] h-[450px] rounded-full bg-blue-100/40 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '2.5s' }} />
 
         {/* Content Container (Matches exact typography, styling & colors from user image) */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
