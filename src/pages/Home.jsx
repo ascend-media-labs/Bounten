@@ -112,7 +112,7 @@ export default function Home() {
 
           {/* Light, Reduced Gradient Overlay so Images Are Clearly Visible & Crisp */}
           {/* Left-side soft mist to maintain perfect text contrast, open transparency on center and right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent sm:from-white/75 sm:via-white/30 sm:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent sm:from-white/85 sm:via-white/40 sm:to-transparent" />
           {/* Subtle bottom edge blend */}
           <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-white/70 to-transparent" />
         </div>
@@ -122,10 +122,10 @@ export default function Home() {
           <div className="max-w-4xl space-y-4 sm:space-y-5 text-left">
             <AnimatedSection animation="fade-right" duration={700}>
               {/* Trust Tag with animated pulse */}
-              <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md border border-sky-200/90 text-[#081C3B] font-bold text-xs uppercase tracking-wider py-1 px-3.5 rounded-full shadow-xs hover:border-sky-400 transition-colors">
+              <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md border border-sky-300 text-[#081C3B] font-bold text-xs uppercase tracking-wider py-1 px-3.5 rounded-full shadow-xs hover:border-sky-400 transition-colors">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span className="text-sky-800 font-extrabold">Next-Gen Electrolysis</span>
-                <span className="text-slate-300">•</span>
+                <span className="text-sky-900 font-extrabold">Next-Gen Electrolysis</span>
+                <span className="text-slate-400">•</span>
                 <span>100% Salt-Free & Chemical-Free</span>
               </div>
             </AnimatedSection>
@@ -134,23 +134,23 @@ export default function Home() {
             <AnimatedSection animation="fade-right" delay={100} duration={800}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-black text-[#081C3B] tracking-tight leading-[1.12]">
                 Advanced Salt-Free <br className="hidden sm:inline" />
-                <span className="bg-gradient-to-r from-sky-600 via-cyan-600 to-[#081C3B] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-700 via-cyan-700 to-[#081C3B] bg-clip-text text-transparent">
                   Water Softeners
                 </span>
-                <span className="block text-lg sm:text-xl md:text-2xl lg:text-[24px] font-extrabold text-slate-700 mt-2">
+                <span className="block text-lg sm:text-xl md:text-2xl lg:text-[24px] font-extrabold text-[#081C3B] mt-2">
                   Pure, Scale-Free Living for Homes & Businesses
                 </span>
               </h1>
 
-              {/* Subtitle / Value proposition */}
-              <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold text-sky-700">
+              {/* Subtitle / Value proposition (Darker & clearly legible) */}
+              <p className="mt-2 text-xs sm:text-sm md:text-base font-bold text-[#034078]">
                 One Smart Solution. Zero Maintenance. Better Water for Everyday Living.
               </p>
             </AnimatedSection>
 
-            {/* Short Description */}
+            {/* Short Description (Darker, High-Contrast & Clearly Visible) */}
             <AnimatedSection animation="fade-right" delay={200} duration={800}>
-              <p className="text-xs sm:text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm md:text-[15px] text-slate-900 font-medium max-w-2xl leading-relaxed">
                 Engineered with innovative catalytic electrolysis to prevent limescale buildup at the molecular level without salt refills, chemicals, or water wastage —while preserving 100% of essential healthy minerals like Calcium and Magnesium.
               </p>
             </AnimatedSection>
