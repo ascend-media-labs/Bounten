@@ -217,9 +217,9 @@ export default function Home() {
           <div className="absolute bottom-0 inset-x-0 h-6 sm:h-8 bg-gradient-to-t from-white/40 to-transparent pointer-events-none z-10" />
         </div>
 
-        {/* Content Container (Refined Typography & Balanced Sizing) */}
-        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-xl md:max-w-2xl space-y-2 sm:space-y-3.5 lg:space-y-4 text-left">
+        {/* Content Container (Positioned to the Left to Keep Cabinet Clear) */}
+        <div className="w-full max-w-[1536px] mx-auto px-3.5 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+          <div className="max-w-md sm:max-w-lg lg:max-w-[500px] xl:max-w-[520px] space-y-2 sm:space-y-3 lg:space-y-3.5 text-left">
             <AnimatedSection animation="fade-right" duration={700}>
               {/* Trust Tag with animated pulse */}
               <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-sky-200/90 text-[#081C3B] font-bold text-[9px] sm:text-[11px] uppercase tracking-wider py-0.5 sm:py-1 px-2.5 sm:px-3 rounded-full shadow-xs hover:border-sky-400 transition-colors">
