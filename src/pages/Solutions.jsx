@@ -99,27 +99,27 @@ export default function Solutions() {
                 className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 overflow-hidden"
               >
                 <div
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
+                  className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch ${
                     isReversed ? 'lg:flex-row-reverse' : ''
                   }`}
                 >
-                  {/* Solution Image (5 cols) with smooth zoom */}
-                  <div className={`lg:col-span-5 ${isReversed ? 'lg:order-2' : 'lg:order-1'}`}>
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 shadow-md group shine-sweep">
+                  {/* Solution Image (5 cols) - Equal length/height matching text */}
+                  <div className={`lg:col-span-5 ${isReversed ? 'lg:order-2' : 'lg:order-1'} flex flex-col`}>
+                    <div className="relative w-full h-full min-h-[300px] sm:min-h-[360px] lg:min-h-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto rounded-2xl overflow-hidden bg-slate-900 shadow-md group shine-sweep flex-1 flex flex-col">
                       <img
                         src={solution.image}
                         alt={solution.title}
-                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out flex-1"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent pointer-events-none" />
                       
                       {/* Badge */}
-                      <div className="absolute top-4 left-4 bg-sky-500/90 backdrop-blur-xs text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                      <div className="absolute top-4 left-4 bg-sky-500/90 backdrop-blur-xs text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">
                         Category 0{index + 1}
                       </div>
 
-                      <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <div className="absolute bottom-4 left-4 right-4 text-white z-10">
                         <div className="flex items-center gap-2">
                           <span className="w-8 h-8 rounded-lg bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
                             <Icon className="w-4 h-4" />
@@ -130,8 +130,8 @@ export default function Solutions() {
                     </div>
                   </div>
 
-                  {/* Solution Details (7 cols) */}
-                  <div className={`lg:col-span-7 space-y-5 ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
+                  {/* Solution Details (7 cols) - Equal length/height matching image */}
+                  <div className={`lg:col-span-7 flex flex-col justify-between space-y-5 ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
                     <div className="space-y-1.5">
                       <div className="flex items-center gap-2 text-xs font-bold text-sky-600 uppercase tracking-wider">
                         <Icon className="w-4 h-4 animate-pulse" />
