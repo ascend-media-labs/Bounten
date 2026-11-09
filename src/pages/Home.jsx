@@ -36,17 +36,12 @@ const HERO_SLIDES = [
   {
     id: 1,
     image: '/images/hero/hero-slide-1.jpg',
-    alt: 'Happy family enjoying fresh pure scale-free water with Bounten water softener'
+    alt: 'Bounten Zoftnor exterior closed cabinet salt-free water softener'
   },
   {
     id: 2,
     image: '/images/hero/hero-slide-2.jpg',
-    alt: 'Luxury modern kitchen with pure, crystal-clear soft water stream'
-  },
-  {
-    id: 3,
-    image: '/images/hero/hero-slide-3.jpg',
-    alt: 'State-of-the-art SS 304 salt-free water softener system'
+    alt: 'Bounten Zoftnor opened cabinet showing interior electrolysis cylinder and bag filter'
   }
 ];
 
@@ -104,7 +99,7 @@ export default function Home() {
                 <img
                   src={slide.image}
                   alt={slide.alt}
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center md:object-[70%_center]"
                 />
               </div>
             ))}
