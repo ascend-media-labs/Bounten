@@ -41,7 +41,7 @@ const HERO_SLIDES = [
   {
     id: 2,
     image: '/images/hero/hero-slide-2.jpg',
-    alt: 'Pure crystal-clear hydrodynamic soft water caustics'
+    alt: 'Luxury modern kitchen with pure, crystal-clear soft water stream'
   },
   {
     id: 3,
