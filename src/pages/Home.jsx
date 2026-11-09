@@ -31,16 +31,16 @@ import AnimatedSection from '../components/AnimatedSection';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 
-// High-resolution realistic water treatment background carousel slides (focused right, soft left)
+// High-resolution realistic water treatment background carousel slides (strictly only 2 slides)
 const HERO_SLIDES = [
   {
     id: 1,
-    image: '/images/hero/hero-slide-1.jpg',
+    image: '/images/hero/zoftnor-cabinet-closed.jpg',
     alt: 'Bounten Zoftnor exterior closed cabinet salt-free water softener'
   },
   {
     id: 2,
-    image: '/images/hero/hero-slide-2.jpg',
+    image: '/images/hero/zoftnor-cabinet-open.jpg',
     alt: 'Bounten Zoftnor opened cabinet showing interior electrolysis cylinder and bag filter'
   }
 ];
