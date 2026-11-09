@@ -174,28 +174,6 @@ export default function Home() {
                 </button>
               </div>
             </AnimatedSection>
-
-            {/* Key Trust Specifications: Compact on Mobile, Spacious on Desktop */}
-            <AnimatedSection animation="fade-up" delay={400} duration={800}>
-              <div className="pt-2 sm:pt-3 grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-3 border-t border-slate-200/80 max-w-3xl text-left">
-                <div className="bg-white/85 backdrop-blur-xs p-1.5 sm:p-2.5 sm:p-3 rounded-lg sm:rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
-                  <div className="text-sm sm:text-base sm:text-lg font-black text-[#081C3B]">≤ 1,999 ppm</div>
-                  <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium">TDS Compatibility</div>
-                </div>
-                <div className="bg-white/85 backdrop-blur-xs p-1.5 sm:p-2.5 sm:p-3 rounded-lg sm:rounded-xl border border-slate-100 hover:border-emerald-300 transition-colors shadow-2xs">
-                  <div className="text-sm sm:text-base sm:text-lg font-black text-emerald-600">5 Years</div>
-                  <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium">Electrode Warranty</div>
-                </div>
-                <div className="bg-white/85 backdrop-blur-xs p-1.5 sm:p-2.5 sm:p-3 rounded-lg sm:rounded-xl border border-slate-100 hover:border-sky-300 transition-colors shadow-2xs">
-                  <div className="text-sm sm:text-base sm:text-lg font-black text-sky-600">Zero Refills</div>
-                  <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium">No Salt or Resin</div>
-                </div>
-                <div className="bg-white/85 backdrop-blur-xs p-1.5 sm:p-2.5 sm:p-3 rounded-lg sm:rounded-xl border border-slate-100 hover:border-amber-300 transition-colors shadow-2xs">
-                  <div className="text-sm sm:text-base sm:text-lg font-black text-amber-600">SS 304</div>
-                  <div className="text-[9px] sm:text-[11px] text-slate-500 font-medium">Food Grade Alloy</div>
-                </div>
-              </div>
-            </AnimatedSection>
           </div>
         </div>
 
@@ -214,6 +192,30 @@ export default function Home() {
             />
           ))}
         </div>
+      </section>
+
+      {/* KEY TRUST SPECIFICATIONS STRIP - RIGHT BELOW HERO SECTION */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimatedSection animation="fade-up" duration={700}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left">
+              <div className="text-base sm:text-xl font-black text-[#081C3B]">≤ 1,999 ppm</div>
+              <div className="text-xs text-slate-500 font-medium mt-0.5">TDS Compatibility</div>
+            </div>
+            <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-emerald-300 transition-all text-left">
+              <div className="text-base sm:text-xl font-black text-emerald-600">5 Years</div>
+              <div className="text-xs text-slate-500 font-medium mt-0.5">Electrode Warranty</div>
+            </div>
+            <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left">
+              <div className="text-base sm:text-xl font-black text-sky-600">Zero Refills</div>
+              <div className="text-xs text-slate-500 font-medium mt-0.5">No Salt or Resin</div>
+            </div>
+            <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-amber-300 transition-all text-left">
+              <div className="text-base sm:text-xl font-black text-amber-600">SS 304</div>
+              <div className="text-xs text-slate-500 font-medium mt-0.5">Food Grade Alloy</div>
+            </div>
+          </div>
+        </AnimatedSection>
       </section>
 
       {/* 2. ABOUT BOUNTEN SUMMARY SECTION - id="about" */}
