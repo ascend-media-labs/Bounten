@@ -13,6 +13,8 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 
   body {
@@ -20,6 +22,8 @@
     color: #1e293b;
     background-color: #ffffff;
     overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -34,7 +38,7 @@
   }
 }
 
-/* Universal Text Justification for Entire Website */
+/* Universal Text Justification for Entire Website (Desktop & Tablets) */
 p, 
 .text-justify,
 .prose p,
@@ -45,6 +49,20 @@ div > p {
   text-align: justify !important;
   text-justify: inter-word;
   text-align-last: left;
+}
+
+/* Mobile Screens (< 640px): Natural left alignment to prevent awkward word gaps */
+@media (max-width: 640px) {
+  p, 
+  .text-justify,
+  .prose p,
+  article p,
+  section p,
+  main p,
+  div > p {
+    text-align: left !important;
+    text-align-last: left !important;
+  }
 }
 
 /* Custom smooth scrollbar */

@@ -185,7 +185,7 @@ export default function Navbar() {
                       href={link.path}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="whitespace-nowrap flex-shrink-0 group inline-flex items-center gap-1 px-2 xl:px-2.5 py-1.5 text-xs xl:text-[13px] 2xl:text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-xl hover:bg-sky-50 transition-all duration-300 relative"
+                      className="whitespace-nowrap flex-shrink-0 group inline-flex items-center gap-1 px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-[13px] 2xl:text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-xl hover:bg-sky-50 transition-all duration-300 relative"
                       title={`Open official ${link.name}`}
                     >
                       <FileDown className="w-3.5 h-3.5 text-sky-500 flex-shrink-0 transform group-hover:translate-y-0.5 transition-transform duration-200" />
@@ -204,7 +204,7 @@ export default function Navbar() {
                     key={link.name}
                     href={link.path}
                     onClick={(e) => handleNavClick(e, link)}
-                    className={`whitespace-nowrap flex-shrink-0 relative px-2 xl:px-2.5 py-1.5 text-xs xl:text-[13px] 2xl:text-sm font-semibold rounded-xl transition-all duration-300 ease-in-out cursor-pointer ${
+                    className={`whitespace-nowrap flex-shrink-0 relative px-1.5 xl:px-2.5 py-1.5 text-[11px] xl:text-[13px] 2xl:text-sm font-semibold rounded-xl transition-all duration-300 ease-in-out cursor-pointer ${
                       isActive
                         ? 'text-sky-600 bg-sky-50/90 font-bold shadow-xs'
                         : 'text-slate-700 hover:text-sky-600 hover:bg-slate-50'
@@ -218,7 +218,7 @@ export default function Navbar() {
               {/* WhatsApp Quick Icon Button - strictly single line, no cut off */}
               <button
                 onClick={openGeneralEnquiry}
-                className="btn-press ml-1.5 xl:ml-2.5 inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white px-3 xl:px-3.5 py-1.5 xl:py-2 rounded-xl text-xs xl:text-sm font-bold shadow-sm hover:shadow-md transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="btn-press ml-1 xl:ml-2.5 inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white px-2.5 xl:px-3.5 py-1.5 xl:py-2 rounded-xl text-[11px] xl:text-xs 2xl:text-sm font-bold shadow-sm hover:shadow-md transition-all duration-300 whitespace-nowrap flex-shrink-0"
                 title="Enquire on WhatsApp"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-white flex-shrink-0" />

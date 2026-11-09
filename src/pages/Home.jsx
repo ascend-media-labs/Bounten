@@ -103,37 +103,37 @@ function TrustSpecsBar() {
 
   return (
     <section ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
         {/* Card 1: TDS Compatibility */}
-        <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left group">
-          <div className="text-base sm:text-xl font-black text-[#081C3B] tabular-nums tracking-tight">
+        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left group">
+          <div className="text-sm sm:text-base md:text-xl font-black text-[#081C3B] tabular-nums tracking-tight">
             ≤ {counts.ppm.toLocaleString()} ppm
           </div>
-          <div className="text-xs text-slate-500 font-medium mt-0.5">TDS Compatibility</div>
+          <div className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5">TDS Compatibility</div>
         </div>
 
         {/* Card 2: Electrode Warranty */}
-        <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-emerald-300 transition-all text-left group">
-          <div className="text-base sm:text-xl font-black text-emerald-600 tabular-nums tracking-tight">
+        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-emerald-300 transition-all text-left group">
+          <div className="text-sm sm:text-base md:text-xl font-black text-emerald-600 tabular-nums tracking-tight">
             {counts.years} Years
           </div>
-          <div className="text-xs text-slate-500 font-medium mt-0.5">Electrode Warranty</div>
+          <div className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5">Electrode Warranty</div>
         </div>
 
         {/* Card 3: Zero Refills */}
-        <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left group">
-          <div className="text-base sm:text-xl font-black text-sky-600 tracking-tight">
+        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left group">
+          <div className="text-sm sm:text-base md:text-xl font-black text-sky-600 tracking-tight">
             Zero Refills
           </div>
-          <div className="text-xs text-slate-500 font-medium mt-0.5">No Salt or Resin</div>
+          <div className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5">No Salt or Resin</div>
         </div>
 
         {/* Card 4: Food Grade Alloy */}
-        <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-amber-300 transition-all text-left group">
-          <div className="text-base sm:text-xl font-black text-amber-600 tabular-nums tracking-tight">
+        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-amber-300 transition-all text-left group">
+          <div className="text-sm sm:text-base md:text-xl font-black text-amber-600 tabular-nums tracking-tight">
             SS {counts.alloy}
           </div>
-          <div className="text-xs text-slate-500 font-medium mt-0.5">Food Grade Alloy</div>
+          <div className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5">Food Grade Alloy</div>
         </div>
       </div>
     </section>
@@ -246,7 +246,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-3">
                   <Link
                     to="/solutions"
-                    className="btn-press inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group"
+                    className="btn-press inline-flex items-center justify-center gap-1 sm:gap-2 bg-[#081C3B] hover:bg-[#0B2447] text-white px-2.5 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-[11px] sm:text-sm shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group whitespace-nowrap"
                   >
                     <span>Explore Solutions</span>
                     <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
@@ -254,7 +254,7 @@ export default function Home() {
 
                   <Link
                     to="/products"
-                    className="btn-press inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-white hover:bg-sky-50/80 text-[#081C3B] border border-slate-200 hover:border-sky-300 px-3 sm:px-5 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-sm shadow-xs transition-all"
+                    className="btn-press inline-flex items-center justify-center gap-1 sm:gap-2 bg-white hover:bg-sky-50/80 text-[#081C3B] border border-slate-200 hover:border-sky-300 px-2.5 sm:px-5 py-2 sm:py-3 rounded-xl font-bold text-[11px] sm:text-sm shadow-xs transition-all whitespace-nowrap"
                   >
                     <span>View Products ({PRODUCTS_DATA.length})</span>
                   </Link>
@@ -377,7 +377,7 @@ export default function Home() {
                 <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                   Two Distinct Series. Tailored to Your Water Setup.
                 </h2>
-                <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
+                <p className="text-slate-600 text-sm mt-0.5 max-w-2xl">
                   Choose between integrated pre-stage bag filtration or direct streamlined inline descaling.
                 </p>
               </div>
@@ -478,7 +478,7 @@ export default function Home() {
             <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
               {PRODUCT_HIGHLIGHTS.applications.title}
             </h2>
-            <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
+            <p className="text-slate-600 text-sm mt-0.5 max-w-2xl">
               {PRODUCT_HIGHLIGHTS.applications.subtitle}
             </p>
           </div>
@@ -572,7 +572,7 @@ export default function Home() {
               <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                 Comprehensive Services & AMC
               </h2>
-              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
+              <p className="text-slate-600 text-sm mt-0.5 max-w-2xl">
                 From site feasibility inspections to professional installation, electronics synchronization, and Annual Maintenance Contracts.
               </p>
             </div>
@@ -702,7 +702,7 @@ export default function Home() {
               <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                 Real Installations Across India
               </h2>
-              <p className="text-slate-600 text-sm mt-0.5 lg:whitespace-nowrap">
+              <p className="text-slate-600 text-sm mt-0.5 max-w-2xl">
                 Take a look at Bounten water softeners installed in residential apartments, luxury villas, gated communities, and commercial spaces.
               </p>
             </div>
