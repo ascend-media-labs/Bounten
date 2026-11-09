@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   MapPin,
-  Phone,
-  Mail,
   FileDown,
   ShieldCheck,
   ChevronRight,
@@ -83,45 +81,6 @@ export default function Footer() {
             <p className="text-xs text-slate-300 leading-relaxed font-normal max-w-sm">
               <strong className="text-white">BOUNTEN</strong> (KCS Pride Products LLP) is India’s foremost manufacturer of advanced, salt-free electrolysis water softeners. Delivering 100% eco-friendly, zero-maintenance hard water scale protection for homes, villas, commercial spaces, and industrial operations.
             </p>
-
-            {/* Quick Contact Badges - Compact */}
-            <div className="space-y-1.5 pt-1 text-xs">
-              <div className="flex items-center gap-2.5 text-slate-200">
-                <span className="w-6 h-6 rounded-md bg-sky-950 flex items-center justify-center text-sky-400 flex-shrink-0">
-                  <Phone className="w-3.5 h-3.5" />
-                </span>
-                <div className="flex items-center gap-1.5 text-xs">
-                  <span className="text-slate-400">Phone:</span>
-                  <a href={`tel:${COMPANY_CONFIG.phone}`} className="font-bold hover:text-sky-400 transition-colors">
-                    {COMPANY_CONFIG.phone}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-slate-200">
-                <span className="w-6 h-6 rounded-md bg-emerald-950 flex items-center justify-center text-emerald-400 flex-shrink-0">
-                  <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
-                </span>
-                <div className="flex items-center gap-1.5 text-xs">
-                  <span className="text-slate-400">WhatsApp:</span>
-                  <button onClick={openGeneralEnquiry} className="font-bold hover:text-emerald-400 transition-colors text-left">
-                    {COMPANY_CONFIG.displayWhatsApp}
-                  </button>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-slate-200">
-                <span className="w-6 h-6 rounded-md bg-amber-950 flex items-center justify-center text-amber-400 flex-shrink-0">
-                  <Mail className="w-3.5 h-3.5" />
-                </span>
-                <div className="flex items-center gap-1.5 text-xs">
-                  <span className="text-slate-400">Email:</span>
-                  <a href={`mailto:${COMPANY_CONFIG.email}`} className="font-bold hover:text-amber-400 transition-colors">
-                    {COMPANY_CONFIG.email}
-                  </a>
-                </div>
-              </div>
-            </div>
 
             {/* Original Social Media Icons Section */}
             <div className="pt-2.5 border-t border-slate-800/80 space-y-2">
