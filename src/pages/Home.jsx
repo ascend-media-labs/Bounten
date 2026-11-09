@@ -36,7 +36,7 @@ const HERO_SLIDES = [
   {
     id: 1,
     image: '/images/hero/hero-slide-1.jpg',
-    alt: 'Luxury villa bathroom with crystal-clear scale-free water'
+    alt: 'Happy family enjoying fresh pure scale-free water with Bounten water softener'
   },
   {
     id: 2,
