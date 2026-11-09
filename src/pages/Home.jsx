@@ -181,7 +181,7 @@ export default function Home() {
     <div className="space-y-6 sm:space-y-8 pb-6 sm:pb-8 overflow-hidden">
       
       {/* 1. HERO SECTION WITH BACKGROUND CAROUSEL - id="home" */}
-      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-slate-50 py-4 sm:py-10 lg:py-14 border-b border-slate-100">
+      <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-slate-50 py-6 sm:py-12 lg:py-16 min-h-[460px] sm:min-h-[540px] lg:min-h-[620px] xl:min-h-[680px] flex items-center border-b border-slate-100">
         
         {/* RIGHT-TO-LEFT SLIDING BACKGROUND CAROUSEL */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -190,23 +190,31 @@ export default function Home() {
             style={{ transform: `translateX(-${heroSlide * 100}%)` }}
           >
             {HERO_SLIDES.map((slide) => (
-              <div key={slide.id} className="w-full h-full shrink-0 relative">
+              <div key={slide.id} className="w-full h-full shrink-0 relative flex items-center justify-end">
+                {/* Soft ambient blurred backdrop to fill any ultrawide screen edges seamlessly */}
+                <img
+                  src={slide.image}
+                  alt=""
+                  className="hidden sm:block absolute inset-0 w-full h-full object-cover blur-2xl opacity-25 scale-105 pointer-events-none"
+                  aria-hidden="true"
+                />
+                {/* Full-Length Main Image - No Top/Bottom Crop */}
                 <img
                   src={slide.image}
                   alt={slide.alt}
-                  className="w-full h-full object-cover object-[65%_center] sm:object-center"
+                  className="w-full h-full object-cover sm:object-contain sm:object-right relative z-1"
                 />
               </div>
             ))}
           </div>
 
-          {/* Significantly Reduced White Fade so Images Are Rich & Vibrant */}
+          {/* Transparent Gradient Overlays for Text Readability */}
           {/* Desktop: Gentle soft mist on the left for text, completely transparent on center and right */}
-          <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-white/65 via-white/25 to-transparent pointer-events-none" />
+          <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-transparent pointer-events-none z-10" />
           {/* Mobile: Light transparent tint so images are clearly visible without heavy whiteout */}
-          <div className="sm:hidden absolute inset-0 bg-white/30 pointer-events-none" />
+          <div className="sm:hidden absolute inset-0 bg-white/35 pointer-events-none z-10" />
           {/* Delicate bottom edge blend */}
-          <div className="absolute bottom-0 inset-x-0 h-8 sm:h-10 bg-gradient-to-t from-white/40 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-6 sm:h-8 bg-gradient-to-t from-white/40 to-transparent pointer-events-none z-10" />
         </div>
 
         {/* Content Container (Refined Typography & Balanced Sizing) */}
