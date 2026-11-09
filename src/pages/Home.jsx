@@ -195,14 +195,18 @@ export default function Home() {
                 <img
                   src={slide.image}
                   alt=""
-                  className="absolute inset-0 w-full h-full object-cover object-left opacity-90 pointer-events-none"
+                  className="absolute inset-0 w-full h-full object-cover object-left pointer-events-none"
                   aria-hidden="true"
                 />
-                {/* Main full-length crisp image - 100% height, full cabinet with no top/bottom cut */}
+                {/* Main full-length crisp image - Faded smoothly on the left edge to eliminate hard vertical seam line */}
                 <img
                   src={slide.image}
                   alt={slide.alt}
                   className="h-full w-auto max-w-none object-contain relative z-1 ml-auto"
+                  style={{
+                    WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 160px, black 100%)',
+                    maskImage: 'linear-gradient(to right, transparent 0%, black 160px, black 100%)'
+                  }}
                 />
               </div>
             ))}
