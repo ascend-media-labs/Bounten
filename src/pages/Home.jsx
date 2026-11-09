@@ -417,21 +417,6 @@ export default function Home() {
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                     Engineered for households and commercial spaces seeking complete scale prevention along with heavy sediment, silt, and turbidity filtration in one integrated package.
                   </p>
-
-                  <ul className="space-y-2 text-xs text-slate-700 pt-1">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                      <span>Integrated washable high-efficiency bag filter</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                      <span>Resin-Free | Salt-Free | Chemical-Free Electrolysis</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                      <span>1-Year Body & 5-Year Electrode Unconditional Warranty</span>
-                    </li>
-                  </ul>
                 </div>
 
                 <Link
@@ -466,21 +451,6 @@ export default function Home() {
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                     Streamlined, compact electrolytic conditioners and appliance descalers designed for direct inline plumbing connections where pre-filtration is already present.
                   </p>
-
-                  <ul className="space-y-2 text-xs text-slate-700 pt-1">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0" />
-                      <span>Fast, direct inline connection without bag housing</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0" />
-                      <span>Resin-Free | Salt-Free | Chemical-Free Electrolysis</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0" />
-                      <span>1-Year Body & 5-Year Electrode Unconditional Warranty</span>
-                    </li>
-                  </ul>
                 </div>
 
                 <Link
