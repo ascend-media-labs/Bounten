@@ -105,7 +105,7 @@ function TrustSpecsBar() {
     <section ref={containerRef} className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
         {/* Card 1: TDS Compatibility */}
-        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left group">
+        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover-lift glow-sky text-left group cursor-pointer">
           <div className="text-sm sm:text-base md:text-xl font-black text-[#081C3B] tabular-nums tracking-tight">
             ≤ {counts.ppm.toLocaleString()} ppm
           </div>
@@ -113,7 +113,7 @@ function TrustSpecsBar() {
         </div>
 
         {/* Card 2: Electrode Warranty */}
-        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-emerald-300 transition-all text-left group">
+        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover-lift glow-emerald text-left group cursor-pointer">
           <div className="text-sm sm:text-base md:text-xl font-black text-emerald-600 tabular-nums tracking-tight">
             {counts.years} Years
           </div>
@@ -121,7 +121,7 @@ function TrustSpecsBar() {
         </div>
 
         {/* Card 3: Zero Refills */}
-        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left group">
+        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover-lift glow-sky text-left group cursor-pointer">
           <div className="text-sm sm:text-base md:text-xl font-black text-sky-600 tracking-tight">
             Zero Refills
           </div>
@@ -129,7 +129,7 @@ function TrustSpecsBar() {
         </div>
 
         {/* Card 4: Food Grade Alloy */}
-        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-amber-300 transition-all text-left group">
+        <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover-lift glow-amber text-left group cursor-pointer">
           <div className="text-sm sm:text-base md:text-xl font-black text-amber-600 tabular-nums tracking-tight">
             SS {counts.alloy}
           </div>
@@ -508,7 +508,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
           
           {/* 1. Residential */}
-          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
+          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift glow-sky transition-all space-y-3 h-full flex flex-col justify-between">
             <div className="space-y-2.5">
               <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md">
                 <HomeIcon className="w-5 h-5" />
@@ -528,7 +528,7 @@ export default function Home() {
           </div>
 
           {/* 2. Commercial */}
-          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
+          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift glow-emerald transition-all space-y-3 h-full flex flex-col justify-between">
             <div className="space-y-2.5">
               <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
                 <Building2 className="w-5 h-5" />
@@ -548,7 +548,7 @@ export default function Home() {
           </div>
 
           {/* 3. Everyday Applications */}
-          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-3 h-full flex flex-col justify-between">
+          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift glow-amber transition-all space-y-3 h-full flex flex-col justify-between">
             <div className="space-y-2.5">
               <div className="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md">
                 <Droplets className="w-5 h-5" />
@@ -610,7 +610,7 @@ export default function Home() {
             {[...SERVICES_DATA, ...SERVICES_DATA].map((service, idx) => (
               <div
                 key={`${service.id}-${idx}`}
-                className="w-[280px] sm:w-[320px] md:w-[340px] shrink-0 bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 flex flex-col justify-between space-y-3.5 select-none"
+                className="w-[280px] sm:w-[320px] md:w-[340px] shrink-0 bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm hover-lift glow-sky transition-all duration-400 flex flex-col justify-between space-y-3.5 select-none cursor-pointer"
               >
                 <div className="space-y-2.5">
                   <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center transform group-hover:scale-110 transition-transform">

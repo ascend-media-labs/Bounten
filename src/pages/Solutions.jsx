@@ -91,12 +91,20 @@ export default function Solutions() {
         {SOLUTIONS_DATA.map((solution, index) => {
           const Icon = icons[solution.id] || Zap;
           const isReversed = index % 2 !== 0;
+          const glowMap = {
+            residential: 'glow-sky',
+            commercial: 'glow-emerald',
+            industrial: 'glow-amber',
+            agriculture: 'glow-emerald',
+            'swimming-pools': 'glow-cyan',
+            hospitality: 'glow-purple'
+          };
 
           return (
             <AnimatedSection key={solution.id} animation="fade-up" delay={index * 80} duration={700}>
               <section
                 id={solution.id}
-                className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 lg:p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 overflow-hidden"
+                className={`scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 lg:p-6 border border-slate-200/90 shadow-sm hover-lift ${glowMap[solution.id] || 'glow-sky'} transition-all duration-400 overflow-hidden`}
               >
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-7 items-stretch ${

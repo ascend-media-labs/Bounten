@@ -31,7 +31,7 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {SERVICES_DATA.map((service, idx) => (
             <AnimatedSection key={service.id} animation="fade-up" delay={idx * 100} duration={600}>
-              <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 hover:border-sky-300 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 flex flex-col justify-between space-y-5 h-full">
+              <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover-lift glow-sky transition-all duration-300 flex flex-col justify-between space-y-5 h-full cursor-pointer">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-bold text-sky-700 bg-sky-50 px-2.5 py-1 rounded-md border border-sky-100">
