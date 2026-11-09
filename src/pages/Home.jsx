@@ -599,10 +599,19 @@ export default function Home() {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-          {SERVICES_DATA.map((service, idx) => (
-            <AnimatedSection key={service.id} animation="fade-up" delay={idx * 100} duration={600}>
-              <div className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 flex flex-col justify-between space-y-3.5 h-full">
+        {/* Single Row Auto-scrolling Services Carousel */}
+        <div className="relative w-full overflow-hidden py-2 -mx-4 sm:mx-0 px-4 sm:px-0">
+          {/* Subtle Left & Right Edge Fade Gradients */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-8 sm:w-16 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-8 sm:w-16 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
+
+          {/* Continuous Infinite Auto-scroll Track */}
+          <div className="flex w-max gap-4 sm:gap-5 animate-services-marquee hover:[animation-play-state:paused] active:[animation-play-state:paused]">
+            {[...SERVICES_DATA, ...SERVICES_DATA].map((service, idx) => (
+              <div
+                key={`${service.id}-${idx}`}
+                className="w-[280px] sm:w-[320px] md:w-[340px] shrink-0 bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-400 flex flex-col justify-between space-y-3.5 select-none"
+              >
                 <div className="space-y-2.5">
                   <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center transform group-hover:scale-110 transition-transform">
                     <Wrench className="w-5 h-5" />
@@ -625,8 +634,8 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            </AnimatedSection>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 

@@ -289,3 +289,25 @@ div > p {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+/* Services Auto-scroll Marquee */
+@keyframes servicesMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-services-marquee {
+  display: flex;
+  width: max-content;
+  animation: servicesMarquee 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-services-marquee:hover,
+.animate-services-marquee:active {
+  animation-play-state: paused;
+}
