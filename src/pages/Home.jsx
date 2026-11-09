@@ -150,15 +150,8 @@ export default function Home() {
               </p>
             </AnimatedSection>
 
-            {/* Short Description */}
-            <AnimatedSection animation="fade-right" delay={200} duration={800}>
-              <p className="text-[11px] sm:text-sm md:text-[15px] text-slate-900 font-medium max-w-2xl leading-relaxed">
-                Engineered with innovative catalytic electrolysis to prevent limescale buildup at the molecular level without salt refills, chemicals, or water wastage —while preserving 100% of essential healthy minerals like Calcium and Magnesium.
-              </p>
-            </AnimatedSection>
-
             {/* Action Buttons: Compact Grid on Mobile, Row on Desktop */}
-            <AnimatedSection animation="fade-right" delay={300} duration={800}>
+            <AnimatedSection animation="fade-right" delay={200} duration={800}>
               <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-2 sm:gap-3">
                 <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-3">
                   <Link
