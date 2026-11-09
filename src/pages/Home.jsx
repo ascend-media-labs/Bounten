@@ -114,13 +114,13 @@ export default function Home() {
           <div className="absolute bottom-0 inset-x-0 h-8 sm:h-10 bg-gradient-to-t from-white/40 to-transparent pointer-events-none" />
         </div>
 
-        {/* Content Container (Mobile-Optimized to Fit Screen Naturally) */}
+        {/* Content Container (Refined Typography & Balanced Sizing) */}
         <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl space-y-2.5 sm:space-y-4 lg:space-y-5 text-left">
+          <div className="max-w-xl md:max-w-2xl space-y-2 sm:space-y-3.5 lg:space-y-4 text-left">
             <AnimatedSection animation="fade-right" duration={700}>
               {/* Trust Tag with animated pulse */}
-              <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-sky-200/90 text-[#081C3B] font-bold text-[10px] sm:text-xs uppercase tracking-wider py-0.5 sm:py-1 px-2.5 sm:px-3.5 rounded-full shadow-xs hover:border-sky-400 transition-colors">
-                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-sky-200/90 text-[#081C3B] font-bold text-[9px] sm:text-[11px] uppercase tracking-wider py-0.5 sm:py-1 px-2.5 sm:px-3 rounded-full shadow-xs hover:border-sky-400 transition-colors">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span className="text-sky-800 font-extrabold">Next-Gen Electrolysis</span>
                 <span className="text-slate-300">•</span>
                 <span>100% Salt-Free & Chemical-Free</span>
@@ -129,18 +129,18 @@ export default function Home() {
 
             {/* Main Headline */}
             <AnimatedSection animation="fade-right" delay={100} duration={800}>
-              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[46px] font-black text-[#081C3B] tracking-tight leading-[1.15]">
+              <h1 className="text-xl sm:text-3xl md:text-[36px] lg:text-[40px] font-black text-[#081C3B] tracking-tight leading-[1.18]">
                 Advanced Salt-Free <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-sky-600 via-cyan-600 to-[#081C3B] bg-clip-text text-transparent">
                   Water Softeners
                 </span>
-                <span className="block text-sm sm:text-xl md:text-2xl lg:text-[24px] font-extrabold text-[#081C3B] mt-1 sm:mt-2">
+                <span className="block text-xs sm:text-base md:text-lg lg:text-[20px] font-bold text-[#081C3B] mt-1 sm:mt-1.5">
                   Pure, Scale-Free Living for Homes & Businesses
                 </span>
               </h1>
 
               {/* Subtitle / Value proposition */}
-              <p className="mt-1 sm:mt-2 text-[11px] sm:text-sm md:text-base font-bold text-[#034078]">
+              <p className="mt-1 sm:mt-1.5 text-[10px] sm:text-xs md:text-sm font-semibold text-[#034078]">
                 One Smart Solution. Zero Maintenance. Better Water for Everyday Living.
               </p>
             </AnimatedSection>
