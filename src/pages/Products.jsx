@@ -605,7 +605,7 @@ export default function Products() {
           <div className="pt-4 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-700">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-              <span><strong>Warranty:</strong> 1-Yr Cabinet & Electrical | 5-Yr Electrode</span>
+              <span><strong>Warranty:</strong> 1-Yr Cabinet & Electrical* | 5-Yr Electrode*</span>
             </div>
             <div className="flex items-center gap-2">
               <Award className="w-4 h-4 text-sky-600 flex-shrink-0" />

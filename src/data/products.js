@@ -166,11 +166,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet / Body Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Core Element Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -238,11 +238,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet / Body Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -326,11 +326,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -418,11 +418,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -514,11 +514,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -610,11 +610,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -702,11 +702,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -794,11 +794,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -886,11 +886,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -979,11 +979,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -1071,11 +1071,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -1163,11 +1163,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -1253,11 +1253,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -1338,11 +1338,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -1422,11 +1422,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -1506,11 +1506,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -1590,11 +1590,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",
@@ -1674,11 +1674,11 @@ export const PRODUCTS_DATA = [
       },
       {
         "label": "Cabinet & Electrical Warranty",
-        "value": "1-Year Unconditional Warranty"
+        "value": "1-Year Unconditional Warranty*"
       },
       {
         "label": "Electrode Warranty",
-        "value": "5-Year Unconditional Warranty"
+        "value": "5-Year Unconditional Warranty*"
       },
       {
         "label": "Certifications",

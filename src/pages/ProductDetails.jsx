@@ -198,8 +198,8 @@ export default function ProductDetails() {
                     <span>Warranty Assurance</span>
                   </div>
                   <div className="text-[11px] text-slate-700 space-y-0.5">
-                    <p><strong>• 1-Year Unconditional Warranty</strong> on cabinet & electricals.</p>
-                    <p><strong>• 5-Year Unconditional Warranty</strong> on electrode.</p>
+                    <p><strong>• 1-Year Unconditional Warranty*</strong> on cabinet & electricals.</p>
+                    <p><strong>• 5-Year Unconditional Warranty*</strong> on electrode.</p>
                   </div>
                 </div>
 
@@ -319,6 +319,12 @@ export default function ProductDetails() {
                 ) : (
                   <p className="text-xs text-slate-500">Specifications available on request.</p>
                 )}
+
+                {/* Conditions disclaimer */}
+                <div className="pt-1.5 text-[11px] text-slate-500 space-y-0.5 text-left">
+                  <p className="font-semibold text-slate-600">*Conditions apply</p>
+                  <p className="text-slate-400">Depends on input water conditions</p>
+                </div>
 
                 {/* Download Brochure Link */}
                 <div className="pt-2 flex flex-wrap items-center gap-3">

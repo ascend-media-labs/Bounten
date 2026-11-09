@@ -115,9 +115,9 @@ function TrustSpecsBar() {
         {/* Card 2: Electrode Warranty */}
         <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover-lift glow-emerald text-left group cursor-pointer">
           <div className="text-sm sm:text-base md:text-xl font-black text-emerald-600 tabular-nums tracking-tight">
-            {counts.years} Years
+            {counts.years} Years*
           </div>
-          <div className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5">Electrode Warranty</div>
+          <div className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5">Electrode Warranty*</div>
         </div>
 
         {/* Card 3: Zero Refills */}
@@ -684,8 +684,8 @@ export default function Home() {
               </span>
               <h4 className="text-base font-bold text-white">Unconditional Manufacturer Warranty</h4>
               <p className="text-xs text-slate-300 leading-relaxed">
-                1-Year Unconditional on Cabinet & Electricals.<br />
-                5-Year Unconditional on Electrode.
+                1-Year Unconditional on Cabinet & Electricals.*<br />
+                5-Year Unconditional on Electrode.*
               </p>
             </div>
 
@@ -756,6 +756,12 @@ export default function Home() {
               </div>
             </AnimatedSection>
           ))}
+        </div>
+
+        {/* Conditions disclaimer */}
+        <div className="pt-2 text-slate-500 text-xs sm:text-[13px] space-y-0.5 text-left">
+          <p className="font-semibold text-slate-700">*Conditions apply</p>
+          <p className="text-slate-500">Depends on input water conditions</p>
         </div>
       </section>
 
