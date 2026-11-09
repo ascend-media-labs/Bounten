@@ -13,7 +13,7 @@ export default function Services() {
     <div className="bg-slate-50/50 min-h-screen py-6 sm:py-8 lg:py-10">
       
       {/* Core Service Offerings Cards Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-8">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="space-y-1">
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">

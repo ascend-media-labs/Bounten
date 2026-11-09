@@ -24,7 +24,7 @@ export default function Footer() {
     <footer className="bg-[#081C3B] text-slate-300 border-t border-slate-800 relative">
       {/* Upper Value Proposition Strip - Compact & Sleek */}
       <div className="border-b border-slate-800/80 bg-[#0B2447]/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
+        <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-4 sm:py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
             <div className="text-center md:text-left">
               <span className="inline-block text-[11px] uppercase tracking-wider font-bold text-sky-400 mb-0.5">
@@ -69,7 +69,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Grid - Reduced Padding & Optimized Spacing */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+      <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-8 lg:py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
           
           {/* Column 1: Brand & Overview (4 cols) */}
@@ -219,7 +219,7 @@ export default function Footer() {
 
       {/* Bottom Copyright Strip with Back to Top Button - Compact */}
       <div className="border-t border-slate-800/80 bg-[#06142A] py-3 px-4 text-xs text-slate-400">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5 text-center sm:text-left">
+        <div className="w-full max-w-[1680px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5 text-center sm:text-left px-0 sm:px-4 lg:px-6">
           <div className="text-[11px] text-slate-400">
             © {currentYear} <strong className="text-slate-300">BOUNTEN Global</strong> (KCS Pride Products LLP). All rights reserved.
           </div>
