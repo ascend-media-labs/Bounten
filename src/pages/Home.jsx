@@ -213,12 +213,12 @@ export default function Home() {
           </div>
 
           {/* Transparent Gradient Overlays for Text Readability */}
-          {/* Desktop: Gentle soft mist on the left for text, completely transparent on center and right */}
-          <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-white/85 via-white/45 to-transparent pointer-events-none z-10" />
+          {/* Desktop: Light subtle mist on the left for text, transparent on center and right */}
+          <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-white/55 via-white/20 to-transparent pointer-events-none z-10" />
           {/* Mobile: Light transparent tint so images are clearly visible without heavy whiteout */}
-          <div className="sm:hidden absolute inset-0 bg-white/40 pointer-events-none z-10" />
+          <div className="sm:hidden absolute inset-0 bg-white/20 pointer-events-none z-10" />
           {/* Delicate bottom edge blend */}
-          <div className="absolute bottom-0 inset-x-0 h-6 sm:h-8 bg-gradient-to-t from-white/40 to-transparent pointer-events-none z-10" />
+          <div className="absolute bottom-0 inset-x-0 h-6 sm:h-8 bg-gradient-to-t from-white/20 to-transparent pointer-events-none z-10" />
         </div>
 
         {/* Content Container (Positioned to the Left to Keep Cabinet Clear) */}
