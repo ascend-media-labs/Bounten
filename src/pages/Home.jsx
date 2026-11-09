@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   ShieldCheck,
@@ -44,6 +44,101 @@ const HERO_SLIDES = [
     alt: 'Bounten Zoftnor opened cabinet showing interior electrolysis cylinder and bag filter'
   }
 ];
+
+// Auto-incrementing specifications cards triggered while scrolling
+function TrustSpecsBar() {
+  const containerRef = useRef(null);
+  const [inView, setInView] = useState(false);
+  const [counts, setCounts] = useState({ ppm: 0, years: 0, alloy: 0 });
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+        } else {
+          setInView(false); // Re-triggers auto-increment when scrolling back into view
+        }
+      },
+      { threshold: 0.25, rootMargin: '0px 0px -20px 0px' }
+    );
+
+    const el = containerRef.current;
+    if (el) observer.observe(el);
+    return () => {
+      if (el) observer.unobserve(el);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!inView) {
+      setCounts({ ppm: 0, years: 0, alloy: 0 });
+      return;
+    }
+
+    let start = null;
+    const duration = 1600; // 1.6s smooth easing count-up
+    let animationFrameId;
+
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      // Smooth cubic ease-out
+      const ease = 1 - Math.pow(1 - progress, 3);
+
+      setCounts({
+        ppm: Math.round(ease * 1999),
+        years: Math.round(ease * 5),
+        alloy: Math.round(ease * 304)
+      });
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(step);
+      }
+    };
+
+    animationFrameId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [inView]);
+
+  return (
+    <section ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        {/* Card 1: TDS Compatibility */}
+        <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left group">
+          <div className="text-base sm:text-xl font-black text-[#081C3B] tabular-nums tracking-tight">
+            ≤ {counts.ppm.toLocaleString()} ppm
+          </div>
+          <div className="text-xs text-slate-500 font-medium mt-0.5">TDS Compatibility</div>
+        </div>
+
+        {/* Card 2: Electrode Warranty */}
+        <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-emerald-300 transition-all text-left group">
+          <div className="text-base sm:text-xl font-black text-emerald-600 tabular-nums tracking-tight">
+            {counts.years} Years
+          </div>
+          <div className="text-xs text-slate-500 font-medium mt-0.5">Electrode Warranty</div>
+        </div>
+
+        {/* Card 3: Zero Refills */}
+        <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left group">
+          <div className="text-base sm:text-xl font-black text-sky-600 tracking-tight">
+            Zero Refills
+          </div>
+          <div className="text-xs text-slate-500 font-medium mt-0.5">No Salt or Resin</div>
+        </div>
+
+        {/* Card 4: Food Grade Alloy */}
+        <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-amber-300 transition-all text-left group">
+          <div className="text-base sm:text-xl font-black text-amber-600 tabular-nums tracking-tight">
+            SS {counts.alloy}
+          </div>
+          <div className="text-xs text-slate-500 font-medium mt-0.5">Food Grade Alloy</div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   const location = useLocation();
@@ -194,29 +289,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* KEY TRUST SPECIFICATIONS STRIP - RIGHT BELOW HERO SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-            <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left">
-              <div className="text-base sm:text-xl font-black text-[#081C3B]">≤ 1,999 ppm</div>
-              <div className="text-xs text-slate-500 font-medium mt-0.5">TDS Compatibility</div>
-            </div>
-            <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-emerald-300 transition-all text-left">
-              <div className="text-base sm:text-xl font-black text-emerald-600">5 Years</div>
-              <div className="text-xs text-slate-500 font-medium mt-0.5">Electrode Warranty</div>
-            </div>
-            <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 transition-all text-left">
-              <div className="text-base sm:text-xl font-black text-sky-600">Zero Refills</div>
-              <div className="text-xs text-slate-500 font-medium mt-0.5">No Salt or Resin</div>
-            </div>
-            <div className="bg-white p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-amber-300 transition-all text-left">
-              <div className="text-base sm:text-xl font-black text-amber-600">SS 304</div>
-              <div className="text-xs text-slate-500 font-medium mt-0.5">Food Grade Alloy</div>
-            </div>
-          </div>
-        </AnimatedSection>
-      </section>
+      {/* KEY TRUST SPECIFICATIONS STRIP WITH AUTO-INCREMENT ON SCROLL */}
+      <TrustSpecsBar />
 
       {/* 2. ABOUT BOUNTEN SUMMARY SECTION - id="about" */}
       <section id="about" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
