@@ -194,7 +194,7 @@ export default function Home() {
                 <img
                   src={slide.image}
                   alt={slide.alt}
-                  className="w-full h-full object-cover object-center md:object-[70%_center]"
+                  className="w-full h-full object-cover object-[65%_center] sm:object-center"
                 />
               </div>
             ))}
