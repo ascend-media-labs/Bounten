@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
   const formattedOriginalPrice = product.originalPrice ? formatINR(product.originalPrice) : null;
 
   return (
-    <div className="group bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400 hover-lift shine-sweep shadow-xs hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden relative">
+    <div className="group bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400 hover:shadow-[0_0_25px_rgba(2,132,199,0.3),0_15px_30px_-5px_rgba(8,28,59,0.12)] hover-lift shine-sweep shadow-xs transition-all duration-400 flex flex-col overflow-hidden relative">
       {/* Product Image Section: Clean, Full Display, Seamless Fit */}
       <div className="relative aspect-square sm:h-72 p-3 sm:p-4 flex items-center justify-center bg-white overflow-hidden">
         <Link to={`/products/${product.id}`} className="w-full h-full flex items-center justify-center">

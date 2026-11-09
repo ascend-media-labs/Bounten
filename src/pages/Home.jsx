@@ -409,7 +409,7 @@ export default function Home() {
             
             {/* Category 1 Card: Zoftner Pro */}
             <AnimatedSection animation="fade-right" delay={100} duration={800}>
-              <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-sky-200/80 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
+              <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-sky-200/80 shadow-md hover:border-sky-500 hover:shadow-[0_0_30px_rgba(2,132,199,0.35),0_12px_25px_-5px_rgba(2,132,199,0.25)] hover-lift shine-sweep transition-all duration-400 flex flex-col justify-between space-y-5 h-full">
                 <div className="space-y-3.5">
                   <div className="flex items-center justify-end">
                     <span className="text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
@@ -443,7 +443,7 @@ export default function Home() {
 
             {/* Category 2 Card: Zoftner Quick Fix */}
             <AnimatedSection animation="fade-left" delay={200} duration={800}>
-              <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-slate-200 shadow-md hover-lift shine-sweep transition-all duration-500 flex flex-col justify-between space-y-5 h-full">
+              <div className="bg-white rounded-3xl p-5 sm:p-6 border-2 border-slate-200 shadow-md hover:border-[#081C3B] hover:shadow-[0_0_30px_rgba(8,28,59,0.4),0_12px_25px_-5px_rgba(8,28,59,0.25)] hover-lift shine-sweep transition-all duration-400 flex flex-col justify-between space-y-5 h-full">
                 <div className="space-y-3.5">
                   <div className="flex items-center justify-end">
                     <span className="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">

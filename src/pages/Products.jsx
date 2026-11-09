@@ -157,10 +157,10 @@ export default function Products() {
               <button
                 type="button"
                 onClick={() => handleCategorySelect(selectedCategory === 'Zoftner Pro' ? 'All Products' : 'Zoftner Pro')}
-                className={`text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer ${
+                className={`text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-400 cursor-pointer ${
                   selectedCategory === 'Zoftner Pro'
-                    ? 'border-sky-500 bg-sky-50/90 shadow-md ring-2 ring-sky-400/20'
-                    : 'border-slate-200 bg-white hover:border-sky-300 hover:bg-slate-50/70 shadow-xs'
+                    ? 'border-sky-500 bg-sky-50/90 shadow-[0_0_25px_rgba(2,132,199,0.35),0_10px_25px_-5px_rgba(2,132,199,0.25)] ring-2 ring-sky-400/30'
+                    : 'border-slate-200 bg-white hover:border-sky-500 hover:bg-sky-50/30 hover:shadow-[0_0_25px_rgba(2,132,199,0.35),0_10px_25px_-5px_rgba(2,132,199,0.25)] hover:-translate-y-1 shadow-xs'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -190,10 +190,10 @@ export default function Products() {
               <button
                 type="button"
                 onClick={() => handleCategorySelect(selectedCategory === 'Zoftner Quick Fix' ? 'All Products' : 'Zoftner Quick Fix')}
-                className={`text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer ${
+                className={`text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-400 cursor-pointer ${
                   selectedCategory === 'Zoftner Quick Fix'
-                    ? 'border-[#081C3B] bg-slate-100/90 shadow-md ring-2 ring-slate-800/20'
-                    : 'border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50/70 shadow-xs'
+                    ? 'border-[#081C3B] bg-slate-100/90 shadow-[0_0_25px_rgba(8,28,59,0.4),0_10px_25px_-5px_rgba(8,28,59,0.3)] ring-2 ring-slate-800/30'
+                    : 'border-slate-200 bg-white hover:border-[#081C3B] hover:bg-slate-50/60 hover:shadow-[0_0_25px_rgba(8,28,59,0.4),0_10px_25px_-5px_rgba(8,28,59,0.25)] hover:-translate-y-1 shadow-xs'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -414,10 +414,10 @@ export default function Products() {
                 <div>
                   <button
                     onClick={() => handleCategorySelect('Zoftner Pro')}
-                    className={`flex flex-col w-full text-left p-3 rounded-xl border transition-all cursor-pointer ${
+                    className={`flex flex-col w-full text-left p-3 rounded-xl border transition-all duration-300 cursor-pointer ${
                       selectedCategory === 'Zoftner Pro'
-                        ? 'border-sky-500 bg-sky-50/90 text-sky-950 font-bold shadow-xs ring-1 ring-sky-400'
-                        : 'border-slate-200 text-slate-700 hover:border-sky-300 hover:bg-slate-50'
+                        ? 'border-sky-500 bg-sky-50/90 text-sky-950 font-bold shadow-[0_0_15px_rgba(2,132,199,0.3)] ring-1 ring-sky-400'
+                        : 'border-slate-200 text-slate-700 hover:border-sky-400 hover:bg-slate-50 hover:shadow-[0_0_15px_rgba(2,132,199,0.3)]'
                     }`}
                   >
                     <div className="flex items-center justify-between w-full">
@@ -435,10 +435,10 @@ export default function Products() {
                 <div>
                   <button
                     onClick={() => handleCategorySelect('Zoftner Quick Fix')}
-                    className={`flex flex-col w-full text-left p-3 rounded-xl border transition-all cursor-pointer ${
+                    className={`flex flex-col w-full text-left p-3 rounded-xl border transition-all duration-300 cursor-pointer ${
                       selectedCategory === 'Zoftner Quick Fix'
-                        ? 'border-slate-800 bg-slate-100 text-slate-900 font-bold shadow-xs ring-1 ring-slate-700'
-                        : 'border-slate-200 text-slate-700 hover:border-slate-400 hover:bg-slate-50'
+                        ? 'border-slate-800 bg-slate-100 text-slate-900 font-bold shadow-[0_0_15px_rgba(8,28,59,0.35)] ring-1 ring-slate-700'
+                        : 'border-slate-200 text-slate-700 hover:border-[#081C3B] hover:bg-slate-50 hover:shadow-[0_0_15px_rgba(8,28,59,0.35)]'
                     }`}
                   >
                     <div className="flex items-center justify-between w-full">
