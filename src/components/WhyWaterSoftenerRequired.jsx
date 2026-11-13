@@ -41,7 +41,7 @@ export default function WhyWaterSoftenerRequired() {
               {/* Header with Official BOUNTEN Logo & Title */}
               <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                 <img
-                  src="/images/bounten_logo_transparent.png"
+                  src="/images/bounten_official_logo.png"
                   alt="BOUNTEN"
                   className="h-7 sm:h-9 md:h-10 w-auto object-contain flex-shrink-0"
                 />
