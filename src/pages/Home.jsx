@@ -782,7 +782,7 @@ export default function Home() {
               <div className="bg-white rounded-3xl border border-sky-100/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden relative group p-5 sm:p-6 flex flex-col justify-between min-h-[260px] sm:min-h-[280px]">
                 
                 {/* Content on Left */}
-                <div className="w-[62%] sm:w-[58%] z-10 relative flex flex-col justify-between h-full space-y-3">
+                <div className="w-[54%] sm:w-[52%] z-10 relative flex flex-col justify-between h-full space-y-2 sm:space-y-3">
                   
                   {/* Category Header */}
                   <div className="flex items-center gap-3">
@@ -829,11 +829,11 @@ export default function Home() {
                 </div>
 
                 {/* Right Integrated Visual */}
-                <div className="absolute right-0 top-0 bottom-0 w-[42%] sm:w-[45%] h-full pointer-events-none select-none overflow-hidden z-0 flex items-center justify-end">
+                <div className="absolute right-0 top-0 bottom-0 w-[49%] sm:w-[50%] h-full pointer-events-none select-none overflow-hidden z-0 flex items-center justify-end">
                   <img
                     src="/images/warranty/warranty_shield.png"
                     alt="Unconditional Manufacturer Warranty Shield"
-                    className="w-full h-full object-cover object-left transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover object-right transform group-hover:scale-105 transition-transform duration-700 ease-out"
                     loading="lazy"
                   />
                 </div>
@@ -844,7 +844,7 @@ export default function Home() {
               <div className="bg-white rounded-3xl border border-sky-100/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden relative group p-5 sm:p-6 flex flex-col justify-between min-h-[260px] sm:min-h-[280px]">
                 
                 {/* Content on Left */}
-                <div className="w-[62%] sm:w-[58%] z-10 relative flex flex-col justify-between h-full space-y-3">
+                <div className="w-[54%] sm:w-[52%] z-10 relative flex flex-col justify-between h-full space-y-2 sm:space-y-3">
                   
                   {/* Category Header */}
                   <div className="flex items-center gap-3">
@@ -883,11 +883,11 @@ export default function Home() {
                 </div>
 
                 {/* Right Integrated Visual */}
-                <div className="absolute right-0 top-0 bottom-0 w-[42%] sm:w-[45%] h-full pointer-events-none select-none overflow-hidden z-0 flex items-center justify-end">
+                <div className="absolute right-0 top-0 bottom-0 w-[49%] sm:w-[50%] h-full pointer-events-none select-none overflow-hidden z-0 flex items-center justify-end">
                   <img
                     src="/images/warranty/water_splash.png"
                     alt="Water Quality Compatibility Splash"
-                    className="w-full h-full object-cover object-left transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover object-right transform group-hover:scale-105 transition-transform duration-700 ease-out"
                     loading="lazy"
                   />
                 </div>
@@ -898,7 +898,7 @@ export default function Home() {
               <div className="bg-white rounded-3xl border border-sky-100/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden relative group p-5 sm:p-6 flex flex-col justify-between min-h-[260px] sm:min-h-[280px]">
                 
                 {/* Content on Left */}
-                <div className="w-[62%] sm:w-[58%] z-10 relative flex flex-col justify-between h-full space-y-3">
+                <div className="w-[54%] sm:w-[52%] z-10 relative flex flex-col justify-between h-full space-y-2 sm:space-y-3">
                   
                   {/* Category Header */}
                   <div className="flex items-center gap-3">
@@ -937,11 +937,11 @@ export default function Home() {
                 </div>
 
                 {/* Right Integrated Visual */}
-                <div className="absolute right-0 top-0 bottom-0 w-[42%] sm:w-[45%] h-full pointer-events-none select-none overflow-hidden z-0 flex items-center justify-end">
+                <div className="absolute right-0 top-0 bottom-0 w-[49%] sm:w-[50%] h-full pointer-events-none select-none overflow-hidden z-0 flex items-center justify-end">
                   <img
                     src="/images/warranty/stainless_steel_pipes.png"
                     alt="ISO Standards and Stainless Steel Materials"
-                    className="w-full h-full object-cover object-left transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover object-right transform group-hover:scale-105 transition-transform duration-700 ease-out"
                     loading="lazy"
                   />
                 </div>
