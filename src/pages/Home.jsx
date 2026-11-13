@@ -722,7 +722,7 @@ export default function Home() {
               <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
                 Comprehensive Services & AMC
               </h2>
-              <p className="text-slate-600 text-sm mt-0.5 max-w-2xl">
+              <p className="text-slate-600 text-sm mt-0.5 max-w-none lg:whitespace-nowrap">
                 From site feasibility inspections to professional installation, electronics synchronization, and Annual Maintenance Contracts.
               </p>
             </div>
