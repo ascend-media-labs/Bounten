@@ -33,7 +33,7 @@ export default function WhyChooseBounten() {
         <div className="relative rounded-3xl bg-gradient-to-r from-[#00275c] via-[#004a94] to-[#006bb5] border border-sky-400/30 shadow-xl shadow-[#00275c]/25 overflow-hidden">
           
           {/* Bottom Water Wave Splash Effect */}
-          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-28 md:h-32 pointer-events-none select-none overflow-hidden z-0">
+          <div className="absolute inset-x-0 bottom-0 h-20 sm:h-24 md:h-28 pointer-events-none select-none overflow-hidden z-0">
             <img
               src="/images/problems/water_wave_bottom_2x.png"
               alt="Water Wave"
@@ -76,18 +76,18 @@ export default function WhyChooseBounten() {
             </div>
 
             {/* Right Badges Column (3 Circular Prohibitions) */}
-            <div className="lg:col-span-6 xl:col-span-5 flex items-end justify-center lg:justify-end gap-3.5 sm:gap-5 md:gap-6 pb-4 sm:pb-2">
+            <div className="lg:col-span-6 xl:col-span-5 flex items-end justify-center lg:justify-end gap-3.5 sm:gap-5 md:gap-6 pb-2">
               {badges.map((badge) => (
                 <div
                   key={badge.id}
                   className="flex flex-col items-center gap-2.5 sm:gap-3 group"
                 >
-                  {/* Circular Badge with Subtle Glow & Hover Lift */}
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full p-1 bg-white/20 backdrop-blur-2xs shadow-xl border-2 border-white/90 overflow-hidden flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
+                  {/* Circular Badge - Seamless Edge-to-Edge Fit (No bubble gap) */}
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full shadow-lg border-2 border-white overflow-hidden flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 bg-white">
                     <img
                       src={badge.image}
                       alt={badge.alt}
-                      className="w-full h-full object-cover rounded-full select-none"
+                      className="w-full h-full object-cover select-none"
                       loading="lazy"
                     />
                   </div>
@@ -119,3 +119,4 @@ export default function WhyChooseBounten() {
     </section>
   );
 }
+
