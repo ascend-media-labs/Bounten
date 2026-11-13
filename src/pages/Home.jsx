@@ -31,6 +31,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import ProblemsWithHardWater from '../components/ProblemsWithHardWater';
 import WhyWaterSoftenerRequired from '../components/WhyWaterSoftenerRequired';
+import WhyChooseBounten from '../components/WhyChooseBounten';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 
 // High-resolution realistic water treatment background carousel slides (strictly only 2 slides)
@@ -311,6 +312,9 @@ export default function Home() {
 
       {/* WHY IS A WATER SOFTENER REQUIRED SECTION */}
       <WhyWaterSoftenerRequired />
+
+      {/* WHY CHOOSE BOUNTEN WATER SOFTENERS SECTION */}
+      <WhyChooseBounten />
 
       {/* 3. PRODUCT SERIES CATEGORIES OVERVIEW - id="products" */}
       <section id="products" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-8">
