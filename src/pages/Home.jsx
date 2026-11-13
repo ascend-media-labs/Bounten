@@ -21,7 +21,9 @@ import {
   Check,
   Award,
   Link2,
-  Maximize2
+  Maximize2,
+  Layers,
+  Droplet
 } from 'lucide-react';
 import { PRODUCTS_DATA, PRODUCT_HIGHLIGHTS } from '../data/products';
 import { SOLUTIONS_DATA } from '../data/solutions';
@@ -752,39 +754,202 @@ export default function Home() {
           </div>
         </AnimatedSection>
 
-        {/* WARRANTY & TDS BAR */}
-        <AnimatedSection animation="zoom" delay={150} duration={800}>
-          <div className="bg-gradient-to-r from-[#081C3B] via-slate-900 to-[#081C3B] text-white p-5 sm:p-6 rounded-2xl shadow-xl grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-center border border-slate-800">
-            <div className="space-y-0.5">
-              <span className="text-emerald-400 font-bold text-xs uppercase tracking-wider block">
-                Warranty Assurance
-              </span>
-              <h4 className="text-base font-bold text-white">Unconditional Manufacturer Warranty</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                1-Year Unconditional on Cabinet & Electricals.*<br />
-                5-Year Unconditional on Electrode.*
-              </p>
+        {/* 3-CARD QUALITY, WARRANTY & STANDARDS SHOWCASE */}
+        <AnimatedSection animation="fade-up" delay={150} duration={800}>
+          <div className="relative py-4 sm:py-6 overflow-hidden">
+            
+            {/* Ambient Water Wave Background Ribbons */}
+            <div className="absolute inset-0 bg-gradient-to-r from-sky-50/60 via-blue-50/40 to-sky-50/60 pointer-events-none rounded-3xl" />
+            
+            {/* Top Wave Ribbon SVG */}
+            <div className="absolute top-0 left-0 right-0 h-10 overflow-hidden pointer-events-none opacity-40">
+              <svg viewBox="0 0 1200 60" preserveAspectRatio="none" className="w-full h-full text-sky-300 fill-current">
+                <path d="M0,0 C300,45 600,-25 900,30 C1050,55 1150,20 1200,0 L1200,0 L0,0 Z" />
+              </svg>
             </div>
 
-            <div className="space-y-0.5">
-              <span className="text-sky-400 font-bold text-xs uppercase tracking-wider block">
-                Water Quality Compatibility
-              </span>
-              <h4 className="text-base font-bold text-white">Input TDS up to 1,999 ppm</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Works with water TDS up to 1,999 ppm. For TDS above 2,000 ppm, backwashing is recommended.
-              </p>
+            {/* Bottom Wave Ribbon SVG */}
+            <div className="absolute bottom-0 left-0 right-0 h-10 overflow-hidden pointer-events-none opacity-40">
+              <svg viewBox="0 0 1200 60" preserveAspectRatio="none" className="w-full h-full text-sky-300 fill-current">
+                <path d="M0,60 C300,15 600,85 900,30 C1050,5 1150,40 1200,60 L1200,60 L0,60 Z" />
+              </svg>
             </div>
 
-            <div className="space-y-0.5">
-              <span className="text-amber-400 font-bold text-xs uppercase tracking-wider block">
-                Standards & Materials
-              </span>
-              <h4 className="text-base font-bold text-white">ISO 9001 & ISO 14001</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Food grade material: SS304 stainless steel. Non-toxic, safe for drinking lines and skin contact.
-              </p>
+            {/* 3 Symmetrical Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 relative z-10 p-2 sm:p-3">
+              
+              {/* Card 1: Warranty Assurance */}
+              <div className="bg-white rounded-3xl border border-sky-100/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden relative group p-5 sm:p-6 flex flex-col justify-between min-h-[260px] sm:min-h-[280px]">
+                
+                {/* Content on Left */}
+                <div className="w-[62%] sm:w-[58%] z-10 relative flex flex-col justify-between h-full space-y-3">
+                  
+                  {/* Category Header */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0066cc] to-[#0099ff] text-white flex items-center justify-center shadow-md flex-shrink-0">
+                      <ShieldCheck className="w-5 h-5" strokeWidth={2.4} />
+                    </div>
+                    <div>
+                      <span className="text-[11px] sm:text-xs font-black text-[#0070cc] tracking-wider uppercase block leading-tight">
+                        WARRANTY
+                      </span>
+                      <span className="text-[11px] sm:text-xs font-black text-[#0070cc] tracking-wider uppercase block leading-tight">
+                        ASSURANCE
+                      </span>
+                      <span className="w-6 h-0.5 bg-[#0070cc] rounded-full block mt-0.5" />
+                    </div>
+                  </div>
+
+                  {/* Heading */}
+                  <h3 className="text-base sm:text-lg font-black text-[#081C3B] leading-tight tracking-tight mt-1">
+                    Unconditional<br />Manufacturer<br />Warranty
+                  </h3>
+
+                  {/* Bullets */}
+                  <div className="space-y-1.5 pt-1">
+                    <div className="flex items-start gap-2">
+                      <div className="w-4 h-4 rounded-full border border-sky-400 bg-sky-50 text-[#0070cc] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-2.5 h-2.5" strokeWidth={3} />
+                      </div>
+                      <span className="text-[11px] sm:text-xs font-bold text-slate-700 leading-tight">
+                        1-Year Unconditional on Descalers & Electrolytic.
+                      </span>
+                    </div>
+
+                    <div className="flex items-start gap-2">
+                      <div className="w-4 h-4 rounded-full border border-sky-400 bg-sky-50 text-[#0070cc] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-2.5 h-2.5" strokeWidth={3} />
+                      </div>
+                      <span className="text-[11px] sm:text-xs font-bold text-slate-700 leading-tight">
+                        5-Year Unconditional on Electrodes.
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Right Integrated Visual */}
+                <div className="absolute right-0 top-0 bottom-0 w-[42%] sm:w-[45%] h-full pointer-events-none select-none overflow-hidden z-0 flex items-center justify-end">
+                  <img
+                    src="/images/warranty/warranty_shield.png"
+                    alt="Unconditional Manufacturer Warranty Shield"
+                    className="w-full h-full object-cover object-left transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                  />
+                </div>
+
+              </div>
+
+              {/* Card 2: Water Quality Compatibility */}
+              <div className="bg-white rounded-3xl border border-sky-100/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden relative group p-5 sm:p-6 flex flex-col justify-between min-h-[260px] sm:min-h-[280px]">
+                
+                {/* Content on Left */}
+                <div className="w-[62%] sm:w-[58%] z-10 relative flex flex-col justify-between h-full space-y-3">
+                  
+                  {/* Category Header */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00b4d8] to-[#06b6d4] text-white flex items-center justify-center shadow-md flex-shrink-0">
+                      <Droplet className="w-5 h-5 fill-current" />
+                    </div>
+                    <div>
+                      <span className="text-[11px] sm:text-xs font-black text-[#0070cc] tracking-wider uppercase block leading-tight">
+                        WATER QUALITY
+                      </span>
+                      <span className="text-[11px] sm:text-xs font-black text-[#0070cc] tracking-wider uppercase block leading-tight">
+                        COMPATIBILITY
+                      </span>
+                      <span className="w-6 h-0.5 bg-[#00b4d8] rounded-full block mt-0.5" />
+                    </div>
+                  </div>
+
+                  {/* Heading */}
+                  <h3 className="text-base sm:text-lg font-black text-[#081C3B] leading-tight tracking-tight mt-1">
+                    Input TDS up to<br />
+                    <span className="text-[#0070cc] text-lg sm:text-xl font-black">1,999 ppm</span>
+                  </h3>
+
+                  {/* Bullets */}
+                  <div className="pt-1">
+                    <div className="flex items-start gap-2">
+                      <div className="w-4 h-4 rounded-full border border-teal-400 bg-teal-50 text-teal-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-2.5 h-2.5" strokeWidth={3} />
+                      </div>
+                      <span className="text-[11px] sm:text-xs font-bold text-slate-700 leading-snug">
+                        Works with water TDS up to 1,999 ppm. For TDS above 2,000 ppm, backwashing is recommended.
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Right Integrated Visual */}
+                <div className="absolute right-0 top-0 bottom-0 w-[42%] sm:w-[45%] h-full pointer-events-none select-none overflow-hidden z-0 flex items-center justify-end">
+                  <img
+                    src="/images/warranty/water_splash.png"
+                    alt="Water Quality Compatibility Splash"
+                    className="w-full h-full object-cover object-left transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                  />
+                </div>
+
+              </div>
+
+              {/* Card 3: Standards & Materials */}
+              <div className="bg-white rounded-3xl border border-sky-100/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden relative group p-5 sm:p-6 flex flex-col justify-between min-h-[260px] sm:min-h-[280px]">
+                
+                {/* Content on Left */}
+                <div className="w-[62%] sm:w-[58%] z-10 relative flex flex-col justify-between h-full space-y-3">
+                  
+                  {/* Category Header */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white flex items-center justify-center shadow-md flex-shrink-0">
+                      <Layers className="w-5 h-5" strokeWidth={2.4} />
+                    </div>
+                    <div>
+                      <span className="text-[11px] sm:text-xs font-black text-[#0070cc] tracking-wider uppercase block leading-tight">
+                        STANDARDS &
+                      </span>
+                      <span className="text-[11px] sm:text-xs font-black text-[#0070cc] tracking-wider uppercase block leading-tight">
+                        MATERIALS
+                      </span>
+                      <span className="w-6 h-0.5 bg-[#f59e0b] rounded-full block mt-0.5" />
+                    </div>
+                  </div>
+
+                  {/* Heading */}
+                  <h3 className="text-base sm:text-lg font-black text-[#081C3B] leading-tight tracking-tight mt-1">
+                    ISO 9001 &<br />
+                    ISO 14001
+                  </h3>
+
+                  {/* Bullets */}
+                  <div className="pt-1">
+                    <div className="flex items-start gap-2">
+                      <div className="w-4 h-4 rounded-full border border-amber-400 bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-2.5 h-2.5" strokeWidth={3} />
+                      </div>
+                      <span className="text-[11px] sm:text-xs font-bold text-slate-700 leading-snug">
+                        Food-grade materials ensure stainless steel. Non-toxic, safe for drinking lines and skin contact.
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Right Integrated Visual */}
+                <div className="absolute right-0 top-0 bottom-0 w-[42%] sm:w-[45%] h-full pointer-events-none select-none overflow-hidden z-0 flex items-center justify-end">
+                  <img
+                    src="/images/warranty/stainless_steel_pipes.png"
+                    alt="ISO Standards and Stainless Steel Materials"
+                    className="w-full h-full object-cover object-left transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                  />
+                </div>
+
+              </div>
+
             </div>
+
           </div>
         </AnimatedSection>
       </section>
