@@ -355,12 +355,12 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
           
           {/* Card 1: Zoftner Pro */}
-          <AnimatedSection animation="fade-right" delay={100} duration={800}>
-            <div className="bg-white rounded-3xl border border-sky-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden flex flex-col justify-between h-full p-5 sm:p-6 lg:p-7 relative group">
-              <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+          <AnimatedSection animation="fade-right" delay={100} duration={800} className="h-full">
+            <div className="bg-white rounded-3xl border border-sky-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden h-full flex flex-col relative group">
+              <div className="grid grid-cols-1 sm:grid-cols-12 h-full items-stretch flex-1">
                 
                 {/* Left Content Column */}
-                <div className="sm:col-span-7 space-y-3 sm:space-y-3.5 flex flex-col justify-between z-10">
+                <div className="sm:col-span-7 p-5 sm:p-6 lg:p-7 space-y-3 sm:space-y-3.5 flex flex-col justify-between z-10">
                   
                   {/* Title & Badge */}
                   <div className="flex items-center flex-wrap gap-2.5">
@@ -446,11 +446,11 @@ export default function Home() {
                 </div>
 
                 {/* Right Product Image Column (Image 3) */}
-                <div className="sm:col-span-5 relative flex items-center justify-center min-h-[200px] sm:min-h-[270px] overflow-hidden rounded-2xl bg-gradient-to-br from-sky-50/50 to-white">
+                <div className="sm:col-span-5 relative min-h-[260px] sm:min-h-full overflow-hidden bg-gradient-to-br from-sky-50/40 via-sky-50/20 to-white flex items-center justify-center">
                   <img
                     src="/images/products/zoftner_pro_showcase.jpg"
                     alt="Bounten Zoftner Pro water softener system with integrated bag filter"
-                    className="w-full h-full max-h-[290px] object-contain transform group-hover:scale-105 transition-transform duration-600 ease-out select-none"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-600 ease-out select-none"
                     loading="lazy"
                   />
                 </div>
@@ -460,12 +460,12 @@ export default function Home() {
           </AnimatedSection>
 
           {/* Card 2: Zoftner Quick Fix */}
-          <AnimatedSection animation="fade-left" delay={200} duration={800}>
-            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden flex flex-col justify-between h-full p-5 sm:p-6 lg:p-7 relative group">
-              <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+          <AnimatedSection animation="fade-left" delay={200} duration={800} className="h-full">
+            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden h-full flex flex-col relative group">
+              <div className="grid grid-cols-1 sm:grid-cols-12 h-full items-stretch flex-1">
                 
                 {/* Left Content Column */}
-                <div className="sm:col-span-7 space-y-3 sm:space-y-3.5 flex flex-col justify-between z-10">
+                <div className="sm:col-span-7 p-5 sm:p-6 lg:p-7 space-y-3 sm:space-y-3.5 flex flex-col justify-between z-10">
                   
                   {/* Title & Badge */}
                   <div className="flex items-center flex-wrap gap-2.5">
@@ -540,11 +540,11 @@ export default function Home() {
                 </div>
 
                 {/* Right Product Image Column (Image 4) */}
-                <div className="sm:col-span-5 relative flex items-center justify-center min-h-[200px] sm:min-h-[270px] overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-white">
+                <div className="sm:col-span-5 relative min-h-[260px] sm:min-h-full overflow-hidden bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
                   <img
                     src="/images/products/zoftner_quick_fix_showcase.jpg"
                     alt="Bounten Zoftner Quick Fix inline water descaler cylinder"
-                    className="w-full h-full max-h-[290px] object-contain transform group-hover:scale-105 transition-transform duration-600 ease-out select-none"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-600 ease-out select-none"
                     loading="lazy"
                   />
                 </div>
