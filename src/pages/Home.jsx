@@ -625,16 +625,6 @@ export default function Home() {
       {/* 4. WATER SOFTENER - APPLICATIONS & USES (Pixel-Level Recreated 3-Card Layout) - id="solutions" */}
       <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative">
         <div className="relative rounded-3xl bg-gradient-to-b from-sky-50/40 via-white to-sky-50/20 p-4 sm:p-6 lg:p-8 border border-sky-100/80 shadow-xs overflow-hidden space-y-4 sm:space-y-6">
-          
-          {/* Top Right Decorative Water Droplets & Wave Ribbon */}
-          <div className="hidden sm:block absolute right-0 top-0 w-80 lg:w-[500px] xl:w-[600px] h-28 lg:h-32 pointer-events-none select-none overflow-hidden z-0 opacity-85">
-            <img
-              src="/images/solutions/top_water_wave_banner.png"
-              alt="Water Wave Banner"
-              className="w-full h-full object-contain object-right-top"
-              loading="lazy"
-            />
-          </div>
 
           {/* Section Header */}
           <AnimatedSection animation="fade-up" duration={700}>
