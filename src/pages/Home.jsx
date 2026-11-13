@@ -29,6 +29,7 @@ import { ABOUT_DATA } from '../data/about';
 import { COMPANY_CONFIG } from '../data/config';
 import AnimatedSection from '../components/AnimatedSection';
 import WhatsAppIcon from '../components/WhatsAppIcon';
+import ProblemsWithHardWater from '../components/ProblemsWithHardWater';
 import { openGeneralEnquiry } from '../utils/whatsapp';
 
 // High-resolution realistic water treatment background carousel slides (strictly only 2 slides)
@@ -304,76 +305,8 @@ export default function Home() {
       {/* KEY TRUST SPECIFICATIONS STRIP WITH AUTO-INCREMENT ON SCROLL */}
       <TrustSpecsBar />
 
-      {/* 2. ABOUT BOUNTEN SUMMARY SECTION - id="about" */}
-      <section id="about" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/80 hover-lift transition-all">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              
-              <div className="lg:col-span-8 space-y-3.5">
-                <span className="inline-block text-xs uppercase font-extrabold tracking-wider text-sky-600">
-                  About Bounten Global
-                </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
-                  Pioneering Non-Chemical Hard Water Treatment in India
-                </h2>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-                  Headquartered in Banjara Hills, Hyderabad, <strong>BOUNTEN</strong> (KCS Pride Products LLP) was founded to end the cycle of salt dependency and groundwater pollution caused by outdated water softeners. Our advanced Zoftner systems treat hard water at a molecular level, preventing limescale encrustation while preserving vital healthy minerals like calcium and magnesium.
-                </p>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-slate-700 font-semibold">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>Food-Grade SS 304 Reactor Materials</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>0.06-Micron Iridium Mesh Technology</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>100% Retained Healthy Minerals</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>Certified PAN India Technical Network</span>
-                  </div>
-                </div>
-
-                <div className="pt-1">
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 group"
-                  >
-                    <span>Learn more about our company & technology</span>
-                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="lg:col-span-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 space-y-3 text-center">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mx-auto">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <h3 className="text-base font-bold text-[#081C3B]">Our Quality Commitment</h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-normal">
-                  Every Bounten unit undergoes strict 10-bar hydraulic pressure validation, electrode calibration, and electrical safety testing before dispatch.
-                </p>
-                <div className="pt-1">
-                  <button
-                    onClick={openGeneralEnquiry}
-                    className="btn-press w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-2 px-3.5 rounded-xl text-xs font-bold transition-all shadow-xs"
-                  >
-                    <WhatsAppIcon className="w-4 h-4 fill-white" />
-                    <span>Consult an Expert</span>
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </AnimatedSection>
-      </section>
+      {/* 2. PROBLEMS WITH HARD WATER SECTION */}
+      <ProblemsWithHardWater />
 
       {/* 3. PRODUCT SERIES CATEGORIES OVERVIEW - id="products" */}
       <section id="products" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-8">
