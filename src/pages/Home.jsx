@@ -356,16 +356,16 @@ export default function Home() {
           
           {/* Card 1: Zoftner Pro */}
           <AnimatedSection animation="fade-right" delay={100} duration={800} className="h-full">
-            <div className="bg-white rounded-3xl border border-sky-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden h-full flex flex-col relative group">
-              <div className="grid grid-cols-1 sm:grid-cols-12 h-full items-stretch flex-1">
+            <div className="relative bg-gradient-to-br from-white via-sky-50/20 to-white rounded-3xl border border-sky-100 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden h-full flex flex-col justify-between group">
+              
+              {/* Left Content Area */}
+              <div className="relative z-10 w-full sm:w-[62%] lg:w-[58%] p-6 sm:p-7 lg:p-8 flex flex-col justify-between h-full space-y-4">
                 
-                {/* Left Content Column */}
-                <div className="sm:col-span-7 p-5 sm:p-6 lg:p-7 space-y-3 sm:space-y-3.5 flex flex-col justify-between z-10">
-                  
+                <div className="space-y-3 sm:space-y-3.5">
                   {/* Title & Badge */}
                   <div className="flex items-center flex-wrap gap-2.5">
                     <div className="flex items-center gap-1.5">
-                      <span className="w-1 h-6 bg-[#0070cc] rounded-full inline-block flex-shrink-0" />
+                      <span className="w-1.5 h-6 bg-[#0070cc] rounded-full inline-block flex-shrink-0" />
                       <h3 className="text-xl sm:text-2xl font-black text-[#081C3B] tracking-tight">
                         Zoftner Pro
                       </h3>
@@ -384,93 +384,93 @@ export default function Home() {
                   <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
                     Engineered for households and commercial spaces seeking complete scale prevention along with heavy sediment, silt, and turbidity filtration in one integrated package.
                   </p>
-
-                  {/* 3 Feature Icons Row */}
-                  <div className="grid grid-cols-3 gap-2 pt-2 pb-1 border-t border-slate-100">
-                    {/* Feature 1: Complete Protection */}
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
-                        <ShieldCheck className="w-4 h-4" strokeWidth={2.2} />
-                      </div>
-                      <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
-                        <div>Complete</div>
-                        <div>Protection</div>
-                      </div>
-                    </div>
-
-                    {/* Feature 2: Sediment & Turbidity Filtration */}
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                          <rect x="6" y="3" width="12" height="18" rx="2" />
-                          <line x1="6" y1="7" x2="18" y2="7" />
-                          <line x1="6" y1="12" x2="18" y2="12" />
-                          <line x1="6" y1="17" x2="18" y2="17" />
-                          <line x1="10" y1="3" x2="10" y2="21" strokeDasharray="1 1" />
-                          <line x1="14" y1="3" x2="14" y2="21" strokeDasharray="1 1" />
-                        </svg>
-                      </div>
-                      <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
-                        <div>Sediment &</div>
-                        <div>Turbidity Filtration</div>
-                      </div>
-                    </div>
-
-                    {/* Feature 3: Scale Prevention */}
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                          <circle cx="8" cy="8" r="3.5" />
-                          <circle cx="16" cy="8" r="3.5" />
-                          <circle cx="12" cy="16" r="3.5" />
-                        </svg>
-                      </div>
-                      <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
-                        <div>Scale</div>
-                        <div>Prevention</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Rounded Action Button */}
-                  <div className="pt-2">
-                    <Link
-                      to="/products?cat=Zoftner+Pro"
-                      className="btn-press inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#0066cc] to-[#0099ff] hover:from-[#0055b3] hover:to-[#0088ee] text-white py-2.5 sm:py-3 px-6 rounded-full font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
-                    >
-                      <span>Explore Zoftner Pro Models</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-
                 </div>
 
-                {/* Right Product Image Column (Image 3) */}
-                <div className="sm:col-span-5 relative min-h-[260px] sm:min-h-full overflow-hidden bg-gradient-to-br from-sky-50/40 via-sky-50/20 to-white flex items-center justify-center">
-                  <img
-                    src="/images/products/zoftner_pro_showcase.jpg"
-                    alt="Bounten Zoftner Pro water softener system with integrated bag filter"
-                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-600 ease-out select-none"
-                    loading="lazy"
-                  />
+                {/* 3 Feature Icons Row */}
+                <div className="grid grid-cols-3 gap-2 py-3 border-y border-slate-100/90">
+                  {/* Feature 1: Complete Protection */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <ShieldCheck className="w-4 h-4" strokeWidth={2.2} />
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
+                      <div>Complete</div>
+                      <div>Protection</div>
+                    </div>
+                  </div>
+
+                  {/* Feature 2: Sediment & Turbidity Filtration */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                        <rect x="6" y="3" width="12" height="18" rx="2" />
+                        <line x1="6" y1="7" x2="18" y2="7" />
+                        <line x1="6" y1="12" x2="18" y2="12" />
+                        <line x1="6" y1="17" x2="18" y2="17" />
+                        <line x1="10" y1="3" x2="10" y2="21" strokeDasharray="1 1" />
+                        <line x1="14" y1="3" x2="14" y2="21" strokeDasharray="1 1" />
+                      </svg>
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
+                      <div>Sediment &</div>
+                      <div>Turbidity Filtration</div>
+                    </div>
+                  </div>
+
+                  {/* Feature 3: Scale Prevention */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                        <circle cx="8" cy="8" r="3.5" />
+                        <circle cx="16" cy="8" r="3.5" />
+                        <circle cx="12" cy="16" r="3.5" />
+                      </svg>
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
+                      <div>Scale</div>
+                      <div>Prevention</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rounded Action Button */}
+                <div className="pt-1">
+                  <Link
+                    to="/products?cat=Zoftner+Pro"
+                    className="btn-press inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#0066cc] to-[#0099ff] hover:from-[#0055b3] hover:to-[#0088ee] text-white py-2.5 sm:py-3 px-6 rounded-full font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
+                  >
+                    <span>Explore Zoftner Pro Models</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
 
               </div>
+
+              {/* Right Integrated Product Visual (Curved Organic Shape Blend) */}
+              <div className="relative sm:absolute sm:right-0 sm:top-0 sm:bottom-0 w-full sm:w-[46%] lg:w-[48%] h-60 sm:h-full overflow-hidden mask-organic-curve sm:mask-organic-curve-side z-0 pointer-events-none select-none">
+                <img
+                  src="/images/products/zoftner_pro_showcase.jpg"
+                  alt="Bounten Zoftner Pro water softener system with integrated bag filter"
+                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           </AnimatedSection>
 
           {/* Card 2: Zoftner Quick Fix */}
           <AnimatedSection animation="fade-left" delay={200} duration={800} className="h-full">
-            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden h-full flex flex-col relative group">
-              <div className="grid grid-cols-1 sm:grid-cols-12 h-full items-stretch flex-1">
+            <div className="relative bg-gradient-to-br from-white via-slate-50/30 to-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden h-full flex flex-col justify-between group">
+              
+              {/* Left Content Area */}
+              <div className="relative z-10 w-full sm:w-[62%] lg:w-[58%] p-6 sm:p-7 lg:p-8 flex flex-col justify-between h-full space-y-4">
                 
-                {/* Left Content Column */}
-                <div className="sm:col-span-7 p-5 sm:p-6 lg:p-7 space-y-3 sm:space-y-3.5 flex flex-col justify-between z-10">
-                  
+                <div className="space-y-3 sm:space-y-3.5">
                   {/* Title & Badge */}
                   <div className="flex items-center flex-wrap gap-2.5">
                     <div className="flex items-center gap-1.5">
-                      <span className="w-1 h-6 bg-[#081C3B] rounded-full inline-block flex-shrink-0" />
+                      <span className="w-1.5 h-6 bg-[#081C3B] rounded-full inline-block flex-shrink-0" />
                       <h3 className="text-xl sm:text-2xl font-black text-[#081C3B] tracking-tight">
                         Zoftner Quick Fix
                       </h3>
@@ -489,67 +489,67 @@ export default function Home() {
                   <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
                     Streamlined, compact electrolytic conditioners and appliance descalers designed for direct inline plumbing connections where pre-filtration is already present.
                   </p>
-
-                  {/* 3 Feature Icons Row */}
-                  <div className="grid grid-cols-3 gap-2 pt-2 pb-1 border-t border-slate-100">
-                    {/* Feature 1: Direct Inline Setup */}
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
-                        <Link2 className="w-4 h-4" strokeWidth={2.2} />
-                      </div>
-                      <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
-                        <div>Direct</div>
-                        <div>Inline Setup</div>
-                      </div>
-                    </div>
-
-                    {/* Feature 2: Compact & Space-Saving */}
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
-                        <Maximize2 className="w-4 h-4" strokeWidth={2.2} />
-                      </div>
-                      <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
-                        <div>Compact</div>
-                        <div>& Space-Saving</div>
-                      </div>
-                    </div>
-
-                    {/* Feature 3: Effective Descaling */}
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
-                        <Zap className="w-4 h-4" strokeWidth={2.2} />
-                      </div>
-                      <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
-                        <div>Effective</div>
-                        <div>Descaling</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Rounded Action Button */}
-                  <div className="pt-2">
-                    <Link
-                      to="/products?cat=Zoftner+Quick+Fix"
-                      className="btn-press inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0c244d] text-white py-2.5 sm:py-3 px-6 rounded-full font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
-                    >
-                      <span>Explore Zoftner Quick Fix Models</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-
                 </div>
 
-                {/* Right Product Image Column (Image 4) */}
-                <div className="sm:col-span-5 relative min-h-[260px] sm:min-h-full overflow-hidden bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
-                  <img
-                    src="/images/products/zoftner_quick_fix_showcase.jpg"
-                    alt="Bounten Zoftner Quick Fix inline water descaler cylinder"
-                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-600 ease-out select-none"
-                    loading="lazy"
-                  />
+                {/* 3 Feature Icons Row */}
+                <div className="grid grid-cols-3 gap-2 py-3 border-y border-slate-100/90">
+                  {/* Feature 1: Direct Inline Setup */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <Link2 className="w-4 h-4" strokeWidth={2.2} />
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
+                      <div>Direct</div>
+                      <div>Inline Setup</div>
+                    </div>
+                  </div>
+
+                  {/* Feature 2: Compact & Space-Saving */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <Maximize2 className="w-4 h-4" strokeWidth={2.2} />
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
+                      <div>Compact</div>
+                      <div>& Space-Saving</div>
+                    </div>
+                  </div>
+
+                  {/* Feature 3: Effective Descaling */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <Zap className="w-4 h-4" strokeWidth={2.2} />
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-800 leading-tight">
+                      <div>Effective</div>
+                      <div>Descaling</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rounded Action Button */}
+                <div className="pt-1">
+                  <Link
+                    to="/products?cat=Zoftner+Quick+Fix"
+                    className="btn-press inline-flex items-center justify-center gap-2 bg-[#081C3B] hover:bg-[#0c244d] text-white py-2.5 sm:py-3 px-6 rounded-full font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
+                  >
+                    <span>Explore Zoftner Quick Fix Models</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
 
               </div>
+
+              {/* Right Integrated Product Visual (Curved Organic Shape Blend) */}
+              <div className="relative sm:absolute sm:right-0 sm:top-0 sm:bottom-0 w-full sm:w-[46%] lg:w-[48%] h-60 sm:h-full overflow-hidden mask-organic-curve sm:mask-organic-curve-side z-0 pointer-events-none select-none">
+                <img
+                  src="/images/products/zoftner_quick_fix_showcase.jpg"
+                  alt="Bounten Zoftner Quick Fix inline water descaler cylinder"
+                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           </AnimatedSection>
 
