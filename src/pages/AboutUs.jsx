@@ -24,7 +24,7 @@ import { COMPANY_CONFIG } from '../data/config';
 export default function AboutUs() {
   return (
     <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
-      <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-7">
+      <div className="w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-6 sm:space-y-7">
         
         {/* Page Breadcrumb */}
         <div>
@@ -100,8 +100,8 @@ export default function AboutUs() {
       </section>
 
       {/* 3. Mission & Vision */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           
           <AnimatedSection animation="fade-right" delay={100} duration={700}>
             <div className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover-lift transition-all space-y-4 h-full">
@@ -131,7 +131,7 @@ export default function AboutUs() {
       </section>
 
       {/* 4. Technology Pillars */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="w-full space-y-6 sm:space-y-8">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="space-y-1">
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">

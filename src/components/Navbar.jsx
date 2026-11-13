@@ -122,8 +122,8 @@ export default function Navbar() {
   return (
     <>
       {/* Top micro announcement bar */}
-      <div className="bg-[#081C3B] text-slate-300 text-xs py-2 px-4 border-b border-slate-800 transition-colors">
-        <div className="w-full max-w-[1680px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#081C3B] text-slate-300 text-xs py-2 px-3 sm:px-4 border-b border-slate-800 transition-colors">
+        <div className="w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
             <span className="flex items-center gap-1.5 text-sky-400 font-medium whitespace-nowrap">
               <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse flex-shrink-0"></span>
@@ -155,7 +155,7 @@ export default function Navbar() {
             : 'bg-white border-b border-slate-100 py-3'
         }`}
       >
-        <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12">
           <div className="flex items-center justify-between gap-2 lg:gap-3">
             
             {/* Logo on Left - strictly flex-shrink-0 */}

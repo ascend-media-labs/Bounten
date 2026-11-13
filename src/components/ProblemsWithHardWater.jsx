@@ -43,7 +43,7 @@ export default function ProblemsWithHardWater() {
   return (
     <section
       id="problems"
-      className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative"
+      className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 relative"
     >
       <div className="relative rounded-3xl bg-gradient-to-b from-white via-sky-50/20 to-white p-4 sm:p-5 md:p-6 lg:p-7 border border-slate-200/80 shadow-xs overflow-hidden">
         

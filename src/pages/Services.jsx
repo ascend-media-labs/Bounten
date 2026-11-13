@@ -15,7 +15,7 @@ export default function Services() {
     <div className="bg-slate-50/50 min-h-screen py-4 sm:py-6 lg:py-8">
       
       {/* Core Service Offerings Cards Grid */}
-      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-4">
+      <section className="w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-4">
         {/* Page Breadcrumb */}
         <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
           <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>

@@ -147,7 +147,7 @@ export default function Products() {
 
   return (
     <div id="products" className="bg-white min-h-screen py-3 sm:py-5 scroll-mt-24">
-      <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-8">
+      <div className="w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-6 sm:space-y-8">
 
         {/* Page Breadcrumb */}
         <nav className="flex items-center space-x-1.5 text-xs text-slate-500">

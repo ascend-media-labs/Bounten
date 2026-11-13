@@ -70,7 +70,7 @@ export default function ProductDetails() {
 
   return (
     <div className="bg-slate-50/50 min-h-screen py-4 sm:py-6">
-      <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-4 sm:space-y-5">
+      <div className="w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-4 sm:space-y-5">
 
         {/* Navigation & Back Link */}
         <div className="flex items-center justify-between gap-3 flex-wrap">

@@ -172,7 +172,7 @@ function TrustSpecsBar() {
   }, [inView]);
 
   return (
-    <section ref={containerRef} className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+    <section ref={containerRef} className="w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
         {/* Card 1: TDS Compatibility */}
         <div className="bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-xs hover-lift glow-sky text-left group cursor-pointer">
@@ -292,8 +292,8 @@ export default function Home() {
         </div>
 
         {/* Content Container (Positioned to the Left to Keep Cabinet Clear) */}
-        <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
-          <div className="max-w-md sm:max-w-lg lg:max-w-[520px] xl:max-w-[560px] space-y-2 sm:space-y-3 lg:space-y-3.5 text-left">
+        <div className="w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 relative z-10">
+          <div className="max-w-md sm:max-w-lg lg:max-w-[560px] xl:max-w-[620px] 2xl:max-w-[680px] space-y-2 sm:space-y-3 lg:space-y-3.5 text-left">
             <AnimatedSection animation="fade-right" duration={700}>
               {/* Trust Tag with animated pulse */}
               <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md border border-sky-200/90 text-[#081C3B] font-bold text-[9px] sm:text-[11px] uppercase tracking-wider py-0.5 sm:py-1 px-2.5 sm:px-3 rounded-full shadow-xs hover:border-sky-400 transition-colors">
@@ -384,7 +384,7 @@ export default function Home() {
       <WhyChooseBounten />
 
       {/* 3. PRODUCT SERIES CATEGORIES OVERVIEW - id="products" */}
-      <section id="products" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4.5 relative">
+      <section id="products" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-3.5 sm:space-y-4.5 relative">
         
         {/* Product Series Header */}
         <AnimatedSection animation="fade-up" duration={700}>
@@ -623,7 +623,7 @@ export default function Home() {
       </section>
 
       {/* 4. WATER SOFTENER - APPLICATIONS & USES (Pixel-Level Recreated 3-Card Layout) - id="solutions" */}
-      <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative">
+      <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 relative">
         <div className="relative rounded-3xl bg-gradient-to-b from-sky-50/40 via-white to-sky-50/20 p-4 sm:p-6 lg:p-8 border border-sky-100/80 shadow-xs overflow-hidden space-y-4 sm:space-y-6">
 
           {/* Section Header */}
@@ -885,7 +885,7 @@ export default function Home() {
       </section>
 
       {/* 5. SERVICES OVERVIEW - id="services" */}
-      <section id="services" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4">
+      <section id="services" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-3.5 sm:space-y-4">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
@@ -951,7 +951,7 @@ export default function Home() {
       </section>
 
       {/* 5. BOUNTEN WATER SOFTENER BENEFITS - id="benefits" */}
-      <section id="benefits" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4">
+      <section id="benefits" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-3.5 sm:space-y-4">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="relative bg-gradient-to-br from-white via-sky-50/20 to-white rounded-3xl p-5 sm:p-6 lg:p-7 border border-sky-100/90 shadow-xl shadow-sky-950/5 overflow-hidden">
             
@@ -1234,7 +1234,7 @@ export default function Home() {
       </section>
 
       {/* 6. GALLERY PREVIEW - id="gallery" */}
-      <section id="gallery" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4">
+      <section id="gallery" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 space-y-3.5 sm:space-y-4">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>

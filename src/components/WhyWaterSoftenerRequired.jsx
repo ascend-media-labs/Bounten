@@ -29,7 +29,7 @@ function MineralCrystalsIcon({ className = "w-6 h-6 text-[#0070cc]" }) {
 
 export default function WhyWaterSoftenerRequired() {
   return (
-    <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+    <section className="w-full px-3 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12">
       <AnimatedSection animation="fade-up" duration={700}>
         <div className="relative rounded-3xl bg-gradient-to-r from-white via-sky-50/60 to-[#eaf5fc] border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
           
