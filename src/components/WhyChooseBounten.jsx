@@ -41,27 +41,27 @@ export default function WhyChooseBounten() {
             />
           </div>
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-center p-6 sm:p-8 lg:p-10 xl:p-12 gap-8 lg:gap-10">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-center p-5 sm:p-6 lg:p-7 xl:p-8 gap-5 lg:gap-6">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-6 xl:col-span-7 space-y-4 sm:space-y-5">
+            <div className="lg:col-span-6 xl:col-span-7 space-y-2.5 sm:space-y-3.5">
               
               {/* Header with TYENT Logo & Title */}
               <div className="flex items-center gap-3 sm:gap-4 md:gap-5 flex-wrap sm:flex-nowrap">
                 <img
                   src="/images/problems/tyent_logo_white.png"
                   alt="TYENT India"
-                  className="h-9 sm:h-11 md:h-12 w-auto object-contain flex-shrink-0"
+                  className="h-8 sm:h-10 md:h-11 w-auto object-contain flex-shrink-0"
                 />
-                <div className="hidden sm:block w-[1.5px] h-10 sm:h-12 bg-white/40 flex-shrink-0" />
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-black tracking-tight leading-tight">
+                <div className="hidden sm:block w-[1.5px] h-9 sm:h-10 bg-white/40 flex-shrink-0" />
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[30px] font-black tracking-tight leading-tight">
                   <span className="text-white block">Why Choose</span>
                   <span className="text-[#38bdf8] block">Bounten Water Softeners?</span>
                 </h2>
               </div>
 
               {/* Cyan Accent Line */}
-              <div className="w-14 h-1 bg-[#38bdf8] rounded-full"></div>
+              <div className="w-12 h-1 bg-[#38bdf8] rounded-full"></div>
 
               {/* Descriptive Paragraphs */}
               <div className="space-y-3 pt-1 text-white/95 text-xs sm:text-sm md:text-[15px] font-normal leading-relaxed max-w-2xl">

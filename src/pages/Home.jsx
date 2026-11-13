@@ -244,7 +244,7 @@ export default function Home() {
   };
 
   return (
-    <div className="space-y-6 sm:space-y-8 pb-6 sm:pb-8 overflow-hidden">
+    <div className="space-y-4 sm:space-y-5 lg:space-y-6 pb-4 sm:pb-6 overflow-hidden">
       
       {/* 1. HERO SECTION WITH BACKGROUND CAROUSEL - id="home" */}
       <section id="home" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 relative overflow-hidden bg-slate-50 py-4 sm:py-6 lg:py-8 min-h-[400px] sm:min-h-[440px] lg:min-h-[480px] xl:min-h-[500px] flex items-center border-b border-slate-100">
@@ -380,14 +380,14 @@ export default function Home() {
       <WhyChooseBounten />
 
       {/* 3. PRODUCT SERIES CATEGORIES OVERVIEW - id="products" */}
-      <section id="products" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-8 relative">
+      <section id="products" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4.5 relative">
         
         {/* Product Series Header */}
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="relative flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div className="relative flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             
             {/* Header Text */}
-            <div className="space-y-1.5 max-w-2xl relative z-10">
+            <div className="space-y-1 max-w-2xl relative z-10">
               <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#0070cc]">
                 <span className="w-5 h-0.5 bg-[#0070cc] rounded-full inline-block" />
                 <span>PRODUCT SERIES</span>
@@ -404,7 +404,7 @@ export default function Home() {
             {/* View Full Catalogue Button */}
             <Link
               to="/products"
-              className="btn-press inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#081C3B] bg-white border border-sky-300 rounded-full px-5 py-2.5 shadow-xs hover:border-sky-500 hover:text-sky-600 hover:shadow-md transition-all group flex-shrink-0 self-start sm:self-auto relative z-10"
+              className="btn-press inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#081C3B] bg-white border border-sky-300 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 shadow-xs hover:border-sky-500 hover:text-sky-600 hover:shadow-md transition-all group flex-shrink-0 self-start sm:self-auto relative z-10"
             >
               <span>View Full Catalogue ({PRODUCTS_DATA.length})</span>
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform text-sky-600" />
@@ -413,16 +413,16 @@ export default function Home() {
         </AnimatedSection>
 
         {/* 2 Symmetrical Product Series Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3.5 sm:gap-4.5">
           
           {/* Card 1: Zoftner Pro */}
           <AnimatedSection animation="fade-right" delay={100} duration={800} className="h-full">
             <div className="relative bg-gradient-to-br from-white via-sky-50/20 to-white rounded-3xl border border-sky-100 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden h-full flex flex-col justify-between group">
               
               {/* Left Content Area */}
-              <div className="relative z-10 w-full sm:w-[62%] lg:w-[58%] p-6 sm:p-7 lg:p-8 flex flex-col justify-between h-full space-y-4">
+              <div className="relative z-10 w-full sm:w-[62%] lg:w-[58%] p-5 sm:p-6 lg:p-7 flex flex-col justify-between h-full space-y-2.5 sm:space-y-3">
                 
-                <div className="space-y-3 sm:space-y-3.5">
+                <div className="space-y-2 sm:space-y-2.5">
                   {/* Title & Badge */}
                   <div className="flex items-center flex-wrap gap-2.5">
                     <div className="flex items-center gap-1.5">
@@ -448,7 +448,7 @@ export default function Home() {
                 </div>
 
                 {/* 3 Feature Icons Row */}
-                <div className="grid grid-cols-3 gap-2 py-3 border-y border-slate-100/90">
+                <div className="grid grid-cols-3 gap-2 py-2 border-y border-slate-100/90">
                   {/* Feature 1: Complete Protection */}
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
@@ -525,9 +525,9 @@ export default function Home() {
             <div className="relative bg-gradient-to-br from-white via-slate-50/30 to-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden h-full flex flex-col justify-between group">
               
               {/* Left Content Area */}
-              <div className="relative z-10 w-full sm:w-[62%] lg:w-[58%] p-6 sm:p-7 lg:p-8 flex flex-col justify-between h-full space-y-4">
+              <div className="relative z-10 w-full sm:w-[62%] lg:w-[58%] p-5 sm:p-6 lg:p-7 flex flex-col justify-between h-full space-y-2.5 sm:space-y-3">
                 
-                <div className="space-y-3 sm:space-y-3.5">
+                <div className="space-y-2 sm:space-y-2.5">
                   {/* Title & Badge */}
                   <div className="flex items-center flex-wrap gap-2.5">
                     <div className="flex items-center gap-1.5">
@@ -553,7 +553,7 @@ export default function Home() {
                 </div>
 
                 {/* 3 Feature Icons Row */}
-                <div className="grid grid-cols-3 gap-2 py-3 border-y border-slate-100/90">
+                <div className="grid grid-cols-3 gap-2 py-2 border-y border-slate-100/90">
                   {/* Feature 1: Direct Inline Setup */}
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs">
@@ -619,7 +619,7 @@ export default function Home() {
       </section>
 
       {/* 4. WATER SOFTENER - APPLICATIONS & USES (Right below Product Series, No Fade) - id="solutions" */}
-      <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-5 sm:space-y-6">
+      <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
           <div>
             <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
@@ -643,18 +643,18 @@ export default function Home() {
         </div>
 
         {/* 3 Columns: Residential, Commercial, Everyday - 100% Solid & Crisp */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
           
           {/* 1. Residential */}
-          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift glow-sky transition-all space-y-3 h-full flex flex-col justify-between">
-            <div className="space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md">
+          <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm hover-lift glow-sky transition-all space-y-2.5 h-full flex flex-col justify-between">
+            <div className="space-y-2 sm:space-y-2.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md">
                 <HomeIcon className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold text-[#081C3B]">
+              <h3 className="text-base sm:text-lg font-bold text-[#081C3B]">
                 {PRODUCT_HIGHLIGHTS.applications.residential.title}
               </h3>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-slate-700">
                 {PRODUCT_HIGHLIGHTS.applications.residential.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
@@ -666,15 +666,15 @@ export default function Home() {
           </div>
 
           {/* 2. Commercial */}
-          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift glow-emerald transition-all space-y-3 h-full flex flex-col justify-between">
-            <div className="space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
+          <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm hover-lift glow-emerald transition-all space-y-2.5 h-full flex flex-col justify-between">
+            <div className="space-y-2 sm:space-y-2.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
                 <Building2 className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold text-[#081C3B]">
+              <h3 className="text-base sm:text-lg font-bold text-[#081C3B]">
                 {PRODUCT_HIGHLIGHTS.applications.commercial.title}
               </h3>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-slate-700">
                 {PRODUCT_HIGHLIGHTS.applications.commercial.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
@@ -686,15 +686,15 @@ export default function Home() {
           </div>
 
           {/* 3. Everyday Applications */}
-          <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-sm hover-lift glow-amber transition-all space-y-3 h-full flex flex-col justify-between">
-            <div className="space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md">
+          <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm hover-lift glow-amber transition-all space-y-2.5 h-full flex flex-col justify-between">
+            <div className="space-y-2 sm:space-y-2.5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md">
                 <Droplets className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold text-[#081C3B]">
+              <h3 className="text-base sm:text-lg font-bold text-[#081C3B]">
                 {PRODUCT_HIGHLIGHTS.applications.everyday.title}
               </h3>
-              <div className="space-y-1.5 text-xs sm:text-sm text-slate-700">
+              <div className="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-slate-700">
                 {PRODUCT_HIGHLIGHTS.applications.everyday.items.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
@@ -712,7 +712,7 @@ export default function Home() {
       </section>
 
       {/* 5. SERVICES OVERVIEW - id="services" */}
-      <section id="services" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-5 sm:space-y-6">
+      <section id="services" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
@@ -778,24 +778,24 @@ export default function Home() {
       </section>
 
       {/* 5. BOUNTEN WATER SOFTENER BENEFITS - id="benefits" */}
-      <section id="benefits" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-5 sm:space-y-6">
+      <section id="benefits" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="relative bg-gradient-to-br from-white via-sky-50/20 to-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-sky-100/90 shadow-xl shadow-sky-950/5 overflow-hidden">
+          <div className="relative bg-gradient-to-br from-white via-sky-50/20 to-white rounded-3xl p-5 sm:p-6 lg:p-7 border border-sky-100/90 shadow-xl shadow-sky-950/5 overflow-hidden">
             
             {/* Ambient Background Glows */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-sky-100/40 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
 
             {/* Header Area */}
-            <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 sm:pb-8 border-b border-slate-100">
-              <div className="space-y-2 max-w-2xl">
+            <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-3 pb-4 sm:pb-5 border-b border-slate-100">
+              <div className="space-y-1.5 max-w-2xl">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#0070cc] animate-pulse" />
                   <span className="text-[11px] font-black uppercase tracking-wider text-[#0070cc]">
                     PROVEN SYSTEM ADVANTAGES
                   </span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#081C3B] tracking-tight">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#081C3B] tracking-tight">
                   Bounten Water Softener Key Benefits
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -805,7 +805,7 @@ export default function Home() {
 
               <Link
                 to="/benefits"
-                className="btn-press inline-flex items-center gap-2 bg-gradient-to-r from-[#0066cc] to-[#0099ff] hover:from-[#0055b3] hover:to-[#0088ee] text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-full font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all group flex-shrink-0 self-start md:self-auto"
+                className="btn-press inline-flex items-center gap-2 bg-gradient-to-r from-[#0066cc] to-[#0099ff] hover:from-[#0055b3] hover:to-[#0088ee] text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all group flex-shrink-0 self-start md:self-auto"
               >
                 <span>View Full Benefits & Technology Guide</span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
@@ -813,30 +813,30 @@ export default function Home() {
             </div>
 
             {/* 6 Creative & Premium Feature Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 pt-6 sm:pt-8 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 pt-4 sm:pt-5 relative z-10">
               {KEY_BENEFITS_DATA.map((item, idx) => {
                 const IconComponent = item.icon;
                 return (
                   <div
                     key={idx}
-                    className="relative bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group overflow-hidden flex flex-col justify-between"
+                    className="relative bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group overflow-hidden flex flex-col justify-between"
                   >
                     {/* Hover Ambient Corner Glow */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-sky-100/50 via-sky-50/20 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
-                    <div className="space-y-3 relative z-10">
+                    <div className="space-y-2.5 relative z-10">
                       {/* Icon + Badge Row */}
                       <div className="flex items-center justify-between gap-3">
-                        <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${item.iconGradient} text-white flex items-center justify-center shadow-md transform group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                        <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${item.iconGradient} text-white flex items-center justify-center shadow-md transform group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                           <IconComponent className="w-5 h-5" strokeWidth={2.2} />
                         </div>
-                        <span className={`text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${item.badgeColor} shadow-2xs`}>
+                        <span className={`text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full border ${item.badgeColor} shadow-2xs`}>
                           {item.badge}
                         </span>
                       </div>
 
                       {/* Title */}
-                      <h4 className="text-base sm:text-[17px] font-bold text-[#081C3B] group-hover:text-[#0070cc] transition-colors leading-snug tracking-tight">
+                      <h4 className="text-sm sm:text-base font-bold text-[#081C3B] group-hover:text-[#0070cc] transition-colors leading-snug tracking-tight">
                         {item.title}
                       </h4>
 
@@ -847,7 +847,7 @@ export default function Home() {
                     </div>
 
                     {/* Bottom Result Highlight */}
-                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-slate-700 relative z-10">
+                    <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-slate-700 relative z-10">
                       <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                       <span>{item.highlight}</span>
                     </div>
@@ -862,7 +862,7 @@ export default function Home() {
 
         {/* 3-CARD QUALITY, WARRANTY & STANDARDS SHOWCASE */}
         <AnimatedSection animation="fade-up" delay={150} duration={800}>
-          <div className="relative py-4 sm:py-6 overflow-hidden">
+          <div className="relative py-2 sm:py-3 overflow-hidden">
             
             {/* Ambient Water Wave Background Ribbons */}
             <div className="absolute inset-0 bg-gradient-to-r from-sky-50/60 via-blue-50/40 to-sky-50/60 pointer-events-none rounded-3xl" />
@@ -882,7 +882,7 @@ export default function Home() {
             </div>
 
             {/* 3 Symmetrical Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 relative z-10 p-2 sm:p-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4.5 relative z-10 p-1 sm:p-2">
               
               {/* Card 1: Warranty Assurance */}
               <div className="bg-white rounded-3xl border border-sky-100/90 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 overflow-hidden relative group p-5 sm:p-6 flex flex-col justify-between min-h-[260px] sm:min-h-[280px]">
@@ -1061,7 +1061,7 @@ export default function Home() {
       </section>
 
       {/* 6. GALLERY PREVIEW - id="gallery" */}
-      <section id="gallery" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-5 sm:space-y-6">
+      <section id="gallery" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4">
         <AnimatedSection animation="fade-up" duration={700}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>

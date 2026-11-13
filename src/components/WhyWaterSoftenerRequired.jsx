@@ -36,23 +36,23 @@ export default function WhyWaterSoftenerRequired() {
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             
             {/* Left Content Area (Editable Text & Icons) */}
-            <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-between space-y-6 sm:space-y-7 relative z-10">
+            <div className="lg:col-span-7 p-5 sm:p-6 lg:p-7 xl:p-8 flex flex-col justify-between space-y-4 sm:space-y-4.5 relative z-10">
               
               {/* Header with TYENT INDIA Logo & Title */}
               <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                 <img
                   src="/images/problems/tyent_logo_2x.png"
                   alt="TYENT India"
-                  className="h-9 sm:h-11 md:h-12 w-auto object-contain flex-shrink-0"
+                  className="h-8 sm:h-10 md:h-11 w-auto object-contain flex-shrink-0"
                 />
-                <div className="hidden sm:block w-[1.5px] h-10 sm:h-12 bg-slate-300 flex-shrink-0" />
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-black text-[#081C3B] tracking-tight leading-snug">
+                <div className="hidden sm:block w-[1.5px] h-9 sm:h-10 bg-slate-300 flex-shrink-0" />
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[30px] font-black text-[#081C3B] tracking-tight leading-snug">
                   Why is a <span className="text-[#0070cc]">Water Softener</span> Required..?
                 </h2>
               </div>
 
               {/* Core Feature Bullet Points */}
-              <div className="space-y-4 sm:space-y-5 pt-1">
+              <div className="space-y-3 sm:space-y-3.5 pt-0.5">
                 {/* Point 1: Mineral reduction */}
                 <div className="flex items-start gap-3.5 sm:gap-4">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#e1f2fc] text-[#0070cc] flex items-center justify-center flex-shrink-0 shadow-2xs mt-0.5">

@@ -45,10 +45,10 @@ export default function ProblemsWithHardWater() {
       id="problems"
       className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative"
     >
-      <div className="relative rounded-3xl bg-gradient-to-b from-white via-sky-50/20 to-white p-5 sm:p-7 md:p-9 border border-slate-200/80 shadow-xs overflow-hidden">
+      <div className="relative rounded-3xl bg-gradient-to-b from-white via-sky-50/20 to-white p-4 sm:p-5 md:p-6 lg:p-7 border border-slate-200/80 shadow-xs overflow-hidden">
         
         {/* Top Water Splash Decorative Graphic */}
-        <div className="hidden md:block absolute right-0 top-0 w-80 lg:w-[480px] xl:w-[560px] h-36 lg:h-44 pointer-events-none select-none overflow-hidden z-0">
+        <div className="hidden md:block absolute right-0 top-0 w-80 lg:w-[480px] xl:w-[560px] h-32 lg:h-36 pointer-events-none select-none overflow-hidden z-0">
           <img
             src="/images/problems/water_splash_banner.jpg"
             alt="Water Splash"
@@ -58,20 +58,20 @@ export default function ProblemsWithHardWater() {
 
         {/* Section Header */}
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="relative z-10 max-w-2xl mb-7 sm:mb-9">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#081C3B] tracking-tight leading-[1.12]">
+          <div className="relative z-10 max-w-2xl mb-3.5 sm:mb-4.5">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#081C3B] tracking-tight leading-[1.12]">
               Problems with <br className="hidden sm:inline" />
               <span className="text-[#0284c7]">Hard Water</span>
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base md:text-lg mt-2.5 font-normal leading-relaxed">
+            <p className="text-slate-600 text-xs sm:text-sm md:text-base mt-1.5 font-normal leading-relaxed">
               Hard water may look clear, but it can cause daily problems at home.
             </p>
-            <div className="w-16 h-1 bg-[#0284c7] rounded-full mt-3.5"></div>
+            <div className="w-12 h-1 bg-[#0284c7] rounded-full mt-2"></div>
           </div>
         </AnimatedSection>
 
         {/* 4 Problems Cards Grid */}
-        <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+        <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
           {HARD_WATER_PROBLEMS.map((problem, idx) => (
             <AnimatedSection
               key={problem.id}
