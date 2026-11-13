@@ -32,12 +32,12 @@ export default function WhyChooseBounten() {
       <AnimatedSection animation="fade-up" duration={700}>
         <div className="relative rounded-3xl bg-gradient-to-r from-[#00275c] via-[#004a94] to-[#006bb5] border border-sky-400/30 shadow-xl shadow-[#00275c]/25 overflow-hidden">
           
-          {/* Bottom Water Wave Splash Effect */}
+          {/* Bottom Water Wave Splash Effect - Silky Smooth Fade */}
           <div className="absolute inset-x-0 bottom-0 h-20 sm:h-24 md:h-28 pointer-events-none select-none overflow-hidden z-0">
             <img
-              src="/images/problems/water_wave_bottom_2x.png"
+              src="/images/problems/water_wave_faded_2x.png"
               alt="Water Wave"
-              className="w-full h-full object-cover object-bottom opacity-85 mix-blend-screen"
+              className="w-full h-full object-cover object-bottom opacity-90 mix-blend-screen"
             />
           </div>
 
