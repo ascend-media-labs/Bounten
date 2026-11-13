@@ -6,8 +6,7 @@ import {
   MapPin,
   Filter,
   CheckCircle2,
-  ChevronRight,
-  Sparkles
+  ChevronRight
 } from 'lucide-react';
 import { GALLERY_ITEMS, GALLERY_CATEGORIES } from '../data/gallery';
 import GalleryLightbox from '../components/GalleryLightbox';
@@ -43,45 +42,30 @@ export default function Gallery() {
     <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
       <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-7">
         
-        {/* Page Breadcrumb & Side Heading Header */}
-        <div className="space-y-2">
+        {/* Page Breadcrumb & Category Filter Tabs */}
+        <div className="space-y-3">
           <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3 text-slate-400" />
             <span className="font-semibold text-slate-800">Media & Installation Gallery</span>
           </nav>
 
-          <AnimatedSection animation="fade-up" duration={500}>
-            <div className="space-y-1.5 pt-0.5 max-w-4xl text-left">
-              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200 w-fit">
-                <Sparkles className="w-3 h-3 text-sky-600" />
-                Visual Proof of Excellence
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B] tracking-tight">
-                BOUNTEN Media & Installation Gallery
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal text-justify">
-                Explore authentic photographs of real residential villa installations, commercial cooling plants, manufacturing assembly lines, certified water testing labs, and company leadership.
-              </p>
-
-              {/* Category Filter Tabs */}
-              <div className="pt-2 flex flex-wrap items-center justify-start gap-1.5 sm:gap-2">
-                {GALLERY_CATEGORIES.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`btn-press px-3.5 py-1.5 rounded-full text-xs font-bold transition-all border ${
-                      selectedCategory === cat
-                        ? 'bg-[#081C3B] text-white border-[#081C3B] shadow-md scale-105'
-                        : 'bg-white hover:bg-sky-50 text-slate-700 border-slate-200 hover:border-sky-300 shadow-xs'
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
+          {/* Category Filter Tabs */}
+          <div className="flex flex-wrap items-center justify-start gap-1.5 sm:gap-2">
+            {GALLERY_CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`btn-press px-3.5 py-1.5 rounded-full text-xs font-bold transition-all border ${
+                  selectedCategory === cat
+                    ? 'bg-[#081C3B] text-white border-[#081C3B] shadow-md scale-105'
+                    : 'bg-white hover:bg-sky-50 text-slate-700 border-slate-200 hover:border-sky-300 shadow-xs'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* 2. Responsive Image Grid */}

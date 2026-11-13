@@ -13,21 +13,7 @@ export default function Services() {
     <div className="bg-slate-50/50 min-h-screen py-6 sm:py-8 lg:py-10">
       
       {/* Core Service Offerings Cards Grid */}
-      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-8">
-        <AnimatedSection animation="fade-up" duration={700}>
-          <div className="space-y-1">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-              Dedicated Customer Care
-            </span>
-            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B] tracking-tight">
-              Official Service Capabilities
-            </h2>
-            <p className="text-slate-600 text-xs sm:text-sm mt-1 max-w-3xl leading-relaxed text-justify">
-              We don't rely on unverified third-party contractors. Every Bounten service call is attended by certified in-house technical personnel.
-            </p>
-          </div>
-        </AnimatedSection>
-
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {SERVICES_DATA.map((service, idx) => (
             <AnimatedSection key={service.id} animation="fade-up" delay={idx * 100} duration={600}>

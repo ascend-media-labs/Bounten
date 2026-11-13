@@ -8,7 +8,6 @@ import {
   CheckCircle2,
   Award,
   Clock,
-  Sparkles,
   Home as HomeIcon,
   Building2,
   Wrench,
@@ -132,28 +131,13 @@ export default function Benefits() {
     <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
       <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-7">
 
-        {/* Page Breadcrumb & Side Heading Header */}
-        <div className="space-y-2">
+        {/* Page Breadcrumb */}
+        <div>
           <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3 text-slate-400" />
             <span className="font-semibold text-slate-800">Benefits & Technology</span>
           </nav>
-
-          <AnimatedSection animation="fade-up" duration={500}>
-            <div className="space-y-1.5 pt-0.5 max-w-4xl text-left">
-              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200 w-fit">
-                <Sparkles className="w-3 h-3 text-sky-600" />
-                Comprehensive Technology & Value Guide
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B] tracking-tight">
-                Bounten Water Softener Benefits
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal text-justify">
-                Advanced Electrolysis Technology for Soft, Healthy & Scale-Free Living. Explore our complete engineering specifications, maintenance details, operational guidelines, and model pricing below.
-              </p>
-            </div>
-          </AnimatedSection>
         </div>
 
         {/* ============================================================== */}

@@ -12,8 +12,7 @@ import {
   ShieldCheck,
   Zap,
   PhoneCall,
-  ChevronRight,
-  Sparkles
+  ChevronRight
 } from 'lucide-react';
 import { SOLUTIONS_DATA } from '../data/solutions';
 import AnimatedSection from '../components/AnimatedSection';
@@ -49,41 +48,26 @@ export default function Solutions() {
     <div className="bg-slate-50 min-h-screen py-3 sm:py-5">
       <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-6 sm:space-y-7">
         
-        {/* Page Breadcrumb & Side Heading Header */}
-        <div className="space-y-2">
+        {/* Page Breadcrumb & Quick Jump Navigation */}
+        <div className="space-y-3">
           <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
             <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3 text-slate-400" />
             <span className="font-semibold text-slate-800">Applications & Solutions</span>
           </nav>
 
-          <AnimatedSection animation="fade-up" duration={500}>
-            <div className="space-y-1.5 pt-0.5 max-w-4xl text-left">
-              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200 w-fit">
-                <Sparkles className="w-3 h-3 text-sky-600" />
-                Engineered Across All Flow Rates
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B] tracking-tight">
-                Tailored Water Treatment Solutions
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal text-justify">
-                From single-point bathroom fixtures and whole-home villas to multi-building corporate campuses, boilers, and agriculture, Bounten delivers custom-calibrated salt-free systems.
-              </p>
-
-              {/* Quick jump navigation pills with hover bounce */}
-              <div className="pt-2 flex flex-wrap items-center justify-start gap-1.5 sm:gap-2">
-                {SOLUTIONS_DATA.map((sol) => (
-                  <a
-                    key={sol.id}
-                    href={`#${sol.id}`}
-                    className="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 text-xs font-bold px-3.5 py-1.5 rounded-full transition-all border border-slate-200 shadow-xs hover:border-sky-300 hover:scale-105 active:scale-95"
-                  >
-                    {sol.title}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
+          {/* Quick jump navigation pills with hover bounce */}
+          <div className="flex flex-wrap items-center justify-start gap-1.5 sm:gap-2">
+            {SOLUTIONS_DATA.map((sol) => (
+              <a
+                key={sol.id}
+                href={`#${sol.id}`}
+                className="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 text-xs font-bold px-3.5 py-1.5 rounded-full transition-all border border-slate-200 shadow-xs hover:border-sky-300 hover:scale-105 active:scale-95"
+              >
+                {sol.title}
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* 2. Detailed Solutions Sections (6 Categories) */}
