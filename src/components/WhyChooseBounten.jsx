@@ -46,12 +46,12 @@ export default function WhyChooseBounten() {
             {/* Left Content Column */}
             <div className="lg:col-span-6 xl:col-span-7 space-y-2.5 sm:space-y-3.5">
               
-              {/* Header with TYENT Logo & Title */}
+              {/* Header with Official BOUNTEN Logo & Title */}
               <div className="flex items-center gap-3 sm:gap-4 md:gap-5 flex-wrap sm:flex-nowrap">
                 <img
-                  src="/images/problems/tyent_logo_white.png"
-                  alt="TYENT India"
-                  className="h-8 sm:h-10 md:h-11 w-auto object-contain flex-shrink-0"
+                  src="/images/bounten_logo_white.png"
+                  alt="BOUNTEN"
+                  className="h-7 sm:h-9 md:h-10 w-auto object-contain flex-shrink-0"
                 />
                 <div className="hidden sm:block w-[1.5px] h-9 sm:h-10 bg-white/40 flex-shrink-0" />
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[30px] font-black tracking-tight leading-tight">
