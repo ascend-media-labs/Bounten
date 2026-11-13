@@ -23,7 +23,8 @@ import {
   Link2,
   Maximize2,
   Layers,
-  Droplet
+  Droplet,
+  TrendingUp
 } from 'lucide-react';
 import { PRODUCTS_DATA, PRODUCT_HIGHLIGHTS } from '../data/products';
 import { SOLUTIONS_DATA } from '../data/solutions';
@@ -49,6 +50,64 @@ const HERO_SLIDES = [
     id: 2,
     image: '/images/hero/zoftnor-cabinet-open.jpg',
     alt: 'Bounten Zoftnor opened cabinet showing interior electrolysis cylinder and bag filter'
+  }
+];
+
+// Rich Creative Key Benefits Data
+const KEY_BENEFITS_DATA = [
+  {
+    icon: ShieldCheck,
+    badge: 'Zero Limescale',
+    badgeColor: 'text-sky-700 bg-sky-100 border-sky-200/80',
+    iconGradient: 'from-sky-500 to-blue-600',
+    title: 'Helps Prevent Scale Build-up',
+    description: 'Stops stubborn calcium and magnesium crusting in overhead tanks, concealed internal pipes, and solar geysers.',
+    highlight: '100% Pipeline Protection'
+  },
+  {
+    icon: Zap,
+    badge: '2x Longevity',
+    badgeColor: 'text-emerald-700 bg-emerald-100 border-emerald-200/80',
+    iconGradient: 'from-emerald-500 to-teal-600',
+    title: 'Extends Appliance Lifespan',
+    description: 'Protects expensive heating coils in geysers, washing machines, and dishwashers from premature burnout.',
+    highlight: 'Prevents Coil Burnout'
+  },
+  {
+    icon: Wrench,
+    badge: 'Zero Clogging',
+    badgeColor: 'text-indigo-700 bg-indigo-100 border-indigo-200/80',
+    iconGradient: 'from-indigo-500 to-blue-600',
+    title: 'Reduces Plumbing Maintenance',
+    description: 'Maintains optimal water flow rate throughout your home, ending frequent plumber callouts and acid descaling.',
+    highlight: 'Preserves Water Pressure'
+  },
+  {
+    icon: Sparkles,
+    badge: 'Spotless Chrome',
+    badgeColor: 'text-cyan-700 bg-cyan-100 border-cyan-200/80',
+    iconGradient: 'from-cyan-500 to-blue-600',
+    title: 'Keeps Bathroom Fixtures Cleaner',
+    description: 'Eliminates ugly white chalk stains on luxury chrome taps, shower glass partitions, mirrors, and designer tiles.',
+    highlight: 'Effortless Bathroom Cleaning'
+  },
+  {
+    icon: Droplets,
+    badge: 'Skin & Hair Care',
+    badgeColor: 'text-rose-700 bg-rose-100 border-rose-200/80',
+    iconGradient: 'from-rose-500 to-pink-600',
+    title: 'Improves Everyday Bathing Comfort',
+    description: 'Conditioned soft water reduces hair brittleness and fall, keeping your skin naturally soft, hydrated, and rash-free.',
+    highlight: 'Gentle on Skin & Hair'
+  },
+  {
+    icon: TrendingUp,
+    badge: 'Up to 40% Savings',
+    badgeColor: 'text-amber-700 bg-amber-100 border-amber-200/80',
+    iconGradient: 'from-amber-500 to-orange-600',
+    title: 'Supports Long-Term Cost Savings',
+    description: 'Significantly cuts power consumption through efficient heat transfer and reduces soap and detergent use by up to 50%.',
+    highlight: 'Lower Electricity & Detergent Bills'
   }
 ];
 
@@ -721,36 +780,83 @@ export default function Home() {
       {/* 5. BOUNTEN WATER SOFTENER BENEFITS - id="benefits" */}
       <section id="benefits" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-5 sm:space-y-6">
         <AnimatedSection animation="fade-up" duration={700}>
-          <div className="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-4">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-[#081C3B]">
+          <div className="relative bg-gradient-to-br from-white via-sky-50/20 to-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-sky-100/90 shadow-xl shadow-sky-950/5 overflow-hidden">
+            
+            {/* Ambient Background Glows */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-sky-100/40 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-100/30 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
+
+            {/* Header Area */}
+            <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 sm:pb-8 border-b border-slate-100">
+              <div className="space-y-2 max-w-2xl">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#0070cc] animate-pulse" />
+                  <span className="text-[11px] font-black uppercase tracking-wider text-[#0070cc]">
+                    PROVEN SYSTEM ADVANTAGES
+                  </span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#081C3B] tracking-tight">
                   Bounten Water Softener Key Benefits
                 </h3>
-                <p className="text-xs text-slate-500 font-medium">Advanced Electrolysis Technology for Scale-Free Living</p>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  Advanced Non-Chemical Electrolysis Technology for Scale-Free Living Across Your Entire Home.
+                </p>
               </div>
+
               <Link
                 to="/benefits"
-                className="btn-press inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 bg-sky-100 hover:bg-sky-200 px-3.5 py-1.5 rounded-full transition-colors w-fit"
+                className="btn-press inline-flex items-center gap-2 bg-gradient-to-r from-[#0066cc] to-[#0099ff] hover:from-[#0055b3] hover:to-[#0088ee] text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-full font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all group flex-shrink-0 self-start md:self-auto"
               >
                 <span>View Full Benefits & Technology Guide</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-0.5">
-              {PRODUCT_HIGHLIGHTS.applications.keyBenefits.items.map((benefit, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-xs flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800 hover:border-emerald-300 transition-colors"
-                >
-                  <div className="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 font-bold text-xs">
-                    ✓
+            {/* 6 Creative & Premium Feature Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 pt-6 sm:pt-8 relative z-10">
+              {KEY_BENEFITS_DATA.map((item, idx) => {
+                const IconComponent = item.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="relative bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group overflow-hidden flex flex-col justify-between"
+                  >
+                    {/* Hover Ambient Corner Glow */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-sky-100/50 via-sky-50/20 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="space-y-3 relative z-10">
+                      {/* Icon + Badge Row */}
+                      <div className="flex items-center justify-between gap-3">
+                        <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${item.iconGradient} text-white flex items-center justify-center shadow-md transform group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                          <IconComponent className="w-5 h-5" strokeWidth={2.2} />
+                        </div>
+                        <span className={`text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${item.badgeColor} shadow-2xs`}>
+                          {item.badge}
+                        </span>
+                      </div>
+
+                      {/* Title */}
+                      <h4 className="text-base sm:text-[17px] font-bold text-[#081C3B] group-hover:text-[#0070cc] transition-colors leading-snug tracking-tight">
+                        {item.title}
+                      </h4>
+
+                      {/* Description */}
+                      <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
+                        {item.description}
+                      </p>
+                    </div>
+
+                    {/* Bottom Result Highlight */}
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-slate-700 relative z-10">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                      <span>{item.highlight}</span>
+                    </div>
+
                   </div>
-                  <span>{benefit}</span>
-                </div>
-              ))}
+                );
+              })}
             </div>
+
           </div>
         </AnimatedSection>
 
