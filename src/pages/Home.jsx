@@ -24,7 +24,11 @@ import {
   Maximize2,
   Layers,
   Droplet,
-  TrendingUp
+  TrendingUp,
+  ShowerHead,
+  WashingMachine,
+  Flame,
+  Grid2X2
 } from 'lucide-react';
 import { PRODUCTS_DATA, PRODUCT_HIGHLIGHTS } from '../data/products';
 import { SOLUTIONS_DATA } from '../data/solutions';
@@ -618,94 +622,273 @@ export default function Home() {
 
       </section>
 
-      {/* 4. WATER SOFTENER - APPLICATIONS & USES (Right below Product Series, No Fade) - id="solutions" */}
-      <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-3.5 sm:space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-          <div>
-            <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-              Applications & Uses
-            </span>
-            <h2 className="text-xl sm:text-2xl font-bold text-[#081C3B]">
-              {PRODUCT_HIGHLIGHTS.applications.title}
-            </h2>
-            <p className="text-slate-600 text-sm mt-0.5 max-w-2xl">
-              {PRODUCT_HIGHLIGHTS.applications.subtitle}
-            </p>
-          </div>
-
-          <Link
-            to="/solutions"
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-600 hover:text-sky-800 self-start sm:self-auto group flex-shrink-0"
-          >
-            <span>View All Solutions</span>
-            <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-
-        {/* 3 Columns: Residential, Commercial, Everyday - 100% Solid & Crisp */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+      {/* 4. WATER SOFTENER - APPLICATIONS & USES (Pixel-Level Recreated 3-Card Layout) - id="solutions" */}
+      <section id="solutions" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative">
+        <div className="relative rounded-3xl bg-gradient-to-b from-sky-50/40 via-white to-sky-50/20 p-4 sm:p-6 lg:p-8 border border-sky-100/80 shadow-xs overflow-hidden space-y-4 sm:space-y-6">
           
-          {/* 1. Residential */}
-          <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm hover-lift glow-sky transition-all space-y-2.5 h-full flex flex-col justify-between">
-            <div className="space-y-2 sm:space-y-2.5">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-md">
-                <HomeIcon className="w-5 h-5" />
-              </div>
-              <h3 className="text-base sm:text-lg font-bold text-[#081C3B]">
-                {PRODUCT_HIGHLIGHTS.applications.residential.title}
-              </h3>
-              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-slate-700">
-                {PRODUCT_HIGHLIGHTS.applications.residential.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Top Right Decorative Water Droplets & Wave Ribbon */}
+          <div className="hidden sm:block absolute right-0 top-0 w-80 lg:w-[500px] xl:w-[600px] h-28 lg:h-32 pointer-events-none select-none overflow-hidden z-0 opacity-85">
+            <img
+              src="/images/solutions/top_water_wave_banner.png"
+              alt="Water Wave Banner"
+              className="w-full h-full object-contain object-right-top"
+              loading="lazy"
+            />
           </div>
 
-          {/* 2. Commercial */}
-          <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm hover-lift glow-emerald transition-all space-y-2.5 h-full flex flex-col justify-between">
-            <div className="space-y-2 sm:space-y-2.5">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
-                <Building2 className="w-5 h-5" />
+          {/* Section Header */}
+          <AnimatedSection animation="fade-up" duration={700}>
+            <div className="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+              <div className="space-y-1">
+                <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#0070cc]">
+                  <span>APPLICATIONS & USES</span>
+                  <span className="w-6 h-0.5 bg-[#0070cc] rounded-full inline-block" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-tight">
+                  <span className="text-[#081C3B]">Water Softener – </span>
+                  <span className="text-[#0070cc]">Applications & Uses</span>
+                </h2>
+                <p className="text-slate-600 text-xs sm:text-sm md:text-base mt-1 font-normal">
+                  Ideal for Homes, Apartments, Villas and Commercial Spaces.
+                </p>
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-[#081C3B]">
-                {PRODUCT_HIGHLIGHTS.applications.commercial.title}
-              </h3>
-              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-slate-700">
-                {PRODUCT_HIGHLIGHTS.applications.commercial.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
 
-          {/* 3. Everyday Applications */}
-          <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm hover-lift glow-amber transition-all space-y-2.5 h-full flex flex-col justify-between">
-            <div className="space-y-2 sm:space-y-2.5">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center shadow-md">
-                <Droplets className="w-5 h-5" />
-              </div>
-              <h3 className="text-base sm:text-lg font-bold text-[#081C3B]">
-                {PRODUCT_HIGHLIGHTS.applications.everyday.title}
-              </h3>
-              <div className="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-slate-700">
-                {PRODUCT_HIGHLIGHTS.applications.everyday.items.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-slate-900 font-semibold">{item.name}:</strong>{' '}
-                      <span className="text-slate-600">{item.description}</span>
+              <Link
+                to="/solutions"
+                className="btn-press inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0070cc] hover:text-white bg-white/95 hover:bg-[#0070cc] border border-sky-300 hover:border-[#0070cc] rounded-full px-4 py-2 sm:px-5 sm:py-2.5 shadow-2xs hover:shadow-md transition-all group flex-shrink-0 self-start sm:self-auto relative z-10"
+              >
+                <span>View All Solutions</span>
+                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </AnimatedSection>
+
+          {/* 3 Premium Theme Cards: Residential (Blue), Commercial (Green), Everyday (Orange) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 relative z-10 items-stretch">
+            
+            {/* Card 1: Residential Applications (Blue) */}
+            <AnimatedSection animation="fade-up" delay={100} duration={700} className="h-full">
+              <div className="bg-white rounded-3xl border border-sky-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group relative h-full">
+                
+                {/* Top Image + Wave Cutout + Floating Badge */}
+                <div className="relative h-44 sm:h-48 md:h-52 w-full flex-shrink-0">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <img
+                      src="/images/solutions/card_residential_top.jpg"
+                      alt="Residential Applications - Luxury Villa"
+                      className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                      loading="lazy"
+                    />
+                    {/* Organic Wave Cutout with Smooth Curve */}
+                    <div className="absolute -bottom-0.5 left-0 right-0 h-10 pointer-events-none">
+                      <svg
+                        viewBox="0 0 400 45"
+                        preserveAspectRatio="none"
+                        className="w-full h-full text-white fill-current"
+                      >
+                        <path d="M0,20 C90,42 160,8 240,30 C320,48 370,18 400,24 L400,45 L0,45 Z" />
+                      </svg>
+                      <svg
+                        viewBox="0 0 400 45"
+                        preserveAspectRatio="none"
+                        className="absolute inset-0 w-full h-full fill-none pointer-events-none"
+                      >
+                        <path
+                          d="M0,20 C90,42 160,8 240,30 C320,48 370,18 400,24"
+                          stroke="#bae6fd"
+                          strokeWidth="2.5"
+                        />
+                      </svg>
                     </div>
                   </div>
-                ))}
+
+                  {/* Floating Squircle Category Icon */}
+                  <div className="absolute -bottom-4 left-5 sm:left-6 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-[#0284c7] to-[#0369a1] text-white flex items-center justify-center shadow-md shadow-sky-500/30 border-2 border-white z-10 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <HomeIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-white" strokeWidth={2.4} />
+                  </div>
+                </div>
+
+                {/* Content Area */}
+                <div className="p-5 sm:p-6 pt-6 sm:pt-7 flex flex-col justify-between flex-grow relative z-10 space-y-4">
+                  <div className="space-y-3.5">
+                    <h3 className="text-lg sm:text-xl font-black text-[#081C3B] tracking-tight">
+                      {PRODUCT_HIGHLIGHTS.applications.residential.title}
+                    </h3>
+                    <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                      {PRODUCT_HIGHLIGHTS.applications.residential.items.map((item, idx) => (
+                        <li key={idx} className="flex items-center gap-2.5">
+                          <div className="w-4 h-4 rounded-full border border-sky-400 bg-sky-50 text-[#0284c7] flex items-center justify-center flex-shrink-0">
+                            <Check className="w-2.5 h-2.5" strokeWidth={3} />
+                          </div>
+                          <span className="font-medium text-slate-700 leading-snug">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Bottom Right Decoration */}
+                  <img
+                    src="/images/solutions/card1_splash.png"
+                    alt=""
+                    className="absolute bottom-0 right-0 w-28 sm:w-32 pointer-events-none select-none opacity-90 z-0"
+                    loading="lazy"
+                  />
+                </div>
+
               </div>
-            </div>
+            </AnimatedSection>
+
+            {/* Card 2: Commercial Applications (Green) */}
+            <AnimatedSection animation="fade-up" delay={200} duration={700} className="h-full">
+              <div className="bg-white rounded-3xl border border-emerald-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group relative h-full">
+                
+                {/* Top Image + Wave Cutout + Floating Badge */}
+                <div className="relative h-44 sm:h-48 md:h-52 w-full flex-shrink-0">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <img
+                      src="/images/solutions/card_commercial_top.jpg"
+                      alt="Commercial Applications - Hotel & Offices"
+                      className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                      loading="lazy"
+                    />
+                    {/* Organic Wave Cutout with Smooth Curve */}
+                    <div className="absolute -bottom-0.5 left-0 right-0 h-10 pointer-events-none">
+                      <svg
+                        viewBox="0 0 400 45"
+                        preserveAspectRatio="none"
+                        className="w-full h-full text-white fill-current"
+                      >
+                        <path d="M0,20 C90,42 160,8 240,30 C320,48 370,18 400,24 L400,45 L0,45 Z" />
+                      </svg>
+                      <svg
+                        viewBox="0 0 400 45"
+                        preserveAspectRatio="none"
+                        className="absolute inset-0 w-full h-full fill-none pointer-events-none"
+                      >
+                        <path
+                          d="M0,20 C90,42 160,8 240,30 C320,48 370,18 400,24"
+                          stroke="#a7f3d0"
+                          strokeWidth="2.5"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Floating Squircle Category Icon */}
+                  <div className="absolute -bottom-4 left-5 sm:left-6 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-[#10b981] to-[#059669] text-white flex items-center justify-center shadow-md shadow-emerald-500/30 border-2 border-white z-10 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <Building2 className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-white" strokeWidth={2.4} />
+                  </div>
+                </div>
+
+                {/* Content Area */}
+                <div className="p-5 sm:p-6 pt-6 sm:pt-7 flex flex-col justify-between flex-grow relative z-10 space-y-4">
+                  <div className="space-y-3.5">
+                    <h3 className="text-lg sm:text-xl font-black text-[#081C3B] tracking-tight">
+                      {PRODUCT_HIGHLIGHTS.applications.commercial.title}
+                    </h3>
+                    <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                      {PRODUCT_HIGHLIGHTS.applications.commercial.items.map((item, idx) => (
+                        <li key={idx} className="flex items-center gap-2.5">
+                          <div className="w-4 h-4 rounded-full border border-emerald-400 bg-emerald-50 text-[#10b981] flex items-center justify-center flex-shrink-0">
+                            <Check className="w-2.5 h-2.5" strokeWidth={3} />
+                          </div>
+                          <span className="font-medium text-slate-700 leading-snug">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Bottom Right Decoration */}
+                  <img
+                    src="/images/solutions/card2_skyline.png"
+                    alt=""
+                    className="absolute bottom-0 right-0 w-24 sm:w-28 pointer-events-none select-none opacity-85 z-0"
+                    loading="lazy"
+                  />
+                </div>
+
+              </div>
+            </AnimatedSection>
+
+            {/* Card 3: Everyday Applications (Orange) */}
+            <AnimatedSection animation="fade-up" delay={300} duration={700} className="h-full">
+              <div className="bg-white rounded-3xl border border-amber-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group relative h-full">
+                
+                {/* Top Image + Wave Cutout + Floating Badge */}
+                <div className="relative h-44 sm:h-48 md:h-52 w-full flex-shrink-0">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <img
+                      src="/images/solutions/card_everyday_top.jpg"
+                      alt="Everyday Applications - Shower & Bathroom"
+                      className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                      loading="lazy"
+                    />
+                    {/* Organic Wave Cutout with Smooth Curve */}
+                    <div className="absolute -bottom-0.5 left-0 right-0 h-10 pointer-events-none">
+                      <svg
+                        viewBox="0 0 400 45"
+                        preserveAspectRatio="none"
+                        className="w-full h-full text-white fill-current"
+                      >
+                        <path d="M0,20 C90,42 160,8 240,30 C320,48 370,18 400,24 L400,45 L0,45 Z" />
+                      </svg>
+                      <svg
+                        viewBox="0 0 400 45"
+                        preserveAspectRatio="none"
+                        className="absolute inset-0 w-full h-full fill-none pointer-events-none"
+                      >
+                        <path
+                          d="M0,20 C90,42 160,8 240,30 C320,48 370,18 400,24"
+                          stroke="#fed7aa"
+                          strokeWidth="2.5"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Floating Squircle Category Icon */}
+                  <div className="absolute -bottom-4 left-5 sm:left-6 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-[#f97316] to-[#ea580c] text-white flex items-center justify-center shadow-md shadow-amber-500/30 border-2 border-white z-10 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <Droplets className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-white" strokeWidth={2.4} />
+                  </div>
+                </div>
+
+                {/* Content Area */}
+                <div className="p-5 sm:p-6 pt-6 sm:pt-7 flex flex-col justify-between flex-grow relative z-10 space-y-4">
+                  <div className="space-y-3.5">
+                    <h3 className="text-lg sm:text-xl font-black text-[#081C3B] tracking-tight">
+                      {PRODUCT_HIGHLIGHTS.applications.everyday.title}
+                    </h3>
+                    <ul className="space-y-2 text-xs sm:text-[13px] text-slate-700">
+                      {PRODUCT_HIGHLIGHTS.applications.everyday.items.map((item, idx) => {
+                        const iconMap = [ShowerHead, WashingMachine, Flame, Utensils, Wrench, Grid2X2];
+                        const ItemIcon = iconMap[idx] || Droplets;
+                        return (
+                          <li key={idx} className="flex items-start gap-2.5">
+                            <div className="w-5 h-5 rounded-md bg-amber-50 border border-amber-200/80 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
+                              <ItemIcon className="w-3.5 h-3.5" strokeWidth={2.2} />
+                            </div>
+                            <div className="leading-snug">
+                              <strong className="text-slate-900 font-bold">{item.name}:</strong>{' '}
+                              <span className="text-slate-600">{item.description}</span>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+
+                  {/* Bottom Right Decoration */}
+                  <img
+                    src="/images/solutions/card3_wave.png"
+                    alt=""
+                    className="absolute bottom-0 right-0 w-28 sm:w-32 pointer-events-none select-none opacity-85 z-0"
+                    loading="lazy"
+                  />
+                </div>
+
+              </div>
+            </AnimatedSection>
+
           </div>
 
         </div>
