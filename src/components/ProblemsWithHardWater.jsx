@@ -93,11 +93,11 @@ export default function ProblemsWithHardWater() {
                 aria-label={`View details about ${problem.title}`}
               >
                 {/* Exact Card Graphic Image */}
-                <div className="relative w-full aspect-[468/760] overflow-hidden bg-white">
+                <div className="relative w-full overflow-hidden bg-white">
                   <img
                     src={problem.cardImage}
                     alt={problem.title}
-                    className="w-full h-full object-contain transform group-hover:scale-[1.025] transition-transform duration-400 ease-out"
+                    className="w-full h-auto block object-cover transform group-hover:scale-[1.02] transition-transform duration-300 ease-out"
                     loading="lazy"
                   />
                   
@@ -306,3 +306,4 @@ export default function ProblemsWithHardWater() {
     </section>
   );
 }
+

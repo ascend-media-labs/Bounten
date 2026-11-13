@@ -148,3 +148,4 @@ export const HARD_WATER_PROBLEMS = [
     whatsappMessage: "Hi Bounten Team, My clothes and towels feel rough and stiff with hard water stains. Which Bounten Zoftner system do you recommend for laundry and home water?"
   }
 ];
+
