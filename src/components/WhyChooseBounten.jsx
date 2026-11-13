@@ -28,7 +28,7 @@ export default function WhyChooseBounten() {
   ];
 
   return (
-    <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+    <section id="about" className="scroll-mt-14 sm:scroll-mt-16 md:scroll-mt-20 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
       <AnimatedSection animation="fade-up" duration={700}>
         <div className="relative rounded-3xl bg-gradient-to-r from-[#00275c] via-[#004a94] to-[#006bb5] border border-sky-400/30 shadow-xl shadow-[#00275c]/25 overflow-hidden">
           

@@ -1,11 +1,19 @@
 import React from 'react';
-import { RotateCcw, ShieldAlert, CheckCircle2, FileQuestion } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { RotateCcw, ShieldAlert, CheckCircle2, FileQuestion, ChevronRight } from 'lucide-react';
 import { COMPANY_CONFIG } from '../data/config';
 
 export default function RefundPolicy() {
   return (
-    <div className="bg-slate-50/50 min-h-screen py-10 sm:py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div className="bg-slate-50/50 min-h-screen py-8 sm:py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        
+        {/* Breadcrumb Navigation */}
+        <nav className="flex items-center space-x-1.5 text-xs text-slate-500 font-medium">
+          <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
+          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <span className="text-slate-800 font-semibold">Return & Refund Policy</span>
+        </nav>
         
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-xs space-y-6">
           <div className="border-b border-slate-100 pb-6 space-y-2">

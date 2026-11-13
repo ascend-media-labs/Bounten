@@ -32,6 +32,22 @@ export default function Products() {
   // Exactly 9 products per page as shown in example screenshot
   const ITEMS_PER_PAGE = 9;
 
+  // Sync category & search when URL search params change (e.g. from footer or home links)
+  useEffect(() => {
+    const cat = searchParams.get('cat');
+    if (cat) {
+      setSelectedCategory(cat);
+    } else {
+      setSelectedCategory('All Products');
+    }
+    const q = searchParams.get('q');
+    if (q !== null) {
+      setSearchQuery(q);
+      setSearchInputText(q);
+    }
+    setCurrentPage(1);
+  }, [searchParams]);
+
   // Sync category changes
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);

@@ -26,13 +26,21 @@ function ScrollToTop() {
     if (!hash) {
       window.scrollTo(0, 0);
     } else {
-      setTimeout(() => {
+      const scrollTarget = () => {
         const id = hash.replace('#', '');
         const el = document.getElementById(id);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 120);
+      };
+      // Try immediate and with slight delays for dynamic/animated layouts
+      requestAnimationFrame(scrollTarget);
+      const timer1 = setTimeout(scrollTarget, 100);
+      const timer2 = setTimeout(scrollTarget, 300);
+      return () => {
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+      };
     }
   }, [pathname, hash]);
 

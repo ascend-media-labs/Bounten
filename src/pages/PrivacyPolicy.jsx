@@ -1,12 +1,20 @@
 import React from 'react';
-import { ShieldCheck, Lock, Eye, FileText, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ShieldCheck, Lock, Eye, FileText, CheckCircle2, ChevronRight } from 'lucide-react';
 import { COMPANY_CONFIG } from '../data/config';
 
 export default function PrivacyPolicy() {
   return (
-    <div className="bg-slate-50/50 min-h-screen py-10 sm:py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div className="bg-slate-50/50 min-h-screen py-6 sm:py-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         
+        {/* Page Breadcrumb */}
+        <nav className="flex items-center space-x-1.5 text-xs text-slate-500">
+          <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
+          <ChevronRight className="w-3 h-3 text-slate-400" />
+          <span className="font-semibold text-slate-800">Privacy Policy</span>
+        </nav>
+
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-xs space-y-6">
           <div className="border-b border-slate-100 pb-6 space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-sky-600 block">

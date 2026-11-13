@@ -197,7 +197,7 @@ export default function Navbar() {
                 // Check active state: either based on scrollspy (on home) or pathname (on subpage)
                 const isActive = isHomePage
                   ? activeSection === link.sectionId
-                  : location.pathname === link.path;
+                  : location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
 
                 return (
                   <a
@@ -284,7 +284,7 @@ export default function Navbar() {
 
                 const isActive = isHomePage
                   ? activeSection === link.sectionId
-                  : location.pathname === link.path;
+                  : location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
 
                 return (
                   <a
